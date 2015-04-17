@@ -33,7 +33,7 @@ Run with
 ```
 ./rai.sh URL
 ```
-
+In the directory where you downloaded it.
 
 To use from any directory install the script directly in the $PATH using this command (run as root):
 
@@ -57,15 +57,15 @@ cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh
 
 Run with:
 ```
-bash rai.sh URL
+bash /sdcard/rai.sh URL
 ```
 
-To use this script from any directory install the script directly in the $PATH using these commands (here, root is mandatory).
+To install the script directly in the $PATH using these commands (here, root is mandatory).
 
 
 ```
 su
-mount -o remount,rw /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod 755 /system/bin/rai.sh
+mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod 755 /system/bin/rai.sh
 ```
 
 And run with:
@@ -86,7 +86,7 @@ Run with:
 ```
 ./rai.sh URL
 ```
-
+In the directory where you downloaded it.
 
 To view the downloaded video use iFile. 
 
@@ -114,6 +114,7 @@ Run with:
 ```
 bash rai.sh
 ```
+In the directory where you downloaded it.
 
 To run the script from any directory run the following commands:
 
