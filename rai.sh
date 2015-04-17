@@ -1,6 +1,7 @@
 #!/bin/bash
 # Rai.TV download script
-# By Daniil Gentili
+# Created by Daniil Gentili (http://daniil.eu.org)
+# Uses Andrea Lazzarotto's (http://andrealazzarotto.com) server (http://video.lazza.dk) to decode URLs.
 
 [ "$1" = "--help" ] && echo "Rai.tv download script
 Created by Daniil Gentili
