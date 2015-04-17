@@ -107,8 +107,7 @@ rai.sh URL
 Install [Unxutils](http://unxutils.sourceforge.net/) and [win-bash](http://win-bash.sourceforge.net/), open up the command prompt and type:
 
 ```
-bash
-cd && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh
+wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 ```
 
 Run with:
@@ -116,17 +115,11 @@ Run with:
 bash rai.sh
 ```
 
-Or change the shebang to match the location of the bash executable and run with
-
-```
-./rai.sh
-```
-
 To run the script from any directory run the following commands:
 
 ```
 bash
-cd $HOME && echo "export PATH="$PATH:$HOME/rai/" >>.bashrc && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh
+cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 ```
 
 Change shebang to match the location of the bash executable (default is C:/usr/bin/bash)
