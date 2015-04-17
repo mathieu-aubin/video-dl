@@ -59,7 +59,7 @@ $formats
 Select the format you want to download: " && read l &&
  selection=$(echo "$vars" | sed "$l!d")
  dl=$(wget http://video.lazza.dk/rai/?r=$(eval echo "$`echo "$vars" | sed "$l!d"`") -q -O -) &&
- ext=$(echo $dl | awk -F . '{print $NF}') &&
+ ext=$(echo $dl | awk -F. '$0=$NF') &&
  wget $dl -O "$title.$ext"
  }
 fi
