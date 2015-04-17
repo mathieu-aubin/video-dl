@@ -36,7 +36,7 @@ To use from any directory install the script directly in $PATH using this comman
 wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O /usr/bin/rai.sh && chmod +x /usr/bin/rai.sh
 ```
 
-And call it with:
+Now you will be able to run the script simply with:
 ```
 rai.sh URL
 ```
