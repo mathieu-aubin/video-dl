@@ -91,11 +91,10 @@ In the directory where you downloaded it.
 
 To view the downloaded video use iFile. 
 
-To use from any directory install the script directly in $PATH using this command (run it as root):
+To use from any directory install the script directly in $PATH using this command:
 
 ```
-su
-wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh && chmod 777 /usr/bin/rai.sh
+su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh && chmod 777 /usr/bin/rai.sh"
 ```
 
 And run with:
