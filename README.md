@@ -30,7 +30,7 @@ Run with
 ```
 
 
-To use from any directory install the script directly in $PATH using this command (run as root):
+To use from any directory install the script directly in the $PATH using this command (run as root):
 
 ```
 wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O /usr/bin/rai.sh && chmod +x /usr/bin/rai.sh
@@ -44,7 +44,7 @@ rai.sh URL
 
 
 ### Android:
-1. Install busybox, Jackpal's Terminal emulator and bash. Root is not mandatory.
+1. Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer). Root is not mandatory.
 2. Run these commands:
 ```
 cd /data/data/jackpal.androidterm/app_HOME/ && wget http://daniilgentili.magix.net/android/rai.sh -O rai.sh && chmod +x rai.sh
@@ -55,7 +55,7 @@ Run with:
 bash rai.sh URL
 ```
 
-To use this script from any directory install the script directly in $PATH using these commands (here, root is mandatory).
+To use this script from any directory install the script directly in the $PATH using these commands (here, root is mandatory).
 
 
 ```
@@ -71,7 +71,7 @@ rai.sh URL
 If you cannot execute the command match the shebang of the script to the location of the bash executable.
 
 ### iOS:
-Jailbreak your device, install the terminal app and run the following command:
+Jailbreak your device, install the terminal app and wget and run the following command:
 
 ```
 wget http://daniilgentili.magix.net/rai.sh -O rai.sh && chmod +x rai.sh
@@ -99,7 +99,7 @@ rai.sh URL
 
 
 ### Windows:
-Install unxutils and win-bash, open up the command prompt and type:
+Install [Unxutils](http://unxutils.sourceforge.net/)and [win-bash](http://win-bash.sourceforge.net/), open up the command prompt and type:
 
 ```
 bash
@@ -131,3 +131,7 @@ And run with:
 bash
 rai.sh URL
 ```
+
+That's it!
+Enjoy!
+[Daniil Gentili](http://daniil.eu.org)
