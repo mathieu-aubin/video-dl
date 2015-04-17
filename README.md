@@ -1,4 +1,4 @@
-# rai-bash-dl
+# rai.tv-bash-dl
 Rai.tv bash download script.
 
 Created by [Daniil Gentili](http://daniil.eu.org), this script uses [Andrea Lazzarotto](http://andrealazzarotto.com/)'s [server](http://video.lazza.dk) to decode URLs.
