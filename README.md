@@ -52,7 +52,7 @@ rai.sh URL
 1. Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer). Root is not mandatory.
 2. Run these commands:
 ```
-cd /data/data/jackpal.androidterm/app_HOME/ && wget http://daniilgentili.magix.net/android/rai.sh -O rai.sh && chmod 777 rai.sh
+cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
 ```
 
 Run with:
@@ -65,7 +65,7 @@ To use this script from any directory install the script directly in the $PATH u
 
 ```
 su
-mount -o remount,rw /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod +x /system/bin/rai.sh
+mount -o remount,rw /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod 755 /system/bin/rai.sh
 ```
 
 And run with:
