@@ -119,7 +119,7 @@ To run the script from any directory run the following commands:
 
 ```
 bash
-cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
+cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && mkdir rai && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 ```
 
 Change shebang to match the location of the bash executable (default is C:/usr/bin/bash)
