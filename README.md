@@ -76,7 +76,7 @@ rai.sh URL
 If you cannot execute the command match the shebang of the script to the location of the bash executable.
 
 ### iOS:
-Jailbreak your device, install the terminal app and wget and run the following command:
+Jailbreak your device, install mobileterminal and wget and run the following command:
 
 ```
 wget http://daniilgentili.magix.net/rai.sh -O rai.sh && chmod +x rai.sh
