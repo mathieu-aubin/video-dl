@@ -23,7 +23,7 @@ Options:
 ## Installation instructions:
 
 ### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X:
-Execute this command:
+Execute this command to install the script:
 
 ```
 wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O rai.sh && chmod +x rai.sh
@@ -41,7 +41,7 @@ To use from any directory install the script directly in the $PATH using this co
 wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O /usr/bin/rai.sh && chmod +x /usr/bin/rai.sh
 ```
 
-Now you will be able to run the script simply with:
+Now you should be able to run the script simply with:
 ```
 rai.sh URL
 ```
