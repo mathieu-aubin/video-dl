@@ -1,8 +1,8 @@
-# rai-bashdl
+# rai-bash-dl
 Rai.tv bash download script created by Daniil Gentili.
 This script can be used on any Linux/Unix system (including Android, Mac OS X or iOS) and even on Windows!
 
-# Usage:
+## Usage:
 rai.sh [ -af [ urls.txt ] ] URL URL2 URL3 ...
 
 Options:
@@ -12,9 +12,9 @@ Options:
 
 --help	Shows this extremely helpful message.
 
-# Installation instructions
+## Installation instructions:
 
-# Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X:
+### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X:
 Execute this command:
 
 wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O rai.sh && chmod +x rai.sh
@@ -31,7 +31,7 @@ rai.sh URL
 
 
 
-# Android:
+### Android:
 1. Install busybox, Jackpal's Terminal emulator and bash. Root is not mandatory.
 2. Run this command:
 cd /data/data/jackpal.androidterm/app_HOME/ && wget http://daniilgentili.magix.net/android/rai.sh -O rai.sh && chmod +x rai.sh
@@ -49,7 +49,7 @@ rai.sh URL
 
 If you cannot execute the command match the shebang of the script to the location of the bash executable.
 
-# iOS:
+### iOS:
 Jailbreak your device, install the terminal app and run the following command:
 
 wget http://daniilgentili.magix.net/rai.sh -O rai.sh && chmod +x rai.sh
@@ -68,7 +68,7 @@ And run with:
 rai.sh URL
 
 
-# Windows:
+### Windows:
 Install unxutils and win-bash, open up the command prompt and type:
 bash
 cd && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh
