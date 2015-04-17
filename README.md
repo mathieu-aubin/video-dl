@@ -3,9 +3,10 @@ Rai.tv bash download script created by Daniil Gentili.
 This script can be used on any Linux/Unix system (including Android, Mac OS X or iOS) and even on Windows!
 
 ## Usage:
-```rai.sh [ -af [ urls.txt ] ] URL URL2 URL3 ... ```
+```rai.sh [ -af [ urls.txt ] ] URL URL2 URL3 ...```
 
 Options:
+
 -a	Automatic mode: quietly downloads every video in maximum mp4 quality.
 
 -f	Reads URLs from specified text file(s).
@@ -39,10 +40,10 @@ And call it with:
 Run with:
 ```bash rai.sh URL```
 
-To use this script from any directory install the script directly in $PATH using this command (run it as root):
+To use this script from any directory install the script directly in $PATH using these commands (here, root is mandatory).
 
-```su
-mount -o remount,rw /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod +x /system/bin/rai.sh```
+```su```
+```mount -o remount,rw /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod +x /system/bin/rai.sh```
 
 And run with:
 ```rai.sh URL```
@@ -70,8 +71,8 @@ And run with:
 
 ### Windows:
 Install unxutils and win-bash, open up the command prompt and type:
-```bash
-cd && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh```
+```bash```
+```cd && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh```
 
 Run with:
 ```bash rai.sh```
@@ -83,13 +84,10 @@ Or change the shebang to match the location of the bash executable and run with
 To run the script from any directory run the following commands:
 
 ```bash
-cd $HOME
-echo "export PATH="$PATH:C:/rai/" >>.bashrc
-cd C:/rai
-wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh```
+cd $HOME && echo "export PATH="$PATH:$HOME/rai/" >>.bashrc && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && chmod +x rai.sh```
 
 Change shebang to match the location of the bash executable (default is C:/usr/bin/bash)
 
 And run with:
-```bash
-rai.sh URL```
+```bash```
+```rai.sh URL```
