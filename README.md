@@ -1,6 +1,8 @@
 # rai-bash-dl
-Rai.tv bash download script created by Daniil Gentili.
-This script can be used on any Linux/Unix system (including Android, Mac OS X or iOS) and even on Windows!
+Rai.tv bash download script.
+Created by [Daniil Gentili](http://daniil.eu.org), this script uses ]Andrea Lazzarotto](http://andrealazzarotto.com/)'s [server](video.lazza.dk) to decode URLs.
+This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website.
+This script can be installed on any Linux/Unix system (including Android, Mac OS X or iOS) and even on Windows!
 
 ## Usage:
 ```
@@ -133,5 +135,7 @@ rai.sh URL
 ```
 
 That's it!
+
 Enjoy!
-[Daniil Gentili](http://daniil.eu.org)
+
+[Daniil Gentili](http://daniil.eu.org/lol)
