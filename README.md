@@ -104,7 +104,7 @@ rai.sh URL
 
 
 ### Windows:
-Install [Unxutils](http://unxutils.sourceforge.net/)and [win-bash](http://win-bash.sourceforge.net/), open up the command prompt and type:
+Install [Unxutils](http://unxutils.sourceforge.net/) and [win-bash](http://win-bash.sourceforge.net/), open up the command prompt and type:
 
 ```
 bash
