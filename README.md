@@ -52,7 +52,7 @@ rai.sh URL
 1. Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer). Root is not mandatory.
 2. Run these commands:
 ```
-cd /data/data/jackpal.androidterm/app_HOME/ && wget http://daniilgentili.magix.net/android/rai.sh -O rai.sh && chmod +x rai.sh
+cd /data/data/jackpal.androidterm/app_HOME/ && wget http://daniilgentili.magix.net/android/rai.sh -O rai.sh && chmod 777 rai.sh
 ```
 
 Run with:
@@ -79,7 +79,7 @@ If you cannot execute the command match the shebang of the script to the locatio
 Jailbreak your device, install mobileterminal and wget and run the following command:
 
 ```
-wget http://daniilgentili.magix.net/rai.sh -O rai.sh && chmod +x rai.sh
+wget http://daniilgentili.magix.net/rai.sh -O rai.sh && chmod 777 rai.sh
 ```
 
 Run with:
@@ -94,7 +94,7 @@ To use from any directory install the script directly in $PATH using this comman
 
 ```
 su
-wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh && chmod +x /usr/bin/rai.sh
+wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh && chmod 777 /usr/bin/rai.sh
 ```
 
 And run with:
