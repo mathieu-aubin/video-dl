@@ -60,7 +60,10 @@ Select the format you want to download: " && read l &&
  selection=$(echo "$vars" | sed "$l!d")
  dl=$(wget http://video.lazza.dk/rai/?r=$(eval echo "$`echo "$vars" | sed "$l!d"`") -q -O -) &&
  ext=$(echo $dl | awk -F. '$0=$NF') &&
- wget $dl -O "$title.$ext"
+ echo "Download queued." &&
+ queue="$queue
+wget $dl -O $title.$ext
+ "
  }
 fi
 
@@ -79,4 +82,4 @@ for u in $URL; do
  dlcmd
 done
 
-[ "$?" = "0" ] && echo "All downloads completed successfully."
+echo "Downloading videos..." && $queue && echo "All downloads completed successfully."
