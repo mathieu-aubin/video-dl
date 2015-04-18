@@ -74,6 +74,7 @@ fi
 
 
 for u in $URL; do
+ curl -Ls -o /dev/null -w %{url_effective} $u |  grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue
  file=$(wget $u -q -O -)
  $(echo "$file" | grep videoTitolo)
  eval "$(echo "$file" | grep videoURL | sed "s/var//g" | tr -d '[[:space:]]')"
