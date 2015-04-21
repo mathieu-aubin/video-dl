@@ -5,7 +5,7 @@ Created by [Daniil Gentili](http://daniil.eu.org), this script uses [Andrea Lazz
 
 This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website.
 
-This script can be installed on [any Linux/Unix system](#Any-Linux/Unix-system) including [Android](#android), [Mac OS X](#Any-Linux/Unix-system) or [iOS](#iOS) and even on [Windows](#windows)!
+This script can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows)!
 And for every other platform there's the [web version](http://daniil.eu.org/rai.php) that you can use directly from [here](http://daniil.eu.org/rai.php) or [install on your own server](#installation-on-a-web-server).
 
 ## Usage:
