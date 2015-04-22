@@ -6,7 +6,6 @@ Created by [Daniil Gentili](http://daniil.eu.org), this script uses [Andrea Lazz
 This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website.
 
 This script can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows)!
-And for every other platform there's the [web version](http://daniil.eu.org/rai.php) that you can use directly from [here](http://daniil.eu.org/rai.php) or [install on your own server](#installation-on-a-web-server).
 
 ## Usage:
 ```
@@ -132,10 +131,6 @@ bash
 rai.sh URL
 ```
 
-### Installation on a web server.
-To use this script from any platform you can use the web version that you can find [here](http://daniil.eu.org/rai.php) or install it on your own Linux/Unix web server.
-To do this, install php, download [this file](https://github.com/danog/rai.tv-bash-dl/raw/master/rai.php) and place it in any subdirectory of the www directory. Then navigate to the appropriate page and download away!
-Note that shell_exec must be enabled in order for this script to work.
 
 That's it!
 
