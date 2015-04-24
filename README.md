@@ -9,16 +9,17 @@ This script can be installed on [any Linux/Unix system](#installation-instructio
 
 ## Usage:
 ```
-rai.sh [ -af [ urls.txt ] ] URL URL2 URL3 ...
+rai.sh [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
 ```
 
 Options:
 
--a	Automatic mode: quietly downloads every video in maximum mp4 quality.
+Options:
+-q	Quiet mode: useful for crontab jobs.
+-m	Manual mode: manually select the quality to download.
+-f	Reads URL(s) from specified text file(s).
+--help	Show this extremely helpful message.
 
--f	Reads URLs from specified text file(s).
-
---help	Shows this extremely helpful message.
 
 ## Installation instructions:
 
