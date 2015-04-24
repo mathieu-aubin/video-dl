@@ -14,15 +14,20 @@ rai.sh [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
 
 Options:
 
-Options:
+
+
 
 -q	Quiet mode: useful for crontab jobs.
 
+
 -m	Manual mode: manually select the quality to download.
+
 
 -f	Reads URL(s) from specified text file(s).
 
+
 --help	Show this extremely helpful message.
+
 
 
 ## Installation instructions:
