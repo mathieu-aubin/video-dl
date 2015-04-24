@@ -6,7 +6,7 @@
 [ "$1" = "--help" ] && echo "Rai.tv download script
 Created by Daniil Gentili
 Uses Andrea Lazzarotto's server to decode the URLs.
-Usage: $(basename $0) [ -qmf ] URL URL2 URL3 ...
+Usage: $(basename $0) [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
 
 Options:
 
