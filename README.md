@@ -121,7 +121,7 @@ To run the script from any directory run the following commands:
 
 ```
 bash
-cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && mkdir rai && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
+cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && mkdir -p rai && cd rai && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 ```
 
 
