@@ -70,7 +70,7 @@ su
 mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod 755 /system/bin/rai.sh
 ```
 
-And run with:
+Now you should be able to run it with:
 ```
 rai.sh URL
 ```
@@ -98,7 +98,7 @@ To use from any directory install the script directly in $PATH using this comman
 su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh && chmod 777 /usr/bin/rai.sh"
 ```
 
-And run with:
+Now you should be able to run it with:
 ```
 rai.sh URL
 ```
@@ -125,7 +125,7 @@ cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && mkdir rai && cd rai && wge
 ```
 
 
-And run with:
+Now you should be able to run it with:
 ```
 bash
 rai.sh URL
