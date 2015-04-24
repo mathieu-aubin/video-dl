@@ -6,11 +6,12 @@
 [ "$1" = "--help" ] && echo "Rai.tv download script
 Created by Daniil Gentili
 
-Usage: rai.sh [ -af ] URL URL2 URL3 ...
+Usage: rai.sh [ -qmf ] URL URL2 URL3 ...
 
 Options:
 
--a	Automatic mode: quietly downloads every video in maximum mp4 quality.
+-q	Quiet mode: useful for crontab jobs.
+-m	Manual mode: manually select the quality to download (kind of unstable).
 -f	Reads URLs from specified text file(s).
 --help	Shows this extremely helpful message.
 
@@ -18,39 +19,48 @@ Options:
 
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
-[ "$1" = "-a" ] && A=y && shift
+[ "$1" = "-q" ] && WOPT="-q" && shift
+[ "$1" = "-m" ] && M=y && shift
 [ "$1" = "-f" ] && F=y && shift
-[ "$1" = "-fa" ] && A=y && F=y && shift
-[ "$1" = "-af" ] && A=y && F=y && shift
+[ "$1" = "-qm" ] && WOPT="-q" && M=y && shift
 
-[ "$2" = "-a" ] && A=y && set -- "${@:1}" "" "${@:3}"
+[ "$1" = "-mf" ] && M=y && F=y && shift
 
-[ "$2" = "-f" ] && F=y && set -- "${@:1}" "" "${@:3}"
+[ "$1" = "-qf" ] && WOPT="-q" && F=y && shift
 
-[ "$3" = "-a" ] && A=y && set -- "${@:2}" "" "${@:4}"
+[ "$1" = "-qmf" ] && WOPT="-q" && M=y && F=y && shift
 
-
-
+[ "$1" = "-mq" ] && WOPT="-q" && M=y && shift
+[ "$1" = "-fm" ] && M=y && F=y && shift
+[ "$1" = "-fq" ] && WOPT="-q" && F=y && shift
+[ "$1" = "-mfq" ] && WOPT="-q" && M=y && F=y && shift
+[ "$1" = "-fmq" ] && WOPT="-q" && M=y && F=y && shift
+[ "$1" = "-mqf" ] && WOPT="-q" && M=y && F=y && shift
 
 function var() {
 eval $*
 }
 
-if [ "$A" = "y" ]; then
+if [ "$M" != "y" ]; then
 
  function dlcmd() {
-dl=$(echo $videoURL_MP4 || echo $videoURL)
-ext=mp4
-wget $(wget http://video.lazza.dk/rai/?r=$dl -q -O -) -O "$title.$ext"
+set +u
+dl=$(wget http://video.lazza.dk/rai/?r=$(echo $videoURL_MP4 || echo $videoURL_H264 || echo $videoURL_WMV | echo $videoURL) -q -O -)
+set +u
+ext=$(echo $dl | awk -F. '$0=$NF')
+queue="$queue
+wget $dl -O $title.$ext $WOPT
+"
  }
-
 else
 
  echo "Video(s) info:" &&
  function dlcmd() {
+vars=$(compgen -A variable | grep videoURL)
+formats="$(echo "$vars" | sed -e 's/\<videoURL\>/Normal quality (mp4)/g' | sed -e 's/\<videoURL_MP4\>/High quality (mp4)/g' | sed -e 's/\<videoURL_H264\>/Normal quality (h264)/g' | sed 's/\<videoURL_M3U8\>/Normal quality (m3u8)/g' |  sed 's/\<videoURL_wmv\>/Normal quality (wmv)/g' | awk '{print NR, $0}')"
 echo -n "
 
-=====================================================
+=====================================
 
 Title: $videoTitolo
 
@@ -58,14 +68,13 @@ Available formats:
 $formats
 
 Select the format you want to download: " && read l &&
- selection=$(echo "$vars" | sed "$l!d")
- dl=$(wget http://video.lazza.dk/rai/?r=$(eval echo "$`echo "$vars" | sed "$l!d"`") -q -O -) &&
- ext=$(echo $dl | awk -F. '$0=$NF') &&
- echo "Download queued." &&
- queue="$queue
-wget $dl -O $title.$ext
- "
+dl=$(eval echo "$`echo "$vars" | sed "$l!d"`") &&
+dl=$(echo $dl | grep -q http && echo $dl || echo http:$dl)
+echo "Download queued." &&
+queue="$queue
+wget $dl -O $title.mp4 -U 'Mozilla/5.0 $WOPT"
  }
+
 fi
 
 
@@ -74,14 +83,10 @@ fi
 
 
 for u in $URL; do
- curl -Ls -o /dev/null -w %{url_effective} $u |  grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue
+ curl --version &>/dev/null && (curl -Ls -o /dev/null -w %{url_effective} $u |  grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue)
  file=$(wget $u -q -O -)
  $(echo "$file" | grep videoTitolo)
- eval "$(echo "$file" | grep videoURL | sed "s/var//g" | tr -d '[[:space:]]')"
- vars=$(compgen -A variable | grep videoURL)
- formats="$(echo "$vars" | sed -e 's/\<videoURL\>/Normal quality (mp4)/g' | sed -e 's/\<videoURL_MP4\>/High quality (mp4)/g' | sed -e 's/\<videoURL_H264\>/Normal quality (h264)/g' | sed 's/\<videoURL_M3U8\>/Normal quality (m3u8)/g' |  sed 's/\<videoURL_wmv\>/Normal quality (wmv)/g' | awk '{print NR, $0}')"
+ eval $(echo "$file" | grep videoURL | sed "s/var//g" | tr -d '[[:space:]]')
  title="${videoTitolo//[^a-zA-Z0-9 ]/}" && title=`echo $title | tr -s " "` && title=${title// /_}
  dlcmd
-done
-
-echo "Downloading videos..." && $queue && echo "All downloads completed successfully."
+done && echo "Downloading videos..." && $queue && echo "All downloads completed successfully."
