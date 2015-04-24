@@ -5,15 +5,15 @@
 
 [ "$1" = "--help" ] && echo "Rai.tv download script
 Created by Daniil Gentili
-
-Usage: rai.sh [ -qmf ] URL URL2 URL3 ...
+Uses Andrea Lazzarotto's server to decode the URLs.
+Usage: $(basename $0) [ -qmf ] URL URL2 URL3 ...
 
 Options:
 
 -q	Quiet mode: useful for crontab jobs.
--m	Manual mode: manually select the quality to download (kind of unstable).
--f	Reads URLs from specified text file(s).
---help	Shows this extremely helpful message.
+-m	Manual mode: manually select the quality to download.
+-f	Reads URL(s) from specified text file(s).
+--help	Show this extremely helpful message.
 
 " && exit
 
@@ -71,8 +71,9 @@ $formats
 Select the format you want to download: " && read l &&
 dl=$(eval echo "$`echo "$vars" | sed "$l!d"`") &&
 dl=$(echo $dl | grep -q http && echo $dl || echo http:$dl)
-wget $dl -O $title.tmp -U "$user" $WOPT
-grep -q EXT- $title.tmp && (avconv -i "$dl" -codec copy -qscale 0 $title.mp4; rm $title.tmp)|| mv $title.tmp $title.mp4
+queue="$queue
+wget $dl -O $title.tmp -U 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53' $WOPT; grep -q EXT- $title.tmp && (avconv -i $dl -codec copy -qscale 0 $title.mp4; rm $title.tmp)|| mv $title.tmp $title.mp4
+"
  }
 fi
 
@@ -86,4 +87,4 @@ for u in $URL; do
  eval $(echo "$file" | grep videoURL | sed "s/var//g" | tr -d '[[:space:]]')
  title="${videoTitolo//[^a-zA-Z0-9 ]/}" && title=`echo $title | tr -s " "` && title=${title// /_}
  dlcmd
-done && echo "Downloading videos..." && $queue && echo "All downloads completed successfully."
+done && echo "Downloading videos..." && eval $queue && echo "All downloads completed successfully."
