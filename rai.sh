@@ -56,6 +56,7 @@ else
 
  echo "Video(s) info:" &&
  function dlcmd() {
+user="Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53"
 vars=$(compgen -A variable | grep videoURL)
 formats="$(echo "$vars" | sed -e 's/\<videoURL\>/Normal quality (mp4)/g' | sed -e 's/\<videoURL_MP4\>/High quality (mp4)/g' | sed -e 's/\<videoURL_H264\>/Normal quality (h264)/g' | sed 's/\<videoURL_M3U8\>/Normal quality (m3u8)/g' |  sed 's/\<videoURL_wmv\>/Normal quality (wmv)/g' | awk '{print NR, $0}')"
 echo -n "
@@ -70,17 +71,13 @@ $formats
 Select the format you want to download: " && read l &&
 dl=$(eval echo "$`echo "$vars" | sed "$l!d"`") &&
 dl=$(echo $dl | grep -q http && echo $dl || echo http:$dl)
-echo "Download queued." &&
-queue="$queue
-wget $dl -O $title.mp4 -U 'Mozilla/5.0 $WOPT"
+wget $dl -O $title.tmp -U "$user" $WOPT
+grep -q EXT- $title.tmp && (avconv -i "$dl" -codec copy -qscale 0 $title.mp4; rm $title.tmp)|| mv $title.tmp $title.mp4
  }
-
 fi
 
 
 [ "$F" = "y" ] && URL="$(cat "$*")" || URL="$*"
-
-
 
 for u in $URL; do
  curl --version &>/dev/null && (curl -Ls -o /dev/null -w %{url_effective} $u |  grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue)
