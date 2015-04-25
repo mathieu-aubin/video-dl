@@ -17,16 +17,19 @@ Options:
 
 
 
--q	Quiet mode: useful for crontab jobs.
+-q:	Quiet mode: useful for crontab jobs.
 
 
--m	Manual mode: manually select the quality to download.
+-m:	Manual mode: manually select the quality to download.
 
 
--f	Reads URL(s) from specified text file(s).
+-f:	Reads URL(s) from specified text file(s).
 
 
---help	Show this extremely helpful message.
+-u: Self-update the script (run this command without arguments).
+
+
+--help:	Show this extremely helpful message.
 
 
 
