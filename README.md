@@ -36,7 +36,7 @@ Options:
 Execute this command to install the script:
 
 ```
-wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O rai.sh && chmod +x rai.sh
+wget https://github.com/danog/rai.tv-bash-dl/raw/master/rai.sh -O rai.sh || curl -L https://github.com/danog/rai.tv-bash-dl/raw/master/rai.sh -o rai.sh; chmod +x rai.sh
 ```
 
 Run with 
@@ -48,7 +48,7 @@ In the directory where you downloaded it.
 To use from any directory install the script directly in the $PATH using this command (run as root):
 
 ```
-wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O /usr/bin/rai.sh && chmod +x /usr/bin/rai.sh
+wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O /usr/bin/rai.sh || curl -L https://github.com/danog/rai.tv-bash-dl/raw/master/rai.sh -o rai.sh; chmod +x /usr/bin/rai.sh
 ```
 
 Now you should be able to run the script simply with:
