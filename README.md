@@ -131,7 +131,7 @@ In the directory where you downloaded it.
 To run the script from any directory run the following commands:
 
 ```
-cd /bin && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
+cd /bin && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && cd $OLDPWD
 ```
 
 
