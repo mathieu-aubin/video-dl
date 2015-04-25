@@ -116,29 +116,27 @@ rai.sh URL
 
 
 ### Windows:
-Install [Unxutils](http://unxutils.sourceforge.net/) and [win-bash](http://win-bash.sourceforge.net/), open up the command prompt and type:
+Install [Cygwin](https://www.cygwin.com), open its command prompt and type:
 
 ```
-wget http://daniilgentili.magix.net/rai.sh -O rai.sh
+wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 ```
 
 Run with:
 ```
-bash rai.sh
+./rai.sh
 ```
 In the directory where you downloaded it.
 
 To run the script from any directory run the following commands:
 
 ```
-bash
-cd / && echo "export PATH="$PATH:/rai/"" >>.bashrc && mkdir -p rai && cd rai && wget http://daniilgentili.magix.net/rai.sh -O rai.sh
+cd /bin && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 ```
 
 
 Now you should be able to run it with:
 ```
-bash
 rai.sh URL
 ```
 
