@@ -20,13 +20,13 @@ Options:
 wget --help &>/dev/null
 if [ "$?" = "0" ]; then 
  function dl() {
-wget $1 -O $2 $3
+wget $1 -O $2 $3 $4 $5
  }
  dopt="-q"
  uopt="-U"
 else
  function dl()  {
-curl -L $1 -o $2 $3
+curl -L $1 -o $2 $3 $4 $5
  }
  dopt="-s"
  uopt="-A"
