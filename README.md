@@ -26,7 +26,7 @@ Options:
 -f:	Reads URL(s) from specified text file(s).
 
 
--u: Self-update the script (run this command without arguments).
+-u: Self-update the script.
 
 
 --help:	Show this extremely helpful message.
