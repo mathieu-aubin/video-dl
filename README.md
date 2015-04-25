@@ -26,9 +26,6 @@ Options:
 -f:	Reads URL(s) from specified text file(s).
 
 
--u: Self-update the script.
-
-
 --help:	Show this extremely helpful message.
 
 
@@ -36,6 +33,7 @@ Options:
 ## Installation instructions:
 
 ### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X:
+Note that you will have to install wget to use this program on Mac os X.
 Execute this command to install the script:
 
 ```
