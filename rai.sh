@@ -17,7 +17,7 @@ Options:
 
 " && exit
 
-wget && (function dl() { wget $1 -O $2 $3 ; } && dopt="-q" && uopt="-U") || (function dl()  { curl -L $1 -o $2 $3; } && dopt="-s" && uopt="-A")
+wget &>/dev/null && (function dl() { wget $1 -O $2 $3 ; } && dopt="-q" && uopt="-U") || (function dl()  { curl -L $1 -o $2 $3; } && dopt="-s" && uopt="-A")
 
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
