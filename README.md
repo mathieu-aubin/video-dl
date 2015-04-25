@@ -116,7 +116,7 @@ rai.sh URL
 
 
 ### Windows:
-Install [Cygwin](https://www.cygwin.com), open its command prompt and type:
+Install [Cygwin](https://www.cygwin.com) (don't forget to install wget during the installation process!), open its command prompt and type:
 
 ```
 wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
