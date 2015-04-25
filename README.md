@@ -39,7 +39,7 @@ Options:
 Execute this command to install the script:
 
 ```
-wget https://github.com/danog/rai.tv-bash-dl/raw/master/rai.sh -O rai.sh || curl -L https://github.com/danog/rai.tv-bash-dl/raw/master/rai.sh -o rai.sh; chmod +x rai.sh
+wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x rai.sh
 ```
 
 Run with 
@@ -51,7 +51,7 @@ In the directory where you downloaded it.
 To use from any directory install the script directly in the $PATH using this command (run as root):
 
 ```
-wget https://github.com/danog/rai-bash-dl/raw/master/rai.sh -O /usr/bin/rai.sh || curl -L https://github.com/danog/rai.tv-bash-dl/raw/master/rai.sh -o rai.sh; chmod +x /usr/bin/rai.sh
+wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x /usr/bin/rai.sh
 ```
 
 Now you should be able to run the script simply with:
@@ -94,7 +94,7 @@ If you cannot execute the command match the shebang of the script to the locatio
 Jailbreak your device, install mobileterminal and wget and run the following command:
 
 ```
-wget http://daniilgentili.magix.net/rai.sh -O rai.sh && chmod 777 rai.sh
+wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x rai.sh
 ```
 
 Run with:
@@ -108,7 +108,7 @@ To view the downloaded video use iFile.
 To use from any directory install the script directly in $PATH using this command:
 
 ```
-su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh && chmod 777 /usr/bin/rai.sh"
+su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x /usr/bin/rai.sh"
 ```
 
 Now you should be able to run it with:
