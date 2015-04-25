@@ -32,7 +32,7 @@ curl -L $1 -o $2 $3 $4 $5
  dopt="-s"
  uopt="-A"
 fi
-[ "$1" = "-u" ] && echo "Updating script..." && dl http://daniilgentili.magix.net/rai.sh $0 $dopt; exit $?
+[ "$1" = "-u" ] && (echo "Updating script..." && dl http://daniilgentili.magix.net/rai.sh $0 $dopt; exit $?)
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
 [ "$1" = "-q" ] && WOPT="$dopt" && shift
