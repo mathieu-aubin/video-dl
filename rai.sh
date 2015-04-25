@@ -17,39 +17,42 @@ Options:
 
 " && exit
 
+wget && (function dl() { wget $1 -O $2 $3 ; } && dopt="-q" && uopt="-U") || (function dl()  { curl $1 -o $2 $3; } && dopt="-s" && uopt="-A")
+
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
-[ "$1" = "-q" ] && WOPT="-q" && shift
+[ "$1" = "-q" ] && WOPT="$dopt" && shift
 [ "$1" = "-m" ] && M=y && shift
 [ "$1" = "-f" ] && F=y && shift
-[ "$1" = "-qm" ] && WOPT="-q" && M=y && shift
+[ "$1" = "-qm" ] && WOPT="$dopt" && M=y && shift
 
 [ "$1" = "-mf" ] && M=y && F=y && shift
 
-[ "$1" = "-qf" ] && WOPT="-q" && F=y && shift
+[ "$1" = "-qf" ] && WOPT="$dopt" && F=y && shift
 
-[ "$1" = "-qmf" ] && WOPT="-q" && M=y && F=y && shift
+[ "$1" = "-qmf" ] && WOPT="$dopt" && M=y && F=y && shift
 
-[ "$1" = "-mq" ] && WOPT="-q" && M=y && shift
+[ "$1" = "-mq" ] && WOPT="$dopt" && M=y && shift
 [ "$1" = "-fm" ] && M=y && F=y && shift
-[ "$1" = "-fq" ] && WOPT="-q" && F=y && shift
-[ "$1" = "-mfq" ] && WOPT="-q" && M=y && F=y && shift
-[ "$1" = "-fmq" ] && WOPT="-q" && M=y && F=y && shift
-[ "$1" = "-mqf" ] && WOPT="-q" && M=y && F=y && shift
+[ "$1" = "-fq" ] && WOPT="$dopt" && F=y && shift
+[ "$1" = "-mfq" ] && WOPT="$dopt" && M=y && F=y && shift
+[ "$1" = "-fmq" ] && WOPT="$dopt" && M=y && F=y && shift
+[ "$1" = "-mqf" ] && WOPT="$dopt" && M=y && F=y && shift
 
 function var() {
 eval $*
 }
 
+
 if [ "$M" != "y" ]; then
 
  function dlcmd() {
 set +u
-dl=$(wget http://video.lazza.dk/rai/?r=$(echo $videoURL_MP4 || echo $videoURL_H264 || echo $videoURL_WMV | echo $videoURL) -q -O -)
+dl=$(dl http://video.lazza.dk/rai/?r=$(echo $videoURL_MP4 || echo $videoURL_H264 || echo $videoURL_WMV | echo $videoURL) - $dopt)
 set +u
 ext=$(echo $dl | awk -F. '$0=$NF')
 queue="$queue
-wget $dl -O $title.$ext $WOPT
+dl $dl $title.$ext $WOPT
 "
  }
 else
@@ -72,7 +75,7 @@ Select the format you want to download: " && read l &&
 dl=$(eval echo "$`echo "$vars" | sed "$l!d"`") &&
 dl=$(echo $dl | grep -q http && echo $dl || echo http:$dl)
 queue="$queue
-wget $dl -O $title.tmp -U 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53' $WOPT; grep -q EXT- $title.tmp && (avconv -i $dl -codec copy -qscale 0 $title.mp4; rm $title.tmp)|| mv $title.tmp $title.mp4
+dl $dl $title.tmp $WOPT $uopt 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53'; grep -q EXT- $title.tmp && (avconv -i $dl -codec copy -qscale 0 $title.mp4; rm $title.tmp)|| mv $title.tmp $title.mp4
 "
  }
 fi
@@ -82,7 +85,7 @@ fi
 
 for u in $URL; do
  curl --version &>/dev/null && (curl -Ls -o /dev/null -w %{url_effective} $u |  grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue)
- file=$(wget $u -q -O -)
+ file=$(dl $u - $dopt)
  $(echo "$file" | grep videoTitolo)
  eval $(echo "$file" | grep videoURL | sed "s/var//g" | tr -d '[[:space:]]')
  title="${videoTitolo//[^a-zA-Z0-9 ]/}" && title=`echo $title | tr -s " "` && title=${title// /_}
