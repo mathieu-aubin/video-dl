@@ -73,7 +73,7 @@ Run with:
 bash /sdcard/rai.sh URL
 ```
 
-To install the script directly in the $PATH using these commands (here, root is mandatory).
+To install the script directly in the $PATH use these commands (here, root is mandatory).
 
 
 ```
