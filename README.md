@@ -1,6 +1,7 @@
 # rai.tv-bash-dl
 Rai.tv bash download script.
 
+[Read in Italian](https://github.com/danog/rai.tv-bash-dl/blob/master/README-IT.md)
 Created by [Daniil Gentili](http://daniil.eu.org), this script uses [Andrea Lazzarotto](http://andrealazzarotto.com/)'s [server](http://video.lazza.dk) to decode URLs.
 
 This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website.
