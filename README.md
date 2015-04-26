@@ -32,7 +32,7 @@ Options:
 
 ## Installation instructions:
 
-### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X:
+### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 Note that you will have to install wget to use this program on Mac os X.
 Execute this command to install the script:
 
