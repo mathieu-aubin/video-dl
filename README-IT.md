@@ -1,7 +1,7 @@
 # rai.tv-bash-dl
 Rai.tv bash download script.
 
-Creato da [Daniil Gentili](http://daniil.eu.org), questo script usa il [server](http://video.lazza.dk) di [Andrea Lazzarotto](http://andrealazzarotto.com/)per decodificare gli indirizzi.
+Creato da [Daniil Gentili](http://daniil.eu.org), questo script usa il [server](http://video.lazza.dk) di [Andrea Lazzarotto](http://andrealazzarotto.com/) per decodificare gli indirizzi.
 
 Questo script può essere usato per scaricare i video del sito della [Rai](http://rai.tv).
 
