@@ -61,7 +61,7 @@ rai.sh URL
 ### Android:
 #### Installa [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Emulatore Terminale](https://play.google.com/store/apps/details?id=jackpal.androidterm) e [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) se il tuo dispositivo ha i permessi di root o soltanto [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) se il tuo dispositivo non è rootato. 
 
-Nota: se non riesci a copiare e incollrare i comandi nel l'emulatore terminale fai così: incolla i comandi una riga alla volta nella barra degli indirizzi, ri-copiali dalla barra degli indirizzi e ri-incollali nell'emulatore terminale.
+Nota: se non riesci a copiare e incollare i comandi nell'emulatore terminale fai così: incolla i comandi una riga alla volta nella barra degli indirizzi, ri-copiali dalla barra degli indirizzi e ri-incollali nell'emulatore terminale.
 Esegui questo comando per installare lo script:
 ```
 cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
