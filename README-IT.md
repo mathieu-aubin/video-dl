@@ -7,7 +7,7 @@ Creato da [Daniil Gentili](http://daniil.eu.org), questo script usa il [server](
 
 Questo script può essere usato per scaricare i video del sito della [Rai](http://rai.tv).
 
-Questo script può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows)!
+Questo script può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows)!
 
 ## Istruzioni di utilizzo:
 ```
@@ -41,7 +41,7 @@ Esegui questo comando per installare lo script:
 wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x rai.sh
 ```
 
-Chiama il programma con:
+Esegui il programma con:
 ```
 ./rai.sh URL
 ```
