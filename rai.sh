@@ -45,7 +45,7 @@ if [ "$M" != "y" ]; then
 
  function dlcmd() {
 set +u
-dl=$(wget http://video.lazza.dk/rai/?r=$(echo $videoURL_MP4 || echo $videoURL_H264 || echo $videoURL_WMV | echo $videoURL) -q -O -)
+dl=$(wget http://video.lazza.dk/rai/?r=$(echo $videoURL_MP4 || echo $videoURL_H264 || echo $videoURL_WMV || echo $videoURL) -q -O -)
 set +u
 ext=$(echo $dl | awk -F. '$0=$NF')
 queue="$queue
