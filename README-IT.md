@@ -66,7 +66,8 @@ rai.sh URL
 
 ### Android:
 #### Metodo 1 (app).
-Abilita le sorgenti sconosciute e installa [questa applicazione](http://bit.ly/0192837465k)
+Abilita le sorgenti sconosciute e installa [questa applicazione](http://bit.ly/0192837465k).
+
 L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 
 #### Metodo 2 (script).
