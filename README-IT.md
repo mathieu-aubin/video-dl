@@ -9,6 +9,8 @@ Questo script può essere usato per scaricare i video del sito della [Rai](http:
 
 Questo script può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows)!
 
+
+
 ## Istruzioni di utilizzo:
 ```
 rai.sh [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
