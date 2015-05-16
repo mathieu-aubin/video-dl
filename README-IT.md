@@ -94,7 +94,7 @@ L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 Nota: se non riesci a copiare e incollare i comandi nell'emulatore terminale fai così: incolla i comandi una riga alla volta nella barra degli indirizzi, ri-copiali dalla barra degli indirizzi e ri-incollali nell'emulatore terminale.
 Esegui questo comando per installare lo script:
 ```
-cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
+cd /sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
 ```
 
 Eseguilo con:
