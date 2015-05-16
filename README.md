@@ -24,7 +24,7 @@ Options:
 
 
 
--q:	Quiet mode: useful for crontab jobs.
+-q:	Quiet mode: useful for crontab jobs, automatically enables -a.
 
 
 -a:	Automatic/Andrea mode: automatically download the video in the maximum quality using Andrea's server.
