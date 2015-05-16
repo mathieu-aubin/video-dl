@@ -16,7 +16,7 @@ Also on Android you can use the [app](http://bit.ly/0192837465k) to download vid
 For every other platform there's the [web version](http://video.daniil.eu.org/rai.php).
 ## Usage:
 ```
-rai.sh [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
+rai.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 ```
 
 Options:
@@ -27,13 +27,14 @@ Options:
 -q:	Quiet mode: useful for crontab jobs.
 
 
--m:	Manual mode: manually select the quality to download.
+-a:	Automatic/Andrea mode: automatically download the video in the maximum quality using Andrea's server.
 
 
 -f:	Reads URL(s) from specified text file(s).
 
 
 --help:	Show this extremely helpful message.
+
 
 
 
@@ -49,9 +50,13 @@ wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgen
 
 Run with 
 ```
-./rai.sh URL
+./rai.sh "URL"
 ```
 In the directory where you downloaded it.
+
+
+Do not forget to put the URL between quotes.
+
 
 To use from any directory install the script directly in the $PATH using this command (run as root):
 
@@ -61,8 +66,13 @@ wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L http://
 
 Now you should be able to run the script simply with:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+
+Do not forget to put the URL between quotes.
+
 
 
 
@@ -81,8 +91,13 @@ cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh
 
 Run with:
 ```
-bash /sdcard/rai.sh URL
+bash /sdcard/rai.sh "URL"
 ```
+
+
+Do not forget to put the URL between quotes.
+
+
 
 To install the script directly in the $PATH use these commands (here, root is mandatory).
 
@@ -94,8 +109,13 @@ mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/rai.s
 
 Now you should be able to run it with:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Do not forget to put the URL between quotes.
+
+
 
 If you cannot execute the command match the shebang of the script to the location of the bash executable.
 
@@ -108,8 +128,13 @@ wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgen
 
 Run with:
 ```
-./rai.sh URL
+./rai.sh "URL"
 ```
+
+
+Do not forget to put the URL between quotes.
+
+
 In the directory where you downloaded it.
 
 To view the downloaded video use iFile. 
@@ -122,8 +147,13 @@ su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L 
 
 Now you should be able to run it with:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Do not forget to put the URL between quotes.
+
+
 
 
 ### Windows:
@@ -135,8 +165,14 @@ wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 
 Run with:
 ```
-./rai.sh
+./rai.sh "URL"
 ```
+
+
+Do not forget to put the URL between quotes.
+
+
+
 In the directory where you downloaded it.
 
 To run the script from any directory run the following commands:
@@ -148,8 +184,13 @@ cd /bin && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && cd $OLDPW
 
 Now you should be able to run it with:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Do not forget to put the URL between quotes.
+
+
 
 
 That's it!
