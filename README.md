@@ -83,6 +83,10 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 #### Method 2 (script).
 #### Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) on rooted devices or [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) if your device isn't rooted. 
 
+
+[Video tutorial](https://www.youtube.com/watch?v=4NLs2NzHbbc)
+
+
 Note: if you can't copy & paste the commands directly in the Terminal Emulator app try this: paste them in the url bar one line at a time, copy them again from the url bar and try to paste them again in the Terminal Emulator app.
 Run these commands:
 ```
