@@ -122,7 +122,7 @@ tr -s "," "\n" |
 tr -s '"' "\n" |
 sed 's/\\//g'; else echo "$json" |
 sed -n "1,/$v/p" |
-awk '/{/{i++}i' |
+awk '/\{/{i++}i' |
 tr -s "," "\n" |
 tr -s '"' "\n" |
 sed 's/\\//g';fi)"
