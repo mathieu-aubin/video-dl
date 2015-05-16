@@ -90,7 +90,7 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 Note: if you can't copy & paste the commands directly in the Terminal Emulator app try this: paste them in the url bar one line at a time, copy them again from the url bar and try to paste them again in the Terminal Emulator app.
 Run these commands:
 ```
-cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
+cd /sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
 ```
 
 Run with:
