@@ -117,7 +117,7 @@ for u in $URL; do
   tmpjson="$(if [ "$?" = 0 ]; then echo "$json" |
 sed -n "1,/$v/p" |
 awk "/$vprev/{i++}i" |
-awk '/{/{i++}i' |
+awk '/\{/{i++}i' |
 tr -s "," "\n" |
 tr -s '"' "\n" |
 sed 's/\\//g'; else echo "$json" |
