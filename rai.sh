@@ -93,7 +93,7 @@ fi
 
 
 for u in $URL; do
- curl --version &>/dev/null && (curl -Ls -o /dev/null -w %{url_effective} $u | grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue)
+ curl --version &>/dev/null && (curl -Ls -o /dev/null -w %{url_effective} $u | grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue) || echo $u  | grep -qE 'http://www*.rai.*/dl/RaiTV/programmi/media/*|http://www*.rai.*/dl/RaiTV/tematiche/*|http://www*.rai.*/dl/*PublishingBlock-*|http://www*.rai.*/dl/replaytv/replaytv.html*|http://*.rai.it/*|http://www.rainews.it/dl/rainews/*' || continue
  file=$(wget $u -q -O -)
  echo $u | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.*
  # Get the relinkers
