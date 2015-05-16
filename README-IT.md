@@ -7,6 +7,10 @@ Creato da [Daniil Gentili](http://daniil.eu.org), questo script usa il [server](
 
 Questo script può essere usato per scaricare i video del sito della [Rai](http://rai.tv).
 
+
+Questo script è in grado di scaricare i video di tutti i siti della Rai, incluso Rai Replay.
+
+
 Questo script può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows)!
 
 È anche disponible [un'applicazione per Android](http://bit.ly/0192837465k).
@@ -15,17 +19,17 @@ E per tutte le altre piattaforme c'è la [versione web](http://video.daniil.eu.o
 
 ## Istruzioni di utilizzo:
 ```
-rai.sh [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
+rai.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 ```
 Opzioni:
 
 
 
 
--q:	Modalità silenziosa. Utile per programmazioni in crontab.
+-q:	Modalità silenziosa. Utile per programmazioni in crontab, abilita automaticamente -a.
 
 
--m:	Modalità manuale: seleziona manualmente la qualità da scaricare.
+-a:	Modalità Automatica/Andrea: scarica automaticamente la massima qualità dei video utlizzando il server di Andrea.
 
 
 -f:	Leggi gli URL da uno o più file di testo.
@@ -47,8 +51,13 @@ wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgen
 
 Esegui il programma con:
 ```
-./rai.sh URL
+./rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 Nella directory dove l'hai scaricato.
 
 Per usare questo programma da qualsiasi cartella installa il programma nella $PATH con questo comando (da eseguire come root):
@@ -59,8 +68,13 @@ wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L http://
 
 Ora potrai eseguire lo script da qualsiasi cartella con:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 
 
 
@@ -81,8 +95,13 @@ cd sdcard && wget http://daniilgentili.magix.net/android/rai.sh
 
 Eseguilo con:
 ```
-bash /sdcard/rai.sh URL
+bash /sdcard/rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 
 Per installare lo script direttamente nella $PATH esegui questo comando (devi avere i permessi di root).
 
@@ -94,8 +113,13 @@ mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/rai.s
 
 Ora dovresti essere in grado di eseguire lo script con:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 
 Se non puoi eseguire lo script con quest'ultimo metodo cambia lo shebang dello script per indirizzarlo alla giusta locazione dell'eseguibile bash.
 
@@ -108,8 +132,14 @@ wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgen
 
 Esegui lo script con:
 ```
-./rai.sh URL
+./rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
+
 Nella cartella dove lo hai scaricato.
 
 Per visualizzare i video scaricati usa iFile.
@@ -122,8 +152,13 @@ su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L 
 
 Ora dovresti essere in grado di eseguire lo script con questo comando:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 
 
 ### Windows:
@@ -135,8 +170,14 @@ wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
 
 Esegui lo script con:
 ```
-./rai.sh
+./rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
+
 Nella directory dove lo hai scaricato.
 
 Per usare lo script da qualsiasi directory usa questo comando.
@@ -146,10 +187,15 @@ cd /bin && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && cd $OLDPW
 ```
 
 
-Ora dovresti essere in grado di eseguirlo con:
+Ora dovresti essere in grado di eseguirlo con un:
 ```
-rai.sh URL
+rai.sh "URL"
 ```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 
 
 Ecco qua!
