@@ -8,8 +8,6 @@ Created by [Daniil Gentili](http://daniil.eu.org), this script uses [Andrea Lazz
 
 This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website: it supports nearly all videos, including Rai Replay and iframe videos.
 
-If you find a video that won't work, [contact me]<daniil.gentili.dg@gmail.com>.
-
 
 This script can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows)!
 
