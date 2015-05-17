@@ -42,6 +42,20 @@ Options:
 
 ### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 Note that you will have to install wget to use this program on Mac os X.
+
+On debian-derived distros, execute this command to add my repo to your system:
+```
+sudo wget -q -O /etc/apt/sources.list.d/daniil.list http://dano.cu.cc/1IJrcd1 && wget -q -O - http://dano.cu.cc/1Aci9Qp | sudo apt-key add -
+```
+You should see an OK if the operation was successful.
+
+
+And this command to install the script.
+```
+sudo apt-get update && sudo apt-get -y install raitv-bash-dl
+```
+Or if you want to use the old method follow these instructions.
+
 Execute this command to install the script:
 
 ```
