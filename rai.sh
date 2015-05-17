@@ -69,8 +69,6 @@ sane="$(echo "$u" | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed
 
 api="$(wget "http://video.daniil.it/api/rai.php?url=$sane" -q -O - | sed '/^\s*$/d')"
 
-echo "$api" | grep -q \( || continue
-
 max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
