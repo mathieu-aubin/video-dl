@@ -51,10 +51,10 @@ eval $*
 if [ "$A" = "y" ]; then
 
  function dlcmd() {
-dl="$(echo "$api" | awk 'END {print $NF}')"
+url="$(echo "$api" | awk 'END {print $NF}')"
 ext=$(echo $url | awk -F. '$0=$NF')
 queue="$queue
-wget $dl -O $title.$ext $WOPT
+wget $url -O $title.$ext $WOPT
 "
  }
 else
