@@ -61,7 +61,7 @@ else
 
  echo "Video(s) info:" &&
  function dlcmd() {
-videoTitolo=$(echo "$titles" | cut -d \  -f 1)
+videoTitolo=$(echo "$titles" | sed s/'\w*$'//)
 max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
@@ -96,7 +96,7 @@ for u in $URL; do
 
  titles=$(echo "$api" | sed -n 1p)
  api=$(echo "$api" | sed '1!d')
- title=$(echo "$titles" | cut -d \  -f 2)
+ title=$(echo "$titles" | cut -d \  -f 1)
 
  dlcmd
 done
