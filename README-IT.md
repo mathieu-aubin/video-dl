@@ -44,7 +44,7 @@ Opzioni:
 ### Qualsiasi sistema Linux/Unix (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 Nota: dovrai installare wget su Mac OS X per usare questo script.
 
-Su sistemi debian o derivate, esegui wuesto comando per aggiungere la mia repo al sistema:
+Su sistemi debian o derivate, esegui questo comando per aggiungere la mia repo al sistema:
 ```
 sudo wget -O /etc/apt/sources.list.d/daniil.list http://dano.cu.cc/1IJrcd1 && wget -O - http://dano.cu.cc/1Aci9Qp | sudo apt-key add -
 ```
