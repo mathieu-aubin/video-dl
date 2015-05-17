@@ -79,8 +79,9 @@ $(echo "$api" | sed 's/http.*//')
 
 "
 
-until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video)? "; read l; [ "$l" = "q" ] && break;done 2>/dev/null
+until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video)? "; read l; [ "$l" = "q" ] && break && continue;done 2>/dev/null
 
+[ "$l" = "q" ] && continue
 
 url=$(echo "$api" | sed "$l!d" | awk 'NF>1{print $NF}')
 
