@@ -52,7 +52,7 @@ You should see an OK if the operation was successful.
 
 And this command to install the script.
 ```
-sudo apt-get update && sudo apt-get -y install raitv-bash-dl
+sudo apt-get update; sudo apt-get -y install raitv-bash-dl
 ```
 Or if you want to use the old method follow these instructions.
 
