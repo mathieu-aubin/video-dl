@@ -61,7 +61,8 @@ else
 
  echo "Video(s) info:" &&
  function dlcmd() {
-videoTitolo=$(echo "$titles" | sed s/'\w*$'//)
+videoTitolo=$(echo "$titles" | cut -d' ' -f2-)
+
 max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
