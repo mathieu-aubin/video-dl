@@ -69,6 +69,8 @@ sane="$(echo "$u" | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed
 
 api="$(wget "http://video.daniil.it/api/rai.php?url=$sane" -q -O - | sed '/^\s*$/d')"
 
+echo "$api" | grep -q \( || continue
+
 max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
@@ -77,7 +79,7 @@ $(echo "$api" | sed 's/http.*//')
 
 "
 
-until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number)? "; read l;done 2>/dev/null
+until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video)? "; read l; [ "$l" = "q" ] && break;done 2>/dev/null
 
 
 url=$(echo "$api" | sed "$l!d" | awk 'NF>1{print $NF}')
@@ -160,4 +162,5 @@ sed 's/\\//g';fi)"
   relinker_rai
  fi
 
-done && echo "Downloading videos..." && eval $queue && echo "All downloads completed successfully."
+done
+[ "$queue" != "" ] && echo "Downloading videos..." && eval $queue && echo "All downloads completed successfully."
