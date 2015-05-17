@@ -43,7 +43,7 @@ Options:
 [ "$WOPT" = "-q" ] && A=y
 [ "$F" = "y" ] && URL="$(cat "$*")" || URL="$*"
 
-echo -n "Self-updating script..." && wget http://daniilgentili.magix.net/rai.sh -O $0 -q 2>/dev/null ; echo -en "\r\033[K" ; exec $0 $*; exit $?
+echo -n "Self-updating script..." && wget http://daniilgentili.magix.net/rai.sh -O $0 -q 2>/dev/null ; echo -en "\r\033[K" ; bash $0 $*; exit $?
 
 function var() {
 eval $*
