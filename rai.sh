@@ -94,7 +94,8 @@ for u in $URL; do
 
  echo "$api" | grep -q \( || continue
  titles=$(echo "$api" | sed -n 1p)
- api=$(echo "$api" | sed '1!d')
+ api=$(echo "$api" | sed '1d')
+ 
  title=$(echo "$titles" | cut -d \  -f 1)
 
  dlcmd
