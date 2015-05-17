@@ -45,16 +45,24 @@ Opzioni:
 Nota: dovrai installare wget su Mac OS X per usare questo script.
 
 Su sistemi debian o derivate, esegui questo comando per aggiungere la mia repo al sistema:
+
+
 ```
 sudo wget -O /etc/apt/sources.list.d/daniil.list http://dano.cu.cc/1IJrcd1 && wget -O - http://dano.cu.cc/1Aci9Qp | sudo apt-key add -
 ```
+
+
 Dovresti vedere un OK se la operazione si conclude con successo.
 
 
 E questo comando per installare lo script.
+
+
 ```
 sudo apt-get update && sudo apt-get -y install raitv-bash-dl
 ```
+
+
 Oppure se vuoi usare il metodo normale segui queste istruzioni.
 
 Esegui questo comando per installare lo script:
