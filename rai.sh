@@ -88,7 +88,7 @@ fi
 for u in $URL; do
  curl --version &>/dev/null && (curl -Ls -o /dev/null -w %{url_effective} $u | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/*|http://www.*.rai..*/dl/RaiTV/tematiche/.*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' || continue) || echo $u  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/*|http://www.*.rai..*/dl/RaiTV/tematiche/.*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' || continue
  
- sane="$(echo "$u" | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed 's/\//%2F/g' | sed 's/\?/%3F/g')"
+ sane="$(echo "$u" | sed 's/#.*//' | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed 's/\//%2F/g' | sed 's/\?/%3F/g')"
 
  api="$(wget "http://video.daniil.it/api/rai.php?url=$sane&p=v2" -q -O - | sed '/^\s*$/d')"
 
