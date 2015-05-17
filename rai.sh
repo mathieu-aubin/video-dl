@@ -93,9 +93,7 @@ for u in $URL; do
  api="$(wget "http://video.daniil.it/api/rai.php?url=$sane&p=v2" -q -O - | sed '/^\s*$/d')"
 
  echo "$api" | grep -q \( || continue
-
  titles=$(echo "$api" | sed -n 1p)
- echo $titles
  api=$(echo "$api" | sed '1!d')
  title=$(echo "$titles" | cut -d \  -f 1)
 
