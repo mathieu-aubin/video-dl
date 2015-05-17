@@ -1,7 +1,7 @@
 #!/bin/bash
 # Rai.TV download script
 # Created by Daniil Gentili (http://daniil.eu.org)
-# Uses Andrea Lazzarotto's (http://andrealazzarotto.com) server (http://video.lazza.dk) to decode URLs.
+# Uses Andrea Lazzarotto's (http://andrealazzarotto.com) server (http://video.lazza.dk) to decode URLs in automatic mode.
 # Changelog:
 # v1 (and revisions): initial version.
 # v2 (and revisions): added support for Rai Replay, support for multiple qualities, advanced video info and custom API server.
@@ -9,7 +9,7 @@
 
 [ "$1" = "--help" ] && echo "Rai.tv download script
 Created by Daniil Gentili
-Uses Andrea Lazzarotto's server to decode the URLs.
+Uses Andrea Lazzarotto's server to decode the URLs (when -a is specified).
 Usage: $(basename $0) [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
 
 Options:
