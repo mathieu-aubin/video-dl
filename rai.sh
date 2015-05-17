@@ -50,7 +50,7 @@ eval $*
 
 if [ "$A" = "y" ]; then
 
- function relinker_rai() {
+ function dlcmd() {
 dl="$(echo "$api" | awk 'END {print $NF}')"
 ext=$(echo $url | awk -F. '$0=$NF')
 queue="$queue
