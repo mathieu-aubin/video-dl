@@ -5,6 +5,10 @@ Rai.tv bash download script.
 
 Creato da [Daniil Gentili](http://daniil.eu.org).
 
+
+This project is licensed under the terms of the GPLv3 license.
+
+
 Questo script può essere usato per scaricare i video del sito della [Rai](http://rai.tv).
 
 

@@ -6,6 +6,9 @@ Rai.tv bash download script.
 
 Created by [Daniil Gentili](http://daniil.eu.org).
 
+This project is licensed under the terms of the GPLv3 license.
+
+
 This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website: it supports nearly all videos, including Rai Replay and iframe videos.
 
 

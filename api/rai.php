@@ -19,6 +19,7 @@ if(isset($_GET['url'])) {
 '
 # Rai.TV download script
 # Created by Daniil Gentili (http://daniil.eu.org)
+# This program is licensed under the GPLv3 license.
 # Web version: can be incorporated in websites.
 [ "$*" = "" ] && exit 1
 function kill() {

@@ -1,6 +1,7 @@
 #!/bin/bash
 # Rai.TV download script
 # Created by Daniil Gentili (http://daniil.eu.org)
+# This program is licensed under the GPLv3 license.
 # Changelog:
 # v1 (and revisions): initial version.
 # v2 (and revisions): added support for Rai Replay, support for multiple qualities, advanced video info and custom API server.
