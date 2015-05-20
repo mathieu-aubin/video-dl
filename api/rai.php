@@ -132,7 +132,7 @@ for f in `echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spli
 
  url="$(wget "$dl&output=43" -q -O -)"
  base=$(echo "$url" | sed 's/<\/url>/\
-&/g' | sed 's/.*<url>//' | grep '.*.mp4$')
+&/g' | sed 's/.*<url>//' | grep -E '.*.mp4$|.*.wmv$')
  
  
  checkurl
