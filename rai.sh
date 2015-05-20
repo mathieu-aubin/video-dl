@@ -103,7 +103,7 @@ for u in $URL; do
  
  sane="$(echo "$u" | sed 's/#.*//' | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed 's/\//%2F/g' | sed 's/\?/%3F/g')"
 
- api="$(dl "http://video.daniil.it/api/rai.php?url=$sane&p=v2" - $Q | sed '/^\s*$/d')"
+ api="$(dl "http://video.daniil.it/api/rai.php?url=$sane" - $Q | sed '/^\s*$/d')"
 
  echo "$api" | grep -q \( || continue
  titles=$(echo "$api" | sed -n 1p)
