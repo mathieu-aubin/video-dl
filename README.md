@@ -254,7 +254,7 @@ Explanation:
 ```
 Newline
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
-Sanitized name of video for file name. Original name of the video for printing to user output.
+Sanitized name of video for file name  Original name of the video for printing to user output
 Newline
 1 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
 Number for user selection  quality name (format, size, dimension)
@@ -264,7 +264,7 @@ Number for user selection  quality name (format, size, dimension)
 Newline
 ```
 
-If you created a version of the script using another programming language [contact me](http://daniil.it/contact_me.html) and I will put it on this page!
+If you created a version of the script using another programming language [contact me](http://daniil.it/contact_me.htm) and I will put it on this page!
 
 That's it!
 
