@@ -67,38 +67,38 @@ normal="$(echo "$urlsfromunformatted" | grep -v .*_400.mp4 | grep -v .*_600.mp4 
 
 formats="$(
 [ "$four" != "" ] && for a in $four; do getsize
- echo "Minimum quality $info";done
+ echo "Minimum quality $info $a";done
 
 
 [ "$six" != "" ] && for a in $six; do getsize
  
- echo "Low quality $info";done
+ echo "Low quality $info $a";done
 
 
 
 [ "$eight" != "" ] && for a in $eight; do getsize
 
- echo "Medium-low quality $info";done
+ echo "Medium-low quality $info $a";done
 
 
 [ "$twelve" != "" ] && for a in $twelve; do getsize
 
- echo "Medium quality $info";done
+ echo "Medium quality $info $a";done
 
 
 [ "$fifteen" != "" ] && for a in $fifteen; do getsize
 
- echo "Medium-high quality $info";done
+ echo "Medium-high quality $info $a";done
 
 
 [ "$eighteen" != "" ] && for a in $eighteen; do getsize
 
- echo "Highest quality $info";done
+ echo "Highest quality $info $a";done
 
 
 [ "$normal" != "" ] && for a in $normal; do getsize
 
- echo "Normal quality $info";done
+ echo "Normal quality $info $a";done
 
 )"
 formats="$(echo "$formats" | awk '{print NR, $0}')"
@@ -191,7 +191,7 @@ $(echo "$tmpwget" | grep -E '^Length|^Lunghezza' | sed 's/.*(//' | sed 's/).*//'
 unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";done)"
 
 echo "$userinput
-$todl $videoTitolo
+$title $videoTitolo
 $unformatted
 endofdbentry" >> /var/www/rai-db.txt
 
@@ -279,7 +279,7 @@ titles="$(echo "$db" | sed -n 1p)"
 
 unformatted="$(echo "$db" | sed '1d')"
 
-todl="$(echo "$titles" | cut -d \  -f 1)"
+title="$(echo "$titles" | cut -d \  -f 1)"
 
 videoTitolo="$(echo "$titles" | cut -d' ' -f2-)"
 

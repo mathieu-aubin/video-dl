@@ -92,6 +92,8 @@ if [ "$tmpsize" != "" ]; then echo ""$tmpsize", "; fi)$(mplayer -vo null -ao nul
 
 getsize() {
 info=$(echo "$unformatted" | grep "$a" | sed 's/http.*//')
+ext=$(echo $a | awk -F. '$0=$NF')
+todl="$title.$ext"
 }
 
 formatoutput() {
@@ -237,7 +239,7 @@ $(echo "$tmpwget" | grep -E '^Length|^Lunghezza' | sed 's/.*(//' | sed 's/).*//'
 unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";done)"
 
 echo "$userinput
-$todl $videoTitolo
+$title $videoTitolo
 $unformatted
 endofdbentry" >> /var/www/rai-db.txt
 
@@ -325,7 +327,7 @@ titles="$(echo "$db" | sed -n 1p)"
 
 unformatted="$(echo "$db" | sed '1d')"
 
-todl="$(echo "$titles" | cut -d \  -f 1)"
+title="$(echo "$titles" | cut -d \  -f 1)"
 
 videoTitolo="$(echo "$titles" | cut -d' ' -f2-)"
 
