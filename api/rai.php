@@ -23,7 +23,7 @@ if(isset($_GET['url'])) {
 # Web version: can be incorporated in websites.
 [ "$*" = "" ] && exit 1
 function kill() {
-echo "<center><h1><a>Questo non &#232; un indirizzo Rai.</a></h1></center>"; exit 1
+exit 1
 }
 
 dl=$(echo $1 | grep -q http: && echo $1 || echo http:$1)
@@ -132,7 +132,7 @@ for f in `echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spli
 
  url="$(wget "$dl&output=43" -q -O -)"
  base=$(echo "$url" | sed 's/<\/url>/\
-&/g' | sed 's/.*<url>//' | grep -E '.*.mp4$|.*.wmv$')
+&/g' | sed 's/.*<url>//' | grep '.*.mp4$\|.*.wmv$\|.*.mov$')
  
  
  checkurl
