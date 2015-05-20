@@ -70,6 +70,16 @@ E questo comando per installare lo script.
 sudo apt-get update && sudo apt-get -y install raitv-bash-dl
 ```
 
+Esegui il programma con:
+
+```
+rai.sh "URL"
+```
+
+
+Ricorda che è necessario racchiudere l'URL tra virgolette.
+
+
 
 Oppure se vuoi usare il metodo normale segui queste istruzioni.
 
