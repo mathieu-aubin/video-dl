@@ -1,5 +1,5 @@
-# rai.tv-bash-dl
-Rai.tv bash download script.
+# rai-dl
+Programmi per scaricare video Rai.
 
 [Read English version](https://github.com/danog/rai.tv-bash-dl)
 
@@ -9,19 +9,23 @@ Creato da [Daniil Gentili](http://daniil.eu.org).
 This project is licensed under the terms of the GPLv3 license.
 
 
-Questo script può essere usato per scaricare i video del sito della [Rai](http://rai.tv).
+I programmi di questo progetto possono essere usati per scaricare i video del sito della [Rai](http://rai.tv), e sono in grado di scaricare i video di tutti i siti della Rai, incluso Rai Replay.
 
 
-Questo script è in grado di scaricare i video di tutti i siti della Rai, incluso Rai Replay.
+Questo progetto include uno [script Bash](#istruzioni-di-utilizzo-dello-script-bash) che può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows), [un'applicazione per Android](#metodo-1-app), una [API](#api) e una [versione web](#versione-web)!
+
+Sia la [API](#api) sia la [versione web](#versione-web) usano un [database](https://github.com/danog/rai.tv-bash-dl/blob/master/rai-db.txt).
 
 
-Questo script può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows)!
+## Versione Web
+Questo progetto include una [versione web](http://video.daniil.it/rai.php).
 
-È anche disponible [un'applicazione per Android](http://bit.ly/0192837465k).
+![Alt text](http://daniilgentili.magix.net/rai.png)
 
-E per tutte le altre piattaforme c'è la [versione web](http://video.daniil.eu.org/rai.php)!
+Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/rai.tv-bash-dl/blob/master/rai.php).
 
-## Istruzioni di utilizzo:
+
+## Istruzioni di utilizzo dello script bash:
 ```
 rai.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 ```
@@ -43,7 +47,7 @@ Opzioni:
 
 
 
-## Istruzioni di installazione:
+## Istruzioni di installazione dello script bash:
 
 ### Qualsiasi sistema Linux/Unix (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 Nota: dovrai installare wget su Mac OS X per usare questo script.
@@ -225,6 +229,46 @@ rai.sh "URL"
 
 Ricorda che è necessario racchiudere l'URL tra virgolette.
 
+# API
+
+Questo progetto include anche una API.
+
+Il codice sorgente della API può essere visualizzato [qui](https://github.com/danog/rai.tv-bash-dl/blob/master/api/rai.php).
+
+### Esempio di utilizzo API
+
+Richiesta:
+
+```
+http://video.daniil.it/api/rai.php?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
+```
+
+Output:
+
+```
+
+Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
+1 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+2 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+
+```
+
+Spiegazione: 
+
+```
+Newline
+Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
+Nome sanitizzato per il salvataggio del video  Nome originale del video
+Newline
+1 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+Numero per selezione utente  nome della qualità (formato, dimensione, qualità) URL del video
+Newline
+2 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+Numero per selezione utente  nome della qualità (formato, dimensione, qualità) URL del video
+Newline
+```
+
+Se hai creato un'altra versione di questo programma utilizzando la API [contattami](http://daniil.it/contact_me.htm) e io la metterò su questa pagina!
 
 
 
