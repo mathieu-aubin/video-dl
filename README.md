@@ -1,5 +1,5 @@
-# rai.tv-bash-dl
-Rai.tv bash download script.
+# rai-dl
+Rai.tv download project.
 
 [Read in Italian](https://github.com/danog/rai.tv-bash-dl/blob/master/README-IT.md)
 
@@ -9,15 +9,13 @@ Created by [Daniil Gentili](http://daniil.eu.org).
 This project is licensed under the terms of the GPLv3 license.
 
 
-This script can be used to download videos from the Italian [Rai](http://rai.tv) Television website: it supports nearly all videos, including Rai Replay and iframe videos.
+The programs included in this project can be used to download videos from the Italian [Rai](http://rai.tv) Television website: they support nearly all videos, including Rai Replay and iframe videos
 
 
-This script can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows)!
+This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](http://bit.ly/0192837465k) and even a [web version](#Web-version)!
 
-Also on Android you can use the [app](http://bit.ly/0192837465k) to download videos.
 
-For every other platform there's the [web version](http://video.daniil.eu.org/rai.php).
-## Usage:
+## Bash script usage:
 ```
 rai.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 ```
@@ -41,7 +39,7 @@ Options:
 
 
 
-## Installation instructions:
+### Bash script installation instructions:
 
 ### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 Note that you will have to install wget to use this program on Mac os X.
@@ -220,7 +218,53 @@ rai.sh "URL"
 Do not forget to put the URL between quotes.
 
 
+## Web version
+This project also features a [web version](http://video.daniil.it/rai.php).
 
+![Alt text](http://daniilgentili.magix.net/rai.png)
+
+The source code of the page can be viewed in the rai.php file.
+
+## API
+
+This project also features an API.
+
+The source code of the API can be viewed in the api/rai.php file.
+
+### API usage example
+
+Requested URL:
+
+```
+http://video.daniil.it/api/rai.php?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
+```
+
+Output:
+
+```
+
+Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
+1 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+2 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+
+```
+
+Explanation: 
+
+```
+Newline
+Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
+Sanitized name of video for file name. Original name of the video for printing to user output.
+Newline
+1 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+Number for user selection  quality name (format, size, dimension)
+Newline
+2 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+Number for user selection  quality name (format, size, dimension)
+Newline
+```
+
+If you created a version of the script using another programming language [contact me](http://daniil.it/contact_me.html) and I will put it on this page!
 
 That's it!
 
