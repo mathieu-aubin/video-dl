@@ -22,7 +22,7 @@ Options:
 
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
-which wget 2>/dev/null
+which wget &>/dev/null
 if [ "$?" = 0 ];then wget() {
 wget $1 -O $2 $3
  }
