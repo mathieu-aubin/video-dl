@@ -101,8 +101,9 @@ formats="$(
  echo "Normal quality $info";done
 
 )"
-}
 formats="$(echo "$formats" | awk '{print NR, $0}')"
+}
+
 
 function checkurl() {
 tbase="$base"
