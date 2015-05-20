@@ -16,6 +16,15 @@ This project features a Bash script that can be installed on [any Linux/Unix sys
 
 Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/rai.tv-bash-dl/blob/master/rai-db.txt).
 
+
+## Web version
+This project also features a [web version](http://video.daniil.it/rai.php).
+
+![Alt text](http://daniilgentili.magix.net/rai.png)
+
+The source code of the page can be viewed in the rai.php file.
+
+
 ## Bash script usage:
 ```
 rai.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
@@ -218,13 +227,6 @@ rai.sh "URL"
 
 Do not forget to put the URL between quotes.
 
-
-## Web version
-This project also features a [web version](http://video.daniil.it/rai.php).
-
-![Alt text](http://daniilgentili.magix.net/rai.png)
-
-The source code of the page can be viewed in the rai.php file.
 
 ## API
 
