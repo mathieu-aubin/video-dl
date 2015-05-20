@@ -228,9 +228,9 @@ The source code of the page can be viewed in the rai.php file.
 
 ## API
 
-This project also features an API.
+This project also features an [API](http://video.daniil.it/api/rai.php).
 
-The source code of the API can be viewed in the api/rai.php file.
+The source code of the API can be viewed [here](https://github.com/danog/rai.tv-bash-dl/blob/master/api/rai.php).
 
 ### API usage example
 
