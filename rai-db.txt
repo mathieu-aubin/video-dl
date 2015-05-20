@@ -93,3 +93,8 @@ Winx_Club_VI_Ep11_Sogni_infranti Winx Club VI - Ep.11: Sogni infranti
 (mp4, 292MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2365690_1800.mp4
 (mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2365690_800.mp4
 endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-86fe17d9-4d1a-4aec-a4ec-bbf33a073282.html
+Winx_Club_VI_Ep7_La_biblioteca_perduta Winx Club VI - Ep.7: La biblioteca perduta
+(mp4, 292MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2276352_1800.mp4
+(mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2276352_800.mp4
+endofdbentry
