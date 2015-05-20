@@ -68,9 +68,9 @@ function kill() {
 echo "<center><h1><a>Questo non &#232; un indirizzo Rai.</a></h1></center>"; exit 1
 }
 
-dl=$(echo $1 | grep -q http: && echo $1 || echo http:$1)
-
-curl -w "%{url_effective}\n" -L -s -I -S $dl -o /dev/null  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*' || kill
+dl="$(echo $1 | grep -q http: && echo $1 || echo http:$1)"
+dl="$(echo "$dl" | sed 's/#.*//')"
+curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*' || kill
 
 
 # OK, here we have all the functions.
@@ -81,6 +81,74 @@ echo "$URLS" | awk 'END {print $NF}'
 
 function var() {
 eval $*
+}
+
+size() {
+echo `echo $1 | awk -F. '$0=$NF'`, $(
+tmpsize=$(echo "$size" | sed "$(echo "$URLS" | grep -n "$1" | cut -f1 -d:)!d")
+
+if [ "$tmpsize" != "" ]; then echo ""$tmpsize", "; fi)$(mplayer -vo null -ao null -identify -frames 0 $1 2>/dev/null | grep kbps | awk '{print $3}')
+}
+
+getsize() {
+info=$(echo "$unformatted" | grep "$a" | sed 's/http.*//')
+}
+
+formatoutput() {
+urlsfromunformatted="$(echo "$unformatted" | awk 'NF>1{print $NF}')"
+
+four="$(echo "$urlsfromunformatted" | grep .*_400.mp4)"
+six="$(echo "$urlsfromunformatted" | grep .*_600.mp4)"
+eight="$(echo "$urlsfromunformatted" | grep .*_800.mp4)"
+twelve="$(echo "$urlsfromunformatted" | grep .*_1200.mp4)"
+fifteen="$(echo "$urlsfromunformatted" | grep .*_1500.mp4)"
+eighteen="$(echo "$urlsfromunformatted" | grep .*_1800.mp4)"
+
+normal="$(echo "$urlsfromunformatted" | grep -v .*_400.mp4 | grep -v .*_600.mp4 | grep -v .*_800.mp4 | grep -v .*_1200.mp4 | grep -v .*_1500.mp4 | grep -v .*_1800.mp4)"
+
+formats="$(
+[ "$four" != "" ] && for a in $four; do getsize
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  minima $info</a></h2>
+<br>";done
+
+
+[ "$six" != "" ] && for a in $six; do getsize
+ 
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  bassa $info</a></h2>
+<br>";done
+
+
+
+[ "$eight" != "" ] && for a in $eight; do getsize
+
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  medio-bassa $info </a></h2>
+<br>";done
+
+
+[ "$twelve" != "" ] && for a in $twelve; do getsize
+
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  media $info</a></h2>
+<br>";done
+
+
+[ "$fifteen" != "" ] && for a in $fifteen; do getsize
+
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  medio-alta $info</a></h2>
+<br>";done
+
+
+[ "$eighteen" != "" ] && for a in $eighteen; do getsize
+
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  massima $info</a></h2>
+<br>";done
+
+
+[ "$normal" != "" ] && for a in $normal; do getsize
+
+ echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  normale $info</a></h2>
+<br>";done
+
+)"
 }
 
 function checkurl() {
@@ -160,59 +228,20 @@ $i" && size="$size
 $(echo "$tmpwget" | grep -E '^Length|^Lunghezza' | sed 's/.*(//' | sed 's/).*//')B"; done
 
 
-size() {
-echo `echo $1 | awk -F. '$0=$NF'`, $(
-tmpsize=$(echo "$size" | sed "$(echo "$URLS" | grep -n "$1" | cut -f1 -d:)!d")
-if [ "$tmpsize" != "" ]; then echo ""$tmpsize", "; fi)$(mplayer -vo null -ao null -identify -frames 0 $1 2>/dev/null | grep kbps | awk '{print $3}')
-}
 
 
 [[ -z $title ]] && todl=$(echo $URLS | sed 's/.*\///') || todl=$(echo $title.$(echo $URLS | awk -F. '$0=$NF'))
 
 # Quality checks
 
-four="$(echo "$URLS" | grep .*_400.mp4)"
-six="$(echo "$URLS" | grep .*_600.mp4)"
-eight="$(echo "$URLS" | grep .*_800.mp4)"
-twelve="$(echo "$URLS" | grep .*_1200.mp4)"
-fifteen="$(echo "$URLS" | grep .*_1500.mp4)"
-eighteen="$(echo "$URLS" | grep .*_1800.mp4)"
+unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";done)"
 
-normal="$(echo "$URLS" | grep -v .*_400.mp4 | grep -v .*_600.mp4 | grep -v .*_800.mp4 | grep -v .*_1200.mp4 | grep -v .*_1500.mp4 | grep -v .*_1800.mp4)"
+echo "$userinput
+$todl $videoTitolo
+$unformatted
+endofdbentry" >> /var/www/rai-db.txt
 
-
-formats="$(
-
-[ "$four" != "" ] && for a in $four; do echo "<h2><a href=\"$a\" download=\"$todl\">Qualit&#224;  minima (`size $a`)</a></h2>
-<br>";done
-
-
-[ "$six" != "" ] && for b in $six; do echo "<h2><a href=\"$b\" download=\"$todl\">Bassa qualit&#224; (`size $b`)</a></h2>
-<br>";done
-
-
-
-[ "$eight" != "" ] && for c in $eight; do echo "<h2><a href=\"$c\" download=\"$todl\">Qualit&#224; medio-bassa (`size $c`)</a></h2>
-<br>";done
-
-
-[ "$twelve" != "" ] && for d in $twelve; do echo "<h2><a href=\"$d\" download=\"$todl\">Qualit&#224; media (`size $d`)</a></h2>
-<br>";done
-
-
-[ "$fifteen" != "" ] && for e in $fifteen; do echo "<h2><a href=\"$e\" download=\"$todl\">Qualit&#224; medio-alta (`size $e`)</a></h2>
-<br>";done
-
-
-[ "$eighteen" != "" ] && for f in $eighteen; do echo "<h2><a href=\"$f\" download=\"$todl\">Alta qualit&#224; (`size $f`)</a></h2>
-<br>";done
-
-
-[ "$normal" != "" ] && for g in $normal; do echo "<h2><a href=\"$g\" download=\"$todl\">Qualit&#224; normale (`size $g`)</a></h2>
-<br>";done
-
-)"
-
+formatoutput
 
 }
 
@@ -289,24 +318,54 @@ else
 fi
 }
 
+rai_db() {
+db="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/rai-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
+
+titles="$(echo "$db" | sed -n 1p)"
+
+unformatted="$(echo "$db" | sed '1d')"
+
+todl="$(echo "$titles" | cut -d \  -f 1)"
+
+videoTitolo="$(echo "$titles" | cut -d' ' -f2-)"
+
+formatoutput
+}
 
 # And here we have the final URL check and the working part.
 
 second=$2
 third=$3
 
-curl -w "%{url_effective}\n" -L -s -S $dl -o /dev/null  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && rai $dl $2 $3 || relinker_rai $dl $2 $3
+userinput="$dl"
+saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
 
 
-[ "$formats" = "" ] && echo "<h1><center>Errore.</center></h1>" ||
-echo "<center><h1><i>Script Rai.TV</i></h1>
-<h2><i>Creato da <a href="http://daniil.it">Daniil Gentili</a></i></h2>
+grep -q "$saneuserinput" /var/www/rai-db.txt
+
+if [ "$?" = 0 ]; then
+ rai_db
+ [ "$formats" = "" ] && echo "<h1><center>Errore.</center></h1>" || echo "<center><h1><i>Script Rai.TV</i></h1>
+<h2><i>Creato da <a href=\"http://daniil.it\">Daniil Gentili</a></i></h2>
 <br>
 <h1>Titolo:</h1> <h2>$videoTitolo</h2>
 <br>
 <h1>Versioni disponibili:</h1>
 $formats
 </center>"
+
+else
+ curl -w "%{url_effective}\n" -L -s -S "$dl" -o /dev/null  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && rai $dl $2 $3 || relinker_rai $dl $2 $3
+ [ "$formats" = "" ] && echo "<h1><center>Errore.</center></h1>" || echo "<center><h1><i>Script Rai.TV</i></h1>
+<h2><i>Creato da <a href=\"http://daniil.it\">Daniil Gentili</a></i></h2>
+<br>
+<h1>Titolo:</h1> <h2>$videoTitolo</h2>
+<br>
+<h1>Versioni disponibili:</h1>
+$formats
+</center>"
+
+fi
 
 # A bit messed up, I know. But at least it works (right?).
 -->

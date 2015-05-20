@@ -1,5 +1,5 @@
 <!--
-: '
+: "
 -->
 <?php
 if(isset($_GET['url'])) {
@@ -16,14 +16,14 @@ if(isset($_GET['url'])) {
 }
 ?>
 <!--
-'
+"
 # Rai.TV download script
 # Created by Daniil Gentili (http://daniil.eu.org)
 # This program is licensed under the GPLv3 license.
 # Web version: can be incorporated in websites.
 [ "$*" = "" ] && exit 1
 function kill() {
-exit 1
+echo "<center><h1><a>Questo non &#232; un indirizzo Rai.</a></h1></center>"; exit 1
 }
 
 dl=$(echo $1 | grep -q http: && echo $1 || echo http:$1)
@@ -40,6 +40,69 @@ echo "$URLS" | awk 'END {print $NF}'
 function var() {
 eval $*
 }
+
+size() {
+echo `echo $1 | awk -F. '$0=$NF'`, $(
+tmpsize=$(echo "$size" | sed "$(echo "$URLS" | grep -n "$1" | cut -f1 -d:)!d")
+
+if [ "$tmpsize" != "" ]; then echo ""$tmpsize", "; fi)$(mplayer -vo null -ao null -identify -frames 0 $1 2>/dev/null | grep kbps | awk '{print $3}')
+}
+
+getsize() {
+info=$(echo "$unformatted" | grep "$a" | sed 's/http.*//')
+}
+
+formatoutput() {
+
+urlsfromunformatted="$(echo "$unformatted" | awk 'NF>1{print $NF}')"
+
+four="$(echo "$urlsfromunformatted" | grep .*_400.mp4)"
+six="$(echo "$urlsfromunformatted" | grep .*_600.mp4)"
+eight="$(echo "$urlsfromunformatted" | grep .*_800.mp4)"
+twelve="$(echo "$urlsfromunformatted" | grep .*_1200.mp4)"
+fifteen="$(echo "$urlsfromunformatted" | grep .*_1500.mp4)"
+eighteen="$(echo "$urlsfromunformatted" | grep .*_1800.mp4)"
+
+normal="$(echo "$urlsfromunformatted" | grep -v .*_400.mp4 | grep -v .*_600.mp4 | grep -v .*_800.mp4 | grep -v .*_1200.mp4 | grep -v .*_1500.mp4 | grep -v .*_1800.mp4)"
+
+formats="$(
+[ "$four" != "" ] && for a in $four; do getsize
+ echo "Minimum quality $info";done
+
+
+[ "$six" != "" ] && for a in $six; do getsize
+ 
+ echo "Low quality $info";done
+
+
+
+[ "$eight" != "" ] && for a in $eight; do getsize
+
+ echo "Medium-low quality $info";done
+
+
+[ "$twelve" != "" ] && for a in $twelve; do getsize
+
+ echo "Medium quality $info";done
+
+
+[ "$fifteen" != "" ] && for a in $fifteen; do getsize
+
+ echo "Medium-high quality $info";done
+
+
+[ "$eighteen" != "" ] && for a in $eighteen; do getsize
+
+ echo "Highest quality $info";done
+
+
+[ "$normal" != "" ] && for a in $normal; do getsize
+
+ echo "Normal quality $info";done
+
+)"
+}
+formats="$(echo "$formats" | awk '{print NR, $0}')"
 
 function checkurl() {
 tbase="$base"
@@ -104,12 +167,10 @@ done
 
 base="$TMPURLS"
 
-
 ext=$(echo $base | awk -F. '$0=$NF')
 
 for t in _400.$ext _600.$ext _800.$ext _1200.$ext _1500.$ext _1800.$ext; do for i in _400.$ext _600.$ext _800.$ext _1200.$ext _1500.$ext _1800.$ext; do tbase="$tbase
 $(echo "$base" | sed "s/$t/$i/")"; done ;done
-
 
 tmpbase="$(echo "$tbase" | sort | awk '!x[$0]++')"
 base=
@@ -120,52 +181,20 @@ $i" && size="$size
 $(echo "$tmpwget" | grep -E '^Length|^Lunghezza' | sed 's/.*(//' | sed 's/).*//')B"; done
 
 
-size() {
-echo `echo $1 | awk -F. '$0=$NF'`, $(
-tmpsize=$(echo "$size" | sed "$(echo "$URLS" | grep -n "$1" | cut -f1 -d:)!d")
-if [ "$tmpsize" != "" ]; then echo ""$tmpsize", "; fi)$(mplayer -vo null -ao null -identify -frames 0 $1 2>/dev/null | grep kbps | awk '{print $3}')
-}
+
 
 [[ -z $title ]] && todl=$(echo $URLS | sed 's/.*\///') || todl=$(echo $title.$(echo $URLS | awk -F. '$0=$NF'))
 
 # Quality checks
 
-four="$(echo "$URLS" | grep .*_400.mp4)"
-six="$(echo "$URLS" | grep .*_600.mp4)"
-eight="$(echo "$URLS" | grep .*_800.mp4)"
-twelve="$(echo "$URLS" | grep .*_1200.mp4)"
-fifteen="$(echo "$URLS" | grep .*_1500.mp4)"
-eighteen="$(echo "$URLS" | grep .*_1800.mp4)"
+unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";done)"
 
-normal="$(echo "$URLS" | grep -v .*_400.mp4 | grep -v .*_600.mp4 | grep -v .*_800.mp4 | grep -v .*_1200.mp4 | grep -v .*_1500.mp4 | grep -v .*_1800.mp4)"
+echo "$userinput
+$todl $videoTitolo
+$unformatted
+endofdbentry" >> /var/www/rai-db.txt
 
-
-formats="$(
-[ "$four" != "" ] && for a in $four; do echo "Minimum quality (`size $a`) $a";done
-
-
-[ "$six" != "" ] && for b in $six; do echo "Low quality (`size $b`) $b";done
-
-
-
-[ "$eight" != "" ] && for c in $eight; do echo "Medium-low quality (`size $c`) $c";done
-
-
-[ "$twelve" != "" ] && for d in $twelve; do echo "Medium quality (`size $d`) $d";done
-
-
-[ "$fifteen" != "" ] && for e in $fifteen; do echo "Medium-high quality (`size $e`) $e";done
-
-
-[ "$eighteen" != "" ] && for f in $eighteen; do echo "High quality (`size $f`) $f";done
-
-
-[ "$normal" != "" ] && for g in $normal; do echo "Normal quality (`size $g`) $g";done
-
-)"
-
-formats="$([ "$third" = "v2" ] && echo "$title $videoTitolo"
-echo "$formats" | awk '{print NR, $0}')"
+formatoutput
 
 }
 
@@ -242,17 +271,41 @@ else
 fi
 }
 
+rai_db() {
+db="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/rai-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
+
+titles="$(echo "$db" | sed -n 1p)"
+
+unformatted="$(echo "$db" | sed '1d')"
+
+todl="$(echo "$titles" | cut -d \  -f 1)"
+
+videoTitolo="$(echo "$titles" | cut -d' ' -f2-)"
+
+formatoutput
+}
 
 # And here we have the final URL check and the working part.
 
 second=$2
 third=$3
 
-curl -w "%{url_effective}\n" -L -s -S $dl -o /dev/null  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && rai $dl $2 $3 || relinker_rai $dl $2 $3
+userinput="$dl"
+saneuserinput=$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g')
 
 
-[ "$formats" = "" ] && exit ||
-echo "$formats"
+grep -q "$dl" /var/www/rai-db.txt
 
+if [ "$?" = 0 ]; then
+ rai_db
+ [ "$formats" = "" ] && exit || echo "$title $videoTitolo
+$formats"
+
+else
+ curl -w "%{url_effective}\n" -L -s -S $dl -o /dev/null  | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && rai $dl $2 $3 || relinker_rai $dl $2 $3
+ [ "$formats" = "" ] && exit || echo "$title $videoTitolo
+$formats"
+
+fi
 # A bit messed up, I know. But at least it works (right?).
 -->
