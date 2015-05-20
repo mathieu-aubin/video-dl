@@ -6,7 +6,7 @@
 # v1 (and revisions): initial version.
 # v2 (and revisions): added support for Rai Replay, support for multiple qualities, advanced video info and custom API server.
 #
-
+echo "This program is licensed under the GPLv3 license."
 [ "$1" = "--help" ] && echo "Rai.tv download script
 Created by Daniil Gentili
 Usage: $(basename $0) [ -qmf [ urls.txt ] ] URL URL2 URL3 ...
