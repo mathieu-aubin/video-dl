@@ -12,7 +12,7 @@ This project is licensed under the terms of the GPLv3 license.
 The programs included in this project can be used to download videos from the Italian [Rai](http://rai.tv) Television website: they support nearly all videos, including Rai Replay and iframe videos
 
 
-This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](http://bit.ly/0192837465k) and even a [web version](#Web-version)!
+This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
 
 
 ## Bash script usage:
