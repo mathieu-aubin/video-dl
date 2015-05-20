@@ -14,6 +14,7 @@ The programs included in this project can be used to download videos from the It
 
 This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
 
+Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/rai.tv-bash-dl/blob/master/rai-db.txt).
 
 ## Bash script usage:
 ```
