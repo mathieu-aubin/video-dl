@@ -10,3 +10,7 @@ http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-4c59795e-43f6-47fd-a472-3
 23_Danzando_con_le_stelle_Mia_and_Me.mp4 23 - Danzando con le stelle - Mia and Me
 (mp4, 271MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3797780.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-faabb441-2d63-4d10-9b11-a6d17b59263d.html
+Vince_la_seconda_edizione_di_Si_puu00F2_fare_Biagio_Izzo.mp4 Vince la seconda edizione di "Si pu\u00F2 fare": Biagio Izzo
+(mp4, 18MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Si_puo_fare/sipuofare_puntate/3953351_1800.mp4
+endofdbentry
