@@ -23,11 +23,11 @@ Options:
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
 which wget &>/dev/null
-if [ "$?" = 0 ];then wget() {
+if [ "$?" = 0 ];then dl() {
 wget $1 -O $2 $3
  }
  Q="-q"
-else wget() {
+else dl() {
 curl $1 -o $2 $3
  }
  Q="-s"
@@ -53,7 +53,7 @@ fi
 [ "$WOPT" = "$Q" ] && A=y
 [ "$F" = "y" ] && URL="$(cat "$*")" || URL="$*"
 
-echo -n "Self-updating script..." && wget http://daniilgentili.magix.net/rai.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; echo -en "\r\033[K"
+echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/rai.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; echo -en "\r\033[K"
 
 function var() {
 eval $*
@@ -66,7 +66,7 @@ if [ "$A" = "y" ]; then
 url="$(echo "$api" | awk 'END {print $NF}')"
 ext=$(echo $url | awk -F. '$0=$NF')
 queue="$queue
-wget $url $title.$ext $WOPT
+dl $url $title.$ext $WOPT
 "
  }
 else
@@ -92,7 +92,7 @@ url=$(echo "$api" | sed "$l!d" | awk 'NF>1{print $NF}')
 ext=$(echo $url | awk -F. '$0=$NF')
 
 queue="$queue
-wget $url $title.$ext $WOPT
+dl $url $title.$ext $WOPT
 "
  }
 fi
@@ -103,7 +103,7 @@ for u in $URL; do
  
  sane="$(echo "$u" | sed 's/#.*//' | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed 's/\//%2F/g' | sed 's/\?/%3F/g')"
 
- api="$(wget "http://video.daniil.it/api/rai.php?url=$sane&p=v2" - $Q | sed '/^\s*$/d')"
+ api="$(dl "http://video.daniil.it/api/rai.php?url=$sane&p=v2" - $Q | sed '/^\s*$/d')"
 
  echo "$api" | grep -q \( || continue
  titles=$(echo "$api" | sed -n 1p)
