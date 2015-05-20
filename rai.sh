@@ -22,27 +22,38 @@ Options:
 
 [ "$*" = "" ] && echo "No url specified. Aborting." && exit 1
 
-[ "$1" = "-q" ] && WOPT="-q" && shift
+which wget 2>/dev/null
+if [ "$?" = 0 ];then wget() {
+wget $1 -O $2 $3
+ }
+ Q="-q"
+else wget() {
+curl $1 -o $2 $3
+}
+ Q="-s"
+fi
+
+[ "$1" = "-q" ] && WOPT="$Q" && shift
 [ "$1" = "-a" ] && A=y && shift
 [ "$1" = "-f" ] && F=y && shift
-[ "$1" = "-qa" ] && WOPT="-q" && A=y && shift
+[ "$1" = "-qa" ] && WOPT="$Q" && A=y && shift
 
 [ "$1" = "-af" ] && A=y && F=y && shift
 
-[ "$1" = "-qf" ] && WOPT="-q" && F=y && shift
+[ "$1" = "-qf" ] && WOPT="$Q" && F=y && shift
 
-[ "$1" = "-qaf" ] && WOPT="-q" && A=y && F=y && shift
+[ "$1" = "-qaf" ] && WOPT="$Q" && A=y && F=y && shift
 
-[ "$1" = "-aq" ] && WOPT="-q" && A=y && shift
+[ "$1" = "-aq" ] && WOPT="$Q" && A=y && shift
 [ "$1" = "-fa" ] && A=y && F=y && shift
-[ "$1" = "-fq" ] && WOPT="-q" && F=y && shift
-[ "$1" = "-afq" ] && WOPT="-q" && A=y && F=y && shift
-[ "$1" = "-faq" ] && WOPT="-q" && A=y && F=y && shift
-[ "$1" = "-aqf" ] && WOPT="-q" && A=y && F=y && shift
-[ "$WOPT" = "-q" ] && A=y
+[ "$1" = "-fq" ] && WOPT="$Q" && F=y && shift
+[ "$1" = "-afq" ] && WOPT="$Q" && A=y && F=y && shift
+[ "$1" = "-faq" ] && WOPT="$Q" && A=y && F=y && shift
+[ "$1" = "-aqf" ] && WOPT="$Q" && A=y && F=y && shift
+[ "$WOPT" = "$Q" ] && A=y
 [ "$F" = "y" ] && URL="$(cat "$*")" || URL="$*"
 
-echo -n "Self-updating script..." && wget http://daniilgentili.magix.net/rai.sh -O $0 -q 2>/dev/null ; echo -en "\r\033[K"
+echo -n "Self-updating script..." && wget http://daniilgentili.magix.net/rai.sh -O $0 -q 2>/dev/null;chmod 755 $0 2>/dev/null; echo -en "\r\033[K"
 
 function var() {
 eval $*
@@ -55,7 +66,7 @@ if [ "$A" = "y" ]; then
 url="$(echo "$api" | awk 'END {print $NF}')"
 ext=$(echo $url | awk -F. '$0=$NF')
 queue="$queue
-wget $url -O $title.$ext $WOPT
+wget $url $title.$ext $WOPT
 "
  }
 else
@@ -81,7 +92,7 @@ url=$(echo "$api" | sed "$l!d" | awk 'NF>1{print $NF}')
 ext=$(echo $url | awk -F. '$0=$NF')
 
 queue="$queue
-wget $url -O $title.$ext $WOPT
+wget $url $title.$ext $WOPT
 "
  }
 fi
@@ -92,7 +103,7 @@ for u in $URL; do
  
  sane="$(echo "$u" | sed 's/#.*//' | sed 's/\&/%26/g' | sed 's/\=/%3D/g' | sed 's/\:/%3A/g' | sed 's/\//%2F/g' | sed 's/\?/%3F/g')"
 
- api="$(wget "http://video.daniil.it/api/rai.php?url=$sane&p=v2" -q -O - | sed '/^\s*$/d')"
+ api="$(wget "http://video.daniil.it/api/rai.php?url=$sane&p=v2" - $Q | sed '/^\s*$/d')"
 
  echo "$api" | grep -q \( || continue
  titles=$(echo "$api" | sed -n 1p)
