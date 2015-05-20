@@ -29,7 +29,7 @@ wget $1 -O $2 $3
  Q="-q"
 else wget() {
 curl $1 -o $2 $3
-}
+ }
  Q="-s"
 fi
 
