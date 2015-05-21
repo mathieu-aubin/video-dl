@@ -37,7 +37,7 @@ Opzioni:
 -q:	Modalità silenziosa. Utile per programmazioni in crontab, abilita automaticamente -a.
 
 
--a:	Modalità Automatica/Andrea: scarica automaticamente la massima qualità dei video utlizzando il server di Andrea.
+-a:	Modalità Automatica/Andrea: scarica automaticamente la massima qualità dei video.
 
 
 -f:	Leggi gli URL da uno o più file di testo.
@@ -50,7 +50,7 @@ Opzioni:
 ## Istruzioni di installazione dello script bash:
 
 ### Qualsiasi sistema Linux/Unix (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
-Nota: dovrai installare wget su Mac OS X per usare questo script.
+
 
 Su sistemi debian o derivate, esegui questo comando per aggiungere la mia repo al sistema:
 
