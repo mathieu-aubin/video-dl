@@ -4,7 +4,7 @@ Rai.tv download project.
 [Read in Italian](https://github.com/danog/rai.tv-bash-dl/blob/master/README-IT.md)
 
 
-Created by [Daniil Gentili](http://daniil.eu.org).
+Created by [Daniil Gentili](http://daniil.it).
 
 This project is licensed under the terms of the GPLv3 license.
 
@@ -38,7 +38,7 @@ Options:
 -q:	Quiet mode: useful for crontab jobs, automatically enables -a.
 
 
--a:	Automatic/Andrea mode: automatically download the video in the maximum quality using Andrea's server.
+-a:	Automatic/Andrea mode: automatically download the video in the maximum quality.
 
 
 -f:	Reads URL(s) from specified text file(s).
@@ -52,7 +52,7 @@ Options:
 ### Bash script installation instructions:
 
 ### Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
-Note that you will have to install wget to use this program on Mac os X.
+
 
 On debian-derived distros, execute this command to add my repo to your system:
 
@@ -283,4 +283,4 @@ That's it!
 
 Enjoy!
 
-[Daniil Gentili](http://daniil.eu.org/lol)
+[Daniil Gentili](http://daniil.it)
