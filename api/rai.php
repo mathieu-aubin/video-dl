@@ -112,7 +112,7 @@ base=
 tbase="$(echo "$tbase" | sort | awk '!x[$0]++')"
 
 
-for u in "$tbase";do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
+for u in "$tbase";do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK\|video/mp4' && base="$base
 $u"; done
 
 }
@@ -131,8 +131,8 @@ for f in `echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spli
 
 
  url="$(wget "$dl&output=43" -q -O -)"
- base=$(echo "$url" | sed 's/<\/url>/\
-&/g' | sed 's/.*<url>//' | grep '.*.mp4$\|.*.wmv$\|.*.mov$')
+ base="$(echo "$url" | sed 's/<\/url>/\
+&/g' | sed 's/.*<url>//' | grep '.*.mp4$\|.*.wmv$\|.*.mov$')"
  
  
  checkurl
@@ -158,9 +158,10 @@ for f in `echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spli
  if [ "$base" = "" ]; then
   url="$(wget "$dl&output=4" -q -O -)"
   base=$(echo "$url" | grep -q creativemedia && echo "$url" || curl -w "%{url_effective}\n" -L -s -I -S $dl -A "" -o /dev/null)
+  checkurl
  fi
  
- checkurl
+ 
 
  TMPURLS="$TMPURLS
 $base"
@@ -181,10 +182,6 @@ for i in $tmpbase;do tmpwget="$(wget -S --spider $i 2>&1)"; echo "$tmpwget" | gr
 $i" && size="$size
 $(echo "$tmpwget" | grep -E '^Length|^Lunghezza' | sed 's/.*(//' | sed 's/).*//')B"; done
 
-
-
-
-[[ -z $title ]] && todl=$(echo $URLS | sed 's/.*\///') || todl=$(echo $title.$(echo $URLS | awk -F. '$0=$NF'))
 
 # Quality checks
 

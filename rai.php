@@ -92,8 +92,9 @@ if [ "$tmpsize" != "" ]; then echo ""$tmpsize", "; fi)$(mplayer -vo null -ao nul
 
 getsize() {
 info=$(echo "$unformatted" | grep "$a" | sed 's/http.*//')
-ext=$(echo $a | awk -F. '$0=$NF')
-todl="$title.$ext"
+
+[[ -z $title ]] && todl=$(echo $a | sed 's/.*\///') || todl="$title.$(echo $a | awk -F. '$0=$NF')"
+
 }
 
 formatoutput() {
@@ -160,7 +161,7 @@ base=
 tbase="$(echo "$tbase" | sort | awk '!x[$0]++')"
 
 
-for u in "$tbase";do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
+for u in "$tbase";do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK\|video/mp4' && base="$base
 $u"; done
 
 }
@@ -206,9 +207,10 @@ for f in `echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spli
  if [ "$base" = "" ]; then
   url="$(wget "$dl&output=4" -q -O -)"
   base=$(echo "$url" | grep -q creativemedia && echo "$url" || curl -w "%{url_effective}\n" -L -s -I -S $dl -A "" -o /dev/null)
+  checkurl
  fi
  
- checkurl
+ 
 
  TMPURLS="$TMPURLS
 $base"
@@ -216,7 +218,7 @@ done
 
 base="$TMPURLS"
 
-ext=$(echo $base | awk -F. '$0=$NF')
+
 
 for t in _400.$ext _600.$ext _800.$ext _1200.$ext _1500.$ext _1800.$ext; do for i in _400.$ext _600.$ext _800.$ext _1200.$ext _1500.$ext _1800.$ext; do tbase="$tbase
 $(echo "$base" | sed "s/$t/$i/")"; done ;done
@@ -231,8 +233,6 @@ $(echo "$tmpwget" | grep -E '^Length|^Lunghezza' | sed 's/.*(//' | sed 's/).*//'
 
 
 
-
-[[ -z $title ]] && todl=$(echo $URLS | sed 's/.*\///') || todl=$(echo $title.$(echo $URLS | awk -F. '$0=$NF'))
 
 # Quality checks
 

@@ -98,3 +98,29 @@ Winx_Club_VI_Ep7_La_biblioteca_perduta Winx Club VI - Ep.7: La biblioteca perdut
 (mp4, 292MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2276352_1800.mp4
 (mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2276352_800.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-4221770f-acdd-44f2-8c9e-2d3f8ac0eeca.html
+72_candeline_buon_compleanno_Al_Bano 72 candeline: buon compleanno Al Bano
+(mp4, 22MB, 720x404) http://creativemedia4.rai.it/podcastcdn/canaliWebTV/WebTV_Gossip/3962100.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-212b67a9-3a65-4aeb-8e90-2eee8978d92b.html
+Il_Candidato_Trentesimo_episodio_La_manifestazione Il Candidato - Trentesimo episodio: "La manifestazione"
+(mp4, 73MB, 720x404) http://creativemedia4.rai.it/podcastcdn/raitre/Il_Candidato/3958832.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-3306a239-3508-4ca6-a6a6-d34bbfb74df1.html
+Intervista_al_premier_Matteo_Renzi_Porta_a_porta_190515 Intervista al premier Matteo Renzi - Porta a porta 19/05/15
+(mp4, 953MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Porta_a_Porta/Porta_a_Porta_Puntate_2015/3960183_1800.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-323e67bf-f38d-4d5a-9a79-261c7fc5ff1f.html
+Winx_Club_VI_Ep8_Lattacco_della_sfinge Winx Club VI - Ep.8: L'attacco della sfinge
+(mp4, 293MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2254796_1800.mp4
+(mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2254796_800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-53965df3-d5c9-483e-95ec-185b72a389c0.html
+Adriano_OlivettiLa_forza_di_un_sogno_1_puntata_28102013 Adriano Olivetti.La forza di un sogno - 1^ puntata 28/10/2013
+(mp4, 830MB, 640x360) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Adriano_Olivetti__La_forza_di_un_sogno/1932662.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-68c10f78-ad73-49a8-a4b3-5c5229e1ed4b.html
+Adriano_OlivettiLa_forza_di_un_sogno_2_puntata_29102013 Adriano Olivetti.La forza di un sogno - 2^ puntata 29/10/2013
+(mp4, 1.3GB, 1024x576) http://creativemedia1.rai.it/podcastcdn/Fiction/RaiUno/Adriano_Olivetti__La_forza_di_un_sogno/1937320_1800.mp4
+(mp4, 627MB, 700x394) http://creativemedia1.rai.it/podcastcdn/Fiction/RaiUno/Adriano_Olivetti__La_forza_di_un_sogno/1937320_800.mp4
+endofdbentry
