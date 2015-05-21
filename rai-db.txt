@@ -124,3 +124,29 @@ Adriano_OlivettiLa_forza_di_un_sogno_2_puntata_29102013 Adriano Olivetti.La forz
 (mp4, 1.3GB, 1024x576) http://creativemedia1.rai.it/podcastcdn/Fiction/RaiUno/Adriano_Olivetti__La_forza_di_un_sogno/1937320_1800.mp4
 (mp4, 627MB, 700x394) http://creativemedia1.rai.it/podcastcdn/Fiction/RaiUno/Adriano_Olivetti__La_forza_di_un_sogno/1937320_800.mp4
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-05-15&ch=1&v=515217&vd=2015-05-15&vc=1
+Storie_Vere Storie Vere
+(mp4, 192MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_1800.mp4
+(mp4, 91MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-05-15&ch=1&v=515217&vd=2015-05-15&vc=1
+Storie_Vere Storie Vere
+(mp4, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_1800.mp4
+(mp4, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_800.mp4
+(mp4, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_1800.mp4
+(mp4, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_800.mp4
+endofdbentry
+http://video.daniil.it/rai.php?url=http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-05-15&ch=1&v=515217&vd=2015-05-15&vc=1
+Storie_Vere Storie Vere
+(mp4, 192MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_1800.mp4
+(mp4, 91MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/3936118_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-05-15&ch=1&v=515222&vd=2015-05-15&vc=1
+La_prova_del_cuoco La prova del cuoco
+(mp4, 992MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/La_prova_del_cuoco/La_Prova_del_Cuoco_puntate_2014/3939057_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-858087cf-da9f-4af4-8041-c948bb3a83ae.html
+Cerimonia_di_inaugurazione_EXPO_2015_del_01052015 Cerimonia di inaugurazione EXPO 2015 del 01/05/2015
+(mp4, 1.9GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/Rai/Rai_Expo/Expo_Eventi_EP_Puntate/3865830_1800.mp4
+(mp4, 923MB, 700x394) http://creativemedia4.rai.it/podcastcdn/Rai/Rai_Expo/Expo_Eventi_EP_Puntate/3865830_800.mp4
+endofdbentry

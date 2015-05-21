@@ -112,7 +112,7 @@ base=
 tbase="$(echo "$tbase" | sort | awk '!x[$0]++')"
 
 
-for u in "$tbase";do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK\|video/mp4' && base="$base
+for u in "$tbase";do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
 $u"; done
 
 }
