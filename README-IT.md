@@ -22,7 +22,7 @@ Questo progetto include una [versione web](http://video.daniil.it/).
 
 ![Alt text](http://daniilgentili.magix.net/rai.png)
 
-Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/api.sh).
+Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/rai.php).
 
 
 ## Istruzioni di utilizzo dello script bash:
