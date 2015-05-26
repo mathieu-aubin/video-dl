@@ -1,7 +1,7 @@
-# rai-dl
-Rai.tv download project.
+# video-dl
+Video download project.
 
-[Read in Italian](https://github.com/danog/rai.tv-bash-dl/blob/master/README-IT.md)
+[Read in Italian](https://github.com/danog/video-dl/blob/master/README-IT.md)
 
 
 Created by [Daniil Gentili](http://daniil.it).
@@ -9,25 +9,25 @@ Created by [Daniil Gentili](http://daniil.it).
 This project is licensed under the terms of the GPLv3 license.
 
 
-The programs included in this project can be used to download videos from the Italian [Rai](http://rai.tv) Television website: they support nearly all videos, including Rai Replay and iframe videos
+The programs included in this project can be used to download videos from any generic site including the Italian [Rai](http://rai.tv) Television website (including rai replay and iframe videos), the italian [Mediaset](http://mediaset.it) website (including iframes like the ones on the [Witty TV](http://wittytv.it) website), and the [LA7](http://la7.it) website.
 
 
 This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
 
-Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/rai.tv-bash-dl/blob/master/rai-db.txt).
+Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/video-db.txt).
 
 
 ## Web version
-This project also features a [web version](http://video.daniil.it/rai.php).
+This project also features a [web version](http://video.daniil.it/).
 
 ![Alt text](http://daniilgentili.magix.net/rai.png)
 
-The source code of the page can be viewed in the rai.php file.
+The source code of the page can be viewed in the api.sh file.
 
 
 ## Bash script usage:
 ```
-rai.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
+video.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 ```
 
 Options:
@@ -42,6 +42,9 @@ Options:
 
 
 -f:	Reads URL(s) from specified text file(s).
+
+
+--player=player: Play the video instead of downloading it using specified player, mplayer if none specified.
 
 
 --help:	Show this extremely helpful message.
@@ -69,13 +72,13 @@ And this command to install the script.
 
 
 ```
-sudo apt-get update; sudo apt-get -y install raitv-bash-dl
+sudo apt-get update; sudo apt-get -y install video-dl
 ```
 
 Run with:
 
 ```
-rai.sh "URL"
+video.sh "URL"
 ```
 
 
@@ -88,12 +91,12 @@ Or if you want to use the old method follow these instructions.
 Execute this command to install the script:
 
 ```
-wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x rai.sh
+wget http://daniilgentili.magix.net/video.sh -O video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x video.sh
 ```
 
 Run with 
 ```
-./rai.sh "URL"
+./video.sh "URL"
 ```
 In the directory where you downloaded it.
 
@@ -104,12 +107,12 @@ Do not forget to put the URL between quotes.
 To use from any directory install the script directly in the $PATH using this command (run as root):
 
 ```
-wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x /usr/bin/rai.sh
+wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x /usr/bin/video.sh
 ```
 
 Now you should be able to run the script simply with:
 ```
-rai.sh "URL"
+video.sh "URL"
 ```
 
 
@@ -133,12 +136,12 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 Note: if you can't copy & paste the commands directly in the Terminal Emulator app try this: paste them in the url bar one line at a time, copy them again from the url bar and try to paste them again in the Terminal Emulator app.
 Run these commands:
 ```
-cd /sdcard && wget http://daniilgentili.magix.net/android/rai.sh 
+cd /sdcard && wget http://daniilgentili.magix.net/android/video.sh 
 ```
 
 Run with:
 ```
-bash /sdcard/rai.sh "URL"
+bash /sdcard/video.sh "URL"
 ```
 
 
@@ -151,12 +154,12 @@ To install the script directly in the $PATH use these commands (here, root is ma
 
 ```
 su
-mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/rai.sh -O /system/bin/rai.sh && chmod 755 /system/bin/rai.sh
+mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/video.sh -O /system/bin/video.sh && chmod 755 /system/bin/video.sh
 ```
 
 Now you should be able to run it with:
 ```
-rai.sh "URL"
+video.sh "URL"
 ```
 
 
@@ -170,12 +173,12 @@ If you cannot execute the command match the shebang of the script to the locatio
 Jailbreak your device, install mobileterminal and wget and run the following command:
 
 ```
-wget http://daniilgentili.magix.net/rai.sh -O rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x rai.sh
+wget http://daniilgentili.magix.net/video.sh -O video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x video.sh
 ```
 
 Run with:
 ```
-./rai.sh "URL"
+./video.sh "URL"
 ```
 
 
@@ -189,12 +192,12 @@ To view the downloaded video use iFile.
 To use from any directory install the script directly in $PATH using this command:
 
 ```
-su -c "wget http://daniilgentili.magix.net/rai.sh -O /usr/bin/rai.sh || curl -L http://daniilgentili.magix.net/rai.sh -o rai.sh; chmod +x /usr/bin/rai.sh"
+su -c "wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x /usr/bin/video.sh"
 ```
 
 Now you should be able to run it with:
 ```
-rai.sh "URL"
+video.sh "URL"
 ```
 
 
@@ -207,12 +210,12 @@ Do not forget to put the URL between quotes.
 Install [Cygwin](https://www.cygwin.com) (don't forget to install wget during the installation process!), open its command prompt and type:
 
 ```
-wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh
+wget http://daniilgentili.magix.net/win/video.sh -O video.sh
 ```
 
 Run with:
 ```
-./rai.sh "URL"
+./video.sh "URL"
 ```
 
 
@@ -225,13 +228,13 @@ In the directory where you downloaded it.
 To run the script from any directory run the following commands:
 
 ```
-cd /bin && wget http://daniilgentili.magix.net/win/rai.sh -O rai.sh && cd $OLDPWD
+cd /bin && wget http://daniilgentili.magix.net/win/video.sh -O video.sh && cd $OLDPWD
 ```
 
 
 Now you should be able to run it with:
 ```
-rai.sh "URL"
+video.sh "URL"
 ```
 
 
@@ -240,16 +243,16 @@ Do not forget to put the URL between quotes.
 
 ## API
 
-This project also features an [API](http://video.daniil.it/api/rai.php).
+This project also features an [API](http://video.daniil.it/api/).
 
-The source code of the API can be viewed [here](https://github.com/danog/rai.tv-bash-dl/blob/master/api/rai.php).
+The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/api/api.sh).
 
 ### API usage example
 
 Requested URL:
 
 ```
-http://video.daniil.it/api/rai.php?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
+http://video.daniil.it/api/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
 ```
 
 Output:
