@@ -92,7 +92,7 @@ urlformatcheck
 [ "$WOPT" = "$Q" ] && A=y
 [ "$F" = "y" ] && URL="$(cat "$allvars")" || URL="$allvars"
 
-#echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/rai.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; echo -en "\r\033[K"
+echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; echo -en "\r\033[K"
 
 function var() {
 eval $*
