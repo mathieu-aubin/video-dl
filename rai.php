@@ -152,52 +152,52 @@ if [ "$common" = "y" ]; then common="$urlsfromunformatted";fi
 formats="$([ "$common" != "" ] && for a in $common; do getsize
  info="$(echo "$info" | sed 's/[(]//;s/[)]//')"
 
- echo "<h2><a href=\"$a\" download=\"$todl\">$info</a></h2>
+ echo "<h2><a href=\"$a\">$info</a></h2>
 <br>";done
 
 [ "$lamp4" != "" ] && for a in $lamp4; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Normal quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Normal quality $info</a></h2>
 <br>";done
 
 [ "$normal" != "" ] && for a in $normal; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Normal quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Normal quality $info</a></h2>
 <br>";done
 
 [ "$eighteen" != "" ] && for a in $eighteen; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Maximum quality  $info</a></h2>
+ echo "<h2><a href=\"$a\">Maximum quality  $info</a></h2>
 <br>";done
 
 
 [ "$fifteen" != "" ] && for a in $fifteen; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Medium-high quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Medium-high quality $info</a></h2>
 <br>";done
 
 
 
 [ "$twelve" != "" ] && for a in $twelve; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Medium quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Medium quality $info</a></h2>
 <br>";done
 
 [ "$eight" != "" ] && for a in $eight; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Medium-low quality  $info </a></h2>
+ echo "<h2><a href=\"$a\">Medium-low quality  $info </a></h2>
 <br>";done
 
 
 [ "$six" != "" ] && for a in $six; do getsize
  
- echo "<h2><a href=\"$a\" download=\"$todl\">Low quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Low quality $info</a></h2>
 <br>";done
 
 
 
 [ "$four" != "" ] && for a in $four; do getsize
- echo "<h2><a href=\"$a\" download=\"$todl\">Minimum quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Minimum quality $info</a></h2>
 <br>";done
 
 
@@ -207,30 +207,30 @@ formats="$([ "$common" != "" ] && for a in $common; do getsize
 
 
 [ "$mp4" != "" ] && for a in $mp4; do getsize
- echo "<h2><a href=\"$a\" download=\"$todl\">Medium-high quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Medium-high quality $info</a></h2>
 <br>";done
 
 
 
-[ "$apple" != "" ] && for a in $apple; do echo "<h2><a href=\"$a\" download=\"$todl\">Medium-low quality  (apple streaming, pseudo-m3u8) </a></h2>
+[ "$apple" != "" ] && for a in $apple; do echo "<h2><a href=\"$a\">Medium-low quality  (apple streaming, pseudo-m3u8) </a></h2>
 <br>";done
 
 
 [ "$wmv" != "" ] && for a in $wmv; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Low quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Low quality $info</a></h2>
 <br>";done
 
 
 [ "$flv" != "" ] && for a in $flv; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Low quality  $info</a></h2>
+ echo "<h2><a href=\"$a\">Low quality  $info</a></h2>
 <br>";done
 
 
 [ "$f4v" != "" ] && for a in $f4v; do getsize
 
- echo "<h2><a href=\"$a\" download=\"$todl\">Low quality $info</a></h2>
+ echo "<h2><a href=\"$a\">Low quality $info</a></h2>
 <br>";done
 
 
