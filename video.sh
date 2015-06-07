@@ -116,7 +116,7 @@ max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
 
-$(echo "$api" | sed 's/http.*//')
+$(echo "$api" | sed 's/http:\/\/.*//')
 
 "
 
