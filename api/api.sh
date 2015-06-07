@@ -213,7 +213,7 @@ unformatted="$([ "$base" != "" ] && for a in $base; do echo "(`size $a`) $a";don
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> $PWD/../../video-db.txt
 
 formatoutput
 
@@ -305,7 +305,7 @@ unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";don
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> $PWD/../../video-db.txt
 
 formatoutput
 }
@@ -337,7 +337,7 @@ unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";don
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> $PWD/../../video-db.txt
 
 formatoutput
 
@@ -363,7 +363,7 @@ unformatted="$(for a in $URLS; do echo "(`size $a`) $a";done)"
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> $PWD/../../video-db.txt
 
 formatoutput
 
@@ -371,7 +371,7 @@ formatoutput
 
 
 video_db() {
-db="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
+db="$(sed -n '/'"$saneuserinput"'/,$p' $PWD/../../video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
 
 titles="$(echo "$db" | sed -n 1p)"
 
@@ -395,7 +395,7 @@ userinput="$dl"
 saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
 
 
-grep -q "$saneuserinput" /var/www/video-db.txt
+grep -q "$saneuserinput" $PWD/../../video-db.txt
 
 if [ "$?" = 0 ]; then
  video_db

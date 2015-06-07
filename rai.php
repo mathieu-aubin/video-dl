@@ -289,7 +289,7 @@ unformatted="$([ "$base" != "" ] && for a in $base; do echo "(`size $a`) $a";don
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> /$PWD/../video-db.txt
 
 formatoutput
 
@@ -382,7 +382,7 @@ unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";don
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> /$PWD/../video-db.txt
 
 formatoutput
 }
@@ -414,7 +414,7 @@ unformatted="$([ "$URLS" != "" ] && for a in $URLS; do echo "(`size $a`) $a";don
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >>/$PWD/../video-db.txt
 
 formatoutput
 
@@ -423,7 +423,10 @@ formatoutput
 common() {
 page="$(wget -q -O - $1)"
 
-URLS="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g;s/\\//g' | awk '!x[$0]++')"
+URLS="$(echo "$page" | sed 's/\,/\
+/g;s/\'/\
+/g;s/\"/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g;s/\\//g' | awk '!x[$0]++')"
 
 
 [ "$URLS" = "" ] && exit
@@ -440,7 +443,7 @@ unformatted="$(for a in $URLS; do echo "(`size $a`) $a";done)"
 echo "$userinput
 $title $videoTitolo
 $unformatted
-endofdbentry" >> /var/www/video-db.txt
+endofdbentry" >> /$PWD/../video-db.txt
 
 formatoutput
 
@@ -448,7 +451,7 @@ formatoutput
 
 
 video_db() {
-db="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
+db="$(sed -n '/'"$saneuserinput"'/,$p' /$PWD/../video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
 
 titles="$(echo "$db" | sed -n 1p)"
 
@@ -472,7 +475,7 @@ userinput="$dl"
 saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
 
 
-grep -q "$saneuserinput" /var/www/video-db.txt
+grep -q "$saneuserinput" /$PWD/../video-db.txt
 
 if [ "$?" = 0 ]; then
  video_db
