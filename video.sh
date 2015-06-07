@@ -110,7 +110,7 @@ else
 
  echo "Video(s) info:" &&
  function dlcmd() {
-videoTitolo=$(echo "$titles" | cut -d' ' -f2-)
+videoTitolo=$(echo "$titles" | cut -d' ' -f2- | sed 's/è/e/g;s/é/e/g;s/ì/i/g;s/í/i/g;s/ù/u/g;s/ú/u/g')
 
 max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
