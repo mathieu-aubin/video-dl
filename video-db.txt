@@ -220,13 +220,3 @@ http://video.focus.it/dettaglio-video/20-giorni-in-antartide-8049
 Video_20_giorni_in_Antartide_Focus Video - 20 giorni in Antartide - Focus
 (mp4, 22MB, 736x320) http://f1.gujmvideo.net/0/9/video/8049/size/web/20-giorni-in-antartide-8049.mp4
 endofdbentry
-http://www.la7.it/omnibus/rivedila7/i-giornali-di-oggi-26052015-26-05-2015-155797
-I_giornali_di_oggi_26052015_LA7_Video_e_notizie_su_programmi_TV_sport_politica_e_spettacolo I giornali di oggi - 26/05/2015 | LA7 - Video e notizie su programmi TV, sport, politica e spettacolo 
-(1, B,) http://la7-vh.akamaihd.net/z/content/entry/data/0/227/0_8fsxk9gp_0_zgx5i3i3_1.mp4/manifest.f4m?hdcore=3.1
-(m3u8, B, 720x576) http://la7-vh.akamaihd.net/i/content/entry/data/0/227/0_8fsxk9gp_0_zgx5i3i3_1.mp4/master.m3u8
-(mp4, 106MB, 720x576) http://vodpmd.la7.it.edgesuite.net/content/entry/data/0/227/0_8fsxk9gp_0_zgx5i3i3_1.mp4
-endofdbentry
-www.smosh.com/shutupcartoons/riding-big-kid-ft-ryan-higa-smosh-babies-29
-RIDING_LIKE_A_BIG_KID_Ft_Ryan_Higa_Smosh_Babies_29_SMOSH RIDING LIKE A BIG KID [Ft. Ryan Higa] (Smosh Babies #29) | SMOSH
-(mp4, 8.7MB, 480x270) http://v1.smosh.com/dnet/media/369/857/2857369/riding-like-a-big-boy-496_kbps.mp4
-endofdbentry
