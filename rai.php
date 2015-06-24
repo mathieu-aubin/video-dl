@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252"/>
 <title>Download videos!</title>
+<link rel="shortcut icon" type="image/png" href="http://video.daniil.it/favicon.png"/>
+
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script>
@@ -30,7 +32,7 @@
 <br>
 
 <form action="#" method="get">
-<center><b>Paste the URL of the video:<br></b><input type="text" name="url" value=""><input type="submit" value="Download the video!"></center>
+<center><b>Paste the URL of the video:<br></b><input type="text" name="url" placeholder="URL of your video"><input type="submit" value="Download the video!"></center>
 </form> 
 
 <?php
@@ -56,9 +58,9 @@ if(isset($_GET['url'])) {
 <span class='st_linkedin_large' displayText='LinkedIn'></span>
 <span class='st_pinterest_large' displayText='Pinterest'></span>
 <span class='st_email_large' displayText='Email'></span>
-<small><i><object align="right"><a href="https://github.com/danog/rai.tv-bash-dl/">Codice sorgente su GitHub.</a>
+<small><i><object align="right"><a href="https://github.com/danog/rai.tv-bash-dl/">Source code on GitHub.</a>
 <br>
-<a href='mailto:daniil.gentili.dg@gmail.com?subject=Video non funzionante&body=Il video inserire_link non funziona, potresti aggiustarlo?%0D%0AGrazie!'>Non funziona?</a>
+<a href='mailto:daniil.gentili.dg@gmail.com?subject=Video non funzionante&body=The video insert_link doesn't work, could you please fix it?%0D%0AThanks!'>Not working?</a>
 </object></i></small></p>
 
 </body>
