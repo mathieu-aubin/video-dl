@@ -4,12 +4,27 @@
 <!DOCTYPE HTML> 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <title>Download videos!</title>
-<link rel="shortcut icon" type="image/png" href="http://video.daniil.it/favicon.png"/>
 
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ff66ff">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ff66ff">
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,19 +35,57 @@
   ga('send', 'pageview');
 
 </script>
+
+<style>
+body {
+    background-color: #ff66ff;
+}
+
+body:not(.special) {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+.special {
+    text-align: right;
+    font-style: italic;
+}
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.setAttribute('data-cfasync', 'false');
+    shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var site_id = 'dc6c8f9c2fd4c46b544da1ace521c9b3';
+      try { Shareaholic.init(site_id); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
+
 <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video">
 </head>
 
-<body bgcolor="#FF66FF"> 
-
 <!-- Nice Morfix-coloured background... -->
 
-<b><center>Download videos from <a href="http://rai.tv">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#">Rai Replay</a> e <a href="http://mediaset.it">Mediaset</a>, <a href="http://la7.it">La7</a>, <a href="http://wittytv.it">Witty TV</a> and more websites!</b></center>
+Download videos from <a href="http://rai.tv">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#">Rai Replay</a>, <a href="http://mediaset.it">Mediaset</a>, <a href="http://la7.it">La7</a>, <a href="http://wittytv.it">Witty TV</a> and more websites!
 
 <br>
 
 <form action="#" method="get">
-<center><b>Paste the URL of the video:<br></b><input type="text" name="url" placeholder="URL of your video"><input type="submit" value="Download the video!"></center>
+Paste the URL of the video:<br><input type="text" name="url" placeholder="URL of your video"><input type="submit" value="Download the video!">
 </form> 
 
 <?php
@@ -51,17 +104,12 @@ if(isset($_GET['url'])) {
 ?>
 
 <br>
-<p>
-<span class='st_sharethis_large' displayText='ShareThis'></span>
-<span class='st_facebook_large' displayText='Facebook'></span>
-<span class='st_twitter_large' displayText='Tweet'></span>
-<span class='st_linkedin_large' displayText='LinkedIn'></span>
-<span class='st_pinterest_large' displayText='Pinterest'></span>
-<span class='st_email_large' displayText='Email'></span>
-<small><i><object align="right"><a href="https://github.com/danog/rai.tv-bash-dl/">Source code on GitHub.</a>
+
+<p class="special">
+<a href="https://github.com/danog/rai.tv-bash-dl/">Source code on GitHub.</a>
 <br>
-<a href='mailto:daniil.gentili.dg@gmail.com?subject=Video non funzionante&body=The video insert_link doesn't work, could you please fix it?%0D%0AThanks!'>Not working?</a>
-</object></i></small></p>
+<a href='mailto:daniil.gentili.dg@gmail.com?subject=Video not working&body=The video insert_link does not work, could you please fix it?%0D%0AThanks!'>Not working?</a>
+</p>
 
 </body>
 </html>
@@ -97,11 +145,11 @@ formats="$([ "$URLS" != "" ] && for a in $URLS; do info=$(echo "$api" | grep "$a
 formats="$(echo "$formats" | awk '!x[$0]++')"
 [ "$formats" = "" ] && { echo "<h1><center>Error.</center></h1>" ; exit 1; }
 
-echo "<center><h1><i>Video download script.</i></h1>
+echo "<h1><i>Video download script.</i></h1>
 <h2><i>Created by <a href=\"http://daniil.it\">Daniil Gentili</a></i></h2>
 <br>
 <h1>Title:</h1> <h2>$videoTitolo</h2>
 <br>
 <h1>Available versions:</h1>
 $formats
-</center>"
+"
