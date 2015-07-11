@@ -61,7 +61,7 @@ sed 's/\
 # Check if URL exists and remove copies of the same URL
 
 function checkurl() {
-tbase="$(echo $base | sort | awk '!x[$0]++' | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }')"
+tbase="$(echo $base | sed 's/ /%20/g;s/%20http:\/\// http:\/\//g;s/%20$//' | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }')"
 
 base=
 for u in $tbase;do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
@@ -178,12 +178,12 @@ formats="$(
 
 )"
 
-formats="$(echo "$formats" | awk '!x[$0]++')"
+formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -g | cut -d' ' -f2-)"
 
 echo "$userinput
 $title $videoTitolo
 $formats
-endofdbentry" >> $PWD/../../video-db.txt
+endofdbentry" >> /var/www/video-db.txt
 
 
 }
@@ -452,7 +452,7 @@ formatoutput
 
 video_db() {
 # Read formats from database
-formats="$(sed -n '/'"$saneuserinput"'/,$p' $PWD/../../video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
+formats="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
 
 }
 
@@ -469,7 +469,7 @@ third=$3
 # Find input URLin database
 userinput="$dl"
 saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
-grep -q "$saneuserinput" $PWD/../../video-db.txt && {
+grep -q ^"$saneuserinput"$ /var/www/video-db.txt && {
 video_db
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
 $formats"
