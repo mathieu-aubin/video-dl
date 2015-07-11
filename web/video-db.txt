@@ -113,3 +113,7 @@ Superquark_del_09072015 Superquark del 09/07/2015
 Medium-low quality (mp4, 756MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raiuno/superquark/Superquark_2015_EP_Puntate/4190001_800.mp4
 Maximum quality (mp4, 1.6GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/superquark/Superquark_2015_EP_Puntate/4190001_1800.mp4
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-05&ch=31&v=536123&vd=2015-07-05&vc=31
+ERIC_CLAPTON_CROSSROADS_BLUES_FESTIVAL_2004 ERIC CLAPTON - CROSSROADS BLUES FESTIVAL 2004
+Medium-low quality (mp4, 705MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/notte/4153565_800.mp4
+endofdbentry
