@@ -14,7 +14,7 @@ The programs included in this project can be used to download videos from any ge
 
 This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
 
-Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/video-db.txt).
+Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/web/video-db.txt).
 
 
 ## Web version
@@ -22,7 +22,7 @@ This project also features a [web version](http://video.daniil.it/).
 
 ![Alt text](http://daniilgentili.magix.net/rai.png)
 
-The source code of the page can be viewed in the rai.php file.
+The source code of the page can be viewed in the web/index.php file.
 
 
 ## Bash script usage:
@@ -245,7 +245,7 @@ Do not forget to put the URL between quotes.
 
 This project also features an [API](http://video.daniil.it/api/).
 
-The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/api/api.sh).
+The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/web/api/api.sh).
 
 ### API usage example
 
