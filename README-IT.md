@@ -14,7 +14,7 @@ I programmi di questo progetto possono essere usati per scaricare i video di qua
 
 Questo progetto include uno [script Bash](#istruzioni-di-utilizzo-dello-script-bash) che può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows), [un'applicazione per Android](#metodo-1-app), una [API](#api) e una [versione web](#versione-web)!
 
-Sia la [API](#api) sia la [versione web](#versione-web) usano un [database](https://github.com/danog/video-dl/blob/master/video-db.txt).
+Sia la [API](#api) sia la [versione web](#versione-web) usano un [database](https://github.com/danog/video-dl/blob/master/web/video-db.txt).
 
 
 ## Versione Web
@@ -22,7 +22,7 @@ Questo progetto include una [versione web](http://video.daniil.it/).
 
 ![Alt text](http://daniilgentili.magix.net/rai.png)
 
-Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/rai.php).
+Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/web/index.php).
 
 
 ## Istruzioni di utilizzo dello script bash:
@@ -246,7 +246,7 @@ Ricorda che è necessario racchiudere l'URL tra virgolette.
 
 Questo progetto include anche una API.
 
-Il codice sorgente della API può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/api/api.sh).
+Il codice sorgente della API può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/web/api/api.sh).
 
 ### Esempio di utilizzo API
 
