@@ -12,6 +12,7 @@
 [ "$1" = "" ] && exit 1
 [ "$1" = "dontmindme" ] && exit 1
 
+api() {
 ####################################################
 ####### Beginning of URL recognition section #######
 ####################################################
@@ -53,7 +54,7 @@ getsize() {
 
 info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
 sed 's/\
-//g;s/^, //;s/, B,//g;s/, ,/,/;s/^B,//;s/, $//'))"
+//g;s/^, //g;s/, B,//g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
 
 }
 
@@ -466,7 +467,7 @@ formats="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/video-db.txt | sed -n '/end
 second=$2
 third=$3
 
-# Find input URLin database
+# Find input URLs in database
 userinput="$dl"
 saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
 grep -q ^"$saneuserinput"$ /var/www/video-db.txt && {
@@ -485,3 +486,5 @@ $formats"
 ###########################################################################################
 
 
+}
+api $*

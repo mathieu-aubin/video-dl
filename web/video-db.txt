@@ -104,3 +104,12 @@ High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/201
 Low quality (wmv, 481MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/04/14ca5786c0789c-06_0.wmv
 Medium-high quality (mp4, 1.1GB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/04/14ca5786c0789c-14_0.mp4
 endofdbentry
+http://www.la7.it/in-onda/video/il-governo-renzi-ha-aumentato-le-tasse-scontro-santanch%C3%A8-mughini-09-07-2015-158808
+Scontro_Santanch_Mughini_In_Onda_LA7_Video_e_notizie_su_programmi_TV_sport_politica_e_spettacolo  Scontro Santanchè Mughini - In Onda | LA7 - Video e notizie su programmi TV, sport, politica e spettacolo 
+(mp4, 13MB, 1024x576) http://vodpmd.la7.it.edgesuite.net/content/entry/data/0/231/0_oecb8hzc_0_80qcrop3_2.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-decd47d5-a70f-4beb-834c-12223951f660.html
+Superquark_del_09072015 Superquark del 09/07/2015
+Medium-low quality (mp4, 756MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raiuno/superquark/Superquark_2015_EP_Puntate/4190001_800.mp4
+Maximum quality (mp4, 1.6GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/superquark/Superquark_2015_EP_Puntate/4190001_1800.mp4
+endofdbentry
