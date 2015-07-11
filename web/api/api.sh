@@ -62,7 +62,8 @@ sed 's/\
 # Check if URL exists and remove copies of the same URL
 
 function checkurl() {
-tbase="$(echo $base | sed 's/ /%20/g;s/%20http:\/\// http:\/\//g;s/%20$//' | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }')"
+tbase="$(echo $base | sed 's/ /%20/g;s/%20http:\/\//\
+http:\/\//g;s/%20$//' | awk '!x[$0]++')"
 
 base=
 for u in $tbase;do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
