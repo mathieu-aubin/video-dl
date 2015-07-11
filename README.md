@@ -252,7 +252,7 @@ The source code of the API can be viewed [here](https://github.com/danog/video-d
 Requested URL:
 
 ```
-http://video.daniil.it/api/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
+http://api.daniil.it/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
 ```
 
 Output:
