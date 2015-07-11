@@ -98,3 +98,9 @@ Normal quality (mp4, 2.4MB, 512x288) http://creativemediax1.rai.it/podcastcdn/ra
 Medium quality (mp4, 4.0MB, 720x404) http://creativemediax1.rai.it/podcastcdn/rainews_vod/4078206_1200.mp4
 Normal quality (mp4, 5.1MB, 1280x720) http://creativemediax1.rai.it/podcastcdn/rainews_vod/4078206.mp4
 endofdbentry
+http://www.video.mediaset.it/video/colorado_cafe/full/puntata-del-10-aprile_528552.html
+Colorado_PUNTATE_INTERE_Puntata_del_10_aprile_Video_Mediaset Colorado - PUNTATE INTERE Puntata del 10 aprile | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/04/14ca5786c0789c-13.ism/manifest
+Low quality (wmv, 481MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/04/14ca5786c0789c-06_0.wmv
+Medium-high quality (mp4, 1.1GB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/04/14ca5786c0789c-14_0.mp4
+endofdbentry
