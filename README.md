@@ -12,7 +12,7 @@ This project is licensed under the terms of the GPLv3 license.
 The programs included in this project can be used to download videos from any generic site including the Italian [Rai](http://rai.tv) Television website (including rai replay and iframe videos), the italian [Mediaset](http://mediaset.it) website (including iframes like the ones on the [Witty TV](http://wittytv.it) website), and the [LA7](http://la7.it) website.
 
 
-This project features a Bash script that can be installed on [any Linux/Unix system](#installation-instructions) including [Android](#android), [Mac OS X](#installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
+This project features a Bash script that can be installed on [any Linux/Unix system](#bash-script-installation-instructions) including [Android](#android), [Mac OS X](#bash-script-installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
 
 Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/web/video-db.txt).
 
