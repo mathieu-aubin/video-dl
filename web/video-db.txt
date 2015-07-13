@@ -117,3 +117,69 @@ http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-05&ch=31&v=536123&vd=201
 ERIC_CLAPTON_CROSSROADS_BLUES_FESTIVAL_2004 ERIC CLAPTON - CROSSROADS BLUES FESTIVAL 2004
 Medium-low quality (mp4, 705MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/notte/4153565_800.mp4
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-06&ch=31&v=536911&vd=2015-07-06&vc=31
+WILD_ITALY WILD ITALY
+Maximum quality (mp4, 672MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4173357_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-07&ch=31&v=537347&vd=2015-07-07&vc=31
+WILD_ITALY WILD ITALY
+Maximum quality (mp4, 672MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4173357_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-08&ch=31&v=537773&vd=2015-07-08&vc=31
+WILD_ITALY WILD ITALY
+
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-08&ch=31&v=537783&vd=2015-07-08&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 307MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4185624_800.mp4
+Maximum quality (mp4, 651MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4185624_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-09&ch=31&v=538054&vd=2015-07-09&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 307MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4185624_800.mp4
+Maximum quality (mp4, 651MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4185624_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-09&ch=31&v=538065&vd=2015-07-09&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 315MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4186988_800.mp4
+Maximum quality (mp4, 668MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4186988_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-10&ch=31&v=538647&vd=2015-07-10&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 315MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4186988_800.mp4
+Maximum quality (mp4, 668MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4186988_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-10&ch=31&v=538656&vd=2015-07-10&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 307MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4191340_800.mp4
+Maximum quality (mp4, 652MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4191340_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-11&ch=31&v=539055&vd=2015-07-11&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 307MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4191340_800.mp4
+Maximum quality (mp4, 652MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4191340_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-11&ch=31&v=538679&vd=2015-07-11&vc=31
+LA_TERRA_VISTA_DAL_CIELOMARE_E_OCEANI LA TERRA VISTA DAL CIELO-MARE E OCEANI
+Medium-low quality (mp4, 337MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4192203_800.mp4
+Maximum quality (mp4, 715MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4192203_1800.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-25e08a1b-9d9f-4a36-bb8f-d3281077b38c.html
+Winx_Club_VI_Ep13_La_fata_madrina Winx Club VI - Ep.13: La fata madrina
+Medium-low quality (mp4, 133MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2410987_800.mp4
+Maximum quality (mp4, 291MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2410987_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-4c59795e-43f6-47fd-a472-331205b9e04e.html
+23_Danzando_con_le_stelle_Mia_and_Me 23 - Danzando con le stelle - Mia and Me
+Normal quality (mp4, 271MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3797780.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/domenica-12-luglio-19-00_550131.html
+Il_segreto_PUNTATE_INTERE_Domenica_12_luglio_1900_Video_Mediaset Il segreto - PUNTATE INTERE Domenica 12 luglio, 19.00 | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e836a183d965-08.ism/manifest
+Medium-high quality (mp4, 393MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14e836a183d965-10_0.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/sabato-11-luglio_550120.html
+Il_segreto_PUNTATE_INTERE_Sabato_11_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Sabato 11 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e82d6a11d89c-08.ism/manifest
+Medium-high quality (mp4, 335MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14e82d6a11d89c-10_0.mp4
+endofdbentry

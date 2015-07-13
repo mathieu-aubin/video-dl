@@ -123,11 +123,17 @@ if(isset($_GET['url'])) {
 [ "$*" = "" ] && exit 1
 
 [ "$1" = "dontmindme" ] && exit 1
-
 [ "$1" = "" ] && exit 1
 
+error() { echo "Error." ; exit 1; }
+
+size="$(wget -S --spider $1 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
+echo "$size" | grep -q G && error
+[ ${size%?} -gt 20 ] && error
+
+
 api="$(bash /var/www/video/api/api.sh $1 | sed '/^\s*$/d')"
-[ "$api" = "" ] && { echo "<h1><center>Error.</center></h1>" ; exit 1; }
+[ "$api" = "" ] && error
 
 titles=$(echo "$api" | sed -n 1p)
 title=$(echo "$titles" | cut -d \ -f 1)
@@ -144,7 +150,7 @@ formats="$([ "$URLS" != "" ] && for a in $URLS; do info=$(echo "$api" | grep "$a
 <br>";done)"
 
 formats="$(echo "$formats" | awk '!x[$0]++')"
-[ "$formats" = "" ] && { echo "<h1><center>Error.</center></h1>" ; exit 1; }
+[ "$formats" = "" ] && error
 
 echo "<h1><i>Video download script.</i></h1>
 <h2><i>Created by <a href=\"http://daniil.it\">Daniil Gentili</a></i></h2>

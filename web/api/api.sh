@@ -12,6 +12,9 @@
 [ "$1" = "" ] && exit 1
 [ "$1" = "dontmindme" ] && exit 1
 
+
+
+
 api() {
 ####################################################
 ####### Beginning of URL recognition section #######
@@ -25,7 +28,7 @@ urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null)"
 
 echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*|http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|http://.*wittytv.it/.*|http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|http://.*vk.com/.*' || ptype=common
 
-echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*' && ptype=rai
+echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && ptype=rai
 
 
 echo "$urltype" | grep -qE 'http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*' && ptype=mediaset
@@ -311,7 +314,7 @@ $base"
 done
 
 # Remove copies of the same url
-base="$(echo $TMPURLS | sort | awk '!x[$0]++')"
+base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
@@ -425,6 +428,7 @@ formatoutput
 
 common() {
 # Store the page in a variable
+
 page="$(wget -q -O - $1)"
 
 # Get the video URLs
