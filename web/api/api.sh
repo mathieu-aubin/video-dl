@@ -467,6 +467,22 @@ formats="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/video-db.txt | sed -n '/end
 ###########################################################################################
 ##################### End of Database section, beginning of working section ###############
 ###########################################################################################
+error() {
+videoTitolo=$(basename $dl)
+a=$dl
+getsize
+formats="$(echo "$info" | sed 's/[(]//;s/[)]//') $dl"
+[ "$formats" = "" ] && exit || echo "$title $videoTitolo
+$formats"
+exit
+}
+
+size="$(wget -S --spider $dl 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
+echo "$size" | grep -q G && error
+[ ${size%?} -gt 20 ] && error
+
+
+
 
 # May need this in future...
 second=$2
@@ -475,6 +491,7 @@ third=$3
 # Find input URLs in database
 userinput="$dl"
 saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
+
 grep -q ^"$saneuserinput"$ /var/www/video-db.txt && {
 video_db
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo

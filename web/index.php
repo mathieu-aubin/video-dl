@@ -125,11 +125,7 @@ if(isset($_GET['url'])) {
 [ "$1" = "dontmindme" ] && exit 1
 [ "$1" = "" ] && exit 1
 
-error() { echo "Error." ; exit 1; }
-
-size="$(wget -S --spider $1 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
-echo "$size" | grep -q G && error
-[ ${size%?} -gt 20 ] && error
+error() { echo "<h1>Error.</h1>" ; exit 1; }
 
 
 api="$(bash /var/www/video/api/api.sh $1 | sed '/^\s*$/d')"

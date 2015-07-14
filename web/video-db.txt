@@ -183,3 +183,30 @@ Il_segreto_PUNTATE_INTERE_Sabato_11_luglio_Video_Mediaset Il segreto - PUNTATE I
 High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e82d6a11d89c-08.ism/manifest
 Medium-high quality (mp4, 335MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14e82d6a11d89c-10_0.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-c8f83c1d-fa2e-482e-b60c-7137b6991395.html
+Napoli_prima_e_dopo Napoli prima e dopo
+Maximum quality (mp4, 1.9GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Gli_Speciali_di_Raiuno/Speciali_Raiuno_Musica/4198206_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-22234d79-c911-40e5-b7b8-fa6ad051fcfb.html
+E_lasciatemi_divertire_del_11072015 E lasciatemi divertire del 11/07/2015
+Medium-low quality (mp4, 290MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/E_lasciatemi_divertire/E_lasciatemi_divertire_EP_Puntate/4198004_800.mp4
+Maximum quality (mp4, 615MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/E_lasciatemi_divertire/E_lasciatemi_divertire_EP_Puntate/4198004_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-5a2e3ca8-9bda-4467-aa68-81ee3f1564a0.html
+7_Speranza_in_frantumi_Mia_and_me 7 - Speranza in frantumi - Mia and me
+Normal quality (mp4, 182MB, 640x360) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1609334.mp4
+Normal quality (mp4, 182MB, 640x360) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1609334.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-12&ch=1&v=539575&vd=2015-07-12&vc=1
+Linea_verde_Estate_Intolleranza_al_glutine_la_risposta_nei_grani_antichi Linea verde Estate Intolleranza al glutine: la risposta è nei grani antichi?
+Maximum quality (mp4, 739MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Linea_Verde_2009-2010/lineaverde_puntate_2014/4200827_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-12&ch=2&v=539600&vd=2015-07-12&vc=2
+Nautilus_let_dellinnocenza Nautilus l'età dell'innocenza
+Medium-low quality (mp4, 215MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raidue_world/mattina_world/4198858_800.mp4
+Maximum quality (mp4, 454MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raidue_world/mattina_world/4198858_1800.mp4
+endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-c8f83c1d-fa2e-482e-b60c-7137b6991395.html
+Napoli_prima_e_dopo Napoli prima e dopo
+Maximum quality (mp4, 1.9GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Gli_Speciali_di_Raiuno/Speciali_Raiuno_Musica/4198206_1800.mp4
+endofdbentry
