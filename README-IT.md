@@ -9,7 +9,7 @@ Creato da [Daniil Gentili](http://daniil.eu.org).
 This project is licensed under the terms of the GPLv3 license.
 
 
-I programmi di questo progetto possono essere usati per scaricare i video di qualsiasi sito generico, inclusi i video del sito della [Rai](http://rai.tv) (incluso Rai Replay e siti iframe), [Mediaset](http://mediaset.it) (incluso Witty TV), [LA7](http://la7.it)-
+I programmi di questo progetto possono essere usati per scaricare i video di qualsiasi sito generico, inclusi i video del sito della [Rai](http://rai.tv) (incluso Rai Replay e siti iframe), [Mediaset](http://mediaset.it) (incluso Witty TV), [LA7](http://la7.it) e tanti altri siti.
 
 
 Questo progetto include uno [script Bash](#istruzioni-di-utilizzo-dello-script-bash) che può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows), [un'applicazione per Android](#metodo-1-app), una [API](#api) e una [versione web](#versione-web)!
