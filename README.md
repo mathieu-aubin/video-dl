@@ -126,11 +126,17 @@ Do not forget to put the URL between quotes.
 #### Method 1 (app).
 Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once opened you will be presented with a user friendly interface similar to the web version.
 ##### Changelog:
+
 1: initial version
+
 1.2: added not working, share and credits button
+
 1.2.1: added external sharing option, fixed bugs
 
+
+
 ##### Todo: 
+
 Fix not working button on external share URL, add google analytics, fix Rai Replay on external share.
 
 #### Method 2 (script).
