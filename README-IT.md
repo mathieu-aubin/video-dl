@@ -127,6 +127,12 @@ Abilita le sorgenti sconosciute e installa [questa applicazione](http://bit.ly/0
 
 L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 
+##### Changelog:
+1: versione iniziale
+1.2: aggiunti i pulsanti non funziona, condividi e ringraziamenti
+1.2.1: aggiunta l'opzione di condivisione dall'esterno, corretti problemi
+
+
 #### Metodo 2 (script).
 ##### Installa [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Emulatore Terminale](https://play.google.com/store/apps/details?id=jackpal.androidterm) e [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) se il tuo dispositivo ha i permessi di root o soltanto [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) se il tuo dispositivo non è rootato. 
 
