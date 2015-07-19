@@ -139,6 +139,8 @@ L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 
 1.3: Aggiunto l'aggiornamento automatico.
 
+1.4: Aggiunto link nei ringraziamenti
+
 
 ##### Da fare:
 
