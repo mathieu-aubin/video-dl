@@ -135,6 +135,8 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 
 1.2.2: Fixed not working button on external share URL, added google analytics, fixed Rai Replay on external share.
 
+1.3: Added auto update.
+
 
 ##### Todo: 
 
