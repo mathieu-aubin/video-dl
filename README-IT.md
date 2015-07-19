@@ -3,7 +3,7 @@ Programmi per scaricare video.
 
 [Read English version](https://github.com/danog/video-dl)
 
-Creato da [Daniil Gentili](http://daniil.eu.org).
+Creato da [Daniil Gentili](http://daniil.it).
 
 
 This project is licensed under the terms of the GPLv3 license.
@@ -137,7 +137,7 @@ L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 
 1.2.2: Aggiustato il pulsante non funzione con URL ricevuti da condivisione esterna, aggiunto google analytics e aggiustato il malfunzionamento dei video rai replay con condivisione esterna.
 
-1.3.3: Aggiunto l'aggiornamento automatico.
+1.3: Aggiunto l'aggiornamento automatico.
 
 
 ##### Da fare:
