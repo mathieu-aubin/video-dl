@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.winsontan520.wversionmanager.library.WVersionManager;
 
 import java.util.HashMap;
 
@@ -27,7 +28,20 @@ public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        // Needed stuff
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
+        // Auto update
+
+        WVersionManager versionManager = new WVersionManager(this);
+        versionManager.setUpdateNowLabel(this.getString(R.string.unow));
+        versionManager.setRemindMeLaterLabel(this.getString(R.string.ulater));
+        versionManager.setIgnoreThisVersionLabel(this.getString(R.string.uignore));
+        versionManager.setUpdateUrl("http://j.mp/rai-dl-apk");
+        versionManager.setVersionContentUrl("http://j.mp/rai-dl"); // your update content url, see the response format below
+        versionManager.checkVersion();
+        // Checking external share
         Intent intent = getIntent();
         String action = intent.getAction();
         String type = intent.getType();
@@ -46,15 +60,14 @@ public class MainActivity extends Activity {
             }
         }
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // Load URL
         mWebView = (WebView) findViewById(R.id.activity_main_webview);
         mWebView.loadUrl(urltoload);
         mWebView.setWebViewClient(new MyAppWebViewClient());
         mWebView.getSettings().setBuiltInZoomControls(true);
 
 
-        // From now on google analytics code
+        // Google analytics
         analytics = GoogleAnalytics.getInstance(this);
         analytics.setLocalDispatchPeriod(1800);
         tracker = analytics.newTracker("UA-50691719-8"); // Replace with actual tracker/property Id

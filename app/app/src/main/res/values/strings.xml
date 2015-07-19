@@ -5,5 +5,8 @@
     <string name="credits"><p>Created by <a href="http://daniil.it">Daniil Gentili</a>, insipiration by Matteo Brusaferro</p></string>
     <string name="credits_title">Credits</string>
     <string name="ok">OK</string>
+    <string name="unow">Update now</string>
+    <string name="ulater">Update later</string>
+    <string name="uignore">Ignore this version</string>
     <string name="share_text">Try out this incredibly fast and intuitive application to download videos from Rai, Mediaset e LA7 websites: http://git.daniil.it/video-dl/#method-1-app</string>
 </resources>
