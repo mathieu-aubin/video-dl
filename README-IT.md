@@ -128,10 +128,17 @@ Abilita le sorgenti sconosciute e installa [questa applicazione](http://bit.ly/0
 L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 
 ##### Changelog:
+
 1: versione iniziale
+
 1.2: aggiunti i pulsanti non funziona, condividi e ringraziamenti
+
 1.2.1: aggiunta l'opzione di condivisione dall'esterno, corretti problemi
+
 1.2.2: Aggiustato il pulsante non funzione con URL ricevuti da condivisione esterna, aggiunto google analytics e aggiustato il malfunzionamento dei video rai replay con condivisione esterna.
+
+1.3.3: Aggiunto l'aggiornamento automatico.
+
 
 ##### Da fare:
 
