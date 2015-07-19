@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Download Rai, LA7 and Mediaset videos free</string>
+    <string name="share">Share this!</string>
+    <string name="not_working">Not working?</string>
+    <string name="credits"><p>Created by <a href="http://daniil.it">Daniil Gentili</a>, insipiration by Matteo Brusaferro</p></string>
+    <string name="credits_title">Credits</string>
+    <string name="ok">OK</string>
+    <string name="share_text">Try out this incredibly fast and intuitive application to download videos from Rai, Mediaset e LA7 websites: http://git.daniil.it/video-dl/#method-1-app</string>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-8a476932fed8e74dbd3fef21e6889b2bb685c611.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-d79895e250ea36f9a0e5d467c068e0cb56485919.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-e666bd701e30895fe1f37b2e5d56dc7f7e52f9de.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-8ebea09e9e4201978e180ff4d317206ce316ca0f.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-c9fa5907fce5a4769dfd42ec6b7514eacbc3f2eb.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-2379dfeae49fecf6618e8b3da3539a0bc553aed3.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-80e71cc90fdc7cac37256a24a090c80ba3fc22c7.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-d1e5e598eb09507d1a429dbd8ac34d8b0c078ecd.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-f3aeeab5529a2ff2759d1c480b33bfd6a4c43b8d.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-8727453b7ab01d211828e8e6cef8ebdda31cc170.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-ba845cb32c39234d3366eb2cf460d76c4f33b2a6.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-ce895749788bc1545504e1766facc74997fb17d4.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-481fca859ffaf74931fb5fc78c94494a4dba69b0.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-8fc0b98a14308b9fd4ca179d706218747ce5ede7.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-190e3d28ada7e3f0645cbff6a60c2be63adc9b1a.jar" />
+    </item>
+    <item
+        jar="/home/daniil/asdk/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-00c504588f974c4bf5dc907b723e57a5b9f55e87.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-ff592f2fad811a36b4e01ce0da96da3438df4cd4.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-0d8750b807787d5e0dda1fe1831a1ac15e8d6ab7.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-df434ea5cee16ccd24fb5ba2540f4fa0878d4159.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-e7f1923c5b0c7911efcdfc67a01800baf0a33779.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-319f8f8261e05318236316012b04154d49cf5403.jar" />
+    </item>
+    <item
+        jar="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/daniil/Dropbox/AndroidStudioProjects/DownloadRaivideos/app/build/intermediates/pre-dexed/debug/classes-b3a4fb18d45d42fcb0440d983051d4c1c696ceed.jar" />
+    </item>
+
+</items>

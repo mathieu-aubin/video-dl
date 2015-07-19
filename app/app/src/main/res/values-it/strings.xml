@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Scarica video Rai e Mediaset Gratis</string>
+    <string name="share">Condividi!</string>
+    <string name="not_working">Non funziona?</string>
+    <string name="credits"><p>Creato da <a href="http://daniil.it">Daniil Gentili</a>, ispirato da Matteo Brusaferro</p></string>
+    <string name="credits_title">Ringraziamenti</string>
+    <string name="ok">OK</string>
+    <string name="share_text">Prova questa veloce ed intuitiva applicazione per scaricare video Rai, Mediaset e LA7: http://git.daniil.it/video-dl/#method-1-app</string>
+</resources>
