@@ -137,6 +137,8 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 
 1.3: Added auto update.
 
+1.4: Added more credits.
+
 
 ##### Todo: 
 
