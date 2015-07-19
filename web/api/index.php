@@ -45,8 +45,8 @@ body {
 </style>
 </head>
 <body>
-<img src="http://lol.daniil.it/index_htm_files/19.jpg" href="http://daniil.it">Video download API Server</img>
-<br><a href="http://daniil.it">Created by Daniil Gentili</a><br>
+<img src="http://lol.daniil.it/index_htm_files/19.jpg" href="http://daniil.it"></img>
+<br><a href="http://daniil.it">Video download API server created by Daniil Gentili</a><br>
 <a href="http://git.daniil.it/video-dl/#api">How to use this api</a><br>
 <a href="https://github.com/danog/video-dl/tree/master/web/api">Source code on GitHub</a>
 </body>';

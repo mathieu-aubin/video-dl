@@ -124,7 +124,6 @@ if(isset($_GET['url'])) {
 
 [ "$1" = "dontmindme" ] && exit 1
 [ "$1" = "" ] && exit 1
-
 error() { echo "<h1>Error.</h1>" ; exit 1; }
 
 

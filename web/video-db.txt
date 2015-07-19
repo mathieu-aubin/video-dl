@@ -210,3 +210,319 @@ http://rai.it/dl/RaiTV/programmi/media/ContentItem-c8f83c1d-fa2e-482e-b60c-7137b
 Napoli_prima_e_dopo Napoli prima e dopo
 Maximum quality (mp4, 1.9GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Gli_Speciali_di_Raiuno/Speciali_Raiuno_Musica/4198206_1800.mp4
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-07&ch=31&v=537356&vd=2015-07-07&vc=31
+LA_TERRA_VISTA_DAL_CIELO_ACQUA LA TERRA VISTA DAL CIELO - ACQUA
+Medium-low quality (mp4, 307MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4185121_800.mp4
+Maximum quality (mp4, 651MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4185121_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-12&ch=31&v=539313&vd=2015-07-12&vc=31
+WILD_ITALY WILD ITALY
+Medium-low quality (mp4, 315MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4186988_800.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-2d8d4c5e-a708-47bf-a077-49b4b0574cdb.html
+Nemico_pubblico_Live_del_12072015 Nemico pubblico Live del 12/07/2015
+Medium-low quality (mp4, 310MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/Nemico_Pubblico_Live/Nemico_Pubblico_Live_puntate_2014/4203609_800.mp4
+Maximum quality (mp4, 656MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/Nemico_Pubblico_Live/Nemico_Pubblico_Live_puntate_2014/4203609_1800.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-989890e4-28ee-47f2-a8b6-24ea33e120d4.html
+Chi_ci_guadagna_dalla_crisi_greca Chi ci guadagna dalla crisi greca?
+Medium-low quality (mp4, 20MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4210895_800.mp4
+Normal quality (mp4, 43MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4210895.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-e5f70eec-3441-43d2-b328-372af5eddd18.html
+Il_meglio_di_Made_in_Sud_del_13072015 Il meglio di Made in Sud del 13/07/2015
+Medium-low quality (mp4, 529MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raidue/Made_in_Sud/Made_in_Sud_6_EP_Puntate/4210033_800.mp4
+Maximum quality (mp4, 1.1GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raidue/Made_in_Sud/Made_in_Sud_6_EP_Puntate/4210033_1800.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-e5f70eec-3441-43d2-b328-372af5eddd18.html
+Il_meglio_di_Made_in_Sud_del_13072015 Il meglio di Made in Sud del 13/07/2015
+Medium-low quality (mp4, 529MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raidue/Made_in_Sud/Made_in_Sud_6_EP_Puntate/4210033_800.mp4
+Maximum quality (mp4, 1.1GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raidue/Made_in_Sud/Made_in_Sud_6_EP_Puntate/4210033_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e5f70eec-3441-43d2-b328-372af5eddd18.html
+Il_meglio_di_Made_in_Sud_del_13072015 Il meglio di Made in Sud del 13/07/2015
+Medium-low quality (mp4, 529MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raidue/Made_in_Sud/Made_in_Sud_6_EP_Puntate/4210033_800.mp4
+Maximum quality (mp4, 1.1GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raidue/Made_in_Sud/Made_in_Sud_6_EP_Puntate/4210033_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-a3823e97-fc9d-409f-9b72-5de3a3133ef5.html
+Made_in_sud_Il_meglio_di_Extra_Onda_num1 Made in sud - Il meglio di Extra Onda num1
+Normal quality (mp4, 31MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Raitv/Raitv_watchfolder_generico/3968692.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/martedi-14-luglio_550432.html
+Il_segreto_PUNTATE_INTERE_Marted_14_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Martedì 14 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e8cf9cece965-08.ism/manifest
+Medium-high quality (mp4, 393MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14e8cf9cece965-10_0.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-87ded731-dcca-412e-9d07-6e9439d59bff.html
+Viaggio_tra_i_pensionati_romani Viaggio tra i pensionati romani
+Medium-low quality (mp4, 20MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4214628_800.mp4
+Normal quality (mp4, 42MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4214628.mp4
+endofdbentry
+http://www.rai.it/dl/RaiTV/programmi/media/ContentItem-87ded731-dcca-412e-9d07-6e9439d59bff.html
+Viaggio_tra_i_pensionati_romani Viaggio tra i pensionati romani
+Medium-low quality (mp4, 20MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4214628_800.mp4
+Normal quality (mp4, 42MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4214628.mp4
+endofdbentry
+http://git.daniil.it/video-dl/
+Videodl_by_danog Video-dl by danog
+mp4, 131MB, 700x394 http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+mp4, 286MB, 1024x576 http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+endofdbentry
+http://www.wittytv.it/temptation-island/martedi-14-luglio-quarta-puntata/550526/
+Marted_14_luglio_8211_Quarta_puntata Martedì 14 luglio &#8211; Quarta puntata
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e8ea12aeea2f-08.ism/manifest
+Medium-high quality (mp4, 1013MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14e8ea12aeea2f-10_0.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/mercoledi-15-luglio_550623.html
+Il_segreto_PUNTATE_INTERE_Mercoled_15_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Mercoledì 15 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e9218a4c57d2-08.ism/manifest
+Medium-high quality (mp4, 333MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14e9218a4c57d2-10_0.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-d16d4dd0-2a42-4396-90bf-94f234709824.html
+27_Parlando_agli_unicorni_Mia_and_Me 27 - Parlando agli unicorni - Mia and Me
+Normal quality (mp4, 271MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3806207.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-0fe3bb78-4c62-4704-bfaf-259dfdaf9cc5.html
+28_La_speranza_di_Centopia_Mia_and_Me 28 - La speranza di Centopia - Mia and Me
+Normal quality (mp4, 267MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3806222.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-5ce01ca6-0a1b-4466-a319-fd518e3b9abb.html
+29_Ricostruzione_Mia_and_Me 29 - Ricostruzione - Mia and Me
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3809723.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-7c82f97d-6be7-480a-902f-7027b4bc4622.html
+30_Il_Trumptus_perduto_Mia_and_Me 30 - Il Trumptus perduto - Mia and Me
+Normal quality (mp4, 267MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3809733.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-a434fd43-be1f-4685-a4ca-e6e237859c89.html
+5_Il_figlio_dorato_Mia_and_Me 5 - Il figlio dorato - Mia and Me
+Normal quality (mp4, 183MB, 640x360) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1606647.mp4
+Normal quality (mp4, 183MB, 640x360) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1606647.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-c4813aa5-2ba3-42b8-b8f7-8ccf5057bfb5.html
+6_Loasi_di_Onchao_Mia_and_Me 6 - L'oasi di Onchao - Mia and Me
+Normal quality (mp4, 183MB, 640x360) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1606651.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-90d055d3-b2b9-4d91-898c-f8c242b94ab7.html
+8_La_vacanza_di_Ziggo_Mia_and_me 8 - La vacanza di Ziggo - Mia and me
+Normal quality (mp4, 184MB, 640x360) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1609337.mp4
+Normal quality (mp4, 184MB, 640x360) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1609337.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-f147aa1f-4a16-4cf5-87e7-813af95d32d9.html
+9_Gli_Elfi_e_il_Drago_Mia_and_me 9 - Gli Elfi e il Drago - Mia and me
+Normal quality (mp4, 182MB, 640x360) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1583263.mp4
+Normal quality (mp4, 182MB, 640x360) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1583263.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-98cc65e7-dcfe-461c-a474-7be0d5315a2e.html
+10_Lalbero_in_fiore_Mia_and_me 10 - L'albero in fiore - Mia and me
+Normal quality (mp4, 182MB, 640x360) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1583359.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/giovedi-16-luglio_550810.html
+Il_segreto_PUNTATE_INTERE_Gioved_16_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Giovedì 16 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e9743a57ea2f-08.ism/manifest
+Medium-high quality (mp4, 339MB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/07/14e9743a57ea2f-10_0.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-80e1442b-d65e-4155-8e98-cf4d82fa7d41.html
+13_Lunicorno_del_fuoco_Mia_and_Me 13 - L'unicorno del fuoco - Mia and Me
+Low quality (mp4, 108MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_400.mp4
+Medium-low quality (mp4, 141MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_800.mp4
+Medium quality (mp4, 208MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1200.mp4
+Medium-high quality (mp4, 258MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1500.mp4
+Maximum quality (mp4, 308MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-80e1442b-d65e-4155-8e98-cf4d82fa7d41.html
+13_Lunicorno_del_fuoco_Mia_and_Me 13 - L'unicorno del fuoco - Mia and Me
+Low quality (mp4, 108MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1102785_600.mp4
+Low quality (mp4, 108MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1102785_400.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_400.mp4
+Medium-low quality (mp4, 141MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1102785_800.mp4
+Medium-low quality (mp4, 141MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_800.mp4
+Medium quality (mp4, 208MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1200.mp4
+Medium quality (mp4, 208MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1200.mp4
+Medium-high quality (mp4, 258MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1500.mp4
+Medium-high quality (mp4, 258MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1500.mp4
+Maximum quality (mp4, 308MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1800.mp4
+Maximum quality (mp4, 308MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1102785_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-9202da1b-4b2d-4559-8cae-275e4fd7c2af.html
+14_Il_bosco_avvizzito_Mia_and_Me 14 - Il bosco avvizzito - Mia and Me
+Low quality (mp4, 109MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1104432_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1104432_400.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1104432_800.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1104432_1200.mp4
+Medium-high quality (mp4, 260MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1104432_1500.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1104432_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-2869fbed-0fad-4394-9771-ba11023e0140.html
+15_Signorina_so_tutto_io_Mia_and_Me 15 - Signorina so tutto io - Mia and Me
+Low quality (mp4, 108MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1106040_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1106040_400.mp4
+Medium-low quality (mp4, 142MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1106040_800.mp4
+Medium quality (mp4, 209MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1106040_1200.mp4
+Medium-high quality (mp4, 259MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1106040_1500.mp4
+Maximum quality (mp4, 309MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1106040_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-06cb149b-f678-4aed-8a5f-c4be86a66a4d.html
+16_La_trappola_dellunicorno_Mia_and_Me 16 - La trappola dell'unicorno - Mia and Me
+Low quality (mp4, 109MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1110272_600.mp4
+Low quality (mp4, 109MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1110272_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1110272_400.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1110272_400.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1110272_800.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1110272_800.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1110272_1200.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1110272_1200.mp4
+Medium-high quality (mp4, 260MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1110272_1500.mp4
+Medium-high quality (mp4, 260MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1110272_1500.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1110272_1800.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1110272_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-6b140997-2443-40aa-a8e4-4c0706bfde81.html
+17_Tutti_in_ghingheri_Mia_and_Me 17 - Tutti in ghingheri - Mia and Me
+Low quality (mp4, 109MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1112558_600.mp4
+Low quality (mp4, 109MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1112558_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1112558_400.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1112558_400.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1112558_800.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1112558_800.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1112558_1200.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1112558_1200.mp4
+Medium-high quality (mp4, 260MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1112558_1500.mp4
+Medium-high quality (mp4, 260MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1112558_1500.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1112558_1800.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1112558_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-d9fd4bde-9160-4414-87e3-ad13aae63ab3.html
+18_Re_per_un_giorno_Mia_and_Me 18 - Re per un giorno - Mia and Me
+Low quality (mp4, 108MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1113821_600.mp4
+Low quality (mp4, 108MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1113821_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1113821_400.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1113821_400.mp4
+Medium-low quality (mp4, 141MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1113821_800.mp4
+Medium-low quality (mp4, 141MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1113821_800.mp4
+Medium quality (mp4, 208MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1113821_1200.mp4
+Medium quality (mp4, 208MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1113821_1200.mp4
+Medium-high quality (mp4, 258MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1113821_1500.mp4
+Medium-high quality (mp4, 258MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1113821_1500.mp4
+Maximum quality (mp4, 308MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1113821_1800.mp4
+Maximum quality (mp4, 308MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1113821_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-f91fd31b-9dc3-4b98-9314-3a1db897717b.html
+19_Il_Pan_pifferaio_Mia_and_Me 19 - Il Pan pifferaio - Mia and Me
+Low quality (mp4, 109MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1115486_600.mp4
+Low quality (mp4, 109MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1115486_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1115486_400.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1115486_400.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1115486_800.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1115486_800.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1115486_1200.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1115486_1200.mp4
+Medium-high quality (mp4, 261MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1115486_1500.mp4
+Medium-high quality (mp4, 261MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1115486_1500.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1115486_1800.mp4
+Maximum quality (mp4, 311MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1115486_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-0b6409c0-219c-4f4d-a2c1-c08afea8c297.html
+20_La_caverna_della_veritu00E0_Mia_and_Me 20 - La caverna della verit\u00E0 - Mia and Me
+Low quality (mp4, 107MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1117161_600.mp4
+Minimum quality (mp4, 74MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1117161_400.mp4
+Medium-low quality (mp4, 140MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1117161_800.mp4
+Medium quality (mp4, 206MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1117161_1200.mp4
+Medium-high quality (mp4, 256MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1117161_1500.mp4
+Maximum quality (mp4, 306MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1117161_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-1092785d-424a-4765-bf17-8d14208632bf.html
+21_Contro_vento_Mia_and_Me 21 - Contro vento - Mia and Me
+Low quality (mp4, 107MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1121236_600.mp4
+Low quality (mp4, 107MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1121236_600.mp4
+Minimum quality (mp4, 74MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1121236_400.mp4
+Minimum quality (mp4, 74MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1121236_400.mp4
+Medium-low quality (mp4, 140MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1121236_800.mp4
+Medium-low quality (mp4, 140MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1121236_800.mp4
+Medium quality (mp4, 207MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1121236_1200.mp4
+Medium quality (mp4, 207MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1121236_1200.mp4
+Medium-high quality (mp4, 256MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1121236_1500.mp4
+Medium-high quality (mp4, 256MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1121236_1500.mp4
+Maximum quality (mp4, 306MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1121236_1800.mp4
+Maximum quality (mp4, 306MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1121236_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-d6f72f94-eef0-4d95-b056-3a7c3989dfe0.html
+22_Al_chiaro_di_Luna_Mia_and_Me 22 - Al chiaro di Luna - Mia and Me
+Low quality (mp4, 109MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1122981_600.mp4
+Low quality (mp4, 109MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1122981_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1122981_400.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1122981_400.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1122981_800.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1122981_800.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1122981_1200.mp4
+Medium quality (mp4, 210MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1122981_1200.mp4
+Medium-high quality (mp4, 261MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1122981_1500.mp4
+Medium-high quality (mp4, 261MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1122981_1500.mp4
+Maximum quality (mp4, 312MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1122981_1800.mp4
+Maximum quality (mp4, 312MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1122981_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-731ae838-1c0d-4ea1-a6cd-95facd19b035.html
+23_Scelta_di_campo_Mia_and_Me 23 - Scelta di campo - Mia and Me
+Low quality (mp4, 109MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1124780_600.mp4
+Low quality (mp4, 109MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1124780_600.mp4
+Minimum quality (mp4, 76MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1124780_400.mp4
+Minimum quality (mp4, 76MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1124780_400.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1124780_800.mp4
+Medium-low quality (mp4, 143MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1124780_800.mp4
+Medium quality (mp4, 211MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1124780_1200.mp4
+Medium quality (mp4, 211MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1124780_1200.mp4
+Medium-high quality (mp4, 261MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1124780_1500.mp4
+Medium-high quality (mp4, 261MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1124780_1500.mp4
+Maximum quality (mp4, 313MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1124780_1800.mp4
+Maximum quality (mp4, 313MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1124780_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-dd270382-e801-460a-b1ee-f64b04268728.html
+24_Lacrime_di_gioia_Mia_and_Me 24 - Lacrime di gioia - Mia and Me
+Low quality (mp4, 108MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1126515_600.mp4
+Minimum quality (mp4, 75MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1126515_400.mp4
+Medium-low quality (mp4, 141MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1126515_800.mp4
+Medium quality (mp4, 208MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1126515_1200.mp4
+Medium-high quality (mp4, 258MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1126515_1500.mp4
+Maximum quality (mp4, 308MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1126515_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-0d584045-f696-490d-963d-fba670f0b192.html
+25_La_proposta_di_Panthea_Mia_and_Me 25 - La proposta di Panthea - Mia and Me
+Low quality (mp4, 107MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1128190_600.mp4
+Low quality (mp4, 107MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1128190_600.mp4
+Minimum quality (mp4, 74MB, 512x288) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1128190_400.mp4
+Minimum quality (mp4, 74MB, 512x288) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1128190_400.mp4
+Medium-low quality (mp4, 139MB, 700x394) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1128190_800.mp4
+Medium-low quality (mp4, 139MB, 700x394) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1128190_800.mp4
+Medium quality (mp4, 205MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1128190_1200.mp4
+Medium quality (mp4, 205MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1128190_1200.mp4
+Medium-high quality (mp4, 255MB, 920x518) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1128190_1500.mp4
+Medium-high quality (mp4, 255MB, 920x518) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1128190_1500.mp4
+Maximum quality (mp4, 304MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Mia_and_Me/1128190_1800.mp4
+Maximum quality (mp4, 304MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/1128190_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-14&ch=1&v=539998&vd=2015-07-14&vc=1
+Il_dirndl Il dirndl
+Maximum quality (mp4, 585MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raiuno/notte/4210291_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-14&ch=1&v=539996&vd=2015-07-14&vc=1
+Cuccioli_Piccola_spia Cuccioli - Piccola spia
+Medium-low quality (mp4, 596MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/notte_world/4210269_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/notte_world/4210269_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-14&ch=1&v=539995&vd=2015-07-14&vc=1
+Real_School_Generazione_digitale_Docenti_La_Scuola_2 Real School Generazione digitale - Docenti - La Scuola 2
+Medium-low quality (mp4, 202MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/notte_world/4210182_800.mp4
+Maximum quality (mp4, 428MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/notte_world/4210182_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/venerdi-17-luglio_551033.html
+Il_segreto_PUNTATE_INTERE_Venerd_17_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Venerdì 17 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14e9c67717c7d2-08.ism/manifest
+Medium-high quality (mp4, 342MB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/07/14e9c67717c7d2-10_0.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-18&ch=31&v=541861&vd=2015-07-18&vc=31
+ISOLE_SELVAGGE ISOLE SELVAGGE
+Medium-low quality (mp4, 338MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4231235_800.mp4
+Maximum quality (mp4, 718MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4231235_1800.mp4
+endofdbentry

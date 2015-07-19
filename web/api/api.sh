@@ -184,7 +184,7 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -g | cut -d' ' -f2-)"
-
+[ "$formats" = "" ] && exit
 echo "$userinput
 $title $videoTitolo
 $formats
