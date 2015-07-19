@@ -133,11 +133,13 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 
 1.2.1: added external sharing option, fixed bugs
 
+1.2.2: Fixed not working button on external share URL, added google analytics, fixed Rai Replay on external share.
 
 
 ##### Todo: 
 
-Fix not working button on external share URL, add google analytics, fix Rai Replay on external share.
+You tell me!
+
 
 #### Method 2 (script).
 #### Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) on rooted devices or [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) if your device isn't rooted. 
