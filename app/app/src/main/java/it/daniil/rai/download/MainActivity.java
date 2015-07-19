@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
         versionManager.setUpdateUrl("http://j.mp/rai-dl-apk");
         versionManager.setVersionContentUrl("http://j.mp/rai-dl"); // your update content url, see the response format below
         versionManager.checkVersion();
+
         // Checking external share
         Intent intent = getIntent();
         String action = intent.getAction();
