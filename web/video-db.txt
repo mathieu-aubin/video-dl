@@ -526,3 +526,54 @@ ISOLE_SELVAGGE ISOLE SELVAGGE
 Medium-low quality (mp4, 338MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4231235_800.mp4
 Maximum quality (mp4, 718MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4231235_1800.mp4
 endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-cb45ecba-a1d8-465e-9a93-a088cc458048.html
+Winx_Club_VI_Ep12_I_Figli_della_Notte Winx Club VI - Ep.12: I Figli della Notte
+Medium-low quality (mp4, 136MB, 700x394) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_800.mp4
+Medium-low quality (mp4, 136MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_800.mp4
+Maximum quality (mp4, 297MB, 1024x576) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_1800.mp4
+Maximum quality (mp4, 297MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/martedi-21-luglio_551656.html
+Il_segreto_PUNTATE_INTERE_Marted_21_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Martedì 21 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14eb1c309877d2-08.ism/manifest
+Medium-high quality (mp4, 349MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14eb1c309877d2-10_0.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/dirette/PublishingBlock-f630463f-a1b1-4ca6-925a-6d9e8801d88c.html?channel=Rai%20Storia
+Rai_Storia Rai Storia
+Normal quality (m3u8, Length: 260 [application/vnd.apple.mpegurl]B) http://stream5.rai.it/italy/smil:raistoria.smil/playlist.m3u8
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-18&ch=1&v=541559&vd=2015-07-18&vc=1
+Cinematografo_Estate Cinematografo Estate
+Maximum quality (mp4, 839MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/CINEMATOGRAFO/4231365_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-76366641-5b30-485d-bec3-7f76e4b2d699.html
+Napoli_47_35_Parallelo_Italia_del_21072015 Napoli - 47 35 Parallelo Italia del 21/07/2015
+Medium-low quality (mp4, 751MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/47-35_Parallelo_Italia/47-35_Parallelo_Italia_EP_Puntate/4252207_800.mp4
+Maximum quality (mp4, 1.6GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/47-35_Parallelo_Italia/47-35_Parallelo_Italia_EP_Puntate/4252207_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/giovedi-23-luglio_551982.html
+Il_segreto_PUNTATE_INTERE_Gioved_23_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Giovedì 23 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14ebb3b31f47d2-13.ism/manifest
+Low quality (wmv, 151MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/07/14ebb3b31f47d2-06_0.wmv
+Medium-high quality (mp4, 346MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14ebb3b31f47d2-14_0.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-cb27157f-9dd0-4aee-b788-b1f67643a391.html
+Report_del_07042014 Report del 07/04/2014
+Medium-low quality (mp4, 622MB, 700x394) http://creativemedia4.rai.it/archive_k/Archive/raitre/report/report_puntate_2014/2440873_800.mp4
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia4.rai.it/archive_k/Archive/raitre/report/report_puntate_2014/2440873_1800.mp4
+endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-76366641-5b30-485d-bec3-7f76e4b2d699.html
+Napoli_47_35_Parallelo_Italia_del_21072015 Napoli - 47 35 Parallelo Italia del 21/07/2015
+Medium-low quality (mp4, 751MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/47-35_Parallelo_Italia/47-35_Parallelo_Italia_EP_Puntate/4252207_800.mp4
+Maximum quality (mp4, 1.6GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/47-35_Parallelo_Italia/47-35_Parallelo_Italia_EP_Puntate/4252207_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-30080eff-741e-482b-8c2c-500c682e828b.html
+Ira_E_lasciatemi_divertire_del_04072015 Ira - E lasciatemi divertire del 04/07/2015
+Medium-low quality (mp4, 284MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/E_lasciatemi_divertire/E_lasciatemi_divertire_EP_Puntate/4169648_800.mp4
+Maximum quality (mp4, 601MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/E_lasciatemi_divertire/E_lasciatemi_divertire_EP_Puntate/4169648_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-18&ch=3&v=541465&vd=2015-07-18&vc=3
+Storie_DellArte_Venere Storie Dell'Arte Venere
+Medium-low quality (mp4, 153MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raitre_world/notte_world/4231147_800.mp4
+Maximum quality (mp4, 325MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raitre_world/notte_world/4231147_1800.mp4
+endofdbentry
