@@ -577,3 +577,13 @@ Storie_DellArte_Venere Storie Dell'Arte Venere
 Medium-low quality (mp4, 153MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raitre_world/notte_world/4231147_800.mp4
 Maximum quality (mp4, 325MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raitre_world/notte_world/4231147_1800.mp4
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-07-18&ch=31&v=541869&vd=2015-07-18&vc=31
+COME_SI_GUARDA_UNOPERA_DARTE COME SI GUARDA UN'OPERA D'ARTE
+Maximum quality (mp4, 354MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4237105_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/sabato-25-luglio_552236.html
+Il_segreto_PUNTATE_INTERE_Sabato_25_luglio_Video_Mediaset Il segreto - PUNTATE INTERE Sabato 25 luglio | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/07/14ec12fc9e27d2-13.ism/manifest
+Low quality (wmv, 190MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/07/14ec12fc9e27d2-06_0.wmv
+Medium-high quality (mp4, 434MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14ec12fc9e27d2-14_0.mp4
+endofdbentry
