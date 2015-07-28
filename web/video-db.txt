@@ -587,3 +587,8 @@ High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/201
 Low quality (wmv, 190MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/07/14ec12fc9e27d2-06_0.wmv
 Medium-high quality (mp4, 434MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/07/14ec12fc9e27d2-14_0.mp4
 endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-549ef417-db27-419a-963d-c0b8b3704912.html
+Libia Libia
+Medium-low quality (mp4, 15MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4296871_800.mp4
+Maximum quality (mp4, 33MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4296871_1800.mp4
+endofdbentry
