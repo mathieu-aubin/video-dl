@@ -592,3 +592,8 @@ Libia Libia
 Medium-low quality (mp4, 15MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4296871_800.mp4
 Maximum quality (mp4, 33MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/AGORA/agora_puntate_2014/4296871_1800.mp4
 endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/sabato-1-agosto_553633.html
+Il_segreto_PUNTATE_INTERE_Sabato_1_agosto_Video_Mediaset Il segreto - PUNTATE INTERE Sabato 1 agosto | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/08/14eeae863fea2f-08.ism/manifest
+Medium-high quality (mp4, 388MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/08/14eeae863fea2f-10_0.mp4
+endofdbentry
