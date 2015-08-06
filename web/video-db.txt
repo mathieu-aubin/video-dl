@@ -597,3 +597,32 @@ Il_segreto_PUNTATE_INTERE_Sabato_1_agosto_Video_Mediaset Il segreto - PUNTATE IN
 High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/08/14eeae863fea2f-08.ism/manifest
 Medium-high quality (mp4, 388MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/08/14eeae863fea2f-10_0.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-fd16b9e8-7dfa-4ae2-915f-dad6da32b519.html
+Puntata_386_Community_3_Agosto_2015 Puntata 386 | Community 3 Agosto 2015
+Normal quality (mp4, 383MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Rai/Rai_Italia/4256595.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-fd16b9e8-7dfa-4ae2-915f-dad6da32b519.html
+Puntata_386_Community_3_Agosto_2015 Puntata 386 | Community 3 Agosto 2015
+Normal quality (mp4, 383MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Rai/Rai_Italia/4256595.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-fd16b9e8-7dfa-4ae2-915f-dad6da32b519.html
+Puntata_386_Community_3_Agosto_2015 Puntata 386 | Community 3 Agosto 2015
+Normal quality (mp4, 383MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Rai/Rai_Italia/4256595.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-fd16b9e8-7dfa-4ae2-915f-dad6da32b519.html
+Puntata_386_Community_3_Agosto_2015 Puntata 386 | Community 3 Agosto 2015
+Normal quality (mp4, 383MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Rai/Rai_Italia/4256595.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-0fe3bb78-4c62-4704-bfaf-259dfdaf9cc5-raigulp.html
+28_La_speranza_di_Centopia_Mia_and_Me 28 - La speranza di Centopia - Mia and Me
+Normal quality (mp4, 267MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3806222.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-739cac8e-0056-43de-a222-15d107dc2f1e.html
+01_Ricostruzione_Mia_and_me 01 - Ricostruzione - Mia and me
+Normal quality (mp4, 251MB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3761394.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-03&ch=2&v=548309&vd=2015-08-03&vc=2
+Voyager_Ai_confini_della_conoscenza Voyager Ai confini della conoscenza
+Medium-low quality (mp4, 751MB, 700x394) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raidue/sera/4324838_800.mp4
+Maximum quality (mp4, 1.5GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raidue/sera/4324838_1800.mp4
+endofdbentry
