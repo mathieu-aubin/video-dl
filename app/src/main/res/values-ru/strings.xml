@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Youtube-dl для Android</string>
+    <string name="not_working">Не работает?</string>
+    <string name="credits">Создатель Daniil Gentili (http://daniil.it) с моралной поддержкой Matteo Brusaferro</string>
+    <string name="credits_title">Благодарность</string>
+    <string name="share">Поделиться</string>
+    <string name="ok">OK</string>
+    <string name="unow">Обновить сейчас</string>
+    <string name="ulater">Обновить позже</string>
+    <string name="uignore">Больше не показывать для этой версии</string>
+    <string name="download">Скачать</string>
+    <string name="settings">Настройки</string>
+    <string name="urlprompt">Please type in a URL</string>
+    <string name="success">Success!</string>
+    <string name="error">An error occurred, please try again.</string>
+
+    <string name="dl">Downloading...</string>
+    <string name="dldesc">Downloading required files...</string>
+    <string name="installing">Installing files...</string>
+    <string name="share_text">Скачайте это быстрое приложениуе чтобы скачивать видео с многих сайтов, включая Youtube! http://git.daniil.it/video-dl/#method-1-app</string>
+
+</resources>

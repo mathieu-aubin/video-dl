@@ -12,13 +12,8 @@ import android.webkit.WebViewClient;
 public class MyAppWebViewClient extends WebViewClient {
 
     @Override
-    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        if(Uri.parse(url).getHost().endsWith("video.daniil.it")) {
-            return false;
-        }
-
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        view.getContext().startActivity(intent);
+    public boolean shouldOverrideUrlLoading(WebView view, String url){
+        view.loadUrl(url);
         return true;
     }
 }

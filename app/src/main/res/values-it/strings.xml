@@ -9,5 +9,13 @@
     <string name="unow">Aggiorna ora</string>
     <string name="ulater">Più tardi</string>
     <string name="uignore">Ignora questa versione</string>
+    <string name="download">Scaricare</string>
+    <string name="settings">Impostazioni</string>
+    <string name="urlprompt">Prego inserire un URL</string>
+    <string name="error">C\'è stato un errore, prego riprovare.</string>
+    <string name="success">Successo!</string>
+    <string name="dl">Scaricamento…</string>
+    <string name="dldesc">Scaricamento dei file necessari in corso…</string>
+    <string name="installing">Installazione dei file in corso…</string>
     <string name="share_text">Prova questa veloce ed intuitiva applicazione per scaricare video Rai, Mediaset e LA7: http://git.daniil.it/video-dl/#method-1-app</string>
 </resources>

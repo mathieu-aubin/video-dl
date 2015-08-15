@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textUri|textNoSuggestions"
+        android:imeOptions="actionGo" />
+
+    <item android:id="@+id/action_url"
+        android:title="URL"
+        android:showAsAction="ifRoom"  />
+
+    <item android:id="@+id/action_download"
+        android:icon="@mipmap/ic_launcher"
+        android:title="@string/download"
+        android:showAsAction="ifRoom" />
+
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/action_share"
+        android:title="@string/share"/>
+    <item android:id="@+id/action_not_working"
+        android:title="@string/not_working"/>
+
+    <item android:id="@+id/action_credits"
+        android:title="@string/credits_title"/>
+
+</menu>
