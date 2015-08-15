@@ -9,7 +9,7 @@ Creato da [Daniil Gentili](http://daniil.it).
 This project is licensed under the terms of the GPLv3 license.
 
 
-I programmi di questo progetto possono essere usati per scaricare i video di qualsiasi sito generico, inclusi i video del sito della [Rai](http://rai.tv) (incluso Rai Replay e siti iframe), [Mediaset](http://mediaset.it) (incluso Witty TV), [LA7](http://la7.it) e tanti altri siti.
+I programmi di questo progetto possono essere usati per scaricare i video di qualsiasi sito generico, inclusi i video del sito della [Rai](http://rai.tv) (incluso Rai Replay e siti iframe), [Mediaset](http://mediaset.it) (incluso Witty TV), [LA7](http://la7.it) e tanti altri siti. E grazie a youtube-dl adesso i programmi supportano tantissimi altri siti!
 
 
 Questo progetto include uno [script Bash](#istruzioni-di-utilizzo-dello-script-bash) che può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows), [un'applicazione per Android](#metodo-1-app), una [API](#api) e una [versione web](#versione-web)!
@@ -20,7 +20,7 @@ Sia la [API](#api) sia la [versione web](#versione-web) usano un [database](http
 ## Versione Web
 Questo progetto include una [versione web](http://video.daniil.it/).
 
-![Alt text](http://daniilgentili.magix.net/rai.png)
+![Alt text](http://daniilgentili.magix.net/rai.png?v=2)
 
 Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/web).
 
