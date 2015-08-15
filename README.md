@@ -277,17 +277,14 @@ http://api.daniil.it/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/Conten
 Output:
 
 ```
-
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
-
 ```
 
 Explanation: 
 
 ```
-Newline
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
 Sanitized name of video for file name  Original name of the video for printing to user output
 Newline
@@ -296,7 +293,6 @@ Quality name (format, size, dimension) URL of the video
 Newline
 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
 Quality name (format, size, dimension) URL of the video
-Newline
 ```
 
 If you created a version of the script using another programming language [contact me](http://daniil.it/contact_me.htm) and I will put it on this page!
