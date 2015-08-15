@@ -9,8 +9,7 @@ Created by [Daniil Gentili](http://daniil.it).
 This project is licensed under the terms of the GPLv3 license.
 
 
-The programs included in this project can be used to download videos from any generic site including the Italian [Rai](http://rai.tv) Television website (including rai replay and iframe videos), the italian [Mediaset](http://mediaset.it) website (including iframes like the ones on the [Witty TV](http://wittytv.it) website), and the [LA7](http://la7.it) website.
-
+The programs included in this project can be used to download videos from any generic site including the Italian [Rai](http://rai.tv) Television website (including rai replay and iframe videos), the italian [Mediaset](http://mediaset.it) website (including iframes like the ones on the [Witty TV](http://wittytv.it) website), and the [LA7](http://la7.it) website. And thanks to youtube-dl now they support lots of other websites!
 
 This project features a Bash script that can be installed on [any Linux/Unix system](#bash-script-installation-instructions) including [Android](#android), [Mac OS X](#bash-script-installation-instructions) or [iOS](#ios) and even on [Windows](#windows), an [API](#api), an [Android app](#method-1-app) and even a [web version](#web-version)!
 
@@ -18,9 +17,9 @@ Both the [API](#api) and the [web version](#web-version) use a [database](https:
 
 
 ## Web version
-This project also features a [web version](http://video.daniil.it/).
+This project also features a [web version](https://video.daniil.it/).
 
-![Alt text](http://daniilgentili.magix.net/rai.png)
+![Alt text](//daniilgentili.magix.net/rai.png)
 
 The source code of the page can be viewed [here](https://github.com/danog/video-dl/blob/master/web).
 
