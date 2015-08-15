@@ -22,7 +22,7 @@ This project also features a [web version](http://video.daniil.it/).
 
 ![Alt text](http://daniilgentili.magix.net/rai.png)
 
-The source code of the page can be viewed in the web/index.php file.
+The source code of the page can be viewed [here](https://github.com/danog/video-dl/blob/master/web).
 
 
 ## Bash script usage:
