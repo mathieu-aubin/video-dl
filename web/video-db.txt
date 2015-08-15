@@ -642,3 +642,67 @@ High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/201
 Low quality (wmv, 164MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/08/14f0dd50ab2a2f-06_0.wmv
 Medium-high quality (mp4, 373MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/08/14f0dd50ab2a2f-14_0.mp4
 endofdbentry
+http://www.dailymotion.com/video/x2xyttq_download-the-last-witch-hunter-2015-full-movie-hd-720p_shortfilms
+Download_The_Last_Witch_Hunter_2015_Full_Movie_HD720p_Video_Dailymotion Download The Last Witch Hunter (2015) Full Movie HD-720p - Video Dailymotion
+=  =
+get dmp.create(document.getElementById(
+player window.playerV5
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-b7200394-20a9-4ccb-90d4-8ff6aa8aee6b.html
+Winx_Club_VI_Ep14_Mithyx Winx Club VI - Ep.14: Mithyx
+Medium-low quality (mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2454383_800.mp4
+Maximum quality (mp4, 293MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2454383_1800.mp4
+endofdbentry
+http://www.braccialettirossi.rai.it/dl/ray/media/Braccialetti-rossi---puntata-del-26012014-33bd08cd-a2fa-4696-9a3b-67e4fc154da8.html
+Braccialetti_rossi_1_puntata Braccialetti rossi - 1^ puntata
+Medium-low quality (mp4, 615MB, 700x394) http://creativemedia1.rai.it/podcastcdn/Fiction/RaiUno/Braccialetti_rossi/2210992_800.mp4
+Medium-low quality (mp4, 615MB, 700x394) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Braccialetti_rossi/2210992_800.mp4
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia1.rai.it/podcastcdn/Fiction/RaiUno/Braccialetti_rossi/2210992_1800.mp4
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Braccialetti_rossi/2210992_1800.mp4
+endofdbentry
+http://www.smosh.com/shutupcartoons/riding-big-kid-ft-ryan-higa-smosh-babies-29
+RIDING_LIKE_A_BIG_KID_Ft_Ryan_Higa_Smosh_Babies_29_SMOSH RIDING LIKE A BIG KID [Ft. Ryan Higa] (Smosh Babies #29) | SMOSH
+mp4, 8.7MB
+480x270 http://v1.smosh.com/dnet/media/369/857/2857369/riding-like-a-big-boy-496_kbps.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-0d069f39-68d9-4df4-b481-0bc186298382.html
+Il_respiro_delloceano_Winx_Club_V Il respiro dell'oceano - Winx Club V
+Maximum quality (mp4, 304MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/junior/Winx_5/1527835_1800.mp4
+Maximum quality (mp4, 304MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Winx_5/1527835_1800.mp4
+endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-e3c31df3-9e87-4f2b-b419-77e1031abc55.html
+La_femme_u00E0_la_camera_Doc3_del_12082015 La femme \u00E0 la camera - Doc3 del 12/08/2015
+Medium-low quality (mp4, 379MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raitre/doc3/Doc3_EP_Puntate/4351894_800.mp4
+Maximum quality (mp4, 801MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raitre/doc3/Doc3_EP_Puntate/4351894_1800.mp4
+endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-7a4b6913-b56d-4ba6-9281-577fcdbab476.html
+Addio_a_Giancarlo_Golzi_batterista_e_fondatore_dei_Matia_Bazar Addio a Giancarlo Golzi, batterista e fondatore dei Matia Bazar
+Normal quality (mp4, 20MB, 720x404) http://creativemedia4.rai.it/podcastcdn/canaliWebTV/WebTV_Gossip/4354153.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-ad1c4b78-4776-4eb1-8f64-f0f8d3393048.html
+La_fine_di_un_incubo_Winx_Club_V La fine di un incubo - Winx Club V
+Maximum quality (mp4, 307MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Winx_5/1532541_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-7a4b6913-b56d-4ba6-9281-577fcdbab476.html
+Addio_a_Giancarlo_Golzi_batterista_e_fondatore_dei_Matia_Bazar Addio a Giancarlo Golzi, batterista e fondatore dei Matia Bazar
+Normal quality (mp4, 20MB, 720x404) http://creativemedia4.rai.it/podcastcdn/canaliWebTV/WebTV_Gossip/4354153.mp4
+endofdbentry
+www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-b7200394-20a9-4ccb-90d4-8ff6aa8aee6b.html
+Winx_Club_VI_Ep14_Mithyx Winx Club VI - Ep.14: Mithyx
+Medium-low quality (mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2454383_800.mp4
+Maximum quality (mp4, 293MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2454383_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-73bbea56-4155-439a-a279-86b318a56c69.html
+FILM_Miracolo_italiano FILM Miracolo italiano
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raicinema/I_film_della_settimana/4348191_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e3c31df3-9e87-4f2b-b419-77e1031abc55.html
+La_femme_u00E0_la_camera_Doc3_del_12082015 La femme \u00E0 la camera - Doc3 del 12/08/2015
+Medium-low quality (mp4, 379MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raitre/doc3/Doc3_EP_Puntate/4351894_800.mp4
+Maximum quality (mp4, 801MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raitre/doc3/Doc3_EP_Puntate/4351894_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e3c31df3-9e87-4f2b-b419-77e1031abc55.html
+La_femme_u00E0_la_camera_Doc3_del_12082015 La femme \u00E0 la camera - Doc3 del 12/08/2015
+Medium-low quality (mp4, 379MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raitre/doc3/Doc3_EP_Puntate/4351894_800.mp4
+Maximum quality (mp4, 801MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raitre/doc3/Doc3_EP_Puntate/4351894_1800.mp4
+endofdbentry

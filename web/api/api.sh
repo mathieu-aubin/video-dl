@@ -477,9 +477,10 @@ $formats"
 exit
 }
 
-size="$(wget -S --spider $dl 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
+size="$(wget -S --spider $urltype 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
+
 echo "$size" | grep -q G && error
-[ ${size%?} -gt 20 ] && error
+[ "${size%?}" -gt 20 ] && error
 
 
 

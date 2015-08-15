@@ -1,13 +1,15 @@
 <?php
 if(($_GET['p']) == 'websites') {
-    print_r('Rai, Mediaset, Witty TV, LA7, any generic non super-protected website.');
+    echo 'Rai, Mediaset, Witty TV, LA7, any generic non super-protected website.';
 } elseif(isset($_GET['url'])) {
     $file = __FILE__;
-    $url = ($_GET["url"]);
-    $param = ($_GET["p"]);
+    $url = $_GET["url"];
+    $param = $_GET["p"];
     $cmd =  "bash /var/www/video/api/api.sh" .  ' ' . escapeshellarg($url) .  ' ' . escapeshellarg($param);
     $message = shell_exec("$cmd");
-    print_r($message);
+    $final = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message);
+    $final = trim($final, "\n");
+    echo "$final";
 } else {
     echo '<!DOCTYPE HTML>
 <html>
