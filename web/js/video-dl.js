@@ -22,11 +22,22 @@ function video() {
         // Prepare URL
         url = "https://api.daniil.it/?url=" + encodeURIComponent(input);
         // Prepare and send request
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", url, false);
-        xmlhttp.send();
-        // Get response text
-        var response = xmlhttp.responseText;
+        var xmlhttp=GetXmlHttpObject();
+        if (xmlhttp==null)
+        {
+            document.getElementById("result").innerHTML = "Browser does not support HTTP Requests. Please use the <a href=\"http://video.daniil.it/old.php\">old version</a>";
+            return;
+        }
+
+        xmlhttp.onreadystatechange= function(){
+            if (xmlhttp.readyState==4 || xmlHttp.readyState=="complete")
+            {
+                var response = xmlhttp.responseText;
+            }
+        }
+
+        xmlHttp.open("GET",url,true);
+        xmlHttp.send(null);
         if (response) {
             // Working...
             document.getElementById("result").innerHTML = "<h2>Working...</h2>";
@@ -50,7 +61,7 @@ function video() {
                 result += "<h2><a href=\"" + url + "\">" + info +
                     "</a></h2><br>"
             }
-            // Output the result and the mail
+            // Output the result and the mail text
             document.getElementById("result").innerHTML = result;
             mailtext();
         } else document.getElementById("result").innerHTML = "<h1>Error!</h1>";

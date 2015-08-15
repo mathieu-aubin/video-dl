@@ -2,7 +2,7 @@
 # Rai.TV download script
 # Created by Daniil Gentili (http://daniil.it)
 # This program is licensed under the GPLv3 license.
-# Web version: can be incorporated in websites.
+
 
 ####################################################
 ############# Beginning of the script ##############
@@ -37,9 +37,9 @@ echo "$urltype" | grep -q 'http://.*wittytv.it/.*' && ptype=mediaset && witty=y
 
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*' && ptype=lasette
 
-echo "$urltype" | grep -q 'http.*://.*vk.com/.*' && ptype=vk
+#echo "$urltype" | grep -q 'http.*://.*vk.com/.*' && ptype=vk
 
-echo "$urltype" | grep -q 'http.*://.*mail.ru/.*' && ptype=mail
+#echo "$urltype" | grep -q 'http.*://.*mail.ru/.*' && ptype=mail
 
 
 ##############################################################################
@@ -428,17 +428,52 @@ formatoutput
 
 common() {
 # Store the page in a variable
-
-page="$(wget -q -O - $1)"
-
+#page="$(wget -q -O - $1)"
 # Get the video URLs
-URLS="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g' | awk '!x[$0]++')"
+#base="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g' | awk '!x[$0]++')"
+#checkurl
+#[ "$base" = "" ] && {
+
+tmpjson="$(youtube-dl -J "$1")"
+videoTitolo=$(echo "$tmpjson" | sed 's/.*\"title\": \"//g;s/\".*//g')
+json="$(echo "$tmpjson" | sed 's/.*formats//g;s/, [{]/\
+/g')"
+while read -r line; do
+    l=$(echo "$line" | sed 's/,/\
+/g')
+    for f in format url ext; do
+     temp="$(echo "$l" | grep \"$f\": | sed 's/"'$f'"\: "//g;s/"$//g;s/^ //g;s/^.* - //g')"
+     eval $f=\""$temp"\"
+    done
+    wget -S --spider "$url" &>/dev/null && {
+    size="$(wget -S --spider "$url" 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B"
+    formats="$formats
+$format ($ext, $size) $url"
+    }
+done <<< "$json"
+
+# Get the title
+title="${videoTitolo//[^a-zA-Z0-9 ]/}"
+title=`echo $title | tr -s " "`
+title=${title// /_}
+
+echo "$userinput
+$title $videoTitolo
+$formats
+endofdbentry" >> /var/www/video-db.txt
+}
+
+
+vk() {
+page="$(wget -q -O - $(echo "$1" | sed 's/http:\/\/m.vk/http:\/\/vk/'))"
+
+URLS="$(echo "$page" | sed 's/,/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/\\//g;s/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | awk '!x[$0]++' | tr -s " " "\n")"
 
 
 [ "$URLS" = "" ] && exit
 
-# Get the title
-videoTitolo="$(echo $page | sed 's/.*<title>//;s/<\/title>.*//' | sed 's/^ //')"
+videoTitolo="$(echo "$page" | grep '<title>' | sed 's/.*<title>//;s/<\/title>.*//' | sed 's/^ //' | translit -t "GOST 7.79 RUS")"
 
 
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
@@ -448,9 +483,59 @@ title=${title// /_}
 unformatted="$URLS"
 formatoutput
 
-
 }
 
+mail() {
+page="$(wget -q -O - $(echo "$1" | sed 's/http:\/\/.*.mail.ru/http:\/\/videoapi.my.mail.ru\/videos/;s/.html$/.json/') | sed 's/{/\
+/g' )"
+
+
+twom="320x180 $(echo "$page" | grep 240p | sed 's/,/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/\\//g;s/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | awk '!x[$0]++')"
+
+[ "$(echo $twom | grep ' ' | sed 's/^.* //' )" != "" ] && URLS="$twom"
+
+
+threem="640x360 $(echo "$page" | grep 360p | sed 's/,/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/\\//g;s/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | awk '!x[$0]++')"
+
+[ "$(echo $threem | grep ' ' | sed 's/^.* //' )" != "" ] && URLS="$URLS
+$threem"
+
+fourm="720x480 $(echo "$page" | grep 480p | sed 's/,/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/\\//g;s/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | awk '!x[$0]++')"
+
+[ "$(echo $fourm | grep ' ' | sed 's/^.* //')" != "" ] && URLS="$URLS
+$fourm"
+
+
+sevenm="1280x720 $(echo "$page" | grep 720p | sed 's/,/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/\\//g;s/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | awk '!x[$0]++')"
+
+[ "$(echo $sevenm | grep ' ' | sed 's/^.* //')" != "" ] && URLS="$URLS
+$sevenm"
+
+tenm="1920x1080 $(echo "$page" | grep 1080p | sed 's/,/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/\\//g;s/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | awk '!x[$0]++')"
+
+[ "$(echo $tenm | grep ' ' | sed 's/^.* //')" != "" ] && URLS="$URLS
+$tenm"
+
+
+[ "$URLS" = "" ] && exit
+
+videoTitolo="$(echo "$page" | grep 'title' | sed 's/.*\"title\"\:\"//;s/\".*//' | translit -t "GOST 7.79 RUS")"
+
+
+title="${videoTitolo//[^a-zA-Z0-9 ]/}"
+title=`echo $title | tr -s " "`
+title=${title// /_}
+
+unformatted="$URLS"
+
+formatoutput
+
+}
 
 ###########################################################################################
 ##################### End of Common section, beginning of database section ################
@@ -477,10 +562,9 @@ $formats"
 exit
 }
 
-size="$(wget -S --spider $urltype 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
-
+size="$(wget -S --spider $dl 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
 echo "$size" | grep -q G && error
-[ "${size%?}" -gt 20 ] && error
+[ ${size%?} -gt 20 ] && error
 
 
 
