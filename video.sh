@@ -75,7 +75,7 @@ case $urlformat in
   *)
     
     queue="$queue
-dl "$url" $title.$ext $WOPT
+dl \"$url\" $title.$ext $WOPT
     "
     ;;
 esac
