@@ -564,7 +564,7 @@ urlformatcheck
 
 [ "$A" = "y" ] && dlcmd() {
 url="$(echo "$api" | awk 'END {print $NF}')"
-ext=$(echo "$url" | echo "$selection" | sed 's/.*[(]//g;s/, .*//g')
+ext=$(echo "$api" | awk 'END {print $NF}' | sed 's/.*[(]//g;s/, .*//g')
 dlvideo
 } || {
 echo "Video(s) info:" &&
