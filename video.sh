@@ -73,7 +73,7 @@ case $urlformat in
     "
     ;;
   *)
-    ext=$(echo $url | awk -F. '$0=$NF')
+    ext=$(echo $url | awk -F. '$0=$NF' | sed 's/?.*//g')
     queue="$queue
 dl "$url" $title.$ext $WOPT
     "
@@ -96,7 +96,7 @@ api() {
 ####### Beginning of URL recognition section #######
 ####################################################
 
-dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
+dl="$(echo "$1" | grep -q '^//' && echo http:$1 || echo $1)"
 
 dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
 
@@ -564,7 +564,7 @@ urlformatcheck
 
 [ "$A" = "y" ] && dlcmd() {
 url="$(echo "$api" | awk 'END {print $NF}')"
-ext=$(echo $url | awk -F. '$0=$NF')
+ext=$(echo "$url" | awk -F. '$0=$NF' | sed 's/?.*//g')
 dlvideo
 } || {
 echo "Video(s) info:" &&
@@ -575,7 +575,7 @@ max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
 
-$(echo "$api" | sed 's/http:\/\/.*//')
+$(echo "$api" | sed 's/http:\/\/.*//g;s/https:\/\///g')
 
 "
 
@@ -585,11 +585,11 @@ until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you wh
 
 selection=$(echo "$api" | sed "$l!d")
 
-urlformat=$(echo $selection | sed 's/http:\/\/.*//;s/https:\/\/.*//g;s/.*[(]//;s/[)].*//')
+urlformat=$(echo "$selection" | sed 's/http:\/\/.*//;s/https:\/\/.*//g;s/.*[(]//;s/[)].*//')
 
 url=$(echo "$selection" | awk 'NF>1{print $NF}')
 
-ext=$(echo $url | awk -F. '$0=$NF')
+ext=$(echo "$url" | awk -F. '$0=$NF')
 dlvideo
 }
 }
