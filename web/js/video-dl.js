@@ -74,7 +74,7 @@ function video() {
                         splitr = lines[i].split(" ");
                         url = splitr[splitr.length - 1];
                         dl = title;
-                        result += "<h2><a download=\" + dl + "\" href=\"" + url + "\">" + info +
+                        result += "<h2><a download=\"\" href=\"" + url + "\">" + info +
                             "</a></h2><br>"
                     }
                     // Output the result and the mail text
