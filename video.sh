@@ -73,7 +73,7 @@ case $urlformat in
     "
     ;;
   *)
-    ext=$(echo $url | awk -F. '$0=$NF' | sed 's/?.*//g')
+    
     queue="$queue
 dl "$url" $title.$ext $WOPT
     "
@@ -564,7 +564,7 @@ urlformatcheck
 
 [ "$A" = "y" ] && dlcmd() {
 url="$(echo "$api" | awk 'END {print $NF}')"
-ext=$(echo "$url" | awk -F. '$0=$NF' | sed 's/?.*//g')
+ext=$(echo "$url" | echo "$selection" | sed 's/.*[(]//g;s/, .*//g')
 dlvideo
 } || {
 echo "Video(s) info:" &&
@@ -589,7 +589,7 @@ urlformat=$(echo "$selection" | sed 's/http:\/\/.*//;s/https:\/\/.*//g;s/.*[(]//
 
 url=$(echo "$selection" | awk 'NF>1{print $NF}')
 
-ext=$(echo "$url" | awk -F. '$0=$NF')
+ext=$(echo "$selection" | sed 's/.*[(]//g;s/, .*//g')
 dlvideo
 }
 }
