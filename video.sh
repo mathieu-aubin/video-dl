@@ -7,6 +7,7 @@
 # v2 (and revisions): added support for Rai Replay, support for multiple qualities, advanced video info and custom API server.
 # v3 (and revisions): added support for Mediaset, Witty TV, La7, etc..
 # v3.1 Included built in API engine, bug fixes
+# v3.2 Added support for youtube and https
 
 echo "This program is licensed under the GPLv3 license."
 help() {
@@ -47,12 +48,12 @@ which ffmpeg &>/dev/null && ffmpeg=y || ffmpeg=n
 
 which wget &>/dev/null && {
 dl() {
-wget $1 -O $2 $3
+wget "$1" -O $2 $3
 }
 Q="-q"
 } || {
 dl() {
-curl $1 -o $2 $3
+curl "$1" -o $2 $3
 }
 Q="-s"
 }
@@ -74,7 +75,7 @@ case $urlformat in
   *)
     ext=$(echo $url | awk -F. '$0=$NF')
     queue="$queue
-dl $url $title.$ext $WOPT
+dl "$url" $title.$ext $WOPT
     "
     ;;
 esac
@@ -584,7 +585,7 @@ until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you wh
 
 selection=$(echo "$api" | sed "$l!d")
 
-urlformat=$(echo $selection | sed 's/http:\/\/.*//;s/.*[(]//;s/[)].*//')
+urlformat=$(echo $selection | sed 's/http:\/\/.*//;s/https:\/\/.*//g;s/.*[(]//;s/[)].*//')
 
 url=$(echo "$selection" | awk 'NF>1{print $NF}')
 
