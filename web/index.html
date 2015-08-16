@@ -11,6 +11,8 @@
 
     <title>Download Videos!</title>
 
+    <script src="/pace/pace.min.js"></script>
+    <link href="/pace/theme.css?v=324" rel="stylesheet" />
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"","theme":"light-top"};
@@ -84,16 +86,17 @@
 
     <!-- Video download -->
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
-    <script src="/js/video-dl.js"></script>
+    <script src="/js/video-dl.js?v=233"></script>
 
 
     <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video">
+    <meta name="Description" content="Download videos from YouTube, Rai,Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/freelancer.css?v=2" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -106,20 +109,37 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="//fast.eager.io/HQkJlAdFye.js"></script>
+
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#page-top">Download videos!</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li id="mail" >
+                    </li>
+                    <li class="portfolio-item">
+                        <a href="#support" class="portfolio-link"  data-toggle="modal">Supported websites</a>
+                    </li>
+                </ul>
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -130,7 +150,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive img-centered" src="img/profile.png" alt="">
+                    <img class="img-responsive img-centered" src="img/profile.png?v=2" onclick="video();" alt="">
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
                         <hr class="star-light">
@@ -166,7 +186,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4 giallo">
                         <h3>Source code</h3>
-                        <p><a href="https://github.com/danog/video-dl/" target="_blank">Source code of Rai, Mediaset and LA7 engine (video-dl) on Github</a><br><a href="https://github.com/rg3/youtube-dl" target="_blank">Source code of generic engine (youtube-dl) on GitHub</a></p>
+                        <p><a href="https://github.com/danog/video-dl/" target="_blank">Rai, Mediaset and LA7 download engine (video-dl)</a><br><a href="https://github.com/rg3/youtube-dl" target="_blank">Generic download engine (youtube-dl)</a><br><a href="http://github.hubspot.com/pace/" target="_blank">Loading animation (pace.js)</a><br><a href="https://github.com/mathiasbynens/he" target="_blank">HTML entity encoder (he.js)</a><br><a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Bootstrap theme (freelancer)</a></p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -203,6 +223,30 @@
         </div>
     </footer>
 
+
+    <div class="portfolio-modal modal fade" id="support" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Supported websites</h2>
+                            <hr class="star-primary">
+                            <div id="websites">
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

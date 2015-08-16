@@ -14,6 +14,33 @@ function mailtext() {
         // Insert mail message in page
     document.getElementById("mail").innerHTML = mailmessage;
 }
+
+function sites() {
+    var xmlHttpw = new XMLHttpRequest();
+    xmlHttpw.onreadystatechange = function() {
+        if (xmlHttpw.readyState == 4 || xmlHttpw.readyState == "complete") {
+            websites = xmlHttpw.responseText;
+            if (websites) {
+                // Get the titles
+                console.log(websites);
+                space = "                            ";
+                websitesout = "                        <ul>\n"
+                var lines = websites.split('\n');
+                for (var i = 0; i < lines.length; i++) {
+                    websitesout += space + "<li>" + lines[i] + "</li>\n";
+                }
+                websitesout += "                        </ul>\n"
+                // Output the result and the mail text
+                document.getElementById("websites").innerHTML = websitesout;
+            } else document.getElementById("websites").innerHTML = "<h1>Error!</h1>";
+
+        }
+        xmlHttpw.open("GET", "http://api.daniil.it/?p=allwebsites", true);
+        xmlHttpw.send();
+
+    }
+}
+
 // Video Download function
 function video() {
     // Get inputted URL
@@ -46,7 +73,8 @@ function video() {
                         info = lines[i].substring(0, last);
                         splitr = lines[i].split(" ");
                         url = splitr[splitr.length - 1];
-                        result += "<h2><a href=\"" + url + "\">" + info +
+                        dl = title;
+                        result += "<h2><a download=\" + dl + "\" href=\"" + url + "\">" + info +
                             "</a></h2><br>"
                     }
                     // Output the result and the mail text
@@ -62,3 +90,4 @@ function video() {
     } else document.getElementById("result").innerHTML = "<h1>No URL was provided!</h1>";
 }
 mailtext();
+sites();

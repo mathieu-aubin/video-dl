@@ -1,6 +1,14 @@
 <?php
 if(($_GET['p']) == 'websites') {
-    echo 'Rai, Mediaset, Witty TV, LA7, any generic non super-protected website.';
+    echo "Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.";
+} elseif(($_GET['p']) == 'allwebsites') {
+    $yt = shell_exec('youtube-dl --list-extractors');
+    echo "Rai
+Mediaset
+Witty TV
+LA7
+$yt";
+
 } elseif(isset($_GET['url'])) {
     $file = __FILE__;
     $url = $_GET["url"];
