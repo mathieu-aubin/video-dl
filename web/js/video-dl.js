@@ -7,12 +7,11 @@ function mailtext() {
         mail = input;
     }
     // Create mail message
-    var mailmessage =
-        '<a href=\'mailto:daniil.gentili.dg@gmail.com?subject=Video not working&body=The video:%0D%0A' +
-        mail +
-        '%0D%0Adoes not work, could you please fix it?%0D%0AThanks!\'>Not working?</a>'
-        // Insert mail message in page
-    document.getElementById("mail").innerHTML = mailmessage;
+    var mailmessage = 'The video:\n' + mail + '\ndoes not work, could you please fix it?\nThanks!';
+
+    // Insert mail message in page
+
+    document.getElementById("message").value = mailmessage;
 }
 
 function sites() {
@@ -20,16 +19,17 @@ function sites() {
     xmlHttpw.onreadystatechange = function() {
         if (xmlHttpw.readyState == 4 || xmlHttpw.readyState == "complete") {
             websites = xmlHttpw.responseText;
+            console.log(websites);
             if (websites) {
                 // Get the titles
                 console.log(websites);
                 space = "                            ";
-                websitesout = "                        <ul>\n"
+                websitesout = "                        <ul>\n";
                 var lines = websites.split('\n');
                 for (var i = 0; i < lines.length; i++) {
-                    websitesout += space + "<li>" + lines[i] + "</li>\n";
+                    websitesout += space + "<li>" + lines[i] + "\n" + space +"</li>\n";
                 }
-                websitesout += "                        </ul>\n"
+                websitesout += "                        </ul>\n";
                 // Output the result and the mail text
                 document.getElementById("websites").innerHTML = websitesout;
             } else document.getElementById("websites").innerHTML = "<h1>Error!</h1>";
@@ -73,8 +73,10 @@ function video() {
                         info = lines[i].substring(0, last);
                         splitr = lines[i].split(" ");
                         url = splitr[splitr.length - 1];
-                        dl = title;
-                        result += "<h2><a download=\"\" href=\"" + url + "\">" + info +
+                        ext = info.substring(info.indexOf('(') + 1);
+                        ext = ext.substring(0, ext.indexOf(','));
+                        dl = title+"."+ext;
+                        result += "<h2><a download=\""+dl+"\" href=\"" + url + "\">" + info +
                             "</a></h2><br>"
                     }
                     // Output the result and the mail text
