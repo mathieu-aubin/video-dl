@@ -60,33 +60,17 @@
 
     </script>
 
-    <!-- Old Share buttons
-    <script type="text/javascript">
-        //<![CDATA[
-        (function() {
-            var shr = document.createElement('script');
-            shr.setAttribute('data-cfasync', 'false');
-            shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
-            shr.type = 'text/javascript';
-            shr.async = 'true';
-            shr.onload = shr.onreadystatechange = function() {
-                var rs = this.readyState;
-                if (rs && rs != 'complete' && rs != 'loaded') return;
-                var site_id = 'dc6c8f9c2fd4c46b544da1ace521c9b3';
-                try {
-                    Shareaholic.init(site_id);
-                } catch (e) {}
-            };
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(shr, s);
-        })();
-        //]]>
+    <!-- Share -->
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "1b773233-532c-4931-8518-d3426890a6fc", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
-    </script>-->
+
+
 
     <!-- Video download -->
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
-    <script src="/js/video-dl.js?v=23345733"></script>
+    <script src="/js/video-dl.js?v=234543733"></script>
 
 
     <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video">
@@ -112,9 +96,7 @@
 
 </head>
 
-<body id="page-top" class="index">
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cf921867cf12f9" async="async"></script>
+<body id="page-top" class="index" onload="mailtext();">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -158,7 +140,7 @@
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
                         <hr class="star-light">
-                        <span class="skills giallo">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>,<a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> and lots of other websites!<br> Paste the URL of the video:</span>
+                        <span class="skills giallo">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>,<a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br> Paste the URL of the video:</span>
 
                         <br><br>
 
@@ -169,7 +151,6 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                        <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
                                 <button type="submit" onclick="video();" class="btn btn-success btn-lg">Download the video!</button>
@@ -177,8 +158,15 @@
                         </div>
                         <p id="result" class="giallo"></p>
                         <br>
-                        <br>
-                        <div class="addthis_sharing_toolbox"></div>
+                        <br> 
+                        <span class='st_sharethis_large' displayText='ShareThis'></span>
+                        <span class='st_facebook_large' displayText='Facebook'></span>
+                        <span class='st_twitter_large' displayText='Tweet'></span>
+                        <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                        <span class='st_pinterest_large' displayText='Pinterest'></span>
+                        <span class='st_email_large' displayText='Email'></span>
+
+
                     </div>
                 </div>
             </div>
@@ -243,7 +231,7 @@
                         <div class="modal-body">
                             <h2>Supported websites</h2>
                             <hr class="star-primary">
-                            <p id="websites"></p>
+                            <p>Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl. </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>

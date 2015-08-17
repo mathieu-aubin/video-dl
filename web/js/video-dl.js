@@ -14,32 +14,6 @@ function mailtext() {
     document.getElementById("message").value = mailmessage;
 }
 
-function sites() {
-    var xmlHttpw = new XMLHttpRequest();
-    xmlHttpw.onreadystatechange = function() {
-        if (xmlHttpw.readyState == 4 || xmlHttpw.readyState == "complete") {
-            websites = xmlHttpw.responseText;
-            console.log(websites);
-            if (websites) {
-                // Get the titles
-                console.log(websites);
-                space = "                            ";
-                websitesout = "                        <ul>\n";
-                var lines = websites.split('\n');
-                for (var i = 0; i < lines.length; i++) {
-                    websitesout += space + "<li>" + lines[i] + "\n" + space +"</li>\n";
-                }
-                websitesout += "                        </ul>\n";
-                // Output the result and the mail text
-                document.getElementById("websites").innerHTML = websitesout;
-            } else document.getElementById("websites").innerHTML = "<h1>Error!</h1>";
-
-        }
-        xmlHttpw.open("GET", "http://api.daniil.it/?p=allwebsites", true);
-        xmlHttpw.send();
-
-    }
-}
 
 // Video Download function
 function video() {
