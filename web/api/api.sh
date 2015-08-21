@@ -450,11 +450,12 @@ while read -r line; do
      temp="$(echo "$l" | grep \"$f\": | sed 's/"'$f'"\: "//g;s/"$//g;s/^ //g;s/^.* - //g')"
      eval $f=\""$temp"\"
     done
-    wget -S --spider "$url" &>/dev/null && {
-size="$(wget -S --spider "$url" 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B"
+    [ "$url" != "" ] && {
+size=
+timeout -skill 3s wget -S --spider "$url" &>/dev/null && size=", $(wget -S --spider "$url" 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B" || size=", Unkown size"
 format=$(echo "$format" | sed 's/[(]//g;s/[)]//g')
 formats="$formats
-$format ($ext, $size) $url"
+$format ($ext$size) $url"
     }
 done <<< "$json"
 

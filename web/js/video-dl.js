@@ -50,8 +50,9 @@ function video() {
                         ext = info.substring(info.indexOf('(') + 1);
                         ext = ext.substring(0, ext.indexOf(','));
                         dl = title+"."+ext;
-                        result += "<h2><a download=\""+dl+"\" href=\"" + url + "\">" + info +
-                            "</a></h2><br>"
+                        if (url != "") { 
+                         result += "<h2><a download=\""+dl+"\" href=\"" + url + "\">" + info + "</a></h2><br>"
+                        }
                     }
                     // Output the result and the mail text
                     document.getElementById("result").innerHTML = result;
