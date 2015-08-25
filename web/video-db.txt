@@ -1046,3 +1046,11 @@ http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-57d8a566-0739-4757-9673-3
  
 Normal quality (wmv 384x288) mms://wms1.rai.it/raitrecdn/raitre/DREAMS_ROAD/DREAMS_ROAD_PUNTATE/205139.wmv
 endofdbentry
+https%3A%2F%2Fyoutube.com%2Awatch%3Fv%3DjBVY7Glcd84
+ 
+
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-5ff1a3bf-64ca-4de7-9329-0cb6b058b6e3.html
+Ligabue_prima_parte Ligabue - prima parte
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/Ligabue/Ligabue01p.wmv
+endofdbentry

@@ -65,15 +65,16 @@ sed 's/\
 # Check if URL exists and remove copies of the same URL
 
 function checkurl() {
-tbase="$(echo $base | sed 's/ /%20/g;s/%20http:\/\//\
-http:\/\//g;s/%20$//' | awk '!x[$0]++')"
+tbase="$(echo "$base" | sed 's/ /%20/g;s/%20http:\/\//\
+http:\/\//g;s/%20$//g;s/ /\
+/g' | awk '!x[$0]++')"
 
 base=
 for u in $tbase;do echo "$u" | grep -q 'rmtp://\|mms://' && {
 base="$base
 $u"
 } || {
-wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
+wget -S --tries=3 --spider "$u" 2>&1 | grep -q '200 OK' && base="$base
 $u"
 }; done
 }
@@ -219,13 +220,13 @@ $(echo "$file" | grep videoTitolo)
 
 replay() {
 # Get the video id
-v=$(echo $1 | sed 's/.*v=//;s/\&.*//')
+v=$(echo "$1" | sed 's/.*v=//;s/\&.*//')
 
 # Get the day
-day=$(echo $1 | sed 's/.*?day=//;s/\&.*//;s/-/_/g')
+day=$(echo "$1" | sed 's/.*?day=//;s/\&.*//;s/-/_/g')
 
 # Get the channel
-case $(echo $1 | sed 's/.*ch=//;s/\&.*//') in
+case $(echo "$1" | sed 's/.*ch=//;s/\&.*//') in
   1)
     ch=RaiUno
     ;;
