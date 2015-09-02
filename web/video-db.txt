@@ -1042,15 +1042,236 @@ http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-57d8a566-0739-4757-9673-3
  
 Normal quality (wmv 384x288) mms://wms1.rai.it/raitrecdn/raitre/DREAMS_ROAD/DREAMS_ROAD_PUNTATE/205139.wmv
 endofdbentry
-http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-57d8a566-0739-4757-9673-3c555313dbd0.html
- 
-Normal quality (wmv 384x288) mms://wms1.rai.it/raitrecdn/raitre/DREAMS_ROAD/DREAMS_ROAD_PUNTATE/205139.wmv
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-5ff1a3bf-64ca-4de7-9329-0cb6b058b6e3.html
+Ligabue_prima_parte Ligabue - prima parte
+Normal quality (wmv) mms://rntlivewm.rai.it/rai/raifiction/Ligabue/Ligabue01p.wmv
 endofdbentry
-https%3A%2F%2Fyoutube.com%2Awatch%3Fv%3DjBVY7Glcd84
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-94add40d-bf10-48b9-9c7c-e8579816efbc.html
+Linea_Blu_Ponente_Ligure_da_Cervo_ad_Oneglia_del_22082015 Linea Blu - Ponente Ligure: da Cervo ad Oneglia del 22/08/2015
+Normal quality (mp4, 891MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/lineablu/LINEABLU_PUNTATE/4384103.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-23&ch=3&v=556827&vd=2015-08-23&vc=3
+Hotel_6_stelle Hotel 6 stelle
+Medium-low quality (mp4, 305MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raitre/Hotel_6_Stelle/Hotel_6_Stelle_puntate_2014/4382639_800.mp4
+Maximum quality (mp4, 645MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/Hotel_6_Stelle/Hotel_6_Stelle_puntate_2014/4382639_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-22&ch=31&v=555692&vd=2015-08-22&vc=31
+EAGLES_STORY EAGLES STORY
+Medium-low quality (mp4, 434MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4374957_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-22&ch=31&v=555692&vd=2015-08-22&vc=31
+EAGLES_STORY EAGLES STORY
+Medium-low quality (mp4, 434MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4374957_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-21&ch=31&v=555268&vd=2015-08-21&vc=31
+NEIL_YOUNG_SILVER_AND_GOLD_LIVE_IN_TEXAS NEIL YOUNG SILVER AND GOLD LIVE IN TEXAS
+Medium-low quality (mp4, 378MB, 920x518) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_800.mp4
+Maximum quality (mp4, 823MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-21&ch=31&v=555268&vd=2015-08-21&vc=31
+NEIL_YOUNG_SILVER_AND_GOLD_LIVE_IN_TEXAS NEIL YOUNG SILVER AND GOLD LIVE IN TEXAS
+Medium-low quality (mp4, 378MB, 920x518) http://creativemedia3.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_800.mp4
+Medium-low quality (mp4, 378MB, 920x518) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_800.mp4
+Maximum quality (mp4, 823MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_1800.mp4
+Maximum quality (mp4, 823MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/magic_land/full/307355/puntata-del-14-giugno.html
+Magic_Land_PUNTATE_INTERE_Puntata_del_14_giugno_Video_Mediaset Magic Land - PUNTATE INTERE Puntata del 14 giugno | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset02/2012/06/137eec927be-1_h264.ism/manifest
+Low quality (wmv, 219MB, 256x144) http://prd.video.mediaset.net/wmv2/2012/06/137eec927be-3_0.wmv
+endofdbentry
+http://www.video.mediaset.it/video/magic_land/full/307355/puntata-del-14-giugno.html
+Magic_Land_PUNTATE_INTERE_Puntata_del_14_giugno_Video_Mediaset Magic Land - PUNTATE INTERE Puntata del 14 giugno | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset02/2012/06/137eec927be-1_h264.ism/manifest
+Low quality (wmv, 219MB, 256x144) http://prd.video.mediaset.net/wmv2/2012/06/137eec927be-3_0.wmv
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-25&ch=31&v=557285&vd=2015-08-25&vc=31
+FILM_CHERI FILM - CHERI
+Medium-low quality (mp4, 569MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4389291_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4389291_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-25&ch=31&v=557285&vd=2015-08-25&vc=31
+FILM_CHERI FILM - CHERI
+Medium-low quality (mp4, 569MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4389291_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4389291_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/iene/puntata/pasca-comitato-lottizzazione-expo-2016_537210.html
+Le_Iene_I_SERVIZI_PASCA_Comitato_Lottizzazione_Expo_2016_Video_Mediaset Le Iene - I SERVIZI PASCA: Comitato Lottizzazione Expo 2016 | Video Mediaset
+Low quality (wmv, 22MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/05/14d538b97afa2f-08_0.wmv
+Low quality (f4v, 51MB, 1024x576) http://prd.video.mediaset.net/flv2/2015/05/14d538b97afa2f-06_0.f4v
+Medium-high quality (mp4, 51MB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/05/14d538b97afa2f-07_0.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-24&ch=3&v=557245&vd=2015-08-24&vc=3
+34_Festival_del_Circo_di_Montecarlo 34* Festival del Circo di Montecarlo
+Medium-low quality (mp4, 584MB, 700x394) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4386358_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4386358_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-24&ch=3&v=557245&vd=2015-08-24&vc=3
+34_Festival_del_Circo_di_Montecarlo 34* Festival del Circo di Montecarlo
+Medium-low quality (mp4, 584MB, 700x394) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4386358_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4386358_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-20&ch=31&v=554839&vd=2015-08-20&vc=31
+NEIL_YOUNG_SILVER_AND_GOLD_LIVE_IN_TEXAS NEIL YOUNG SILVER AND GOLD LIVE IN TEXAS
+Medium-low quality (mp4, 398MB, 520x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/notte/4367532_800.mp4
+Medium-low quality (mp4, 378MB, 920x518) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_800.mp4
+Maximum quality (mp4, 823MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-20&ch=31&v=554839&vd=2015-08-20&vc=31
+NEIL_YOUNG_SILVER_AND_GOLD_LIVE_IN_TEXAS NEIL YOUNG SILVER AND GOLD LIVE IN TEXAS
+Medium-low quality (mp4, 398MB, 520x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/notte/4367532_800.mp4
+Medium-low quality (mp4, 378MB, 920x518) http://creativemedia3.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_800.mp4
+Medium-low quality (mp4, 378MB, 920x518) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_800.mp4
+Maximum quality (mp4, 823MB, 1024x576) http://creativemedia3.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_1800.mp4
+Maximum quality (mp4, 823MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/Raitv/La_grande_musica_di_Raitv/Video_grandemusica_raitv/2242384_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/giovedi-27-agosto_556582.html
+Il_segreto_PUNTATE_INTERE_Gioved_27_agosto_Video_Mediaset Il segreto - PUNTATE INTERE Giovedì 27 agosto | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/08/14f6a5dbf1089c-13.ism/manifest
+Low quality (wmv, 166MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/08/14f6a5dbf1089c-06_0.wmv
+Medium-high quality (mp4, 379MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/08/14f6a5dbf1089c-14_0.mp4
+endofdbentry
+goku
  
 
 endofdbentry
-http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-5ff1a3bf-64ca-4de7-9329-0cb6b058b6e3.html
-Ligabue_prima_parte Ligabue - prima parte
-Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/Ligabue/Ligabue01p.wmv
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-21&ch=31&v=555680&vd=2015-08-21&vc=31
+MUSEO_ITALIA_MUSEI_VATICANI MUSEO ITALIA - MUSEI VATICANI
+Medium-low quality (mp4, 323MB, 700x392) http://creativemedia2.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4370396_800.mp4
+Maximum quality (mp4, 685MB, 1024x576) http://creativemedia2.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4370396_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/venerdi-28-agosto_556834.html
+Il_segreto_PUNTATE_INTERE_Venerd_28_agosto_Video_Mediaset Il segreto - PUNTATE INTERE Venerdì 28 agosto | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/08/14f74a8d8b3965-13.ism/manifest
+Low quality (wmv, 145MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/08/14f74a8d8b3965-06_0.wmv
+Medium-high quality (mp4, 331MB, 1024x576) http://prd.video.mediaset.net/mp4/2015/08/14f74a8d8b3965-14_0.mp4
+endofdbentry
+http://www.youtube.com/watch?v=JDhun54MHBU
+Hitler_Rai_Storia Hitler -  Rai Storia
+
+audio only DASH audio (m4a, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=140&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=audio/mp4&gir=yes&clen=113038763&lmt=1401248051644196&dur=7041.172&sver=3&signature=630A3F057E0571361754BB12F965D823EB180C89.7B0DD3D1DF42072C447CF867548B13396EDFD5D7&key=dg_yt0&mt=1440792762&fexp=9405191
+audio only DASH audio (webm, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=171&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=audio/webm&gir=yes&clen=93574241&lmt=1401282621296884&dur=7041.113&sver=3&signature=395A9EBE18802C17FADDB0C951F346EDC9BFE09B.3A170C78FAFB2B90BBCA3521CA091E4E487023DF&key=dg_yt0&mt=1440792762&fexp=9405191
+audio only DASH audio (m4a, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=141&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=audio/mp4&gir=yes&clen=224487393&lmt=1401248051344339&dur=7041.172&sver=3&signature=3D1F35556240D18539E94E120B48460AE05AE531.610764369CE7A742EC291CDEA02B36908EDA648C&key=dg_yt0&mt=1440792762&fexp=9405191
+256x140 DASH video (webm, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=278&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=video/webm&gir=yes&clen=52345010&lmt=1401288673714415&dur=7041.080&sver=3&signature=165F1F7CF274B2954A241645E697C25F8847CCE9.24319380A656D6BE884B60FFFFBA42CF8E79E033&key=dg_yt0&mt=1440792762&fexp=9405191
+256x140 DASH video (mp4, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=160&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=video/mp4&gir=yes&clen=96774301&lmt=1401248056248384&dur=7041.081&sver=3&signature=1608ADC52FF659E44167F966FBC0EFF59D33428D.9754D57B71BBB502FA97156E2E697ADE024B52EB&key=dg_yt0&mt=1440792762&fexp=9405191
+320x176 DASH video (webm, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=242&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=video/webm&gir=yes&clen=103240214&lmt=1401288380406584&dur=7041.080&sver=3&signature=46F3ED7EFDDEC7EA59507F38A9B28D195F40B607.77B3E064BA391160EC09DA28B13A2E10DEEFD74A&key=dg_yt0&mt=1440792762&fexp=9405191
+320x176 DASH video (mp4, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=133&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=video/mp4&gir=yes&clen=214424795&lmt=1401248059148473&dur=7041.081&sver=3&signature=1FF75CF74E523533E516DF0B66D27984AE9A7821.09F5888E9880B4BAB48990C831D4EB754B7AC885&key=dg_yt0&mt=1440792762&fexp=9405191
+320x176 DASH video (webm, Unkown size) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?id=24386e9f9e0c1c15&itag=243&source=youtube&requiressl=yes&pl=18&mn=sn-nx5cvox-hpa6&mm=31&mv=m&ms=au&gcr=it&ratebypass=yes&mime=video/webm&gir=yes&clen=156494213&lmt=1401288702968928&dur=7041.080&sver=3&signature=274096C865D638422810A1851CAEAAE882DA57BF.795FB8A1FD58CE5B9978860F6D64C0CBE4F70856&key=dg_yt0&mt=1440792762&fexp=9405191
+unknown (3gp, 53MB) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?requiressl=yes&mt=1440792762&mime=video%2F3gpp&ipbits=0&expire=1440814486&dur=7041.286&pl=18&initcwndbps=451250&ip=95.224.255.191&key=yt5&mn=sn-nx5cvox-hpa6&signature=0135B37FEB7645D2F467986101512D1B33BF868D.A158DA5C9A6476645D7370780689EE2E7D490D95&sparams=dur%2Cgcr%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&id=o-AMWYmrUhWyU2zqK3U-jtJAiZhH2kEvSAbDNUOUPXjf2z&mv=m&gcr=it&sver=3&mm=31&lmt=1393000334973325&source=youtube&fexp=9405191%2C9407992%2C9408370%2C9408710%2C9409069%2C9412928%2C9415365%2C9415397%2C9415436%2C9415485%2C9416023%2C9416126%2C9416344%2C9416838%2C9416898%2C9416984%2C9417423%2C9417707%2C9418153%2C9418201%2C9418448%2C9419031%2C9419892%2C9420019&upn=hwJRCV0cxFs&itag=13&ratebypass=yes
+176x144 (3gp, 68MB) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?requiressl=yes&mt=1440792762&mime=video%2F3gpp&ipbits=0&expire=1440814486&dur=7041.497&pl=18&initcwndbps=451250&ip=95.224.255.191&key=yt5&mn=sn-nx5cvox-hpa6&signature=D10077ACD48D37DD3374CBDFCF6326C4554F8CEF.8242F0102B0077959E247ED0F2D2BD324BD1634D&sparams=dur%2Cgcr%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&id=o-AMWYmrUhWyU2zqK3U-jtJAiZhH2kEvSAbDNUOUPXjf2z&mv=m&gcr=it&sver=3&mm=31&lmt=1393000736521336&source=youtube&fexp=9405191%2C9407992%2C9408370%2C9408710%2C9409069%2C9412928%2C9415365%2C9415397%2C9415436%2C9415485%2C9416023%2C9416126%2C9416344%2C9416838%2C9416898%2C9416984%2C9417423%2C9417707%2C9418153%2C9418201%2C9418448%2C9419031%2C9419892%2C9420019&upn=hwJRCV0cxFs&itag=17&ratebypass=yes
+320x240 (3gp, 190MB) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?requiressl=yes&mt=1440792762&mime=video%2F3gpp&ipbits=0&expire=1440814486&dur=7041.311&pl=18&initcwndbps=451250&ip=95.224.255.191&key=yt5&mn=sn-nx5cvox-hpa6&signature=0C0DA58141B9F834450A9A9677576FE6DFA47562.7B23EE84911CD81FF017691368CE67C8C5B5EDB9&sparams=dur%2Cgcr%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&id=o-AMWYmrUhWyU2zqK3U-jtJAiZhH2kEvSAbDNUOUPXjf2z&mv=m&gcr=it&sver=3&mm=31&lmt=1393000869488637&source=youtube&fexp=9405191%2C9407992%2C9408370%2C9408710%2C9409069%2C9412928%2C9415365%2C9415397%2C9415436%2C9415485%2C9416023%2C9416126%2C9416344%2C9416838%2C9416898%2C9416984%2C9417423%2C9417707%2C9418153%2C9418201%2C9418448%2C9419031%2C9419892%2C9420019&upn=hwJRCV0cxFs&itag=36&ratebypass=yes
+400x240 (flv, 251MB) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?requiressl=yes&mt=1440792762&mime=video%2Fx-flv&ipbits=0&expire=1440814486&dur=7041.175&pl=18&initcwndbps=451250&ip=95.224.255.191&key=yt5&mn=sn-nx5cvox-hpa6&signature=E2DE8FDE58A13B2E68B9EAAD5EA26C31DD140515.17D0BA75845B8A85541BE85D1625F9D9A7783491&sparams=dur%2Cgcr%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&id=o-AMWYmrUhWyU2zqK3U-jtJAiZhH2kEvSAbDNUOUPXjf2z&mv=m&gcr=it&sver=3&mm=31&lmt=1393003603902875&source=youtube&fexp=9405191%2C9407992%2C9408370%2C9408710%2C9409069%2C9412928%2C9415365%2C9415397%2C9415436%2C9415485%2C9416023%2C9416126%2C9416344%2C9416838%2C9416898%2C9416984%2C9417423%2C9417707%2C9418153%2C9418201%2C9418448%2C9419031%2C9419892%2C9420019&upn=hwJRCV0cxFs&itag=5&ratebypass=yes
+640x360 (webm, 246MB) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?requiressl=yes&mt=1440792762&mime=video%2Fwebm&ipbits=0&ratebypass=yes&expire=1440814486&dur=0.000&pl=18&initcwndbps=451250&ip=95.224.255.191&key=yt5&mn=sn-nx5cvox-hpa6&signature=1680E784AE6EBF08DD9AACBEDD089B09E8B0AAB3.F66AE527248227939A09A1103E4062C3054979DF&sparams=dur%2Cgcr%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&id=o-AMWYmrUhWyU2zqK3U-jtJAiZhH2kEvSAbDNUOUPXjf2z&mv=m&gcr=it&sver=3&mm=31&lmt=1393034689822145&source=youtube&fexp=9405191%2C9407992%2C9408370%2C9408710%2C9409069%2C9412928%2C9415365%2C9415397%2C9415436%2C9415485%2C9416023%2C9416126%2C9416344%2C9416838%2C9416898%2C9416984%2C9417423%2C9417707%2C9418153%2C9418201%2C9418448%2C9419031%2C9419892%2C9420019&upn=hwJRCV0cxFs&itag=43
+640x360 (mp4, 254MB) https://r2---sn-nx5cvox-hpa6.googlevideo.com/videoplayback?requiressl=yes&mt=1440792762&mime=video%2Fmp4&ipbits=0&ratebypass=yes&expire=1440814486&dur=7041.172&pl=18&initcwndbps=451250&ip=95.224.255.191&key=yt5&mn=sn-nx5cvox-hpa6&signature=89E7A419D5C68C612AF10481D68874939582909F.7F5239355D3EE6C5E7C2528700FA50EA6275915F&sparams=dur%2Cgcr%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&id=o-AMWYmrUhWyU2zqK3U-jtJAiZhH2kEvSAbDNUOUPXjf2z&mv=m&gcr=it&sver=3&mm=31&lmt=1401249870747806&source=youtube&fexp=9405191%2C9407992%2C9408370%2C9408710%2C9409069%2C9412928%2C9415365%2C9415397%2C9415436%2C9415485%2C9416023%2C9416126%2C9416344%2C9416838%2C9416898%2C9416984%2C9417423%2C9417707%2C9418153%2C9418201%2C9418448%2C9419031%2C9419892%2C9420019&upn=hwJRCV0cxFs&itag=18
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-3d4ec668-a124-457e-a2d8-e8869fb5fb07.html
+Liberate_il_Duce_La_Grande_Storia_del_23082013 Liberate il Duce! - La Grande Storia del 23/08/2013
+Maximum quality (mp4, 1.6GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raitre/La%20grande%20storia%202011/grandestoria_puntate_2013/1769288_1800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/il-segreto-i-volti-dell-amore_556957.html
+Il_segreto_PUNTATE_INTERE_Il_Segreto_I_volti_dellamore_Video_Mediaset Il segreto - PUNTATE INTERE Il Segreto - I volti dell'amore | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/08/14f7a9cb1ab7d2-08.ism/manifest
+Medium-high quality (mp4, 433MB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/08/14f7a9cb1ab7d2-10_0.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-29&ch=2&v=559317&vd=2015-08-29&vc=2
+Sereno_Variabile_Estate Sereno Variabile Estate
+Medium-low quality (mp4, 191MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raidue/Sereno%20Variabile/Sereno_Variabile_2014/4400870_800.mp4
+Maximum quality (mp4, 404MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raidue/Sereno%20Variabile/Sereno_Variabile_2014/4400870_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-29&ch=2&v=559317&vd=2015-08-29&vc=2
+Sereno_Variabile_Estate Sereno Variabile Estate
+Medium-low quality (mp4, 191MB, 700x394) http://creativemedia4.rai.it/podcastcdn/raidue/Sereno%20Variabile/Sereno_Variabile_2014/4400870_800.mp4
+Maximum quality (mp4, 404MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raidue/Sereno%20Variabile/Sereno_Variabile_2014/4400870_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-23&ch=1&v=556739&vd=2015-08-23&vc=1
+Overland_14_Caucaso_popoli_e_culture_tra_Europa_e_Asia_Georgia Overland 14 -Caucaso: popoli e culture tra Europa e Asia Georgia
+Medium-low quality (mp4, 305MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4381354_800.mp4
+Maximum quality (mp4, 645MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4381354_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-23&ch=1&v=556739&vd=2015-08-23&vc=1
+Overland_14_Caucaso_popoli_e_culture_tra_Europa_e_Asia_Georgia Overland 14 -Caucaso: popoli e culture tra Europa e Asia Georgia
+Medium-low quality (mp4, 305MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4381354_800.mp4
+Maximum quality (mp4, 645MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4381354_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-29&ch=1&v=559268&vd=2015-08-29&vc=1
+Overland_14_Caucaso_popoli_e_culture_tra_Europa_e_Asia_Georgia Overland 14 -Caucaso: popoli e culture tra Europa e Asia Georgia
+Medium-low quality (mp4, 314MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4399894_800.mp4
+Maximum quality (mp4, 664MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4399894_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-29&ch=1&v=559268&vd=2015-08-29&vc=1
+Overland_14_Caucaso_popoli_e_culture_tra_Europa_e_Asia_Georgia Overland 14 -Caucaso: popoli e culture tra Europa e Asia Georgia
+Medium-low quality (mp4, 314MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4399894_800.mp4
+Maximum quality (mp4, 664MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4399894_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-27&ch=31&v=558136&vd=2015-08-27&vc=31
+ERIC_CLAPTON_STANDING_AT_THE_CROSSROADS ERIC CLAPTON: STANDING AT THE CROSSROADS
+Maximum quality (mp4, 705MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4394905_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-27&ch=31&v=558136&vd=2015-08-27&vc=31
+ERIC_CLAPTON_STANDING_AT_THE_CROSSROADS ERIC CLAPTON: STANDING AT THE CROSSROADS
+Medium-low quality (mp4, 332MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4394905_800.mp4
+Maximum quality (mp4, 705MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4394905_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-27&ch=31&v=558135&vd=2015-08-27&vc=31
+INTRO_ERIC_CLAPTON_STANDING_AT_THE_CROSSROADS INTRO ERIC CLAPTON STANDING AT THE CROSSROADS
+Medium-low quality (mp4 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4393227_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-28&ch=31&v=558553&vd=2015-08-28&vc=31
+MUSEO_ITALIA_RAFFAELLO_E_MICHELANGELO MUSEO ITALIA - RAFFAELLO E MICHELANGELO
+Medium-low quality (mp4, 323MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4396809_800.mp4
+Maximum quality (mp4, 685MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4396809_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-31&ch=31&v=559735&vd=2015-08-31&vc=31
+PASSEPARTOUT_MAGNA_GRECIA PASSEPARTOUT: MAGNA GRECIA
+Medium-low quality (mp4, 189MB, 520x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/rai5_world/sera_world/4406184_800.mp4
+Maximum quality (mp4, 401MB, 768x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/rai5_world/sera_world/4406184_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-31&ch=3&v=560110&vd=2015-08-31&vc=3
+34_Festival_del_Circo_di_Montecarlo 34* Festival del Circo di Montecarlo
+Medium-low quality (mp4, 641MB, 700x394) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4407781_800.mp4
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4407781_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-08-31&ch=3&v=560110&vd=2015-08-31&vc=3
+34_Festival_del_Circo_di_Montecarlo 34* Festival del Circo di Montecarlo
+Medium-low quality (mp4, 641MB, 700x394) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4407781_800.mp4
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/raitre/sera/4407781_1800.mp4
+endofdbentry
+ls
+ 
+
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/martedi-1-settembre_557206.html
+Il_segreto_PUNTATE_INTERE_Marted_1_settembre_Video_Mediaset Il segreto - PUNTATE INTERE Martedì 1 settembre | Video Mediaset
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/08/14f83d58795965-13.ism/manifest
+Low quality (wmv, 153MB, 256x144) http://prd.video.mediaset.net/wmv2/2015/08/14f83d58795965-06_0.wmv
+Medium-high quality (mp4, 349MB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/08/14f83d58795965-14_0.mp4
+endofdbentry
+WC2
+ 
+
+endofdbentry
+http://www.youtube.com/watch?v=mU6ow9eejhY
+I_TORMENTONI_DELLESTATE_2015_La_migliore_musica_con_TITOLI I TORMENTONI DELL'ESTATE 2015 - La migliore musica con TITOLI
+
+audio only DASH audio (m4a, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=140&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=audio/mp4&gir=yes&clen=33918415&lmt=1440323547398165&dur=2135.608&upn=3_gg_LbAdGg&signature=7DB8C7E0EF83F28B6024192991945FDA5119B488.6B21078671F5FD54B937294AA47B15D16D9FD15B&key=dg_yt0&fexp=9405265
+audio only DASH audio (webm, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=171&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=audio/webm&gir=yes&clen=34009198&lmt=1428934031600648&dur=2135.546&upn=3_gg_LbAdGg&signature=79D5AC19493BC7DE303C9717CECB84D33C5A1B47.326DC9497C9F6AB717D42FF9C6C54223EA8683F3&key=dg_yt0&fexp=9405265
+audio only DASH audio (m4a, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=141&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=audio/mp4&gir=yes&clen=68088157&lmt=1428852450823457&dur=2135.608&upn=3_gg_LbAdGg&signature=87E38BD55A248CBB5427A08EE718599E3FDB6CAE.78F6DCE6C760E6B94B074C2B013E9699341A788E&key=dg_yt0&fexp=9405265
+256x144 DASH video (webm, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=278&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/webm&gir=yes&clen=13114744&lmt=1428935063521757&dur=2135.467&upn=3_gg_LbAdGg&signature=71FBB52717D2BF5C17E708A0339337AA4B35A695.02C7CE1C2ABD1EDE43CCE452E1B30BFE0D92CC35&key=dg_yt0&fexp=9405265
+256x144 DASH video (mp4, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=160&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/mp4&gir=yes&clen=13810940&lmt=1440323830903694&dur=2135.533&upn=3_gg_LbAdGg&signature=621E4616FD8640404A7941A47EA984D377E6DAA0.366BADB712E280C5171956EDF7C4EC1126BAFD21&key=dg_yt0&fexp=9405265
+426x240 DASH video (webm, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=242&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/webm&gir=yes&clen=18503842&lmt=1428934604032310&dur=2135.500&upn=3_gg_LbAdGg&signature=4F74006800712286668F147EF009B5791C4940C9.5280C9F96F40E76E86AA4768ADEA61B6FAF81004&key=dg_yt0&fexp=9405265
+426x240 DASH video (mp4, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=133&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/mp4&gir=yes&clen=27506992&lmt=1440323834317803&dur=2135.533&upn=3_gg_LbAdGg&signature=7168E28246F0C929D2656189F01F9697B872A4C3.1EEA40E95B2A30242B7969AAAFF2FCAF8AEE4154&key=dg_yt0&fexp=9405265
+640x360 DASH video (webm, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=243&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/webm&gir=yes&clen=34371758&lmt=1428935392387914&dur=2135.500&upn=3_gg_LbAdGg&signature=126B4E10B165EEEB2EAEE7D81885BAA289D59229.6E22821E017AC808FBB7C29D2868989A35603F7D&key=dg_yt0&fexp=9405265
+640x360 DASH video (mp4, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=134&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/mp4&gir=yes&clen=19629392&lmt=1440323832038328&dur=2135.533&upn=3_gg_LbAdGg&signature=018C737E7031AF403FA4407607BFED629B4F3F13.559B2FD323BC83FFDD5675DE47F459AD09D7D848&key=dg_yt0&fexp=9405265
+854x480 DASH video (webm, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=244&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/webm&gir=yes&clen=53629865&lmt=1428934779064656&dur=2135.500&upn=3_gg_LbAdGg&signature=2733FD6204922A87257B8E6CFF87DC3A6B43FAAE.3FC47020B0D52E0AA8EE41A7E0DA817750C822DC&key=dg_yt0&fexp=9405265
+854x480 DASH video (mp4, Unkown size) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?id=994ea8c3d79e8e16&itag=135&source=youtube&requiressl=yes&pcm2cms=yes&ms=au&pl=18&mm=31&mn=sn-nx5cvox-hpal&mv=m&ratebypass=yes&mime=video/mp4&gir=yes&clen=33517344&lmt=1440323832027015&dur=2135.533&upn=3_gg_LbAdGg&signature=90BF44CACDE7FDBE7DF1D7BEB6224CA45A7877AA.97D5E7D1F8590460ACFBB6042DA92C30E16FA147&key=dg_yt0&fexp=9405265
+unknown (3gp, 9.9MB) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?mt=1441185124&mv=m&pl=18&ms=au&signature=BBCC4F927E4C7D8823CBD988A39E098725FC75F0.E20CACA0F207FAC47ACC09299FCBB1311F92617E&fexp=9405265%2C9405967%2C9406516%2C9408510%2C9408710%2C9408940%2C9409069%2C9414703%2C9414935%2C9415365%2C9415485%2C9416023%2C9416126%2C9416337%2C9417707%2C9418153%2C9418201%2C9418204%2C9418391%2C9418448%2C9418702%2C9418958%2C9419308%2C9419322%2C9419369%2C9419445%2C9419786%2C9419789%2C9420022&key=yt5&mm=31&mn=sn-nx5cvox-hpal&sver=3&initcwndbps=506250&ipbits=0&expire=1441206841&mime=video%2F3gpp&upn=9WjVuzNj_wk&id=o-ANPWWkN8_qbjL0-ITn8zeHIwCfir8QiXW28UD3ewerEg&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&source=youtube&pcm2cms=yes&dur=2135.546&ip=95.224.255.191&itag=13&lmt=1428852538813136&requiressl=yes&ratebypass=yes
+176x144 (3gp, 11MB) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?mt=1441185124&mv=m&pl=18&ms=au&signature=34A1A1DF08B26386479A93DBD57A139E7430AC04.6FD98BA55B904A33167625176F74F968C19C5452&fexp=9405265%2C9405967%2C9406516%2C9408510%2C9408710%2C9408940%2C9409069%2C9414703%2C9414935%2C9415365%2C9415485%2C9416023%2C9416126%2C9416337%2C9417707%2C9418153%2C9418201%2C9418204%2C9418391%2C9418448%2C9418702%2C9418958%2C9419308%2C9419322%2C9419369%2C9419445%2C9419786%2C9419789%2C9420022&key=yt5&mm=31&mn=sn-nx5cvox-hpal&sver=3&initcwndbps=506250&ipbits=0&expire=1441206841&mime=video%2F3gpp&upn=9WjVuzNj_wk&id=o-ANPWWkN8_qbjL0-ITn8zeHIwCfir8QiXW28UD3ewerEg&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&source=youtube&pcm2cms=yes&dur=2135.678&ip=95.224.255.191&itag=17&lmt=1428852693998694&requiressl=yes&ratebypass=yes
+320x240 (3gp, 39MB) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?mt=1441185124&mv=m&pl=18&ms=au&signature=B28B53AAB6CDA4D06AE884BCC1BFBD9E988F8746.904A60AE326738A34AD0260EA4518B2ADE5F1671&fexp=9405265%2C9405967%2C9406516%2C9408510%2C9408710%2C9408940%2C9409069%2C9414703%2C9414935%2C9415365%2C9415485%2C9416023%2C9416126%2C9416337%2C9417707%2C9418153%2C9418201%2C9418204%2C9418391%2C9418448%2C9418702%2C9418958%2C9419308%2C9419322%2C9419369%2C9419445%2C9419786%2C9419789%2C9420022&key=yt5&mm=31&mn=sn-nx5cvox-hpal&sver=3&initcwndbps=506250&ipbits=0&expire=1441206841&mime=video%2F3gpp&upn=9WjVuzNj_wk&id=o-ANPWWkN8_qbjL0-ITn8zeHIwCfir8QiXW28UD3ewerEg&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&source=youtube&pcm2cms=yes&dur=2135.724&ip=95.224.255.191&itag=36&lmt=1428852983525751&requiressl=yes&ratebypass=yes
+400x240 (flv, 47MB) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?mt=1441185124&mv=m&pl=18&ms=au&signature=7870521DE2484A3CAC21A5E779A29C938C3D9661.B17FA3F5455F9898A05F33879BF1953952D07D64&fexp=9405265%2C9405967%2C9406516%2C9408510%2C9408710%2C9408940%2C9409069%2C9414703%2C9414935%2C9415365%2C9415485%2C9416023%2C9416126%2C9416337%2C9417707%2C9418153%2C9418201%2C9418204%2C9418391%2C9418448%2C9418702%2C9418958%2C9419308%2C9419322%2C9419369%2C9419445%2C9419786%2C9419789%2C9420022&key=yt5&mm=31&mn=sn-nx5cvox-hpal&sver=3&initcwndbps=506250&ipbits=0&expire=1441206841&mime=video%2Fx-flv&upn=9WjVuzNj_wk&id=o-ANPWWkN8_qbjL0-ITn8zeHIwCfir8QiXW28UD3ewerEg&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&source=youtube&pcm2cms=yes&dur=2135.588&ip=95.224.255.191&itag=5&lmt=1428850274386314&requiressl=yes&ratebypass=yes
+640x360 (webm, 64MB) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?mt=1441185124&mv=m&pl=18&ms=au&signature=75D7359D79E9FF4522AF3E4C6D8239ECFAED1105.5BED88DCD1118646825D313533B50829CE01F781&fexp=9405265%2C9405967%2C9406516%2C9408510%2C9408710%2C9408940%2C9409069%2C9414703%2C9414935%2C9415365%2C9415485%2C9416023%2C9416126%2C9416337%2C9417707%2C9418153%2C9418201%2C9418204%2C9418391%2C9418448%2C9418702%2C9418958%2C9419308%2C9419322%2C9419369%2C9419445%2C9419786%2C9419789%2C9420022&key=yt5&mm=31&mn=sn-nx5cvox-hpal&sver=3&initcwndbps=506250&ipbits=0&ratebypass=yes&expire=1441206841&mime=video%2Fwebm&upn=9WjVuzNj_wk&id=o-ANPWWkN8_qbjL0-ITn8zeHIwCfir8QiXW28UD3ewerEg&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&source=youtube&pcm2cms=yes&dur=0.000&ip=95.224.255.191&itag=43&lmt=1428853346013354&requiressl=yes
+640x360 (mp4, 68MB) https://r7---sn-nx5cvox-hpal.googlevideo.com/videoplayback?mt=1441185124&mv=m&pl=18&ms=au&signature=7DAE6E80B53378E28481AD3E0E2C1F11180A191C.1F0A1F279C51FF17081BD4DD95F365934F5FD101&fexp=9405265%2C9405967%2C9406516%2C9408510%2C9408710%2C9408940%2C9409069%2C9414703%2C9414935%2C9415365%2C9415485%2C9416023%2C9416126%2C9416337%2C9417707%2C9418153%2C9418201%2C9418204%2C9418391%2C9418448%2C9418702%2C9418958%2C9419308%2C9419322%2C9419369%2C9419445%2C9419786%2C9419789%2C9420022&key=yt5&mm=31&mn=sn-nx5cvox-hpal&sver=3&initcwndbps=506250&ipbits=0&ratebypass=yes&expire=1441206841&mime=video%2Fmp4&upn=9WjVuzNj_wk&id=o-ANPWWkN8_qbjL0-ITn8zeHIwCfir8QiXW28UD3ewerEg&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&source=youtube&pcm2cms=yes&dur=2135.608&ip=95.224.255.191&itag=18&lmt=1440323499238223&requiressl=yes
+endofdbentry
+undefined
+ 
+
 endofdbentry

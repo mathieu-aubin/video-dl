@@ -15,19 +15,22 @@ $(function() {
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
+            var domain = '1';
+
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://s1.daniil.it/mail/contact_me.php",
+                url: "https://mail.daniil.it/",
                 type: "POST",
                 data: {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message
+                    message: message,
+                    domain: domain
                 },
                 cache: false,
                 success: function() {
