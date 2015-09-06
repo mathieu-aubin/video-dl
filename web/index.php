@@ -19,12 +19,17 @@ if(isset($_GET['url'])) {
             $videoTitolo = preg_replace('/(?:^)(\w+)\s/', '', $titles); 
             error_log(" title is $title. and videot is $videoTitolo and titles are $titles");
             $arrfinal = explode("\n", $formats);
+            $uacheck = preg_match_all("/Version\/[0-9]\.[0-9]\sChrome\S*\sMobile|;\swv|\sAppleWebKit\/[0-9]*\.[0-9]*\s[(]KHTML,\slike\sGecko[)]\sVersion\/[0-9]\.[0-9]\s/", $_SERVER['HTTP_USER_AGENT']);
+            error_log($uacheck);
             foreach ($arrfinal as $key => $value) {
                 $finalarrspace = explode(' ', trim($arrfinal[$key]));
                 $url = htmlentities(array_pop($finalarrspace));
                 $info = implode(' ',$finalarrspace);
-                $ext = preg_replace('/,.*$/', '', preg_replace('/^.*[(]\s*/', '', $info));
-                $readyformats = "$readyformats<a href=".'"'."$url".'"'.' download='.'"'."$title".".$ext".'"'.">$info</a><br>";
+                if("$uacheck" == "0" ) {
+                    $ext = preg_replace('/,.*$/', '', preg_replace('/^.*[(]\s*/', '', $info));
+                    $download = " download=\"$title.$ext\"";
+                 };
+                $readyformats = "$readyformats<a href=\"$url\"$download>$info</a><br>";
             };
         
             $output = '<h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>'.$videoTitolo."</h2><br><h1>Available versions:</h1><br>$readyformats</h2>";
