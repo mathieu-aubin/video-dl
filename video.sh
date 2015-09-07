@@ -15,7 +15,9 @@ help() {
 echo "Video download script
 Created by Daniil Gentili
 Supported websites: $(wget -q -O - http://api.daniil.it/?p=websites)
-Usage: $(basename $0) [ -qabf --player=player ] [ URLS.TXT URLS2.TXT ] URL URL2 URL3 ...
+Usage:
+$(basename $0) [ -qabp=player ] URL URL2 URL3 ...
+$(basename $0) [ -qabfp=player ] URL.txt URL2.txt URL3.txt ...
 
 Options:
 
@@ -27,7 +29,7 @@ Options:
 
 -f		Read URL(s) from specified text file(s). If specified, you cannot provide URLs as arguments.
 
---player=player	Play the video instead of downloading it using specified player, mplayer if none specified.
+-p=player	Play the video instead of downloading it using specified player, mplayer if none specified.
 
 --help		Show this extremely helpful message.
 
@@ -57,7 +59,7 @@ Q="-s"
 
 ##### Self updating section #####
 # !!!!!! Comment the following line before editing the script or all changes will be overwritten !!!!!! #
-echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
+#echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
 
 ##### URL format detection #####
 
@@ -87,10 +89,11 @@ api() { dl "http://api.daniil.it/?url=$sane" - $Q; }
 
 ##### Option detection ##### 
 
-while getopts qabf FLAG; do
+while getopts qabfp: FLAG; do
 case "$FLAG" in
   b)
-    echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
+    {
+echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
 echo "Couldn't download the API engine, using built-in (maybe outdated) engine..." 
 api() {
 ####################################################
@@ -560,7 +563,7 @@ $ptype $dl $2 $3
 [ "$formats" = "" ] && continue || echo "$title $videoTitolo
 $formats"
 }
-
+}
     }
     ;;
   q)
@@ -572,20 +575,21 @@ $formats"
   f)
     F=y
     ;;
+  p)
+    {
+play=y
+which "$OPTARG" &>/dev/null && player="$(echo $OPTARG | sed 's/=//g')" || player="mplayer"
+
+    }
+    ;;
   \?)
     echo "Invalid option: -$OPTARG" >&2
 esac
 done
 
-shift $((OPTIND-1))
+[ "$player" = "mplayer" ] && shift $((OPTIND-2)) || shift $((OPTIND-1)) 
 
-##### Player option detection and choice #####
-
-echo "$1" | grep -q "\--player" && player=$(echo "$1" | sed 's/ .*//;s/.*--player\=//') && play=y && shift
-
-
-[ "$player" = "" ] && player=mplayer
-
+##### Player choice #####
 [ "$play" = y ] && dlvideo() {
 queue="$queue
 $player $url
@@ -593,6 +597,7 @@ $player $url
 } || dlvideo() {
 urlformatcheck
 }
+
 [ "$*" = "" ] && echo "No url specified." && help
 
 [ "$F" = "y" ] && URL="$(cat "$*")" || URL="$*"
@@ -645,8 +650,10 @@ for u in $URL; do
 done
 
 
-[ "$queue" != "" ] && { 
-[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully."; } || { [ "$play" = "y" ] && eval $queue; }
-} || { echo "ERROR: download list is empty."; exit 1; }
+[ "$queue" = "" ] && { echo "ERROR: download list is empty."; exit 1; }
+
+[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
+[ "$play" = "y" ] && { eval $queue || echo "An error occurred";exit 1; }
+
 
 exit $?
