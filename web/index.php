@@ -36,7 +36,7 @@ if(isset($_GET['url'])) {
         } else {
              $to = 'daniil.gentili.dg@gmail.com';
              $headers = "From: noreply@daniil.it\n";
-             $email_subject = "Video download error: $url";
+             $email_subject = "Video download error: $mail";
              $email_body = "An error occurred while downloading the following url: $mail\nEmpty response\n\n";
              $headers .= "Reply-To: daniil.gentili.dg@gmail.com";
              mail($to,$email_subject,$email_body,$headers);

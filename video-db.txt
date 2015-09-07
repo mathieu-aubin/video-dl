@@ -1761,3 +1761,75 @@ Tets
  
 
 endofdbentry
+http://www.dailymotion.com/video/x2k8fbm
+Mia_and_Me_26_La_fine_di_unera_HD Mia and Me - 26 - La fine di un'era [HD]
+
+multiple Quality selection URL (mp4, Length: unspecified [application/vnd.apple.mpegurl]B) https://www.dailymotion.com/cdn/manifest/video/x2k8fbm.m3u8?auth=1441811090-2562-bap8lkhe-22baecb99f417e833be5e53d621d8944
+320x184 (mp4, 15KB) http://proxy-69.dailymotion.com/sec(5ad085b13b9ef1cd83a6234b44e295e8)/video/877/719/154917778_mp4_h264_aac_ld.m3u8
+320x184 (mp4, 15KB) http://proxy-05.dailymotion.com/sec(5ad085b13b9ef1cd83a6234b44e295e8)/video/877/719/154917778_mp4_h264_aac_ld.m3u8
+512x288 (mp4, 15KB) http://proxy-69.dailymotion.com/sec(51b5057286a30c6913ea9d9a7a53ebaa)/video/877/719/154917778_mp4_h264_aac.m3u8
+512x288 (mp4, 15KB) http://proxy-05.dailymotion.com/sec(51b5057286a30c6913ea9d9a7a53ebaa)/video/877/719/154917778_mp4_h264_aac.m3u8
+848x480 (mp4, 15KB) http://proxy-69.dailymotion.com/sec(f5ed02aef4115047c0398a79e44f2a8a)/video/877/719/154917778_mp4_h264_aac_hq.m3u8
+848x480 (mp4, 15KB) http://proxy-05.dailymotion.com/sec(f5ed02aef4115047c0398a79e44f2a8a)/video/877/719/154917778_mp4_h264_aac_hq.m3u8
+1024x576 (mp4, 15KB) http://proxy-69.dailymotion.com/sec(24828094555a4959c9ea68a2dadaafe3)/video/877/719/154917778_mp4_h264_aac_hd.m3u8
+1024x576 (mp4, 15KB) http://proxy-05.dailymotion.com/sec(24828094555a4959c9ea68a2dadaafe3)/video/877/719/154917778_mp4_h264_aac_hd.m3u8
+320x240 (mp4, 42MB) https://www.dailymotion.com/cdn/H264-320x240/video/x2k8fbm.mp4?auth=1441811090-2562-sxmic3m5-852f313ce0eda53beae158d9cbc4bf0d
+512x384 (mp4, 78MB) https://www.dailymotion.com/cdn/H264-512x384/video/x2k8fbm.mp4?auth=1441811090-2562-2lrbwfbj-3d45ddcc313db3a66cb68d6d53653f09
+848x480 (mp4, 141MB) https://www.dailymotion.com/cdn/H264-848x480/video/x2k8fbm.mp4?auth=1441811090-2562-3f2wckw4-325ca27360a1c8f273a459e80033da4a
+1280x720 (mp4, 361MB) https://www.dailymotion.com/cdn/H264-1280x720/video/x2k8fbm.mp4?auth=1441811090-2562-w58g6l4j-6063aae311fcf6bb61c0537d6c52167d
+endofdbentry
+http://www.dailymotion.com/video/x2k7pkw_mia-and-me-12-le-manie-di-phuddle-hd_tv
+Mia_and_Me_12_Le_manie_di_Phuddle_HD Mia and Me - 12 - Le manie di Phuddle [HD]
+
+multiple Quality selection URL (mp4, Length: unspecified [application/vnd.apple.mpegurl]B) https://www.dailymotion.com/cdn/manifest/video/x2k7pkw.m3u8?auth=1441811301-2562-uqrpi3js-d3828b5c50cf9c4891989c18e767aa6b
+320x184 (mp4, 15KB) http://proxy-019.dc3.dailymotion.com/sec(fb25ebe9b2818ecc9928287443259d52)/video/614/488/154884416_mp4_h264_aac_ld.m3u8
+320x184 (mp4, 15KB) http://proxy-010.dc3.dailymotion.com/sec(fb25ebe9b2818ecc9928287443259d52)/video/614/488/154884416_mp4_h264_aac_ld.m3u8
+512x288 (mp4, 14KB) http://proxy-019.dc3.dailymotion.com/sec(7c3cfdf634e91432ee03ba867c3b8e11)/video/614/488/154884416_mp4_h264_aac.m3u8
+512x288 (mp4, 14KB) http://proxy-010.dc3.dailymotion.com/sec(7c3cfdf634e91432ee03ba867c3b8e11)/video/614/488/154884416_mp4_h264_aac.m3u8
+848x480 (mp4, 15KB) http://proxy-019.dc3.dailymotion.com/sec(aa3ae347813be51e770d6c58c9d5a1dc)/video/614/488/154884416_mp4_h264_aac_hq.m3u8
+848x480 (mp4, 15KB) http://proxy-010.dc3.dailymotion.com/sec(aa3ae347813be51e770d6c58c9d5a1dc)/video/614/488/154884416_mp4_h264_aac_hq.m3u8
+1024x576 (mp4, 15KB) http://proxy-019.dc3.dailymotion.com/sec(1d502f36d859e564094a84072daf967f)/video/614/488/154884416_mp4_h264_aac_hd.m3u8
+1024x576 (mp4, 15KB) http://proxy-010.dc3.dailymotion.com/sec(1d502f36d859e564094a84072daf967f)/video/614/488/154884416_mp4_h264_aac_hd.m3u8
+320x240 (mp4, 41MB) https://www.dailymotion.com/cdn/H264-320x240/video/x2k7pkw.mp4?auth=1441811301-2562-jxiqvw3i-1f3bbb0aebcc05b04392465fa6d9e95e
+512x384 (mp4, 76MB) https://www.dailymotion.com/cdn/H264-512x384/video/x2k7pkw.mp4?auth=1441811301-2562-i8ordomw-f983fa18cd3cff30bb3d98010958f808
+848x480 (mp4, 138MB) https://www.dailymotion.com/cdn/H264-848x480/video/x2k7pkw.mp4?auth=1441811301-2562-j55pqzeu-8775749ac461a48cf661fbd1d0a26fef
+1280x720 (mp4, 354MB) https://www.dailymotion.com/cdn/H264-1280x720/video/x2k7pkw.mp4?auth=1441811301-2562-tgd442l3-ef48957a284b9d7b95787f11900cd728
+endofdbentry
+http://www.dailymotion.com/video/x2k7nyz_mia-and-me-11-tutto-cio-che-luccica-hd_tv
+Mia_and_Me_11_Tutto_ciu00f2_che_luccica_HD Mia and Me - 11 - Tutto ci\u00f2 che luccica [HD]
+
+multiple Quality selection URL (mp4, Length: unspecified [application/vnd.apple.mpegurl]B) https://www.dailymotion.com/cdn/manifest/video/x2k7nyz.m3u8?auth=1441811384-2562-5zsbcqq7-7b600c09436666f86da5a5219792e3fb
+320x184 (mp4, 15KB) http://proxy-86.dailymotion.com/sec(56a6bcf9d90861950c460aa4ad00ff99)/video/133/288/154882331_mp4_h264_aac_ld.m3u8
+320x184 (mp4, 15KB) http://proxy-81.dailymotion.com/sec(56a6bcf9d90861950c460aa4ad00ff99)/video/133/288/154882331_mp4_h264_aac_ld.m3u8
+512x288 (mp4, 14KB) http://proxy-86.dailymotion.com/sec(2b0df86b589e322a82146cd27b492abe)/video/133/288/154882331_mp4_h264_aac.m3u8
+512x288 (mp4, 14KB) http://proxy-81.dailymotion.com/sec(2b0df86b589e322a82146cd27b492abe)/video/133/288/154882331_mp4_h264_aac.m3u8
+848x480 (mp4, 15KB) http://proxy-86.dailymotion.com/sec(1abe3c4b62fdb4fda1e0b21835ba09a9)/video/133/288/154882331_mp4_h264_aac_hq.m3u8
+848x480 (mp4, 15KB) http://proxy-81.dailymotion.com/sec(1abe3c4b62fdb4fda1e0b21835ba09a9)/video/133/288/154882331_mp4_h264_aac_hq.m3u8
+1024x576 (mp4, 15KB) http://proxy-86.dailymotion.com/sec(875772b10ab3979632bb7332e16e4adf)/video/133/288/154882331_mp4_h264_aac_hd.m3u8
+1024x576 (mp4, 15KB) http://proxy-81.dailymotion.com/sec(875772b10ab3979632bb7332e16e4adf)/video/133/288/154882331_mp4_h264_aac_hd.m3u8
+320x240 (mp4, 41MB) https://www.dailymotion.com/cdn/H264-320x240/video/x2k7nyz.mp4?auth=1441811384-2562-vatb13p2-7ee38e5120b8abd2ef8e9ffead0e7ba2
+512x384 (mp4, 77MB) https://www.dailymotion.com/cdn/H264-512x384/video/x2k7nyz.mp4?auth=1441811384-2562-hpug8seg-3fbe72a314441fc02c78d3863655a853
+848x480 (mp4, 139MB) https://www.dailymotion.com/cdn/H264-848x480/video/x2k7nyz.mp4?auth=1441811384-2562-5d161qkb-ce46452dd52adf3cc7a2d306b9acf9f9
+1280x720 (mp4, 356MB) https://www.dailymotion.com/cdn/H264-1280x720/video/x2k7nyz.mp4?auth=1441811384-2562-invlgm8o-73f424ffaf277b027e1c219e627002d4
+endofdbentry
+http://www.smosh.com/videos/super-mario-action-hero-bts-2884695
+SUPER_MARIO_ACTION_HERO_BTS_SMOSH SUPER MARIO: ACTION HERO! (BTS) | SMOSH
+
+unknown (mp4, 12MB) http://v1.smosh.com/dnet/media/695/884/2884695/super-mario-action-hero-bts-496_kbps.mp4?1B608EE7AFCE3765E176F3C6FBB98002B3D18C64572F2307D769A874A071F6BE2401
+endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-c0ddeb1f-b3e2-4358-aaf7-ca5eb170fc7b.html
+Anna_e_Yusef_intervista_a_Vanessa_Incontrada "Anna e Yusef": intervista a Vanessa Incontrada
+Normal quality (mp4, 90MB, 1280x720) http://creativemedia4.rai.it/podcastcdn/raiuno/promofiction/4405439.mp4
+endofdbentry
+This
+ 
+
+endofdbentry
+wget
+ 
+
+endofdbentry
+hdhdhd
+ 
+
+endofdbentry
