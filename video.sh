@@ -59,7 +59,7 @@ Q="-s"
 
 ##### Self updating section #####
 # !!!!!! Comment the following line before editing the script or all changes will be overwritten !!!!!! #
-#echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
+echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
 
 ##### URL format detection #####
 
