@@ -37,7 +37,7 @@ if(isset($_GET['url'])) {
              $to = 'daniil.gentili.dg@gmail.com';
              $headers = "From: noreply@daniil.it\n";
              $email_subject = "Video download error: $url";
-             $email_body = "An error occurred while downloading the following url: $url\nEmpty response\n\n";
+             $email_body = "An error occurred while downloading the following url: $mail\nEmpty response\n\n";
              $headers .= "Reply-To: daniil.gentili.dg@gmail.com";
              mail($to,$email_subject,$email_body,$headers);
              $output = "<h1>An error occurred and it was reported.</h1>";
@@ -193,7 +193,7 @@ if(isset($_GET['url'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive img-centered" src="img/profile.png?v=2" alt="">
+                    <img class="img-responsive img-centered" src="img/profile.png?v=2" onclick="video();" alt="">
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
 
@@ -299,7 +299,7 @@ if(isset($_GET['url'])) {
                         <div class="modal-body">
                             <h2>Supported websites</h2>
                             <hr class="star-primary">
-                            <p>Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl. </p>
+                            <p ID="supportedurls">Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl. </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -379,7 +379,7 @@ Thanks!</textarea>
     </script> -->
     <!-- Video download -->
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
-    <script src="/js/video-dl.js?v=2345d43d73f73ng4tgh43"></script>
+    <script src="/js/video-dl.js?v=omgomgomgomg"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

@@ -108,11 +108,30 @@ function video() {
     input = $("input#urljs").val();
     video_dl(input);
 };
+
 function firstload() {
     mailtext();
-    document.getElementById("js").style.display = "block";
-    document.getElementById("php").style.display = "none";
-    document.getElementById("jsd").style.display = "block";
-    document.getElementById("phpd").style.display = "none";
+    $("#supportedurls").empty();
+    $("#supportedurls").html("<h2>Working...</h2>");
+    url = "https://api.daniil.it/?p=allwebsites";
+    // Prepare and send request
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 || xmlhttp.readyState == "complete") {
+            response = xmlhttp.responseText;
+            if (response) {
+                response = he.encode(response).replace(/\s/g, "</li><li>");
+                // Output the result and the mail text
+                $("#supportedurls").html("<li>"+response+"</li>");
+                $("#js").css("display", "block");
+                $("#php").css("display", "none");
+                $("#jsd").css("display", "block");
+                $("#phpd").css("display", "none");
 
+            }
+        }
+    }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    // Get response text
 };

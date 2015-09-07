@@ -1627,3 +1627,137 @@ unknown (3gp, 3.5MB) https://r3---sn-nx5cvox-hpak.googlevideo.com/videoplayback?
 640x360 (mp4, 28MB) https://r3---sn-nx5cvox-hpak.googlevideo.com/videoplayback?ratebypass=yes&upn=rIm0ZpUMJiQ&pcm2cms=yes&mime=video%2Fmp4&itag=18&key=yt5&ipbits=0&expire=1441575596&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&initcwndbps=476250&lmt=1402970270137626&sver=3&mt=1441553946&mv=m&fexp=9408710%2C9409069%2C9409095%2C9414935%2C9415365%2C9415436%2C9415485%2C9415582%2C9416023%2C9416126%2C9416347%2C9416729%2C9417707%2C9418058%2C9418153%2C9418448%2C9419166%2C9420022%2C9420194%2C9420332%2C9420348%2C9420370%2C9420433&ms=au&source=youtube&ip=95.224.255.191&mm=31&mn=sn-nx5cvox-hpak&pl=15&id=o-AJ2DpGIdGPdaA9BVVD2zGd2EWDjlooi2e-SmI_x8r-P9&signature=B54F9813D6671BF10ACC4C437F1ECD6131E25E2F.2186349AF76DFC9D91B1C7F892AAB7AB992764F1&requiressl=yes&dur=455.389
 1280x720 (mp4, 85MB) https://r3---sn-nx5cvox-hpak.googlevideo.com/videoplayback?ratebypass=yes&upn=rIm0ZpUMJiQ&pcm2cms=yes&mime=video%2Fmp4&itag=22&key=yt5&ipbits=0&expire=1441575596&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpcm2cms%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&initcwndbps=476250&lmt=1402970218320303&sver=3&mt=1441553946&mv=m&fexp=9408710%2C9409069%2C9409095%2C9414935%2C9415365%2C9415436%2C9415485%2C9415582%2C9416023%2C9416126%2C9416347%2C9416729%2C9417707%2C9418058%2C9418153%2C9418448%2C9419166%2C9420022%2C9420194%2C9420332%2C9420348%2C9420370%2C9420433&ms=au&source=youtube&ip=95.224.255.191&mm=31&mn=sn-nx5cvox-hpak&pl=15&id=o-AJ2DpGIdGPdaA9BVVD2zGd2EWDjlooi2e-SmI_x8r-P9&signature=79134A90BF2C9F68332CB28017EFDFEEA7F7C2F8.3FC2AAF2F5919CAE6620204C15EC8DFE5A06137C&requiressl=yes&dur=455.389
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-718de366-7b3a-4b62-bd37-3f9c3a4acd5a.html
+Il_caso_Enzo_Tortora_del_30092012 Il caso Enzo Tortora del 30/09/2012
+Low quality (mp4, 457MB, 512x288) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Il_caso_Enzo_Tortora/1110074_600.mp4
+Minimum quality (mp4, 316MB, 512x288) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Il_caso_Enzo_Tortora/1110074_400.mp4
+Medium-low quality (mp4, 598MB, 700x394) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Il_caso_Enzo_Tortora/1110074_800.mp4
+Medium quality (mp4, 880MB, 920x518) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Il_caso_Enzo_Tortora/1110074_1200.mp4
+Medium-high quality (mp4, 1.1GB, 920x518) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Il_caso_Enzo_Tortora/1110074_1500.mp4
+Maximum quality (mp4, 1.3GB, 1024x576) http://creativemedia2.rai.it/podcastcdn/Fiction/RaiUno/Il_caso_Enzo_Tortora/1110074_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-8e4f3fbe-9bc7-4734-99da-6e273355c339.html
+Il_Grande_Torino_Prima_parte Il Grande Torino - Prima parte
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/GrandeTorino/GrandeTorino01p.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-7db13a92-9f3c-44e4-b6bd-4f0e4c42d365.html
+Il_Grande_Torino_Seconda_parte Il Grande Torino - Seconda parte
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/GrandeTorino/GrandeTorino02p.wmv
+endofdbentry
+http://rai.it/dl/RaiTV/programmi/media/ContentItem-507b685b-0d48-40b9-84d9-898bd0dd15b7.html
+Black_Mass_Fuori_Concorso_del_04092015 Black Mass (Fuori Concorso) del 04/09/2015
+Maximum quality (mp4, 386MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Rai_Movie/Festival_del_Cinema_di_Venezia/Conferenze_stampa/4418587_1800.mp4
+Medium-low quality (mp4, 182MB, 720x404) http://creativemedia4.rai.it/podcastcdn/Rai_Movie/Festival_del_Cinema_di_Venezia/Conferenze_stampa/4418587_800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-5e18942e-de4d-40d8-8f58-099510fddf4d.html
+LOriana_1_puntata_del_16022015 L'Oriana - 1^ puntata del 16/02/2015
+Medium-low quality (mp4, 559MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/L_Oriana/3563247_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/L_Oriana/3563247_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-27560351-c11b-4047-9a3a-cb2bbd996ab3.html
+LOriana_2_puntata_del_17022015 L'Oriana - 2^ puntata del 17/02/2015
+Medium-low quality (mp4, 564MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/L_Oriana/3567521_800.mp4
+Maximum quality (mp4, 1.2GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/L_Oriana/3567521_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-102d1b56-9d4c-4388-9818-4265f190816f.html
+Prima_puntata Prima puntata 
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/verdi_1episodio.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-67d56a65-1167-408e-82d1-e19fe90523f6.html
+Seconda_puntata Seconda puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/verdi_2episodio.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-ac1f854b-612e-41fa-a3eb-10d98c15dba3.html
+Terza_puntata Terza puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/verdi_3episodio.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e3bbf8ae-95d2-4c66-ad48-9f9ccc7312e8.html
+Nona_puntata Nona puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/lavitadiverdi_9puntata.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-89f82759-c15a-428f-a146-0c00548c1c1f.html
+Ottava_puntata Ottava puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/lavitadiverdi_8puntata.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-91430adc-dd1e-4be7-8618-28e1a317b13b.html
+Settima_puntata Settima puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/lavitadiverdi_7puntata.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-022ef017-349e-48d4-82b0-15e1117d056b.html
+Quinta_puntata Quinta puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/verdi_5puntata.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-ec020d67-2ea9-438e-9199-62f0a322c981.html
+Sesta_puntata Sesta puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/lavitadiverdi_6puntata.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-8ca73921-49a9-44e3-9297-edb863c89d0e.html
+Quarta_puntata Quarta puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/raifiction/lavitadiverdi/verdi_4puntata.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-c343a32f-4d04-4386-9f59-ad94070ff65d.html
+Quelli_della_notte_prima_puntata Quelli della notte - prima puntata
+Normal quality (wmv) HTTP://http:mms://rntlivewm.rai.it/rai/Quellidellanotte/Quellidnotte01.wmv
+endofdbentry
+http://hdrezka.me/films/foreign/10443-zvezdnyy-put-vozmezdie.html
+u0421u043cu043eu0442u0440u0435u0442u044c_u0444u0438u043bu044cu043c_u0417u0432u0435u0437u0434u043du044bu0439_u043fu0443u0442u044c_u0412u043eu0437u043cu0435u0437u0434u0438u0435_u043eu043du043bu0430u0439u043d_u0432_u0445u043eu0440u043eu0448u0435u043c_u043au0430u0447u0435u0441u0442u0432u0435_720p_HD \u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0444\u0438\u043b\u044c\u043c \u0417\u0432\u0435\u0437\u0434\u043d\u044b\u0439 \u043f\u0443\u0442\u044c: \u0412\u043e\u0437\u043c\u0435\u0437\u0434\u0438\u0435 \u043e\u043d\u043b\u0430\u0439\u043d \u0432 \u0445\u043e\u0440\u043e\u0448\u0435\u043c \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435 720p HD
+
+unknown (html, Length: unspecified [text/html]B) http://hdrezka.me/films/foreign/10443-zvezdnyy-put-vozmezdie.html
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-05&ch=1&v=562106&vd=2015-09-05&vc=1
+Overland_14_Caucaso_popoli_e_culture_tra_Europa_e_Asia_Azerbaigian Overland 14 -Caucaso: popoli e culture tra Europa e Asia Azerbaigian
+Medium-low quality (mp4, 320MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4421305_800.mp4
+Maximum quality (mp4, 678MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4421305_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-05&ch=1&v=562106&vd=2015-09-05&vc=1
+Overland_14_Caucaso_popoli_e_culture_tra_Europa_e_Asia_Azerbaigian Overland 14 -Caucaso: popoli e culture tra Europa e Asia Azerbaigian
+Medium-low quality (mp4, 320MB, 700x394) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4421305_800.mp4
+Maximum quality (mp4, 678MB, 1024x576) http://creativemedia2.rai.it/podcastmhp_world/replaytv_world/raiuno_world/mattina_world/4421305_1800.mp4
+endofdbentry
+http://www.youtube.com/watch?feature=player_detailpage
+ 
+
+endofdbentry
+1oMG8baf0cE
+u042fu043bu0442u0430_u0410_u0437u0430u0447u0435u043c_u043eu043du0438_u0432u0440u0443u0442 \u042f\u043b\u0442\u0430.  \u0410 \u0437\u0430\u0447\u0435\u043c \u043e\u043d\u0438 \u0432\u0440\u0443\u0442?
+
+audio only DASH audio (webm, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=171&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=audio/webm&gir=yes&clen=8580590&lmt=1441498143678598&dur=820.647&mt=1441568449&sver=3&fexp=9407478
+audio only DASH audio (m4a, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=140&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=audio/mp4&gir=yes&clen=13035233&lmt=1441496863330896&dur=820.709&mt=1441568449&sver=3&fexp=9407478
+256x144 DASH video (webm, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=278&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/webm&gir=yes&clen=8286174&lmt=1441499321304721&dur=820.620&mt=1441568449&sver=3&fexp=9407478
+256x144 DASH video (mp4, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=160&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/mp4&gir=yes&clen=11192164&lmt=1441497065810595&dur=820.686&mt=1441568449&sver=3&fexp=9407478
+426x240 DASH video (mp4, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=133&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/mp4&gir=yes&clen=25112743&lmt=1441496895884390&dur=820.653&mt=1441568449&sver=3&fexp=9407478
+426x240 DASH video (webm, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=242&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/webm&gir=yes&clen=17375166&lmt=1441499285248249&dur=820.620&mt=1441568449&sver=3&fexp=9407478
+640x360 DASH video (webm, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=243&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/webm&gir=yes&clen=31539865&lmt=1441499289234418&dur=820.620&mt=1441568449&sver=3&fexp=9407478
+640x360 DASH video (mp4, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=134&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/mp4&gir=yes&clen=45341955&lmt=1441496904257510&dur=820.653&mt=1441568449&sver=3&fexp=9407478
+854x480 DASH video (webm, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=244&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/webm&gir=yes&clen=52168624&lmt=1441499299386164&dur=820.620&mt=1441568449&sver=3&fexp=9407478
+854x480 DASH video (mp4, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=135&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/mp4&gir=yes&clen=89480980&lmt=1441496963923787&dur=820.653&mt=1441568449&sver=3&fexp=9407478
+1280x720 DASH video (webm, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=247&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/webm&gir=yes&clen=99286352&lmt=1441499360102378&dur=820.620&mt=1441568449&sver=3&fexp=9407478
+1280x720 DASH video (mp4, Unkown size) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?id=d68306f1b69fd1c1&itag=136&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&pl=15&mn=sn-nx5cvox-hpar&ratebypass=yes&mime=video/mp4&gir=yes&clen=182681984&lmt=1441497069827900&dur=820.653&mt=1441568449&sver=3&fexp=9407478
+unknown (3gp, 7.8MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&dur=820.680&mv=m&initcwndbps=486250&source=youtube&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&expire=1441590174&upn=EmgMCArgEnY&mime=video%2F3gpp&ipbits=0&requiressl=yes&lmt=1441496783565224&signature=4E81E22A74E879E0B28EFED935D28AD5E3746D55.1809CB3A0B35065AE4DB1AC64D052EE8E8E7F5B8&mm=31&itag=13&mt=1441568449&ratebypass=yes
+176x144 (3gp, 7.7MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&dur=820.778&mv=m&initcwndbps=486250&source=youtube&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&expire=1441590174&upn=EmgMCArgEnY&mime=video%2F3gpp&ipbits=0&requiressl=yes&lmt=1441496785671446&signature=50BEC12CFAED93594495810B3FA83D17F6F11076.AF8728FCEDB01034C90C0D9D6E0EFE8AA23278C3&mm=31&itag=17&mt=1441568449&ratebypass=yes
+320x240 (3gp, 22MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&dur=820.778&mv=m&initcwndbps=486250&source=youtube&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&expire=1441590174&upn=EmgMCArgEnY&mime=video%2F3gpp&ipbits=0&requiressl=yes&lmt=1441496788081071&signature=BC06BD38A386C4127C2A27CDF2FF1708797E350A.26FB5FEF267A131ADC8B04587C167EDADE72F1D2&mm=31&itag=36&mt=1441568449&ratebypass=yes
+400x240 (flv, 35MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&dur=820.689&mv=m&initcwndbps=486250&source=youtube&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&expire=1441590174&upn=EmgMCArgEnY&mime=video%2Fx-flv&ipbits=0&requiressl=yes&lmt=1441496832645094&signature=640F8715B43BBEC24B63D349A1FEE73B8C2ADAC2.0144CDE13B794FA1E6CA9F22C37C6955C4190C2C&mm=31&itag=5&mt=1441568449&ratebypass=yes
+640x360 (webm, 72MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?dur=0.000&initcwndbps=486250&source=youtube&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&upn=EmgMCArgEnY&ipbits=0&lmt=1441498121565693&ratebypass=yes&sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&mime=video%2Fwebm&mv=m&mt=1441568449&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&expire=1441590174&requiressl=yes&signature=10C81CCEB6B367E80F2C1FFAE4D384C63ADA3B3A.E3D346767E33BD125E5560F73725BDD9CEA2C0A7&mm=31&itag=43
+640x360 (mp4, 56MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?dur=820.709&initcwndbps=486250&source=youtube&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&upn=EmgMCArgEnY&ipbits=0&lmt=1441496866207568&ratebypass=yes&sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&mime=video%2Fmp4&mv=m&mt=1441568449&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&expire=1441590174&requiressl=yes&signature=2C6C9863A74B835D74C72756D6D7EE67FF6659F7.A1CBD1BC0780A06C7CA40B77AD110ED19BD4DCA9&mm=31&itag=18
+1280x720 (mp4, 210MB) https://r8---sn-nx5cvox-hpar.googlevideo.com/videoplayback?dur=820.709&initcwndbps=486250&source=youtube&fexp=9407478%2C9408710%2C9409069%2C9415365%2C9415485%2C9416023%2C9416126%2C9417707%2C9418153%2C9418448%2C9420348&upn=EmgMCArgEnY&ipbits=0&lmt=1441497006979195&ratebypass=yes&sver=3&pl=15&id=o-AJMcfwZy-yBZoWT1QIVq8v20TTdQRWnypU5k9Ek4dfsF&mime=video%2Fmp4&mv=m&mt=1441568449&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&ms=au&mn=sn-nx5cvox-hpar&ip=95.224.255.191&key=yt5&expire=1441590174&requiressl=yes&signature=D20731C36445603C390C731081FE9A7F18DDFBA1.A40D042CAFC1535E581AC66B76B48C21CEAE9161&mm=31&itag=22
+endofdbentry
+http://www.dailymotion.com/video/xtuqa5_mia-and-me-1x11-italian_fun
+ 
+
+endofdbentry
+Rai.phpsgs
+ 
+
+endofdbentry
+Dbdhsh;//
+ 
+
+endofdbentry
+i;//
+ 
+
+endofdbentry
+Tets
+ 
+
+endofdbentry

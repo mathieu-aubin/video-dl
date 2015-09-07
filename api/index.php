@@ -3,10 +3,10 @@ if(($_GET['p']) == 'websites') {
     echo "Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.";
 } elseif(($_GET['p']) == 'allwebsites') {
     $yt = shell_exec('youtube-dl --list-extractors');
-    echo "Rai
-Mediaset
-Witty TV
-LA7
+    echo "rai.it
+video.mediaset.it
+wittytv.it
+la7.it
 $yt";
 
 } elseif(isset($_GET['url'])) {
