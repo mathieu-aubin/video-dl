@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.1
+# Video download script v3.3
 # Created by Daniil Gentili (http://daniil.it)
 # This program is licensed under the GPLv3 license.
 # Changelog:
@@ -8,6 +8,7 @@
 # v3 (and revisions): added support for Mediaset, Witty TV, La7, etc..
 # v3.1 Included built in API engine, bug fixes
 # v3.2 Added support for youtube and https
+# v3.3 Fixed auto update and squashed some bugs.
 
 echo "This program is licensed under the GPLv3 license."
 help() {
@@ -22,9 +23,9 @@ Options:
 
 -a		Automatic mode: automatically download the video in the maximum quality.
 
--b		Uses built-in API engine: requires additional programs and may not work properly on some systems, may be faster than the API server.
+-b		Use built-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server.
 
--f		Reads URL(s) from specified text file(s). If specified, you cannot provide URLs as arguments.
+-f		Read URL(s) from specified text file(s). If specified, you cannot provide URLs as arguments.
 
 --player=player	Play the video instead of downloading it using specified player, mplayer if none specified.
 
@@ -34,12 +35,8 @@ Options:
 exit
 }
 [ "$1" = "--help" ] && help
-[ "$*" = "" ] && echo "No url specified." && help
 
 lineclear() { echo -en "\r\033[K"; }
-
-##### Self updating section #####
-echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
 
 ##### Tools detection and selection #####
 which smooth.sh &>/dev/null && smoothsh=y || smoothsh=n
@@ -57,6 +54,10 @@ curl "$1" -o $2 $3
 }
 Q="-s"
 }
+
+##### Self updating section #####
+# !!!!!! Comment the following line before editing the script or all changes will be overwritten !!!!!! #
+echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
 
 ##### URL format detection #####
 
@@ -89,22 +90,22 @@ api() { dl "http://api.daniil.it/?url=$sane" - $Q; }
 while getopts qabf FLAG; do
 case "$FLAG" in
   b)
-    echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && declare -f | grep -q replaytv || {
+    echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
 echo "Couldn't download the API engine, using built-in (maybe outdated) engine..." 
 api() {
 ####################################################
 ####### Beginning of URL recognition section #######
 ####################################################
 
-dl="$(echo "$1" | grep -q '^//' && echo http:$1 || echo $1)"
+dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
 
 dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null)"
 
-echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*|http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|http://.*wittytv.it/.*|http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|http://.*vk.com/.*' || ptype=common
+echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*|http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|http://.*wittytv.it/.*|http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*' || ptype=common
 
-echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*' && ptype=rai
+echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && ptype=rai
 
 
 echo "$urltype" | grep -qE 'http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*' && ptype=mediaset
@@ -113,9 +114,9 @@ echo "$urltype" | grep -q 'http://.*wittytv.it/.*' && ptype=mediaset && witty=y
 
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*' && ptype=lasette
 
-echo "$urltype" | grep -q 'http.*://.*vk.com/.*' && ptype=vk
+#echo "$urltype" | grep -q 'http.*://.*vk.com/.*' && ptype=vk
 
-echo "$urltype" | grep -q 'http.*://.*mail.ru/.*' && ptype=mail
+#echo "$urltype" | grep -q 'http.*://.*mail.ru/.*' && ptype=mail
 
 
 ##############################################################################
@@ -141,12 +142,18 @@ sed 's/\
 # Check if URL exists and remove copies of the same URL
 
 function checkurl() {
-tbase="$(echo $base | sed 's/ /%20/g;s/%20http:\/\//\
-http:\/\//g;s/%20$//' | awk '!x[$0]++')"
+tbase="$(echo "$base" | sed 's/ /%20/g;s/%20http:\/\//\
+http:\/\//g;s/%20$//g;s/ /\
+/g' | awk '!x[$0]++')"
 
 base=
-for u in $tbase;do wget -S --tries=3 --spider $u 2>&1 | grep -q 'HTTP/1.1 200 OK' && base="$base
-$u"; done
+for u in $tbase;do echo "$u" | grep -q 'rmtp://\|mms://' && {
+base="$base
+$u"
+} || {
+wget -S --tries=3 --spider "$u" 2>&1 | grep -q '200 OK' && base="$base
+$u"
+}; done
 }
 
 
@@ -187,8 +194,6 @@ esac
 
 formats="$(
 [ "$common" != "" ] && for a in $common; do getsize
- info="$(echo "$info" | sed 's/[(]//;s/[)]//')"
-
  echo "$info $a";done
 
 [ "$lamp4" != "" ] && for a in $lamp4; do getsize
@@ -260,7 +265,7 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -g | cut -d' ' -f2-)"
-
+[ "$formats" = "" ] && exit
 
 
 }
@@ -286,13 +291,13 @@ $(echo "$file" | grep videoTitolo)
 
 replay() {
 # Get the video id
-v=$(echo $1 | sed 's/.*v=//;s/\&.*//')
+v=$(echo "$1" | sed 's/.*v=//;s/\&.*//')
 
 # Get the day
-day=$(echo $1 | sed 's/.*?day=//;s/\&.*//;s/-/_/g')
+day=$(echo "$1" | sed 's/.*?day=//;s/\&.*//;s/-/_/g')
 
 # Get the channel
-case $(echo $1 | sed 's/.*ch=//;s/\&.*//') in
+case $(echo "$1" | sed 's/.*ch=//;s/\&.*//') in
   1)
     ch=RaiUno
     ;;
@@ -354,7 +359,7 @@ for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spl
  # 1st method
 
  url="$(wget -qO- "$dl&output=25")
-$(wget "$dl&output=43" -q -O -)"
+$(wget "$dl&output=43" -U="" -q -O -)"
  
  [ "$url" != "" ] && tempbase=$(echo "$url" | sed 's/[>]/\
 /g;s/[<]/\
@@ -386,7 +391,7 @@ $base"
 done
 
 # Remove copies of the same url
-base="$(echo $TMPURLS | sort | awk '!x[$0]++')"
+base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
@@ -497,32 +502,62 @@ formatoutput
 ##################### End of Mediaset section, beginning of common section ################
 ###########################################################################################
 
-
 common() {
 # Store the page in a variable
 page="$(wget -q -O - $1)"
-
 # Get the video URLs
-URLS="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g' | awk '!x[$0]++')"
+base="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g' | awk '!x[$0]++')"
 
+checkurl
+[ "$base" = "" ] && continue 
 
-[ "$URLS" = "" ] && exit
-
-# Get the title
 videoTitolo="$(echo $page | sed 's/.*<title>//;s/<\/title>.*//' | sed 's/^ //')"
 
+title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 
+title=`echo $title | tr -s " "`
+
+title=${title// /_}
+
+unformatted="$base"
+formatoutput
+
+}
+
+# OK, here's the problem: The following function uses youtube-dl to get the download info, but offering the functionality of youtube-dl using an http api is one thing, while using the above mentioned program when the user can already use it is another thing. Comment the auto update line and change common_yt_dl to common if you still want to use youtube-dl trough this script.
+
+common_yt_dl() {
+tmpjson="$(youtube-dl -J "$1")"
+videoTitolo=$(echo "$tmpjson" | sed 's/.*\"title\": \"//g;s/\".*//g')
+json="$(echo "$tmpjson" | sed 's/.*formats//g;s/, [{]/\
+/g')"
+while read -r line; do
+    l=$(echo "$line" | sed 's/,/\
+/g')
+    for f in format url ext; do
+     temp="$(echo "$l" | grep \"$f\": | sed 's/"'$f'"\: "//g;s/"$//g;s/^ //g;s/^.* - //g')"
+     eval $f=\""$temp"\"
+    done
+    [ "$url" != "" ] && {
+size=
+timeout -skill 3s wget -S --spider "$url" &>/dev/null && size=", $(wget -S --spider "$url" 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B" || size=", Unkown size"
+format=$(echo "$format" | sed 's/[(]//g;s/[)]//g')
+formats="$formats
+$format ($ext$size) $url"
+    }
+done <<< "$json"
+
+# Get the title
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=`echo $title | tr -s " "`
 title=${title// /_}
 
-unformatted="$URLS"
-formatoutput
-
-
 }
+
+###########################################################################################
+##################### End of Common section, beginning of database section ################
 $ptype $dl $2 $3
-[ "$formats" = "" ] && exit || echo "$title $videoTitolo
+[ "$formats" = "" ] && continue || echo "$title $videoTitolo
 $formats"
 }
 
@@ -558,6 +593,8 @@ $player $url
 } || dlvideo() {
 urlformatcheck
 }
+[ "$*" = "" ] && echo "No url specified." && help
+
 [ "$F" = "y" ] && URL="$(cat "$*")" || URL="$*"
 
 ##### To be automatic or to be selected by the user, that is the question. #####
@@ -599,8 +636,6 @@ for u in $URL; do
  sane="$(echo "$u" | sed 's/#.*//;s/\&/%26/g;s/\=/%3D/g;s/\:/%3A/g;s/\//%2F/g;s/\?/%3F/g')"
 
  api="$(api "$u" | sed '/^\s*$/d')"
-
-
  [ "$api" = "" ] && echo "Couldn't download $u." && continue
  titles=$(echo "$api" | sed -n 1p)
  api=$(echo "$api" | sed '1d' | awk '{print NR, $0}')
@@ -614,4 +649,4 @@ done
 [ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully."; } || { [ "$play" = "y" ] && eval $queue; }
 } || { echo "ERROR: download list is empty."; exit 1; }
 
-exit
+exit $?
