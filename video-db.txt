@@ -1833,3 +1833,122 @@ hdhdhd
  
 
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-bc5c32a9-cb48-4331-9978-cc32083df1c0.html
+Il_Vietnam_prima_parte Il Vietnam - prima parte
+Normal quality (mp4, 116MB, 320x240) http://creativemedia4.rai.it/podcastcdn/raiuno/stelladelsud/4267963.mp4
+Normal quality (wmv 320x240) mms://wms1.rai.it/raiunocdn/raiuno/stelladelsud/55532.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-bc5c32a9-cb48-4331-9978-cc32083df1c0.html
+Il_Vietnam_prima_parte Il Vietnam - prima parte
+Normal quality (mp4, 116MB, 320x240) http://creativemedia4.rai.it/podcastcdn/raiuno/stelladelsud/4267963.mp4
+Normal quality (wmv 320x240) mms://wms1.rai.it/raiunocdn/raiuno/stelladelsud/55532.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/page/Page-421c6174-133b-4da4-9e96-a62da15fb577.html?set=ContentSet-b327e306-2d7e-4c2b-abad-27b97ebe195f&type=V
+ 
+
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/page/Page-421c6174-133b-4da4-9e96-a62da15fb577.html?set=ContentSet-b327e306-2d7e-4c2b-abad-27b97ebe195f&type=V
+ 
+
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-976e531d-5a18-45e2-bfb0-a9dbfb2d2f28.html
+Il_Vietnam_seconda_parte Il Vietnam - seconda parte
+Normal quality (mp4, 109MB, 320x240) http://creativemedia4.rai.it/podcastcdn/raiuno/stelladelsud/4267969.mp4
+Normal quality (wmv 320x240) mms://wms1.rai.it/raiunocdn/raiuno/stelladelsud/55534.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-976e531d-5a18-45e2-bfb0-a9dbfb2d2f28.html
+Il_Vietnam_seconda_parte Il Vietnam - seconda parte
+Normal quality (mp4, 109MB, 320x240) http://creativemedia4.rai.it/podcastcdn/raiuno/stelladelsud/4267969.mp4
+Normal quality (wmv 320x240) mms://wms1.rai.it/raiunocdn/raiuno/stelladelsud/55534.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-10eaca79-2686-43dd-afd9-dddc970054cf.html
+I_piloti_delle_Frecce_Tricolore I piloti delle Frecce Tricolore
+Maximum quality (mp4, 45MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Estate_in_diretta/Estate_in_diretta_2014/2648659_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-10eaca79-2686-43dd-afd9-dddc970054cf.html
+I_piloti_delle_Frecce_Tricolore I piloti delle Frecce Tricolore
+Maximum quality (mp4, 45MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Estate_in_diretta/Estate_in_diretta_2014/2648659_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-2865b5be-00e5-403e-b519-7184ae13bd02.html
+Grand_Hotel_Seconda_puntata_del_02092015 Grand Hotel - Seconda puntata del 02/09/2015
+Medium-low quality (mp4, 694MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4413443_800.mp4
+Maximum quality (mp4, 1.4GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4413443_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-2865b5be-00e5-403e-b519-7184ae13bd02.html
+Grand_Hotel_Seconda_puntata_del_02092015 Grand Hotel - Seconda puntata del 02/09/2015
+Medium-low quality (mp4, 694MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4413443_800.mp4
+Maximum quality (mp4, 1.4GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4413443_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-4d93df66-35a3-4dea-842b-dd6fba01e452.html
+Grand_Hotel_Prima_puntata_del_01092015 Grand Hotel - Prima puntata del 01/09/2015
+Medium-low quality (mp4, 669MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4410966_800.mp4
+Maximum quality (mp4, 1.4GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4410966_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-4d93df66-35a3-4dea-842b-dd6fba01e452.html
+Grand_Hotel_Prima_puntata_del_01092015 Grand Hotel - Prima puntata del 01/09/2015
+Medium-low quality (mp4, 669MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4410966_800.mp4
+Maximum quality (mp4, 1.4GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4410966_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-ac8df980-f037-4e2b-abbd-f7d647bb8baf.html
+I_vostri_reportages_il_Vietnam I vostri reportages: il Vietnam
+Normal quality (mp4, 32MB, 384x288) http://creativemedia4.rai.it/podcastcdn/raitre/kilimangiaro/4279544.mp4
+Normal quality (wmv 384x288) mms://wms1.rai.it/raitrecdn/raitre/kilimangiaro/36280.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-ac8df980-f037-4e2b-abbd-f7d647bb8baf.html
+I_vostri_reportages_il_Vietnam I vostri reportages: il Vietnam
+Normal quality (mp4, 32MB, 384x288) http://creativemedia4.rai.it/podcastcdn/raitre/kilimangiaro/4279544.mp4
+Normal quality (wmv 384x288) mms://wms1.rai.it/raitrecdn/raitre/kilimangiaro/36280.wmv
+endofdbentry
+http://it.dplay.com/mega-aeroporto-ai-raggi-x/
+ 
+
+endofdbentry
+http://it.dplay.com/mega-aeroporto-ai-raggi-x/stagione-1-episodio-5/
+ 
+
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-2feac20c-ac7d-47ba-ab0c-8f15fdd44299.html
+Italia_Bulgaria_10_La_partita Italia - Bulgaria 1-0 | La partita 
+Medium-low quality (mp4, 822MB, 700x394) http://creativemedia4.rai.it/podcastcdn/NewsVod/Euro_2016/4426418_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/podcastcdn/NewsVod/Euro_2016/4426418_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-b52299eb-1a43-4b91-b59d-28b0143e6f34.html
+Pechino_Express_Il_Nuovo_Mondo_del_07092015 Pechino Express Il Nuovo Mondo del 07/09/2015
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-07&ch=2&v=563025&vd=2015-09-07&vc=2
+Pechino_Express_Il_Nuovo_Mondo Pechino Express Il Nuovo Mondo
+Medium-low quality (mp4, 820MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_800.mp4
+Maximum quality (mp4, 1.7GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4430202_1800.mp4
+endofdbentry

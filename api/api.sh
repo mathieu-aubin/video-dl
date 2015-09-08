@@ -254,20 +254,14 @@ esac
 tmpjson="$(wget http://www.rai.it/dl/portale/html/palinsesti/replaytv/static/"$ch"_$day.html -qO-)"
 
 # Keep only section with correct video id and make it grepable
-json="$(
-
-echo "$tmpjson" | sed '/'$v'/,//d;s/\,/\
-/g;s/\"/\
-/g;s/\\//g' | tac | awk "flag != 1; /\}/ { flag = 1 }; " | tac
-
-
-)"
+json="$(echo $tmpjson | sed 's/'$v'.*//g;s/.*[{]//g;s/\,/\
+/g')"
 
 # Get the relinkers
-replay=$(echo "$json" | grep mediapolis | sort | awk '!x[$0]++')
+replay=$(echo "$json" | grep mediapolis | sed 's/.*://g;s/\"//g;s/^ *//g')
 
 # Get the title
-videoTitolo=$(echo "$json" | grep -A 2 '^t$' | awk 'END{print}')
+videoTitolo=$(echo "$json" | grep '"t":' | sed 's/.*://;s/\"//g;s/^ *//g')
 
 
 }
