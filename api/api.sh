@@ -22,7 +22,7 @@ api() {
 
 dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
 
-dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
+#dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null)"
 
@@ -258,10 +258,10 @@ json="$(echo $tmpjson | sed 's/'$v'.*//g;s/.*[{]//g;s/\,/\
 /g')"
 
 # Get the relinkers
-replay=$(echo "$json" | grep mediapolis | sed 's/.*://g;s/\"//g;s/^ *//g')
+replay=$(echo "$json" | grep mediapolis | sed 's/.*\"://g;s/\"//g;s/^ *//g')
 
 # Get the title
-videoTitolo=$(echo "$json" | grep '"t":' | sed 's/.*://;s/\"//g;s/^ *//g')
+videoTitolo=$(echo "$json" | grep '"t":' | sed 's/.*\"://;s/\"//g;s/^ *//g')
 
 
 }
@@ -318,8 +318,8 @@ base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
-for t in _400.mp4 _600.mp4 _800.mp4 _1200.mp4 _1500.mp4 _1800.mp4 .mp4; do for i in _400.mp4 _600.mp4 _800.mp4 _1200.mp4 _1500.mp4 _1800.mp4; do tbase="$tbase
-$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | awk '!x[$0]++')"; done;done
+for t in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4 \\.mp4; do for i in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4; do tbase="$tbase
+$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | grep -Ev '_([0-9]{3,4})_([0-9]{3,4})\.mp4' | awk '!x[$0]++')"; done;done
 
 
 base="$tbase"
