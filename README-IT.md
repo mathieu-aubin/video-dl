@@ -265,7 +265,7 @@ Ricorda che è necessario racchiudere l'URL tra virgolette.
 
 Questo progetto include anche una API.
 
-Il codice sorgente della API può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/web/api/api.sh).
+Il codice sorgente della API può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/api).
 
 
 ### Esempio di utilizzo API
