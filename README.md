@@ -263,7 +263,7 @@ Do not forget to put the URL between quotes.
 
 This project also features an [API](http://video.daniil.it/api/).
 
-The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/web/api/api.sh).
+The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/api).
 
 ### API usage example
 
