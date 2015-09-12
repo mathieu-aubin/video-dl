@@ -62,7 +62,7 @@ if(isset($_GET['url'])) {
     <title>Download Videos!</title>
 
     <script src="/pace/pace.min.js"></script>
-    <link href="/pace/theme.css?v=32g34" rel="stylesheet" />
+    <link href="/pace/theme.css?v=32g3d4" rel="stylesheet" />
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {
@@ -134,10 +134,10 @@ if(isset($_GET['url'])) {
     <meta name="Description" content="Download videos from YouTube, Rai,Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css?v=4" rel="stylesheet">
+    <link href="css/bootstrap.min.css?v=lol" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css?v=2r3" rel="stylesheet">
+    <link href="css/freelancer.css?v=omgomgomgogmgloloolol" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -193,12 +193,12 @@ if(isset($_GET['url'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive img-centered" src="img/profile.png?v=2" onclick="video();" alt="">
+                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick="video();" alt=""></a>
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
 
                         <hr class="star-light">
-                        <span class="skills giallo">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>,<a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br>Paste the URL of the video:<BR></span>
+                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br>Paste the URL of the video:<BR></span>
 
                         <br>
                         <br>
@@ -214,12 +214,12 @@ if(isset($_GET['url'])) {
 
                         <br>
                         <br>
-                        <span class='st_sharethis_large'  displayText='ShareThis'></span>
-                        <span class='st_facebook_large'  displayText='Facebook'></span>
-                        <span class='st_twitter_large'  displayText='Tweet'></span>
-                        <span class='st_linkedin_large'  displayText='LinkedIn'></span>
-                        <span class='st_pinterest_large'  displayText='Pinterest'></span>
-                        <span class='st_email_large'  displayText='Email'></span>
+                        <span class='st_sharethis_large'></span>
+                        <span class='st_facebook_large'></span>
+                        <span class='st_twitter_large'></span>
+                        <span class='st_linkedin_large'></span>
+                        <span class='st_pinterest_large'></span>
+                        <span class='st_email_large'></span>
                         <br>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- Video dl -->
@@ -299,7 +299,7 @@ if(isset($_GET['url'])) {
                         <div class="modal-body">
                             <h2>Supported websites</h2>
                             <hr class="star-primary">
-                            <p ID="supportedurls">Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl. </p>
+                            <p ID="supportedurls" class="inverted">Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl. </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -379,7 +379,9 @@ Thanks!</textarea>
     </script> -->
     <!-- Video download -->
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
-    <script src="/js/video-dl.js?v=omgomgomgomg"></script>
+    <script src="/js/linkify.min.js?"></script>
+    <script src="/js/linkify-jquery.min.js?"></script>
+    <script src="/js/video-dl.js?v=omgomgomgomgomgomgomgomg"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

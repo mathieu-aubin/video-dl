@@ -16,13 +16,13 @@ p.small {
     font-size: 16px;
 }
 
-a,
+
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #fff;
 }
 
 h1,
@@ -344,7 +344,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #19be9d;
+    background-color: #00CDCD;
 }
 
 footer .footer-col {
@@ -353,7 +353,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #233140;
+    background-color: #FF66FF;
 }
 
 .btn-social {
@@ -458,9 +458,20 @@ footer .footer-below {
     opacity: 0;
 }
 
-body a {
+a {
     color: #FFFF00;
 }
+
+.inverted a {
+    color: #FF66FF;
+}
+.inverted a:hover,
+.inverted a:focus,
+.inverted a:active,
+.inverted a.active {
+    color: #00CDCD;
+}
+
 .green {
     color: #00FF00;
 }

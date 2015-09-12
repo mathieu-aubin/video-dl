@@ -122,12 +122,14 @@ function firstload() {
             if (response) {
                 response = he.encode(response).replace(/\s/g, "</li><li>");
                 // Output the result and the mail text
-                $("#supportedurls").html("<li>"+response+"</li>");
+                $("#supportedurls").html("<li>"+response+"<a href=\"http://lol.daniil.it\" target=\"_blank\">&#9786;</a></li>");
                 $("#js").css("display", "block");
                 $("#php").css("display", "none");
                 $("#jsd").css("display", "block");
                 $("#phpd").css("display", "none");
-
+                $('#supportedurls').linkify({
+                    target: "_blank"
+                });
             }
         }
     }
