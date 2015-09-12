@@ -77,22 +77,25 @@ if(isset($_GET['url'])) {
     <!-- End Cookie Consent plugin -->
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ff66ff">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=ngg3edNEPX">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=ngg3edNEPX" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png?v=ngg3edNEPX" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png?v=ngg3edNEPX" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=ngg3edNEPX" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=ngg3edNEPX">
+    <link rel="shortcut icon" href="/favicon.ico?v=ngg3edNEPX">
+    <meta name="apple-mobile-web-app-title" content="Download videos">
+    <meta name="application-name" content="Download videos">
+    <meta name="msapplication-TileColor" content="#9f00a7">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=ngg3edNEPX">
     <meta name="theme-color" content="#ff66ff">
 
     <!-- Scripts -->
@@ -181,6 +184,10 @@ if(isset($_GET['url'])) {
                     <li class="portfolio-item">
                         <a href="#support" class="portfolio-link" data-toggle="modal">Supported websites</a>
                     </li>
+
+                    <li>
+                        <a href="https://github.com/danog/video-dl/fork" target="_blank" data-toggle="modal">Fork me on GitHub!</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -239,11 +246,12 @@ if(isset($_GET['url'])) {
                 <div class="row">
                     <div class="footer-col col-md-4 giallo">
                         <h3>Source code</h3>
-                        <p><a href="https://github.com/danog/video-dl/" target="_blank">Rai, Mediaset and LA7 download engine (video-dl)</a>
+                        <p><a href="https://github.com/danog/video-dl/" target="_blank">Rai, Mediaset and LA7 download engine and this website (video-dl)</a>
                             <br><a href="https://github.com/rg3/youtube-dl" target="_blank">Generic download engine (youtube-dl)</a>
-                            <br><a href="http://github.hubspot.com/pace/" target="_blank">Loading animation (pace.js)</a>
+                            <br><a href="https://github.com/HubSpot/pace" target="_blank">Loading animation (pace.js)</a>
                             <br><a href="https://github.com/mathiasbynens/he" target="_blank">HTML entity encoder (he.js)</a>
                             <br><a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Bootstrap theme (freelancer)</a>
+                            <br><a href="https://github.com/soapbox/linkifyjs/" target="_blank">Linkifier (linkify.js)</a>
                         </p>
                     </div>
                     <div class="footer-col col-md-4">
