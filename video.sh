@@ -605,15 +605,15 @@ urlformatcheck
 ##### To be automatic or to be selected by the user, that is the question. #####
 
 [ "$A" = "y" ] && dlcmd() {
-url="$(echo "$api" | sed '1!d')"
-ext=$(echo "$api" | awk 'END{print}' | sed 's/.*[(]//g;s/, .*//g')
+url="$(echo "$api" | sed '1!d' | awk 'END{print}')"
+ext=$(echo "$api" | sed '1!d' | awk 'END{print}' | sed 's/.*[(]//g;s/, .*//g')
 dlvideo
 } || {
 echo "Video(s) info:" &&
 dlcmd() {
 videoTitolo=$(echo "$titles" | cut -d' ' -f2- | sed 's/è/e/g;s/é/e/g;s/ì/i/g;s/í/i/g;s/ù/u/g;s/ú/u/g')
 
-max="$(echo "$api" | sed '1!d' | grep -Eo '^[^ ]+')"
+max="$(echo "$api" | sed '1!d' | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
 
