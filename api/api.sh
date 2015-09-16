@@ -277,7 +277,7 @@ function relinker_rai() {
 
 for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }'); do
  
- dl=$(echo $f | grep -q http: && echo $f || echo http:$f)
+ dl=$(echo $f | grep -q '^//' && echo http:$f || echo $f)
 
  # 1st method
 
@@ -338,13 +338,14 @@ formatoutput
 
 
 function rai() {
-
+saferai="$(echo "$1" | sed 's/#.*//g')"
 # Store the page in a variable
-file=$(wget $1 -q -O -)
+file=$(wget "$saferai" -q -O -)
 
 # Rai replay or normal rai website choice
-echo $1 | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay $1 || rai_normal $1
+echo "$1" | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay "$saferai" || rai_normal "$saferai"
 
+videoTitolo="$(echo -en "$videoTitolo")"
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=`echo $title | tr -s " "`
 title=${title// /_}
@@ -436,7 +437,7 @@ common() {
 
 tmpjson="$(youtube-dl -J "$1")"
 videoTitolo=$(echo "$tmpjson" | sed 's/.*\"title\": \"//g;s/\".*//g')
-json="$(echo "$tmpjson" | sed 's/.*formats//g;s/, [{]/\
+json="$(echo "$tmpjson" | sed 's/.*requested_formats//g;s/, [{]/\
 /g')"
 while read -r line; do
     l=$(echo "$line" | sed 's/,/\
@@ -445,12 +446,15 @@ while read -r line; do
      temp="$(echo "$l" | grep \"$f\": | sed 's/"'$f'"\: "//g;s/"$//g;s/^ //g;s/^.* - //g')"
      eval $f=\""$temp"\"
     done
+    url=$(echo "$url" | tr -s "\n" " " | sed 's/\s.*//')
+    format=$(echo "$format" | awk '!x[$0]++' | tr -s "\n" " ")
+    ext=$(echo "$ext" | tr -s "\n" " " | sed 's/\s.*//')
     [ "$url" != "" ] && {
 size=
 timeout -skill 3s wget -S --spider "$url" &>/dev/null && size=", $(wget -S --spider "$url" 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B" || size=", Unkown size"
 format=$(echo "$format" | sed 's/[(]//g;s/[)]//g')
-formats="$formats
-$format ($ext$size) $url"
+echo "$url" | grep -q "://" && formats="$format ($ext$size) $url
+$formats"
     }
 done <<< "$json"
 
@@ -574,17 +578,17 @@ echo "$size" | grep -q G && error
 # May need this in future...
 second=$2
 third=$3
-
+[ "$ptype" = "common" -a "$second" = "json" ] && youtube-dl -J "$dl" && exit
 # Find input URLs in database
 userinput="$dl"
 saneuserinput="$(echo "$dl" | sed 's/\//\\\//g' | sed 's/\&/\\\&/g' )"
 
-grep -q ^"$saneuserinput"$ /var/www/video-db.txt && {
+[ "$third" != 'y' ] && grep -q ^"$saneuserinput"$ /var/www/video-db.txt && {
 video_db
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
 $formats"
 } || {
-$ptype $dl $2 $3
+$ptype "$dl" $2 $3
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
 $formats"
 }

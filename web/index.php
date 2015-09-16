@@ -62,7 +62,7 @@ if(isset($_GET['url'])) {
     <title>Download Videos!</title>
 
     <script src="/pace/pace.min.js"></script>
-    <link href="/pace/theme.css?v=32g3d4" rel="stylesheet" />
+    <link href="/pace/theme.css?v=32glol3d4" rel="stylesheet" />
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {
@@ -133,14 +133,14 @@ if(isset($_GET['url'])) {
     </script>
 
 
-    <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video">
-    <meta name="Description" content="Download videos from YouTube, Rai,Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
+    <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video, youtube">
+    <meta name="Description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css?v=lol" rel="stylesheet">
+    <link href="css/bootstrap.min.css?v=loloolol" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css?v=omgomgomgogmgloloolol" rel="stylesheet">
+    <link href="css/freelancer.css?v=omgomgomgogmglolololololool" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

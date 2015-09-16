@@ -10,10 +10,12 @@ la7.it
 $yt";
 
 } elseif(isset($_GET['url'])) {
+
     $file = __FILE__;
     $url = $_GET["url"];
     $param = $_GET["p"];
-    $cmd =  "bash /var/www/video/api/api.sh" .  ' ' . escapeshellarg($url) .  ' ' . escapeshellarg($param);
+    $db = $_GET["nodb"];
+    $cmd =  "bash /var/www/video/api/api.sh" . ' ' . escapeshellarg($url) . ' ' . escapeshellarg($param) . ' ' . escapeshellarg($db);
     $message = shell_exec("$cmd");
     $final = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message);
     $final = trim($final, "\n");
