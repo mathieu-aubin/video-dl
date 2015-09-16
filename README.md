@@ -291,11 +291,12 @@ Newline
 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
 
 Quality name (format, size, dimension) URL of the video
+Newline
 
 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
 
 Quality name (format, size, dimension) URL of the video
-Newline
+
 
 ```
 
