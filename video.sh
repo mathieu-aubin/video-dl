@@ -614,7 +614,7 @@ echo "Video(s) info:" &&
 dlcmd() {
 videoTitolo=$(echo "$titles" | cut -d' ' -f2- | sed 's/è/e/g;s/é/e/g;s/ì/i/g;s/í/i/g;s/ù/u/g;s/ú/u/g')
 
-max="$(echo "$api" | sed '1!d' | grep -Eo '^[^ ]+')"
+max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
 
@@ -622,9 +622,14 @@ $(echo "$api" | sed 's/http:\/\/.*//g;s/https:\/\/.*//g')
 
 "
 
-until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video)? "; read l; [ "$l" = "q" ] && break;done 2>/dev/null
+until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video and enter to download the maximum quality)? "; read l; [ "$l" = "q" ] && break;[ "$l" = "" ] && {
+url="$(echo "$api" | sed '1!d' | sed 's/.*\s//')"
+ext=$(echo "$api" | sed '1!d' | sed 's/.*[(]//g;s/, .*//g')
+dlvideo
+break
+};done 2>/dev/null
 
-[ "$l" = "q" ] && continue
+[ "$l" = "q" ] || [ "$l" = "" ] && continue
 
 selection=$(echo "$api" | sed "$l!d")
 
