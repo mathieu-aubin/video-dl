@@ -81,3 +81,18 @@ http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-0d069f39-68d9-4df4-b
 Il_respiro_delloceano_Winx_Club_V Il respiro dell'oceano - Winx Club V
 Maximum quality (mp4, 304MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Winx_5/1527835_1800.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-aa2f8af8-0bf6-4efe-ad15-40bc2b3ff7d2.html
+Grand_Hotel_4_puntata_del_15092015 Grand Hotel - 4^ puntata del 15/09/2015
+Maximum quality (mp4, 1.4GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4459118_1800.mp4
+Medium-low quality (mp4, 679MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4459118_800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-aa2f8af8-0bf6-4efe-ad15-40bc2b3ff7d2.html
+Grand_Hotel_4_puntata_del_15092015 Grand Hotel - 4^ puntata del 15/09/2015
+Maximum quality (mp4, 1.4GB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4459118_1800.mp4
+Medium-low quality (mp4, 679MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/Fiction/RaiUno/Grand_Hotel/4459118_800.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-b7200394-20a9-4ccb-90d4-8ff6aa8aee6b.html#p=0
+Winx_Club_VI_Ep14_Mithyx Winx Club VI - Ep.14: Mithyx
+Maximum quality (mp4, 293MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2454383_1800.mp4
+Medium-low quality (mp4, 134MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2454383_800.mp4
+endofdbentry
