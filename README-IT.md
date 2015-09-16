@@ -279,28 +279,37 @@ Richiesta:
 http://api.daniil.it/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
 ```
 
+
 Output:
 
 ```
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
-Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
 ```
 
 Spiegazione: 
 
 ```
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
+
 Nome sanitizzato per il salvataggio del video  Nome originale del video
 Newline
-Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+
+Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+
 Nome della qualità (formato, dimensione, qualità) URL del video
 Newline
-Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+
+Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+
 Nome della qualità (formato, dimensione, qualità) URL del video
+Newline
+
 ```
 
-Se hai creato un'altra versione di questo programma utilizzando la API [contattami](http://daniil.it/contact_me.htm) e io la metterò su questa pagina!
+
+Se hai creato un'altra versione di questo programma utilizzando la API [contattami](http://daniil.it/) e io la metterò su questa pagina!
 
 
 
@@ -308,4 +317,4 @@ Ecco qua!
 
 Buona visione!
 
-[Daniil Gentili](http://daniil.eu.org/lol)
+[Daniil Gentili](http://daniil.it)
