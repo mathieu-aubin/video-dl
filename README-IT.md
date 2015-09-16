@@ -40,10 +40,13 @@ Opzioni:
 -a:	Modalità Automatica/Andrea: scarica automaticamente la massima qualità dei video.
 
 
+-b:	Usa la API interna: richiede più programmmi aggiuntivi e potrebbe nkn funzionare su qualche dispositivo, ma potrebbe anche essere più veloce del server API.
+
+
 -f:	Leggi gli URL da uno o più file di testo.
 
 
---player=player:	Riproduci il video invece di scaricarlo utilizzando il player specificato, se invece esso non viene specificato viene usato mplayer.
+-p player:	Riproduci il video invece di scaricarlo utilizzando il player specificato, se invece esso non viene specificato viene usato mplayer.
 
 
 --help:	Fa vedere questo messaggio.
