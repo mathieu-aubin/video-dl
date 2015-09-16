@@ -34,19 +34,18 @@ Options:
 
 
 
--q:	Quiet mode: useful for crontab jobs, automatically enables -a.
+-q              Quiet mode: useful for crontab jobs, automatically enables -a.
 
+-a              Automatic mode: automatically download the video in the maximum quality.
 
--a:	Automatic/Andrea mode: automatically download the video in the maximum quality.
+-b              Use built-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server.
 
+-f              Read URL(s) from specified text file(s). If specified, you cannot provide URLs as arguments.
 
--f:	Reads URL(s) from specified text file(s).
+-p=player       Play the video instead of downloading it using specified player, mplayer if none specified.
 
+--help          Show this extremely helpful message.
 
---player=player: Play the video instead of downloading it using specified player, mplayer if none specified.
-
-
---help:	Show this extremely helpful message.
 
 
 
