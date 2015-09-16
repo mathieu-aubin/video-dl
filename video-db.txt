@@ -77,3 +77,7 @@ http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-14&ch=31&v=565525&vd=201
 ART_OF_SPAGNA ART OF... SPAGNA
 Normal quality (htm, Length: 99 [text/xml]B) http://mediapolisvod.rai.it/relinker/relinkerServlet.htm?cont=IxWSRoCFVuseeqqEEqual
 endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-0d069f39-68d9-4df4-b481-0bc186298382.html#p=0
+Il_respiro_delloceano_Winx_Club_V Il respiro dell'oceano - Winx Club V
+Maximum quality (mp4, 304MB, 1024x576) http://creativemedia4.rai.it/podcastcdn/junior/Winx_5/1527835_1800.mp4
+endofdbentry
