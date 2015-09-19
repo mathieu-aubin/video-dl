@@ -15,7 +15,7 @@ git push origin ${branch}
 
 }
 
-git clone https://${GH_TOKEN}@github.com/danog/video-dl.git
+git clone https://${GH_TOKEN}@github.com/danog/video-dl.git video-dl
 cd video-dl
 git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
@@ -30,6 +30,7 @@ sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\
 cat ../travis/last_api.sh >> script_api.sh
 busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
 mv script_api.sh ..
+cd ..
 sed '/\#\!\/bin\/bash/,/\# 1st part ends here/!d' video.sh>tmpvideo.sh
 cat script_api.sh >>tmpvideo.sh
 sed '/\# 2nd part starts here/,/exit \$\?/!d' video.sh>>tmpvideo.sh
