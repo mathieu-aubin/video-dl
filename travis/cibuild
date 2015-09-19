@@ -22,7 +22,7 @@ expect {
 interact
 '>../builddeb
 builddeb="$PWD/../builddeb"
-chmod +x ${reprepro}
+chmod +x ${builddeb}
 
 
 mkdir temp
@@ -42,7 +42,7 @@ cd video-dl
 git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
 git config --global push.default simple
-video="$PWD/video-dl"
+video="$PWD"
 
 echo "$desc" | grep -q madebytravisci && exit 1
 ########################################
