@@ -3,8 +3,30 @@
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
 sudo apt-get update
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils dpkg-dev
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils dpkg-dev ruby-rdiscount
+gpg --import s.key
+
+echo '#!/usr/bin/expect -f
+set timeout 2
+set passphrase "'${gpg}'"
+spawn dpkg-buildpackage -Zgzip -kC5C1D8BA [lindex $argv 0] [lindex $argv 1] [lindex $argv 2] [lindex $argv 3]
+expect {
+ "*passphrase:*" {
+  send -- "$passphrase\r"
+  }
+} expect {
+ "*passphrase:*" {
+  send -- "$passphrase\r"
+  }
+} 
+interact
+'>../builddeb
+builddeb="$PWD/../builddeb"
+chmod +x ${reprepro}
+
+
 mkdir temp
+temp="$PWD/temp"
 gitsync() {
 branch="${1}"
 shift
@@ -20,6 +42,8 @@ cd video-dl
 git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
 git config --global push.default simple
+video="$PWD/video-dl"
+
 echo "$desc" | grep -q madebytravisci && exit 1
 ########################################
 version=$(git describe --tags)
@@ -27,17 +51,18 @@ version=$(git describe --tags)
 # Sync API
 cd api
 sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\.txt/d' api.sh>script_api.sh
-cat ../travis/last_api.sh >> script_api.sh
+cat $video/travis/last_api.sh >> script_api.sh
 busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
-mv script_api.sh ..
-cd ..
+mv script_api.sh $video
+cd $video
+
 sed '/\#\!\/bin\/bash/,/\# 1st part ends here/!d' video.sh>tmpvideo.sh
 cat script_api.sh >>tmpvideo.sh
 sed '/\# 2nd part starts here/,/exit \$\?/!d' video.sh>>tmpvideo.sh
 mv tmpvideo.sh video.sh
 rm script_api.sh
-cp video.sh ../temp
-cd ../temp
+cp video.sh $temp
+cd $temp
 busybox ftpput -u $u1 -p $p1 $ftp video.sh
 busybox ftpput -u $u1 -p $p1 $ftp rai.sh video.sh
 busybox ftpput -u $u1 -p $p1 $ftp mediaset.sh video.sh
@@ -57,43 +82,50 @@ busybox ftpput -u $u1 -p $p1 $ftp win/video.sh video.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh video.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh video.sh
 
-cd ../video-dl
+cd $video
 
 # Generate deb
 git status | grep -q video.sh && {
 cd debian/*/
-ronn --roff ../../README-IT.md
-ronn --roff ../../README.md
+ronn --roff $video/README-IT.md
+ronn --roff $video/README.md
 mv README-IT debian/video-dl-it.1
 mv README debian/video-dl.1
-cp ../../video.sh .
+cp $video/video.sh video-dl/
 echo "debian/video-dl.1
 debian/video-dl-it.1" > debian/video-dl.manpages
-dch -v $version -r stable $desc 
-dpkg-buildpackage -Zgzip
-: "cd ../../temp
+dch -v $version $desc 
+builddeb
+: "cd $temp
 git clone https://${GH_TOKEN}@github.com/danog/repo.git
 cd repo/debs
-cp ../../../video-dl/debian/*.deb .
-gitsync master Updated video-dl
-cd ../../../video-dl"
+cp $video/debian/*.deb .
+gitsync master Updated video-dl"
+cd $video
 }
 
 # Generate website
-rm -r ../temp/*
-cd jekyll
-rm _posts/*
-cp ../README*.md _posts
-bundle exec jekyll build
-cp -a _site/* ../../temp
-cd ../
+cd $video/jekyll
+echo "---
+layout: default
+---
+">index.md
+sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README-IT\.md/http\:\/\/daniil\.it\/video-dl\/it\.html/' $video/README.md >> index.md
+
+echo "---
+layout: default
+---
+">it.md
+sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README.md >> it.md
+cp -a * $temp
+cd $video
+
 gitsync master OK madebytravisci
 
 # Upload everything
 git checkout gh-pages
 rm -rf *
-cp -a ../temp/* .
-touch .nojekyll
+cp -a $temp/* .
 
 echo "branches:
   except:

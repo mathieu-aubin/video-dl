@@ -1,6 +1,6 @@
 The Debian Package video-dl
 ----------------------------
 
-Comments regarding the Package
+This bash script can be used to download videos from lots of websites like Youtube, Rai.tv, Mediaset, Witty tv and LA7. The API of this script is constantly updated to support even more websites.
 
  -- Daniil Gentili <daniil@daniil.it>  Tue, 26 May 2015 22:59:02 +0200

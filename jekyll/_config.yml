@@ -1,7 +1,9 @@
-name: Daniil's repo
-markdown: redcarpet
-highlighter: pygments
-url: http://repo.daniil.it
-paginate: 1
-paginate_path: "/:num"
-baseurl:
+# Site settings
+title: Repo
+tag_text: Debian package repo
+description: Debian package repo, created by Daniil Gentili
+
+# Build settings
+markdown: kramdown
+
+exclude: ["README.md"]
