@@ -43,7 +43,7 @@ busybox ftpput -u $u1 -p $p1 $ftp rai.sh video.sh
 busybox ftpput -u $u1 -p $p1 $ftp mediaset.sh video.sh
 sed 's/#!\/bin\/bash/#!\/system\/xbin\/bash/' video.sh | sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/' >videoa.sh
 busybox ftpput -u $u1 -p $p1 $ftp android/video.sh videoa.sh
-busybox ftpput -u $u1 -p $p1 $ftp ftp.magix-online.com android/rai.sh videoa.sh
+busybox ftpput -u $u1 -p $p1 $ftp android/rai.sh videoa.sh
 busybox ftpput -u $u1 -p $p1 $ftp android/mediaset.sh videoa.sh
 
 sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/;s/wget/wget.exe/g;s/curl/curl.exe/g' video.sh >videow.sh
