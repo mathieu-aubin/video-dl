@@ -1,0 +1,7 @@
+name: Daniil's repo
+markdown: redcarpet
+highlighter: pygments
+url: http://repo.daniil.it
+paginate: 1
+paginate_path: "/:num"
+baseurl:

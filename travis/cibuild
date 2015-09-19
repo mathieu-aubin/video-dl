@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+[ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
+# Setup everything 
+sudo apt-get update
+sudo apt-get install busybox
+mkdir temp
+gitsync() {
+branch="${1}"
+shift
+[ "${branch}" != "master" ] && {
+}
+git add -A
+git commit -am "${*}"
+git push origin ${branch}
+
+}
+
+git clone https://${GH_TOKEN}@github.com/danog/video-dl.git
+cd video-dl
+git config --global user.name "${GIT_NAME}"
+git config --global user.email "${GIT_EMAIL}"
+git config --global push.default simple
+git log -1 --pretty=%B | grep -q madebytravisci && exit 1
+########################################
+
+cd api
+
+sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\.txt/d' api.sh>script_api.sh
+cat ../travis/last_api.sh >> script_api.sh
+busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
+mv script_api.sh ..
+sed '/\#\!\/bin\/bash/,/\# 1st part ends here/!d' video.sh>tmpvideo.sh
+cat script_api.sh >>tmpvideo.sh
+sed '/\# 2nd part starts here/,/exit \$\?/!d' video.sh>>tmpvideo.sh
+mv tmpvideo.sh video.sh
+rm script_api.sh
+cp video.sh ../temp
+cd ../temp
+busybox ftpput -u $u1 -p $p1 $ftp video.sh
+busybox ftpput -u $u1 -p $p1 $ftp rai.sh video.sh
+busybox ftpput -u $u1 -p $p1 $ftp mediaset.sh video.sh
+sed 's/#!\/bin\/bash/#!\/system\/xbin\/bash/' video.sh | sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/' >videoa.sh
+busybox ftpput -u $u1 -p $p1 $ftp android/video.sh videoa.sh
+busybox ftpput -u $u1 -p $p1 $ftp ftp.magix-online.com android/rai.sh videoa.sh
+busybox ftpput -u $u1 -p $p1 $ftp android/mediaset.sh videoa.sh
+
+sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/;s/wget/wget.exe/g;s/curl/curl.exe/g' video.sh >videow.sh
+busybox ftpput -u $u1 -p $p1 $ftp win-native/video.sh videow.sh
+busybox ftpput -u $u1 -p $p1 $ftp win-native/rai.sh videow.sh
+busybox ftpput -u $u1 -p $p1 $ftp win-native/mediaset.sh videow.sh
+
+
+sed -i 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' video.sh
+busybox ftpput -u $u1 -p $p1 $ftp win/video.sh video.sh
+busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh video.sh
+busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh video.sh
+rm -r *
+cd ../video-dl
+# Generate website
+cd jekyll
+rm _posts/*
+cp ../README*.md _posts
+bundle exec jekyll build
+cp -a _site/* ../../temp
+cd ../
+
+gitsync master OK madebytravisci
+
+# Upload everything
+git checkout gh-pages
+rm -rf *
+cp -a ../temp/* .
+touch .nojekyll
+
+echo "branches:
+  except:
+    - gh-pages" > .travis.yml
+gitsync gh-pages "Updated the website"
+
+}

@@ -1,7 +1,23 @@
 #!/bin/bash
 # Video download script v3.3
 # Created by Daniil Gentili (http://daniil.it)
-# This program is licensed under the GPLv3 license.
+# Video-dl - Video download programs
+#
+# Copyright (C) 2015 Daniil Gentili
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 # Changelog:
 # v1 (and revisions): initial version.
 # v2 (and revisions): added support for Rai Replay, support for multiple qualities, advanced video info and custom API server.
@@ -10,10 +26,12 @@
 # v3.2 Added support for youtube and https
 # v3.3 Fixed auto update and squashed some bugs.
 
-echo "This program is licensed under the GPLv3 license."
+echo "Video download script - Copyright (C) 2015 Daniil Gentili
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the LICENSE file."
 help() {
-echo "Video download script
-Created by Daniil Gentili
+echo "Created by Daniil Gentili
 Supported websites: $(wget -q -O - http://api.daniil.it/?p=websites)
 Usage:
 $(basename $0) [ -qabp=player ] URL URL2 URL3 ...
@@ -96,6 +114,9 @@ case "$FLAG" in
     {
 echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
 echo "Couldn't download the API engine, using built-in (maybe outdated) engine..." 
+
+# 1st part ends here
+
 api() {
 ####################################################
 ####### Beginning of URL recognition section #######
@@ -564,6 +585,7 @@ $ptype $dl $2 $3
 [ "$formats" = "" ] && continue || echo "$title $videoTitolo
 $formats"
 }
+# 2nd part starts here
 }
     }
     ;;
