@@ -3,7 +3,7 @@
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
 sudo apt-get update &>/dev/null
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils dpkg-dev ruby-rdiscount &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev ruby-rdiscount &>/dev/null
 gpg --import s.key
 
 echo '#!/usr/bin/expect -f
