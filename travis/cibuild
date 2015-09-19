@@ -2,8 +2,8 @@
 [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
-sudo apt-get update
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils dpkg-dev ruby-rdiscount
+sudo apt-get update &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils dpkg-dev ruby-rdiscount &>/dev/null
 gpg --import s.key
 
 echo '#!/usr/bin/expect -f
