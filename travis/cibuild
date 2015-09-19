@@ -8,8 +8,7 @@ mkdir temp
 gitsync() {
 branch="${1}"
 shift
-[ "${branch}" != "master" ] && {
-}
+
 git add -A
 git commit -am "${*}"
 git push origin ${branch}
