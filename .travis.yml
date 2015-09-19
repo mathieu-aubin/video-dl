@@ -12,6 +12,3 @@ addons:
 
 script: ". ./travis/cibuild"
 
-before_install:
-- openssl aes-256-cbc -K $encrypted_bb687c1f16db_key -iv $encrypted_bb687c1f16db_iv
-  -in s.key.enc -out s.key -d
