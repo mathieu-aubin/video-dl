@@ -1,0 +1,251 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "README" "" "September 2015" "" ""
+Video download project\.
+.
+.P
+Read in Italian \fIhttps://github\.com/danog/video\-dl/blob/master/README\-IT\.md\fR
+.
+.P
+Created by Daniil Gentili \fIhttp://daniil\.it\fR\.
+.
+.P
+This project is licensed under the terms of the GPLv3 license\.
+.
+.P
+The programs included in this project can be used to download videos from any generic site including the Italian Rai \fIhttp://rai\.tv\fR Television website (including rai replay and iframe videos), the italian Mediaset \fIhttp://mediaset\.it\fR website (including iframes like the ones on the Witty TV \fIhttp://wittytv\.it\fR website), and the LA7 \fIhttp://la7\.it\fR website\. And thanks to youtube\-dl now they support lots of other websites!
+.
+.P
+This project features a Bash script that can be installed on \fIany Linux/Unix system\fR including \fIAndroid\fR, \fIMac OS X\fR or \fIiOS\fR and even on \fIWindows\fR, an \fIAPI\fR, an \fIAndroid app\fR and even a \fIweb version\fR!
+.
+.P
+Both the \fIAPI\fR and the \fIweb version\fR use a database \fIhttps://github\.com/danog/video\-dl/blob/master/web/video\-db\.txt\fR\.
+.
+.SH "Web version"
+This project also features a web version \fIhttps://video\.daniil\.it/\fR\.
+.
+.P
+.
+.P
+The source code of the page can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/web\fR\.
+.
+.SH "Bash script usage:"
+\fBvideo\.sh [ \-qaf [ urls\.txt ] ] URL URL2 URL3 \.\.\.\fR
+.
+.P
+Options:
+.
+.P
+\-q: Quiet mode: useful for crontab jobs, automatically enables \-a\.
+.
+.P
+\-a: Automatic/Andrea mode: automatically download the video in the maximum quality\.
+.
+.P
+\-f: Reads URL(s) from specified text file(s)\.
+.
+.P
+\-\-player=player: Play the video instead of downloading it using specified player, mplayer if none specified\.
+.
+.P
+\-\-help: Show this extremely helpful message\.
+.
+.SS "Bash script installation instructions:"
+.
+.SS "Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):"
+On debian\-derived distros, execute this command to add my repo to your system:
+.
+.P
+\fBsudo wget \-q \-O /etc/apt/sources\.list\.d/daniil\.list http://dano\.cu\.cc/1IJrcd1 && wget \-q \-O \- http://dano\.cu\.cc/1Aci9Qp | sudo apt\-key add \-\fR
+.
+.P
+You should see an OK if the operation was successful\.
+.
+.P
+And this command to install the script\.
+.
+.P
+\fBsudo apt\-get update; sudo apt\-get \-y install video\-dl\fR
+.
+.P
+Run with:
+.
+.P
+\fBvideo\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.P
+Or if you want to use the old method follow these instructions\.
+.
+.P
+Execute this command to install the script:
+.
+.P
+\fBwget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x video\.sh\fR
+.
+.P
+Run with \fB\./video\.sh "URL"\fR In the directory where you downloaded it\.
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.P
+To use from any directory install the script directly in the $PATH using this command (run as root):
+.
+.P
+\fBwget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x /usr/bin/video\.sh\fR
+.
+.P
+Now you should be able to run the script simply with: \fBvideo\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.SS "Android:"
+.
+.P
+Enable unknown sources and install this app \fIhttp://bit\.ly/0192837465k\fR\. Once opened you will be presented with a user friendly interface similar to the web version\.
+.
+.P
+1: initial version
+.
+.P
+1\.2: added not working, share and credits button
+.
+.P
+1\.2\.1: added external sharing option, fixed bugs
+.
+.P
+1\.2\.2: Fixed not working button on external share URL, added google analytics, fixed Rai Replay on external share\.
+.
+.P
+1\.3: Added auto update\.
+.
+.P
+1\.4: Added more credits\.
+.
+.P
+You tell me!
+.
+.P
+Video tutorial \fIhttps://www\.youtube\.com/watch?v=4NLs2NzHbbc\fR
+.
+.P
+Note: if you can\'t copy & paste the commands directly in the Terminal Emulator app try this: paste them in the url bar one line at a time, copy them again from the url bar and try to paste them again in the Terminal Emulator app\. Run these commands: \fBcd /sdcard && wget http://daniilgentili\.magix\.net/android/video\.sh\fR
+.
+.P
+Run with: \fBbash /sdcard/video\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.P
+To install the script directly in the $PATH use these commands (here, root is mandatory)\.
+.
+.P
+\fBsu mount \-o rw,remount /system && wget http://daniilgentili\.magix\.net/android/video\.sh \-O /system/bin/video\.sh && chmod 755 /system/bin/video\.sh\fR
+.
+.P
+Now you should be able to run it with: \fBvideo\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.P
+If you cannot execute the command match the shebang of the script to the location of the bash executable\.
+.
+.SS "iOS:"
+Jailbreak your device, install mobileterminal and wget and run the following command:
+.
+.P
+\fBwget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x video\.sh\fR
+.
+.P
+Run with: \fB\./video\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.P
+In the directory where you downloaded it\.
+.
+.P
+To view the downloaded video use iFile\.
+.
+.P
+To use from any directory install the script directly in $PATH using this command:
+.
+.P
+\fBsu \-c "wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x /usr/bin/video\.sh"\fR
+.
+.P
+Now you should be able to run it with: \fBvideo\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.SS "Windows:"
+Install Cygwin \fIhttps://www\.cygwin\.com\fR (don\'t forget to install wget during the installation process!), open its command prompt and type:
+.
+.P
+\fBwget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh\fR
+.
+.P
+Run with: \fB\./video\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.P
+In the directory where you downloaded it\.
+.
+.P
+To run the script from any directory run the following commands:
+.
+.P
+\fBcd /bin && wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh && cd $OLDPWD\fR
+.
+.P
+Now you should be able to run it with: \fBvideo\.sh "URL"\fR
+.
+.P
+Do not forget to put the URL between quotes\.
+.
+.SH "API"
+This project also features an API \fIhttp://video\.daniil\.it/api/\fR\.
+.
+.P
+The source code of the API can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/web/api/api\.sh\fR\.
+.
+.SS "API usage example"
+Requested URL:
+.
+.P
+\fBhttp://api\.daniil\.it/?url=http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-47307196\-8fd1\-46f8\-8b31\-92ae5f9b5089\.html#p=0\fR
+.
+.P
+Output:
+.
+.P
+\fBWinx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4\fR
+.
+.P
+Explanation:
+.
+.P
+\fBWinx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante Sanitized name of video for file name Original name of the video for printing to user output Newline Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4 Quality name (format, size, dimension) URL of the video Newline Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4 Quality name (format, size, dimension) URL of the video\fR
+.
+.P
+If you created a version of the script using another programming language contact me \fIhttp://daniil\.it/contact_me\.htm\fR and I will put it on this page!
+.
+.P
+That\'s it!
+.
+.P
+Enjoy!
+.
+.P
+Daniil Gentili \fIhttp://daniil\.it\fR

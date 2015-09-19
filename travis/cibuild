@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
 # Setup everything 
+desc="$(git log -1 --pretty=%B)"
 sudo apt-get update
-sudo apt-get install busybox
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils dpkg-dev
 mkdir temp
 gitsync() {
 branch="${1}"
@@ -20,11 +21,12 @@ cd video-dl
 git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
 git config --global push.default simple
-git log -1 --pretty=%B | grep -q madebytravisci && exit 1
+echo "$desc" | grep -q madebytravisci && exit 1
 ########################################
+version=$(git describe --tags)
 
+# Sync API
 cd api
-
 sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\.txt/d' api.sh>script_api.sh
 cat ../travis/last_api.sh >> script_api.sh
 busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
@@ -54,16 +56,37 @@ sed -i 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magi
 busybox ftpput -u $u1 -p $p1 $ftp win/video.sh video.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh video.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh video.sh
-rm -r *
+
 cd ../video-dl
+
+# Generate deb
+git status | grep -q video.sh && {
+cd debian/*/
+ronn --roff ../../README-IT.md
+ronn --roff ../../README.md
+mv README-IT debian/video-dl-it.1
+mv README debian/video-dl.1
+cp ../../video.sh .
+echo "debian/video-dl.1
+debian/video-dl-it.1" > debian/video-dl.manpages
+dch -v $version -r stable $desc 
+dpkg-buildpackage -Zgzip
+: "cd ../../temp
+git clone https://${GH_TOKEN}@github.com/danog/repo.git
+cd repo/debs
+cp ../../../video-dl/debian/*.deb .
+gitsync master Updated video-dl
+cd ../../../video-dl"
+}
+
 # Generate website
+rm -r ../temp/*
 cd jekyll
 rm _posts/*
 cp ../README*.md _posts
 bundle exec jekyll build
 cp -a _site/* ../../temp
 cd ../
-
 gitsync master OK madebytravisci
 
 # Upload everything

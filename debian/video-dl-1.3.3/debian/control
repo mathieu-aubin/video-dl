@@ -1,0 +1,15 @@
+Source: video-dl
+Section: misc
+Priority: optional
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: http://git.daniil.it/video-dl
+#Vcs-Git: git://github.com/danog//video-dl.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/video-dl.git;a=summary
+
+Package: video-dl
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, wget
+Description: Video Downloader script
+ This bash script can be used to download videos from any generic website and from the Rai.tv, Mediaset, Witty tv and LA7 websites. The API of this script is constantly updated to support even more websites.
