@@ -5,7 +5,7 @@ layout: default
 # video-dl
 Video download project.
 
-[Read in Italian](http://daniil.it/video-dl/it.html)
+[Read in Italian](https://github.com/danog/video-dl/blob/master/README-IT.md)
 
 
 Created by [Daniil Gentili](http://daniil.it).

@@ -116,7 +116,6 @@ echo -n "Downloading latest version of the API engine..." && eval "$(dl http://d
 echo "Couldn't download the API engine, using built-in (maybe outdated) engine..." 
 
 # 1st part ends here
-
 api() {
 ####################################################
 ####### Beginning of URL recognition section #######
@@ -124,7 +123,7 @@ api() {
 
 dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
 
-dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
+#dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null)"
 
@@ -219,6 +218,8 @@ esac
 
 formats="$(
 [ "$common" != "" ] && for a in $common; do getsize
+ info="$(echo "$info" | sed 's/[(]//;s/[)]//')"
+
  echo "$info $a";done
 
 [ "$lamp4" != "" ] && for a in $lamp4; do getsize
@@ -289,7 +290,7 @@ formats="$(
 
 )"
 
-formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -g | cut -d' ' -f2-)"
+formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2-)"
 [ "$formats" = "" ] && exit
 
 
@@ -350,20 +351,14 @@ esac
 tmpjson="$(wget http://www.rai.it/dl/portale/html/palinsesti/replaytv/static/"$ch"_$day.html -qO-)"
 
 # Keep only section with correct video id and make it grepable
-json="$(
-
-echo "$tmpjson" | sed '/'$v'/,//d;s/\,/\
-/g;s/\"/\
-/g;s/\\//g' | tac | awk "flag != 1; /\}/ { flag = 1 }; " | tac
-
-
-)"
+json="$(echo $tmpjson | sed 's/'$v'.*//g;s/.*[{]//g;s/\,/\
+/g')"
 
 # Get the relinkers
-replay=$(echo "$json" | grep mediapolis | sort | awk '!x[$0]++')
+replay=$(echo "$json" | grep mediapolis | sed 's/.*\"://g;s/\"//g;s/^ *//g')
 
 # Get the title
-videoTitolo=$(echo "$json" | grep -A 2 '^t$' | awk 'END{print}')
+videoTitolo=$(echo "$json" | grep '"t":' | sed 's/.*\"://;s/\"//g;s/^ *//g')
 
 
 }
@@ -379,7 +374,7 @@ function relinker_rai() {
 
 for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }'); do
  
- dl=$(echo $f | grep -q http: && echo $f || echo http:$f)
+ dl=$(echo $f | grep -q '^//' && echo http:$f || echo $f)
 
  # 1st method
 
@@ -420,8 +415,8 @@ base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
-for t in _400.mp4 _600.mp4 _800.mp4 _1200.mp4 _1500.mp4 _1800.mp4 .mp4; do for i in _400.mp4 _600.mp4 _800.mp4 _1200.mp4 _1500.mp4 _1800.mp4; do tbase="$tbase
-$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | awk '!x[$0]++')"; done;done
+for t in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4 \\.mp4; do for i in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4; do tbase="$tbase
+$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | grep -Ev '_([0-9]{3,4})_([0-9]{3,4})\.mp4' | awk '!x[$0]++')"; done;done
 
 
 base="$tbase"
@@ -440,13 +435,14 @@ formatoutput
 
 
 function rai() {
-
+saferai="$(echo "$1" | sed 's/#.*//g')"
 # Store the page in a variable
-file=$(wget $1 -q -O -)
+file=$(wget "$saferai" -q -O -)
 
 # Rai replay or normal rai website choice
-echo $1 | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay $1 || rai_normal $1
+echo "$1" | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay "$saferai" || rai_normal "$saferai"
 
+videoTitolo="$(echo -en "$videoTitolo")"
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=`echo $title | tr -s " "`
 title=${title// /_}
@@ -525,8 +521,6 @@ formatoutput
 
 ###########################################################################################
 ##################### End of Mediaset section, beginning of common section ################
-###########################################################################################
-
 common() {
 # Store the page in a variable
 page="$(wget -q -O - $1)"
@@ -679,9 +673,3 @@ done
 
 
 [ "$queue" = "" ] && { echo "ERROR: download list is empty."; exit 1; }
-
-[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
-[ "$play" = "y" ] && { eval $queue || echo "An error occurred";exit 1; }
-
-
-exit $?
