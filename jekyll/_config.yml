@@ -1,7 +1,7 @@
 # Site settings
-title: Repo
-tag_text: Debian package repo
-description: Debian package repo, created by Daniil Gentili
+title: Video-dl
+tag_text: Programs to download videos
+description: Programs to download videos from virtually any website.
 
 # Build settings
 markdown: kramdown
