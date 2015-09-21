@@ -2,6 +2,8 @@
 [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
+echo "$desc" | grep -q madebytravisci && exit
+
 sudo apt-get update &>/dev/null
 sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev ruby-rdiscount &>/dev/null
 gpg --import s.key
@@ -33,7 +35,7 @@ shift
 
 git add -A
 git commit -am "${*}"
-git push origin ${branch}
+git push origin ${branch} &>/dev/null
 
 }
 
@@ -44,7 +46,6 @@ git config --global user.email "${GIT_EMAIL}"
 git config --global push.default simple
 video="$PWD"
 
-echo "$desc" | grep -q madebytravisci && exit 1
 ########################################
 version=$(git describe --tags)
 
