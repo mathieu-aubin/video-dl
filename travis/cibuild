@@ -35,7 +35,7 @@ shift
 
 git add -A
 git commit -am "${*}"
-git push origin ${branch} &>/dev/null
+git push -q origin ${branch}
 
 }
 
