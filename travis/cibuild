@@ -5,7 +5,13 @@ desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
 
 sudo apt-get update &>/dev/null
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev ruby-rdiscount &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev ruby-rdiscount ruby rubygems &>/dev/null
+
+sudo gem install ronn
+
+sudo ln -s /var/lib/gems/1.8/gems/ronn-0.7.3/bin/ronn /usr/bin/
+
+
 gpg --import s.key
 
 echo '#!/usr/bin/expect -f
@@ -96,7 +102,7 @@ cp $video/video.sh video-dl/
 echo "debian/video-dl.1
 debian/video-dl-it.1" > debian/video-dl.manpages
 dch -v $version $desc 
-builddeb
+$builddeb
 : "cd $temp
 git clone https://${GH_TOKEN}@github.com/danog/repo.git
 cd repo/debs
