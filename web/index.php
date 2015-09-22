@@ -209,7 +209,7 @@ if(isset($_GET['url'])) {
 
                         <br>
                         <br>
-                        <form action="http://video.daniil.it/" method="get" id="php">
+                        <form action="//video.daniil.it/" method="get" id="php">
 
                             <input type="text" name="url" class="form-control" placeholder="URL of the video" id="url" required data-validation-required-message="Please enter a URL."><button type="submit" class="btn btn-success btn-lg">Download the video!</button>
                         </form>

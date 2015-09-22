@@ -10,7 +10,10 @@ la7.it
 $yt";
 
 } elseif(isset($_GET['url'])) {
-
+/*    $locale = 'it_IT.utf-8';
+    setlocale(LC_ALL, $locale);
+    putenv('LC_ALL='.$locale);
+*/
     $file = __FILE__;
     $url = $_GET["url"];
     $param = $_GET["p"];
@@ -57,7 +60,7 @@ $yt";
  </style>
 </head>
 <body>
- <img src="http://daniil.it/img/profile.png" alt=""><br><a href="http://daniil.it">Video download API server created by Daniil Gentili</a><br><a href="http://git.daniil.it/video-dl/#api">How to use this api</a><br><a href="https://github.com/danog/video-dl/tree/master/web/api">Source code on GitHub</a>
+ <img src="//daniil.it/img/profile.png" alt=""><br><a href="http://daniil.it">Video download API server created by Daniil Gentili</a><br><a href="http://daniil.it/video-dl/#api">How to use this api</a><br><a href="https://github.com/danog/video-dl/tree/master/api">Source code on GitHub</a>
 </body>
 ';
 }
