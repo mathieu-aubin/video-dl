@@ -102,11 +102,11 @@ echo "debian/video-dl.1
 debian/video-dl-it.1" > debian/video-dl.manpages
 dch -v $version $desc 
 $builddeb
-: "cd $temp
+cd $temp
 git clone https://${GH_TOKEN}@github.com/danog/repo.git
 cd repo/debs
 cp $video/debian/*.deb .
-gitsync master Updated video-dl"
+gitsync master Updated video-dl
 cd $video
 }
 
@@ -125,7 +125,6 @@ layout: default
 sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README-IT.md >> it.md
 cp -a * $temp
 cd $video
-cp ../Gemfile.lock .
 gitsync master OK madebytravisci
 
 # Upload everything
