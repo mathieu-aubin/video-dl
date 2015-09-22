@@ -14,7 +14,7 @@ gpg --import s.key
 echo '#!/usr/bin/expect -f
 set timeout 2
 set passphrase "'${gpg}'"
-spawn dpkg-buildpackage -Zgzip -kC5C1D8BA
+spawn dpkg-buildpackage -Zgzip
 expect {
  "*passphrase:*" {
   send -- "$passphrase\r"
