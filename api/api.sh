@@ -55,7 +55,7 @@ eval $*
 
 getsize() {
 
-info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
+info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(timeout -skill 10s wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
 sed 's/\
 //g;s/^, //g;s/, B,//g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
 
@@ -74,7 +74,7 @@ for u in $tbase;do echo "$u" | grep -q 'rmtp://\|mms://' && {
 base="$base
 $u"
 } || {
-wget -S --tries=3 --spider "$u" 2>&1 | grep -q '200 OK' && base="$base
+wget -S --tries=3 --spider "$u" 2>&1 | grep -q '200 OK\|206 Partial' && base="$base
 $u"
 }; done
 }
@@ -223,7 +223,7 @@ replay() {
 v=$(echo "$1" | sed 's/.*v=//;s/\&.*//')
 
 # Get the day
-day=$(echo "$1" | sed 's/.*?day=//;s/\&.*//;s/-/_/g')
+day=$(echo "$1" | sed 's/.*day=//;s/\&.*//;s/-/_/g')
 
 # Get the channel
 case $(echo "$1" | sed 's/.*ch=//;s/\&.*//') in
@@ -281,7 +281,7 @@ for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spl
 
  # 1st method
 
- url="$(wget -qO- "$dl&output=25")
+ url="$(timeout -skill 5s wget -qO- "$dl&output=25")
 $(wget "$dl&output=43" -U="" -q -O -)"
  
  [ "$url" != "" ] && tempbase=$(echo "$url" | sed 's/[>]/\
@@ -338,7 +338,7 @@ formatoutput
 
 
 function rai() {
-saferai="$(echo "$1" | sed 's/#.*//g')"
+saferai="$1"
 # Store the page in a variable
 file=$(wget "$saferai" -q -O -)
 
@@ -446,10 +446,9 @@ while read -r line; do
      temp="$(echo "$l" | grep \"$f\": | sed 's/"'$f'"\: "//g;s/"$//g;s/^ //g;s/^.* - //g')"
      eval $f=\""$temp"\"
     done
-    base=$(echo "$url" | tr -s "\n" " " | sed 's/\s.*//')
+    url=$(echo "$url" | tr -s "\n" " " | sed 's/\s.*//')
     format=$(echo "$format" | awk '!x[$0]++' | tr -s "\n" " ")
     ext=$(echo "$ext" | tr -s "\n" " " | sed 's/\s.*//')
-    url="$base"
     [ "$url" != "" ] && {
 size=
 timeout -skill 3s wget -S --spider "$url" &>/dev/null && size=", $(wget -S --spider "$url" 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B" || size=", Unkown size"
