@@ -5,11 +5,8 @@ desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
 
 sudo apt-get update &>/dev/null
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev ruby-rdiscount ruby rubygems &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev &>/dev/null
 
-sudo gem install ronn
-
-sudo ln -s /var/lib/gems/1.8/gems/ronn-0.7.3/bin/ronn /usr/bin/
 
 
 gpg --import s.key
@@ -17,7 +14,7 @@ gpg --import s.key
 echo '#!/usr/bin/expect -f
 set timeout 2
 set passphrase "'${gpg}'"
-spawn dpkg-buildpackage -Zgzip -kC5C1D8BA [lindex $argv 0] [lindex $argv 1] [lindex $argv 2] [lindex $argv 3]
+spawn dpkg-buildpackage -Zgzip -kC5C1D8BA
 expect {
  "*passphrase:*" {
   send -- "$passphrase\r"
@@ -94,8 +91,8 @@ cd $video
 # Generate deb
 git status | grep -q video.sh && {
 cd debian/*/
-ronn --roff $video/README-IT.md
-ronn --roff $video/README.md
+bundle exec ronn --roff $video/README-IT.md
+bundle exec ronn --roff $video/README.md
 mv README-IT debian/video-dl-it.1
 mv README debian/video-dl.1
 cp $video/video.sh video-dl/
@@ -123,7 +120,7 @@ echo "---
 layout: default
 ---
 ">it.md
-sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README.md >> it.md
+sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README-IT.md >> it.md
 cp -a * $temp
 cd $video
 
