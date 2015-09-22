@@ -91,8 +91,9 @@ cd $video
 # Generate deb
 git status | grep -q video.sh && {
 cd debian/*/
-bundle exec ronn --roff $video/README-IT.md
-bundle exec ronn --roff $video/README.md
+cp $video/README-IT.md $video/README.md .
+bundle exec ronn --roff README.md
+bundle exec ronn --roff README-IT.md
 mv README-IT debian/video-dl-it.1
 mv README debian/video-dl.1
 cp $video/video.sh video-dl/
