@@ -1,7 +1,23 @@
 #!/bin/bash
 # Video download script v3.3
 # Created by Daniil Gentili (http://daniil.it)
-# This program is licensed under the GPLv3 license.
+# Video-dl - Video download programs
+#
+# Copyright (C) 2015 Daniil Gentili
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 # Changelog:
 # v1 (and revisions): initial version.
 # v2 (and revisions): added support for Rai Replay, support for multiple qualities, advanced video info and custom API server.
@@ -10,10 +26,12 @@
 # v3.2 Added support for youtube and https
 # v3.3 Fixed auto update and squashed some bugs.
 
-echo "This program is licensed under the GPLv3 license."
+echo "Video download script - Copyright (C) 2015 Daniil Gentili
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the LICENSE file."
 help() {
-echo "Video download script
-Created by Daniil Gentili
+echo "Created by Daniil Gentili
 Supported websites: $(wget -q -O - http://api.daniil.it/?p=websites)
 Usage:
 $(basename $0) [ -qabp=player ] URL URL2 URL3 ...
@@ -59,7 +77,8 @@ Q="-s"
 
 ##### Self updating section #####
 # !!!!!! Comment the following line before editing the script or all changes will be overwritten !!!!!! #
-echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $0 $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
+ME=$(which $0 || echo $0)
+echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $ME $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
 
 ##### URL format detection #####
 
@@ -95,6 +114,8 @@ case "$FLAG" in
     {
 echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
 echo "Couldn't download the API engine, using built-in (maybe outdated) engine..." 
+
+# 1st part ends here
 api() {
 ####################################################
 ####### Beginning of URL recognition section #######
@@ -102,7 +123,7 @@ api() {
 
 dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
 
-dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
+#dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null)"
 
@@ -135,7 +156,7 @@ eval $*
 
 getsize() {
 
-info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
+info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(timeout -skill 10s wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
 sed 's/\
 //g;s/^, //g;s/, B,//g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
 
@@ -154,7 +175,7 @@ for u in $tbase;do echo "$u" | grep -q 'rmtp://\|mms://' && {
 base="$base
 $u"
 } || {
-wget -S --tries=3 --spider "$u" 2>&1 | grep -q '200 OK' && base="$base
+wget -S --tries=3 --spider "$u" 2>&1 | grep -q '200 OK\|206 Partial' && base="$base
 $u"
 }; done
 }
@@ -197,6 +218,8 @@ esac
 
 formats="$(
 [ "$common" != "" ] && for a in $common; do getsize
+ info="$(echo "$info" | sed 's/[(]//;s/[)]//')"
+
  echo "$info $a";done
 
 [ "$lamp4" != "" ] && for a in $lamp4; do getsize
@@ -267,7 +290,7 @@ formats="$(
 
 )"
 
-formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -g | cut -d' ' -f2-)"
+formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2-)"
 [ "$formats" = "" ] && exit
 
 
@@ -297,7 +320,7 @@ replay() {
 v=$(echo "$1" | sed 's/.*v=//;s/\&.*//')
 
 # Get the day
-day=$(echo "$1" | sed 's/.*?day=//;s/\&.*//;s/-/_/g')
+day=$(echo "$1" | sed 's/.*day=//;s/\&.*//;s/-/_/g')
 
 # Get the channel
 case $(echo "$1" | sed 's/.*ch=//;s/\&.*//') in
@@ -328,20 +351,14 @@ esac
 tmpjson="$(wget http://www.rai.it/dl/portale/html/palinsesti/replaytv/static/"$ch"_$day.html -qO-)"
 
 # Keep only section with correct video id and make it grepable
-json="$(
-
-echo "$tmpjson" | sed '/'$v'/,//d;s/\,/\
-/g;s/\"/\
-/g;s/\\//g' | tac | awk "flag != 1; /\}/ { flag = 1 }; " | tac
-
-
-)"
+json="$(echo $tmpjson | sed 's/'$v'.*//g;s/.*[{]//g;s/\,/\
+/g')"
 
 # Get the relinkers
-replay=$(echo "$json" | grep mediapolis | sort | awk '!x[$0]++')
+replay=$(echo "$json" | grep mediapolis | sed 's/.*\"://g;s/\"//g;s/^ *//g')
 
 # Get the title
-videoTitolo=$(echo "$json" | grep -A 2 '^t$' | awk 'END{print}')
+videoTitolo=$(echo "$json" | grep '"t":' | sed 's/.*\"://;s/\"//g;s/^ *//g')
 
 
 }
@@ -357,11 +374,11 @@ function relinker_rai() {
 
 for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }'); do
  
- dl=$(echo $f | grep -q http: && echo $f || echo http:$f)
+ dl=$(echo $f | grep -q '^//' && echo http:$f || echo $f)
 
  # 1st method
 
- url="$(wget -qO- "$dl&output=25")
+ url="$(timeout -skill 5s wget -qO- "$dl&output=25")
 $(wget "$dl&output=43" -U="" -q -O -)"
  
  [ "$url" != "" ] && tempbase=$(echo "$url" | sed 's/[>]/\
@@ -398,8 +415,8 @@ base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
-for t in _400.mp4 _600.mp4 _800.mp4 _1200.mp4 _1500.mp4 _1800.mp4 .mp4; do for i in _400.mp4 _600.mp4 _800.mp4 _1200.mp4 _1500.mp4 _1800.mp4; do tbase="$tbase
-$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | awk '!x[$0]++')"; done;done
+for t in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4 \\.mp4; do for i in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4; do tbase="$tbase
+$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | grep -Ev '_([0-9]{3,4})_([0-9]{3,4})\.mp4' | awk '!x[$0]++')"; done;done
 
 
 base="$tbase"
@@ -418,13 +435,14 @@ formatoutput
 
 
 function rai() {
-
+saferai="$1"
 # Store the page in a variable
-file=$(wget $1 -q -O -)
+file=$(wget "$saferai" -q -O -)
 
 # Rai replay or normal rai website choice
-echo $1 | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay $1 || rai_normal $1
+echo "$1" | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay "$saferai" || rai_normal "$saferai"
 
+videoTitolo="$(echo -en "$videoTitolo")"
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=`echo $title | tr -s " "`
 title=${title// /_}
@@ -503,8 +521,6 @@ formatoutput
 
 ###########################################################################################
 ##################### End of Mediaset section, beginning of common section ################
-###########################################################################################
-
 common() {
 # Store the page in a variable
 page="$(wget -q -O - $1)"
@@ -563,6 +579,7 @@ $ptype $dl $2 $3
 [ "$formats" = "" ] && continue || echo "$title $videoTitolo
 $formats"
 }
+# 2nd part starts here
 }
     }
     ;;
@@ -605,8 +622,8 @@ urlformatcheck
 ##### To be automatic or to be selected by the user, that is the question. #####
 
 [ "$A" = "y" ] && dlcmd() {
-url="$(echo "$api" | awk 'END {print $NF}')"
-ext=$(echo "$api" | awk 'END{print}' | sed 's/.*[(]//g;s/, .*//g')
+url="$(echo "$api" | sed '1!d' | sed 's/.*\s//')"
+ext=$(echo "$api" | sed '1!d' | sed 's/.*[(]//g;s/, .*//g')
 dlvideo
 } || {
 echo "Video(s) info:" &&
@@ -621,9 +638,14 @@ $(echo "$api" | sed 's/http:\/\/.*//g;s/https:\/\/.*//g')
 
 "
 
-until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video)? "; read l; [ "$l" = "q" ] && break;done 2>/dev/null
+until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video and enter to download the maximum quality)? "; read l; [ "$l" = "q" ] && break;[ "$l" = "" ] && {
+url="$(echo "$api" | sed '1!d' | sed 's/.*\s//')"
+ext=$(echo "$api" | sed '1!d' | sed 's/.*[(]//g;s/, .*//g')
+dlvideo
+break
+};done 2>/dev/null
 
-[ "$l" = "q" ] && continue
+[ "$l" = "q" ] || [ "$l" = "" ] && continue
 
 selection=$(echo "$api" | sed "$l!d")
 
@@ -638,7 +660,7 @@ dlvideo
 
 
 for u in $URL; do
- sane="$(echo "$u" | sed 's/#.*//;s/\&/%26/g;s/\=/%3D/g;s/\:/%3A/g;s/\//%2F/g;s/\?/%3F/g')"
+ sane="$(echo "$u" | sed 's:%:%25:g;s: :%20:g;s:<:%3C:g;s:>:%3E:g;s:#:%23:g;s:{:%7B:g;s:}:%7D:g;s:|:%7C:g;s:\\:%5C:g;s:\^:%5E:g;s:~:%7E:g;s:\[:%5B:g;s:\]:%5D:g;s:`:%60:g;s:;:%3B:g;s:/:%2F:g;s:?:%3F:g;s^:^%3A^g;s:@:%40:g;s:=:%3D:g;s:&:%26:g;s:\$:%24:g;s:\!:%21:g;s:\*:%2A:g')"
 
  api="$(api "$u" | sed '/^\s*$/d')"
  [ "$api" = "" ] && echo "Couldn't download $u." && continue
@@ -651,9 +673,3 @@ done
 
 
 [ "$queue" = "" ] && { echo "ERROR: download list is empty."; exit 1; }
-
-[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
-[ "$play" = "y" ] && { eval $queue || echo "An error occurred";exit 1; }
-
-
-exit $?

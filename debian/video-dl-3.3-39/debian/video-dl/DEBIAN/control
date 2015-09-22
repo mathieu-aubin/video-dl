@@ -1,0 +1,11 @@
+Package: video-dl
+Version: 3.3-39-g8547bdf
+Architecture: all
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Installed-Size: 28
+Depends: wget, bash, sed
+Section: misc
+Priority: optional
+Homepage: http://daniil.it/video-dl
+Description: Video Download script
+ This bash script can be used to download videos from any website, including Youtube, Rai.tv, Mediaset, Witty tv and LA7. The API of this script is constantly updated to support even more websites. For more info see the manpages.

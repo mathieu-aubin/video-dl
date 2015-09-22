@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 22 Sep 2015 11:07:24 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3-39-g8547bdf
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3-39-g8547bdf) precise; urgency=low
+ .
+   * travis
+Checksums-Sha1: 
+ d59b507d8fe458ad423343af6245aa8a41ce0df6 595 video-dl_3.3-39-g8547bdf.dsc
+ 9118bff134b5ee9ca0a0d6fea3003d169676461b 16507 video-dl_3.3-39-g8547bdf.tar.gz
+ 00012b8474c52820f3ef3448649a1d82dae5fd11 14894 video-dl_3.3-39-g8547bdf_all.deb
+Checksums-Sha256: 
+ d4e7c55372f0b61dfe47162636b9f23d9d9c3ba2a560f734dd89a3e4366b0408 595 video-dl_3.3-39-g8547bdf.dsc
+ 76a9cc712b01d6234942c9dd18ab1ab4017797e974d897c8d554d032b6ad5541 16507 video-dl_3.3-39-g8547bdf.tar.gz
+ 7e0eee5c3eff9fba54900047a95ea1499c70263425c4d2b4b4f7e5b808f89e9c 14894 video-dl_3.3-39-g8547bdf_all.deb
+Files: 
+ 972312e0dacd86c3e32622e79426fda6 595 misc optional video-dl_3.3-39-g8547bdf.dsc
+ af52b8e37d319917464786c91a38d5d9 16507 misc optional video-dl_3.3-39-g8547bdf.tar.gz
+ 1d85c5a46a5caca2e490e4a2f20f5cfe 14894 misc optional video-dl_3.3-39-g8547bdf_all.deb

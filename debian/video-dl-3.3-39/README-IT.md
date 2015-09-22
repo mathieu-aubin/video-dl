@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # video-dl
 Programmi per scaricare video.
 

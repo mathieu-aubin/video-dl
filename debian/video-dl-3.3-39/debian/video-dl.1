@@ -31,33 +31,48 @@ This project also features a web version \fIhttps://video\.daniil\.it/\fR\.
 The source code of the page can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/web\fR\.
 .
 .SH "Bash script usage:"
-\fBvideo\.sh [ \-qaf [ urls\.txt ] ] URL URL2 URL3 \.\.\.\fR
+.
+.nf
+
+video\.sh [ \-qaf [ urls\.txt ] ] URL URL2 URL3 \.\.\.
+.
+.fi
 .
 .P
 Options:
 .
 .P
-\-q: Quiet mode: useful for crontab jobs, automatically enables \-a\.
+\-q Quiet mode: useful for crontab jobs, automatically enables \-a\.
 .
 .P
-\-a: Automatic/Andrea mode: automatically download the video in the maximum quality\.
+\-a Automatic mode: automatically download the video in the maximum quality\.
 .
 .P
-\-f: Reads URL(s) from specified text file(s)\.
+\-b Use built\-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server\.
 .
 .P
-\-\-player=player: Play the video instead of downloading it using specified player, mplayer if none specified\.
+\-f Read URL(s) from specified text file(s)\. If specified, you cannot provide URLs as arguments\.
 .
 .P
-\-\-help: Show this extremely helpful message\.
+\-p=player Play the video instead of downloading it using specified player, mplayer if none specified\.
+.
+.P
+\-\-help Show this extremely helpful message\.
 .
 .SS "Bash script installation instructions:"
 .
 .SS "Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):"
 On debian\-derived distros, execute this command to add my repo to your system:
 .
-.P
-\fBsudo wget \-q \-O /etc/apt/sources\.list\.d/daniil\.list http://dano\.cu\.cc/1IJrcd1 && wget \-q \-O \- http://dano\.cu\.cc/1Aci9Qp | sudo apt\-key add \-\fR
+.IP "" 4
+.
+.nf
+
+sudo wget \-q \-O /etc/apt/sources\.list\.d/daniil\.list http://dano\.cu\.cc/1IJrcd1 && wget \-q \-O \- http://dano\.cu\.cc/1Aci9Qp | sudo apt\-key add \-
+.
+.fi
+.
+.IP "" 0
 .
 .P
 You should see an OK if the operation was successful\.
@@ -65,14 +80,28 @@ You should see an OK if the operation was successful\.
 .P
 And this command to install the script\.
 .
-.P
-\fBsudo apt\-get update; sudo apt\-get \-y install video\-dl\fR
+.IP "" 4
+.
+.nf
+
+sudo apt\-get update; sudo apt\-get \-y install video\-dl
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Run with:
 .
-.P
-\fBvideo\.sh "URL"\fR
+.IP "" 4
+.
+.nf
+
+video\.sh "URL"
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Do not forget to put the URL between quotes\.
@@ -83,8 +112,15 @@ Or if you want to use the old method follow these instructions\.
 .P
 Execute this command to install the script:
 .
-.P
-\fBwget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x video\.sh\fR
+.IP "" 4
+.
+.nf
+
+wget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x video\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Run with \fB\./video\.sh "URL"\fR In the directory where you downloaded it\.
@@ -95,8 +131,15 @@ Do not forget to put the URL between quotes\.
 .P
 To use from any directory install the script directly in the $PATH using this command (run as root):
 .
-.P
-\fBwget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x /usr/bin/video\.sh\fR
+.IP "" 4
+.
+.nf
+
+wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x /usr/bin/video\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Now you should be able to run the script simply with: \fBvideo\.sh "URL"\fR
@@ -145,8 +188,16 @@ Do not forget to put the URL between quotes\.
 .P
 To install the script directly in the $PATH use these commands (here, root is mandatory)\.
 .
-.P
-\fBsu mount \-o rw,remount /system && wget http://daniilgentili\.magix\.net/android/video\.sh \-O /system/bin/video\.sh && chmod 755 /system/bin/video\.sh\fR
+.IP "" 4
+.
+.nf
+
+su
+mount \-o rw,remount /system && wget http://daniilgentili\.magix\.net/android/video\.sh \-O /system/bin/video\.sh && chmod 755 /system/bin/video\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Now you should be able to run it with: \fBvideo\.sh "URL"\fR
@@ -160,8 +211,15 @@ If you cannot execute the command match the shebang of the script to the locatio
 .SS "iOS:"
 Jailbreak your device, install mobileterminal and wget and run the following command:
 .
-.P
-\fBwget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x video\.sh\fR
+.IP "" 4
+.
+.nf
+
+wget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x video\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Run with: \fB\./video\.sh "URL"\fR
@@ -178,8 +236,15 @@ To view the downloaded video use iFile\.
 .P
 To use from any directory install the script directly in $PATH using this command:
 .
-.P
-\fBsu \-c "wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x /usr/bin/video\.sh"\fR
+.IP "" 4
+.
+.nf
+
+su \-c "wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \-L http://daniilgentili\.magix\.net/video\.sh \-o video\.sh; chmod +x /usr/bin/video\.sh"
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Now you should be able to run it with: \fBvideo\.sh "URL"\fR
@@ -190,8 +255,15 @@ Do not forget to put the URL between quotes\.
 .SS "Windows:"
 Install Cygwin \fIhttps://www\.cygwin\.com\fR (don\'t forget to install wget during the installation process!), open its command prompt and type:
 .
-.P
-\fBwget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh\fR
+.IP "" 4
+.
+.nf
+
+wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Run with: \fB\./video\.sh "URL"\fR
@@ -205,8 +277,15 @@ In the directory where you downloaded it\.
 .P
 To run the script from any directory run the following commands:
 .
-.P
-\fBcd /bin && wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh && cd $OLDPWD\fR
+.IP "" 4
+.
+.nf
+
+cd /bin && wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh && cd $OLDPWD
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Now you should be able to run it with: \fBvideo\.sh "URL"\fR
@@ -218,28 +297,63 @@ Do not forget to put the URL between quotes\.
 This project also features an API \fIhttp://video\.daniil\.it/api/\fR\.
 .
 .P
-The source code of the API can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/web/api/api\.sh\fR\.
+The source code of the API can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/api\fR\.
 .
 .SS "API usage example"
 Requested URL:
 .
-.P
-\fBhttp://api\.daniil\.it/?url=http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-47307196\-8fd1\-46f8\-8b31\-92ae5f9b5089\.html#p=0\fR
+.IP "" 4
+.
+.nf
+
+http://api\.daniil\.it/?url=http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-47307196\-8fd1\-46f8\-8b31\-92ae5f9b5089\.html#p=0
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Output:
 .
-.P
-\fBWinx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4\fR
+.IP "" 4
+.
+.nf
+
+Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante
+Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4
+Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4
+.
+.fi
+.
+.IP "" 0
 .
 .P
 Explanation:
 .
-.P
-\fBWinx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante Sanitized name of video for file name Original name of the video for printing to user output Newline Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4 Quality name (format, size, dimension) URL of the video Newline Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4 Quality name (format, size, dimension) URL of the video\fR
+.IP "" 4
+.
+.nf
+
+Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante
+
+Sanitized name of video for file name  Original name of the video for printing to user output
+Newline
+
+Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4
+
+Quality name (format, size, dimension) URL of the video
+Newline
+
+Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4
+
+Quality name (format, size, dimension) URL of the video
+.
+.fi
+.
+.IP "" 0
 .
 .P
-If you created a version of the script using another programming language contact me \fIhttp://daniil\.it/contact_me\.htm\fR and I will put it on this page!
+If you created a version of the script using another programming language contact me \fIhttp://daniil\.it\fR and I will put it on this page!
 .
 .P
 That\'s it!
