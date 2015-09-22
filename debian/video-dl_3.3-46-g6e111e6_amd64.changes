@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 22 Sep 2015 14:02:51 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3-46-g6e111e6
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3-46-g6e111e6) precise; urgency=low
+ .
+   * Update api.sh
+Checksums-Sha1: 
+ 31eec8c149afb3e9302558e8c0b27ea118ae5fc9 595 video-dl_3.3-46-g6e111e6.dsc
+ 97c938052d425c6aea0f79414572fc02da6cebe1 12572 video-dl_3.3-46-g6e111e6.tar.gz
+ d9ed28cb21e258fdb7b7fbdd2c1d55ce0384ae89 14920 video-dl_3.3-46-g6e111e6_all.deb
+Checksums-Sha256: 
+ 70def75e3d591b0163a24bc0447448660ddf87129823b6d95b486d94e2edd831 595 video-dl_3.3-46-g6e111e6.dsc
+ a9c5abe53c5fc4f471dea1d0ce17f22f4292c1f684b9aaea3a568d09c4d90ca8 12572 video-dl_3.3-46-g6e111e6.tar.gz
+ 124c394d385fabf707826be7010345934a173ff9f2fc6b0ea91ea0b956e9fe4a 14920 video-dl_3.3-46-g6e111e6_all.deb
+Files: 
+ 85e72ffa4adee846f5e2c0476ad9d637 595 misc optional video-dl_3.3-46-g6e111e6.dsc
+ 75d64ae0734ee77ccff812ced15dae41 12572 misc optional video-dl_3.3-46-g6e111e6.tar.gz
+ a2868bc6501c9ae15b975115a878a5fa 14920 misc optional video-dl_3.3-46-g6e111e6_all.deb
