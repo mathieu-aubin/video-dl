@@ -96,6 +96,7 @@ bundle exec ronn --roff README.md
 bundle exec ronn --roff README-IT.md
 mv README-IT debian/video-dl-it.1
 mv README debian/video-dl.1
+rm *md
 cp $video/video.sh video-dl/
 echo "debian/video-dl.1
 debian/video-dl-it.1" > debian/video-dl.manpages
