@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 22 Sep 2015 17:19:38 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3-52-gdfd24e1
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3-52-gdfd24e1) precise; urgency=low
+ .
+   * Create .nothing
+Checksums-Sha1: 
+ dbc58ed44a19c7b0149a8e875f5d78fe33cf41ef 595 video-dl_3.3-52-gdfd24e1.dsc
+ c6db68ed06ce2572d033b1a73778f36499f96f9b 12628 video-dl_3.3-52-gdfd24e1.tar.gz
+ e3ff7874fe9777dc4b8052e5ad0ad00371418fa0 14972 video-dl_3.3-52-gdfd24e1_all.deb
+Checksums-Sha256: 
+ 93b76ded04cafde45aeda3a5abfe7b887cd65a8328c79c745e2f61cc1d2a9677 595 video-dl_3.3-52-gdfd24e1.dsc
+ 9b10ad166cd614c18cd90559f05fc95186d63f8ee414f466f26c0dd581be0e9c 12628 video-dl_3.3-52-gdfd24e1.tar.gz
+ 89c80e682b6fb7c9d572ed78ed7b3b8966e27758394317190436fa747c74d5f9 14972 video-dl_3.3-52-gdfd24e1_all.deb
+Files: 
+ 46b74a3ffd50f127481aef821a101139 595 misc optional video-dl_3.3-52-gdfd24e1.dsc
+ bfb285341469d664c0d61aebdc49a9dd 12628 misc optional video-dl_3.3-52-gdfd24e1.tar.gz
+ c51ccb513fa722886b34c26df3247cc6 14972 misc optional video-dl_3.3-52-gdfd24e1_all.deb
