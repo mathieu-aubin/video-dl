@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 23 Sep 2015 15:32:52 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3-58-gaad6a54
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3-58-gaad6a54) precise; urgency=low
+ .
+   * travis
+Checksums-Sha1: 
+ dbff51345068158327c25c1da322f0ddf2ae1246 595 video-dl_3.3-58-gaad6a54.dsc
+ 1796c181d7ac4392efbc9a72599922b170b8544f 12707 video-dl_3.3-58-gaad6a54.tar.gz
+ 8552b0fa0a644aa5d13adb8932607ecf29d9d0f3 15030 video-dl_3.3-58-gaad6a54_all.deb
+Checksums-Sha256: 
+ 1479cd3b9c670a795a04aa31b08df128cc0f23640d79a377baad25eb768a38b9 595 video-dl_3.3-58-gaad6a54.dsc
+ c9b87694a5b781c9c6510d9f7ff65c186d06daa8cb171d6e5de12934860a1003 12707 video-dl_3.3-58-gaad6a54.tar.gz
+ 6638686044d63b1af6b8015c6996dbddde0e78803313a9f4e24443ca497ccd78 15030 video-dl_3.3-58-gaad6a54_all.deb
+Files: 
+ 7c634b65f25758d865624dc9423067e0 595 misc optional video-dl_3.3-58-gaad6a54.dsc
+ e70cc36dc1956c7cc2efe39765c9f8ea 12707 misc optional video-dl_3.3-58-gaad6a54.tar.gz
+ f6124b71ce92746f67ea0b6388c368db 15030 misc optional video-dl_3.3-58-gaad6a54_all.deb
