@@ -6,27 +6,10 @@ echo "$desc" | grep -q madebytravisci && exit
 
 sudo apt-get update &>/dev/null
 sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev &>/dev/null
+tar -xzf enc.tar.gz
+gpg --allow-secret-key-import --import mygpgkey_sec.gpg
 
-
-
-gpg --import s.key
-
-echo '#!/usr/bin/expect -f
-set timeout 2
-set passphrase "'${gpg}'"
-spawn dpkg-buildpackage -Zgzip
-expect {
- "*passphrase:*" {
-  send -- "$passphrase\r"
-  }
-} expect {
- "*passphrase:*" {
-  send -- "$passphrase\r"
-  }
-} 
-interact
-'>../builddeb
-builddeb="$PWD/../builddeb"
+builddeb="$PWD/builddeb"
 chmod +x ${builddeb}
 
 
