@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 23 Sep 2015 19:34:49 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3-68-g687239d
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3-68-g687239d) precise; urgency=low
+ .
+   * Update cibuild
+Checksums-Sha1: 
+ 20ceeb850a71d0ef46135603529b52eeb214e5dc 595 video-dl_3.3-68-g687239d.dsc
+ 7bf2641693c99e4e06bd6d76bc6089533ee88771 12613 video-dl_3.3-68-g687239d.tar.gz
+ 26115162e1b99b0e960cfadaf60c871632a61e51 15242 video-dl_3.3-68-g687239d_all.deb
+Checksums-Sha256: 
+ b53603485b7431fdc67c4f095d4afc62771866cb36fa946aeee5d073b2990f77 595 video-dl_3.3-68-g687239d.dsc
+ af7dff9508c99085d2a71bbf629b968230ddfb86641c8e4714314fd6e33c9bd2 12613 video-dl_3.3-68-g687239d.tar.gz
+ 2cc144eb81943b8f50239e5480135441631976850423060756f2d6375b350b3f 15242 video-dl_3.3-68-g687239d_all.deb
+Files: 
+ 3ca5e2cb3a85554babdc020fdc9c6efa 595 misc optional video-dl_3.3-68-g687239d.dsc
+ ec6108a23d5b1af103c24ce4ae456eee 12613 misc optional video-dl_3.3-68-g687239d.tar.gz
+ 7f8ded89cebcbaabc41603c8da395793 15242 misc optional video-dl_3.3-68-g687239d_all.deb
