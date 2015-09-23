@@ -673,3 +673,8 @@ done
 
 
 [ "$queue" = "" ] && { echo "ERROR: download list is empty."; exit 1; }
+[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
+[ "$play" = "y" ] && { eval $queue || echo "An error occurred";exit 1; }
+
+
+exit $?
