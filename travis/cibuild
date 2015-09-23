@@ -3,7 +3,7 @@
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
-
+export DEBFULLNAME="Daniil Gentili"
 sudo apt-get update &>/dev/null
 sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev &>/dev/null
 tar -xzf enc.tar.gz
