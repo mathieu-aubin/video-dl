@@ -46,6 +46,13 @@ cd $video
 sed '/\#\!\/bin\/bash/,/\# 1st part ends here/!d' video.sh>tmpvideo.sh
 cat script_api.sh >>tmpvideo.sh
 sed '/\# 2nd part starts here/,/exit \$\?/!d' video.sh>>tmpvideo.sh
+echo '[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
+[ "$play" = "y" ] && { eval $queue || echo "An error occurred";exit 1; }
+
+
+exit $?
+'>>tmpvideo.sh
+
 mv tmpvideo.sh video.sh
 rm script_api.sh
 cp video.sh $temp
