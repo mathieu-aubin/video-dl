@@ -3,9 +3,10 @@
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
-#export DEBFULLNAME="Daniil Gentili"
+export DEBFULLNAME="Daniil Gentili"
 sudo apt-get update &>/dev/null
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch patchutils gnupg expect dpkg-dev &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch python-pip python3 patchutils gnupg expect dpkg-dev &>/dev/null
+pip install pexpect
 tar -xzf enc.tar.gz
 gpg --allow-secret-key-import --import mygpgkey_sec.gpg
 
@@ -98,8 +99,10 @@ $builddeb
 cd $temp
 git clone https://${GH_TOKEN}@github.com/danog/repo.git
 cd repo/debs
-cp $video/debian/*.deb .
-gitsync master Updated video-dl
+mkdir video-dl-$version
+cd video-dl-$version
+cp $video/debian/* .
+gitsync master Updated video-dl to $version
 cd $video
 }
 
