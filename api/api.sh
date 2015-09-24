@@ -20,9 +20,7 @@ api() {
 ####################################################
 
 dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
-
 #dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
-
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null)"
 

@@ -303,3 +303,72 @@ WINX_CLUB_VII_EP_1 WINX CLUB (VII) - EP. 1
 Maximum quality (mp4, 324MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/mattina_world/4478476_1800.mp4
 Medium-low quality (mp4 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/mattina_world/4478476_800.mp4
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-19&ch=23&v=567728&vd=2015-09-19&vc=23
+MIA_AND_ME_II_EP_3 MIA AND ME (II) - EP. 3
+Maximum quality (mp4, 313MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4467559_1800.mp4
+Medium-low quality (mp4 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4467559_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-20&ch=23&v=568094&vd=2015-09-20&vc=23
+MIA_AND_ME_II_EP_4 MIA AND ME (II) - EP. 4
+Maximum quality (mp4, 312MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4467797_1800.mp4
+Medium-low quality (mp4 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4467797_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-20&ch=23&v=568095&vd=2015-09-20&vc=23
+MIA_AND_ME_II_EP_5 MIA AND ME (II) - EP. 5
+Maximum quality (mp4, 312MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/mattina_world/4471032_1800.mp4
+Medium-low quality (mp4, 147MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/mattina_world/4471032_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-20&ch=23&v=568121&vd=2015-09-20&vc=23
+MIA_AND_ME_II_EP_22 MIA AND ME (II) - EP. 22
+Maximum quality (mp4, 317MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4475126_1800.mp4
+Medium-low quality (mp4 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4475126_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-21&ch=23&v=568477&vd=2015-09-21&vc=23
+WINX_CLUB_VII_EP_1 WINX CLUB (VII) - EP. 1
+Maximum quality (mp4, 324MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/mattina_world/4478476_1800.mp4
+Medium-low quality (mp4, 153MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/mattina_world/4478476_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-21&ch=23&v=568478&vd=2015-09-21&vc=23
+WINX_CLUB_VII_EP_2 WINX CLUB (VII) - EP. 2
+Maximum quality (mp4, 324MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/gulp/mattina/4478460_1800.mp4
+Medium-low quality (mp4, 153MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/gulp/mattina/4478460_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-22&ch=23&v=568872&vd=2015-09-22&vc=23
+WINX_CLUB_VII_EP_3 WINX CLUB (VII) - EP. 3
+Maximum quality (mp4, 324MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/gulp/mattina/4482234_1800.mp4
+Medium-low quality (mp4, 153MB, 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/gulp/mattina/4482234_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-22&ch=23&v=568873&vd=2015-09-22&vc=23
+WINX_CLUB_VII_EP_4 WINX CLUB (VII) - EP. 4
+Maximum quality (mp4, 324MB, 1024x576) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/gulp/mattina/4482235_1800.mp4
+Medium-low quality (mp4 700x392) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/gulp/mattina/4482235_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-16&ch=23&v=566541&vd=2015-09-16&vc=23
+MIA_AND_ME_II_EP_18 MIA AND ME (II) - EP. 18
+Maximum quality (mp4, 317MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4461320_1800.mp4
+Medium-low quality (mp4, 150MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4461320_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-17&ch=23&v=566943&vd=2015-09-17&vc=23
+MIA_AND_ME_II_EP_19 MIA AND ME (II) - EP. 19
+Maximum quality (mp4, 318MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4464485_1800.mp4
+Medium-low quality (mp4, 150MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4464485_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-18&ch=23&v=567352&vd=2015-09-18&vc=23
+MIA_AND_ME_II_EP_20 MIA AND ME (II) - EP. 20
+Maximum quality (mp4, 317MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4468830_1800.mp4
+Medium-low quality (mp4, 149MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4468830_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-19&ch=23&v=567754&vd=2015-09-19&vc=23
+MIA_AND_ME_II_EP_21 MIA AND ME (II) - EP. 21
+Maximum quality (mp4, 318MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4471985_1800.mp4
+Medium-low quality (mp4, 150MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/pomeriggio_world/4471985_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-19&ch=23&v=567727&vd=2015-09-19&vc=23
+MIA_AND_ME_II_EP_2 MIA AND ME (II) - EP. 2
+Maximum quality (mp4, 312MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/sera_world/4463287_1800.mp4
+Medium-low quality (mp4, 147MB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/sera_world/4463287_800.mp4
+endofdbentry
+/usr/bin/
+ 
+
+endofdbentry
