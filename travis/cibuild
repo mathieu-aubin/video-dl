@@ -80,7 +80,7 @@ busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh video.sh
 cd $video
 
 # Generate deb
-git status | grep -q video.sh && {
+echo $(git status;git log --name-status HEAD^..HEAD) | grep -q video.sh && {
 cd debian/
 cp * old
 rm *
