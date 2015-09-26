@@ -671,6 +671,7 @@ dlvideo
 
 
 for u in $URL; do
+ echo "Getting video info for $u..."
  api="$(api "$u" | sed '/^\s*$/d')"
  [ "$api" = "" ] && echo "Couldn't download $u." && continue
  titles=$(echo "$api" | sed -n 1p)

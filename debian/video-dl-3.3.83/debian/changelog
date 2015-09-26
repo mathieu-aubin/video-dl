@@ -1,3 +1,9 @@
+video-dl (3.3.83) precise; urgency=low
+
+  * Increased verbosity
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sat, 26 Sep 2015 19:19:32 +0000
+
 video-dl (3.3-81-g624c6c6) precise; urgency=low
 
   * Improved the auto update function and player choice.

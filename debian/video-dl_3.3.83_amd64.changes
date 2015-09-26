@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sat, 26 Sep 2015 19:19:32 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.83
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.83) precise; urgency=low
+ .
+   * Increased verbosity
+Checksums-Sha1: 
+ ab368b9a967395c7126969bbb454ef01ca77f5f6 1443 video-dl_3.3.83.dsc
+ 607101d858529b694db1ba1eccc00aa86a1bc922 13103 video-dl_3.3.83.tar.gz
+ 9aa6a695d03ca9d29dcc7630f2ef451fdf8dd877 15546 video-dl_3.3.83_all.deb
+Checksums-Sha256: 
+ 80cd0b7efd80223b73efc09b8d8f6e0e595aa70f6051f9edbe1aedaf441cc2c2 1443 video-dl_3.3.83.dsc
+ 66c425b559bf806f171368789eb6a63facbd66d366cab16907f1f2a024254725 13103 video-dl_3.3.83.tar.gz
+ dc2c89cc8cb0d382f3210d68db16d966021c08c2b20a4ed0c265e2984a7d0cb4 15546 video-dl_3.3.83_all.deb
+Files: 
+ 347cd7e47aa44dec24c655251958a3f9 1443 misc optional video-dl_3.3.83.dsc
+ 4490d3aeb609e5c3ed23ee9507642a70 13103 misc optional video-dl_3.3.83.tar.gz
+ 4443dc148eae3ed3b55e58f697d9d1e0 15546 misc optional video-dl_3.3.83_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWBu/HAAoJEHK5f9HZZyyTQ9oQAIVtKIMcRLo/fIhpBtja2YbV
+Tg5ITf/Mfui5fJB/lhY2ahvFTj5JFGC2EuQkMgvQDXO0fBVdeKMEvMmTSHygm672
+ssLOMcN9ehwd68Yd8FFBk1R5cDrJ33lznmXpf8sOUcyNMx060tKFXdfvmUDiHQsj
+H9FUHzgEZ4fIpc/6frjyqUL3tLERDM5V/Hqp0CRlvvKBkOCxiwIICTGAABd40LqJ
+0HP8KPHO59hYVAjUemWYkSSuvcyq+PLg5uXbzKjDrsHPaecRaPtuwgD01JUmQb5B
+1QugZxqh/IjRzPtHRcT5J73U3vpA7J/ky5vrCmcni7TA6n83qyZS8Adtaw44dfDt
+2LFdvxsLUxjbloQuLfgd6RRtbguu9Yh22rdU22e2hcxsaM3SFvBVUViuOZxHnrpI
+0KeMY4HJEvpoe/Z8f6eDSXslD0PLTUEvsOsbMyVUaqV88Nth0vvg1VyE6GM0ZvM1
+pldYzr8Fs1rS7Ms3c4H1TiFp2fJVmyDWx/ZG1ZnB9lVEc/i3saDNUV2i4uSuK/Ks
+ziwnU946cl9iqReIOcsbBatdToha36oort/XY3ShQQgYiwN6vHKBsNkK70fV20x3
+xlY1Z5DSpJOK44qNPgoSPEbOjc5cZn5H3gj/4pCCrjPFHicYEnxWyujbMzGIkPk9
+HMVjxDoONa/H445uKdTa
+=WWSi
+-----END PGP SIGNATURE-----
