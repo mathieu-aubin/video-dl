@@ -5,6 +5,8 @@ layout: default
 # video-dl
 Video download project.
 
+[![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
+
 [Read in Italian](http://daniil.it/video-dl/it.html)
 
 
