@@ -671,9 +671,9 @@ dlvideo
 
 
 for u in $URL; do
- echo "Getting video info for $u..."
+ echo -n "Getting video info for $u..."
  api="$(api "$u" | sed '/^\s*$/d')"
- [ "$api" = "" ] && echo "Couldn't download $u." && continue
+ [ "$api" = "" ] && { echo "Couldn't download $u." && continue; } || lineclear
  titles=$(echo "$api" | sed -n 1p)
  api=$(echo "$api" | sed '1d' | awk '{print NR, $0}')
  title=$(echo "$titles" | cut -d \  -f 1)
