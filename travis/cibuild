@@ -32,7 +32,7 @@ git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
 git config --global push.default simple
 video="$PWD"
-
+wget http://daniilgentili.magix.net/video.sh -O $temp/reallyold.sh
 ########################################
 version=$(git describe --tags)
 
@@ -80,7 +80,7 @@ busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh video.sh
 cd $video
 
 # Generate deb
-echo $(git status;git log --name-status HEAD^..HEAD) | grep -q video.sh && {
+[ "$(diff $temp/reallyold.sh $video/video.sh) != "" ] && {
 cd debian/
 cp * old
 rm *
