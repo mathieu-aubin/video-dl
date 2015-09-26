@@ -34,7 +34,7 @@ git config --global push.default simple
 video="$PWD"
 wget http://daniilgentili.magix.net/video.sh -O $temp/reallyold.sh
 ########################################
-version=$(git describe --tags)
+version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-[^-]*$//;s/.*-//')"
 
 # Sync API
 cd api
