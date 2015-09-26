@@ -1,3 +1,9 @@
+video-dl (3.3.85) precise; urgency=low
+
+  * Beautified output
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sat, 26 Sep 2015 19:34:07 +0000
+
 video-dl (3.3.83) precise; urgency=low
 
   * Increased verbosity

@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sat, 26 Sep 2015 19:34:07 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.85
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.85) precise; urgency=low
+ .
+   * Beautified output
+Checksums-Sha1: 
+ 5ceb10bee577f029d69a1e1c2cbd7d4a3f3b2ded 1443 video-dl_3.3.85.dsc
+ f143331a82e76fb28914a0c8f75f3666393572f1 13172 video-dl_3.3.85.tar.gz
+ 5248834eaf693f21f5f77d1168d427749f7288bd 15582 video-dl_3.3.85_all.deb
+Checksums-Sha256: 
+ bfaa6038aa009b329f015ea7f622e8b4e7968a6f4384583096d62d6b091df660 1443 video-dl_3.3.85.dsc
+ d9bd95d4d1f786a5c9a30ba99bac34915d2ce9e38735d83d18e7ed58b4fe2374 13172 video-dl_3.3.85.tar.gz
+ 1000301f0a20f954391c94e709583d15586a547b0155b09e52696697d72f950d 15582 video-dl_3.3.85_all.deb
+Files: 
+ b67813c9ea328d6bda56c194fd5d1d0a 1443 misc optional video-dl_3.3.85.dsc
+ 53a57264790781907ada1fd133d71a66 13172 misc optional video-dl_3.3.85.tar.gz
+ ca545dbccfd63376b41f6bf0ee224137 15582 misc optional video-dl_3.3.85_all.deb
