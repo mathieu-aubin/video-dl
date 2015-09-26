@@ -1,6 +1,8 @@
 # video-dl
 Programmi per scaricare video.
 
+[![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
+
 [Read English version](https://github.com/danog/video-dl)
 
 Creato da [Daniil Gentili](http://daniil.it).
