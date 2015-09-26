@@ -1,3 +1,9 @@
+video-dl (3.3-81-g624c6c6) precise; urgency=low
+
+  * Improved the auto update function and player choice.
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sat, 26 Sep 2015 15:14:14 +0000
+
 video-dl (3.3-72-gec1fb8d) precise; urgency=low
 
   * Database, API and web version sync

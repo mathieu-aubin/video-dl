@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sat, 26 Sep 2015 15:14:14 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3-81-g624c6c6
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3-81-g624c6c6) precise; urgency=low
+ .
+   * Improved the auto update function and player choice.
+Checksums-Sha1: 
+ 05e99831b6ce6e8aea6953b3f5b20a5f654c32be 1479 video-dl_3.3-81-g624c6c6.dsc
+ 6acab807b022d380f4cb41acb82f8ab82c78497d 13089 video-dl_3.3-81-g624c6c6.tar.gz
+ 4c3c9f9a029b1372d18b5604290f4aed45d8f3ca 15570 video-dl_3.3-81-g624c6c6_all.deb
+Checksums-Sha256: 
+ f5f74826e7ab4804709d0ad496f3ceb949be11aa95da1f511c73a16804fc0d1f 1479 video-dl_3.3-81-g624c6c6.dsc
+ 5cbc5b530530e972203f4b74c4d592a16f417b118553ac80e421ee6b1ed790c7 13089 video-dl_3.3-81-g624c6c6.tar.gz
+ f25c8d962de55704a8bd3e6e671da7139580feb90c8bf6c04fe185c8ce4cddcb 15570 video-dl_3.3-81-g624c6c6_all.deb
+Files: 
+ ea7b6e2e4d33c9caff55ff30f63cd2df 1479 misc optional video-dl_3.3-81-g624c6c6.dsc
+ f2c66c218298217fd84128cc5a5ba82e 13089 misc optional video-dl_3.3-81-g624c6c6.tar.gz
+ a02ea1dfe4ba6ce45603dc12f59e3a2b 15570 misc optional video-dl_3.3-81-g624c6c6_all.deb
