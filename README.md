@@ -1,6 +1,8 @@
 # video-dl
 Video download project.
 
+[![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
+
 [Read in Italian](https://github.com/danog/video-dl/blob/master/README-IT.md)
 
 
