@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.3
+# Video download script v3.3.1
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -25,36 +25,12 @@
 # v3.1 Included built in API engine, bug fixes
 # v3.2 Added support for youtube and https
 # v3.3 Fixed auto update and squashed some bugs.
+# v3.3.1 Improved the auto update function and player choice
 
 echo "Video download script - Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions; see the LICENSE file."
-help() {
-echo "Created by Daniil Gentili
-Supported websites: $(wget -q -O - http://api.daniil.it/?p=websites)
-Usage:
-$(basename $0) [ -qabp=player ] URL URL2 URL3 ...
-$(basename $0) [ -qabfp=player ] URL.txt URL2.txt URL3.txt ...
-
-Options:
-
--q		Quiet mode: useful for crontab jobs, automatically enables -a.
-
--a		Automatic mode: automatically download the video in the maximum quality.
-
--b		Use built-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server.
-
--f		Read URL(s) from specified text file(s). If specified, you cannot provide URLs as arguments.
-
--p=player	Play the video instead of downloading it using specified player, mplayer if none specified.
-
---help		Show this extremely helpful message.
-
-"
-exit
-}
-[ "$1" = "--help" ] && help
 
 lineclear() { echo -en "\r\033[K"; }
 
@@ -76,9 +52,45 @@ Q="-s"
 }
 
 ##### Self updating section #####
-# !!!!!! Comment the following line before editing the script or all changes will be overwritten !!!!!! #
 ME=$(which $0 || echo $0)
-echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $ME $Q 2>/dev/null;chmod 755 $0 2>/dev/null; lineclear
+# !!!!!! Comment the following line before editing the script or all changes will be overwritten !!!!!! #
+echo -n "Self-updating script..." && dl http://daniilgentili.magix.net/video.sh $ME $Q 2>/dev/null;chmod 755 $ME 2>/dev/null; lineclear
+
+##### Help section #####
+help() {
+echo "Created by Daniil Gentili (http://daniil.it)
+Supported websites: $(dl http://api.daniil.it/?p=websites - $Q)
+Usage:
+$(basename $0) [ -qabp=player ] URL URL2 URL3 ...
+$(basename $0) [ -qabfp=player ] URLS.txt URLS2.txt URLS3.txt ...
+
+Options:
+
+-q		Quiet mode: useful for crontab jobs, automatically enables -a.
+
+-a		Automatic mode: automatically download the video in the maximum quality.
+
+-b		Use built-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server.
+
+-f		Read URL(s) from specified text file(s). If specified, you cannot provide URLs as arguments.
+
+-p=player	Play the video instead of downloading it using specified player, mplayer if none specified.
+
+--help		Show this extremely helpful message.
+
+If the script doesn't behave like it should, update it by running this command
+
+sudo apt-get update && sudo apt-get dist upgrade
+
+If you installed it with apt or use this command 
+
+sudo video.sh
+
+if you installed it manually.
+"
+exit
+}
+[ "$1" = "--help" ] && help
 
 ##### URL format detection #####
 
@@ -104,7 +116,7 @@ esac
 }
 ##### Default API #####
 
-api() { dl "http://api.daniil.it/?url=$sane" - $Q; }
+api() { sane="$(echo "$1" | sed 's:%:%25:g;s: :%20:g;s:<:%3C:g;s:>:%3E:g;s:#:%23:g;s:{:%7B:g;s:}:%7D:g;s:|:%7C:g;s:\\:%5C:g;s:\^:%5E:g;s:~:%7E:g;s:\[:%5B:g;s:\]:%5D:g;s:`:%60:g;s:;:%3B:g;s:/:%2F:g;s:?:%3F:g;s^:^%3A^g;s:@:%40:g;s:=:%3D:g;s:&:%26:g;s:\$:%24:g;s:\!:%21:g;s:\*:%2A:g')"; dl "http://api.daniil.it/?url=$sane" - $Q; }
 
 ##### Option detection ##### 
 
@@ -113,7 +125,7 @@ case "$FLAG" in
   b)
     {
 echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
-echo "Couldn't download the API engine, using built-in (maybe outdated) engine..." 
+echo "Couldn't download the API engine, using built-in engine..." 
 
 # 1st part ends here
 api() {
@@ -594,16 +606,15 @@ $formats"
   p)
     {
 play=y
-which "$OPTARG" &>/dev/null && player="$(echo $OPTARG | sed 's/=//g')" || player="mplayer"
-
+tmplayer="$(echo $OPTARG | sed 's/=//g')"
+[ "$tmplayer" =! "" ] && which "$tmplayer" &>/dev/null && player="$tmplayer" || player="mplayer"
     }
     ;;
   \?)
     echo "Invalid option: -$OPTARG" >&2
 esac
 done
-
-[ "$player" = "mplayer" ] && shift $((OPTIND-2)) || shift $((OPTIND-1)) 
+shift $((OPTIND-1)) 
 
 ##### Player choice #####
 [ "$play" = y ] && dlvideo() {
@@ -659,8 +670,6 @@ dlvideo
 
 
 for u in $URL; do
- sane="$(echo "$u" | sed 's:%:%25:g;s: :%20:g;s:<:%3C:g;s:>:%3E:g;s:#:%23:g;s:{:%7B:g;s:}:%7D:g;s:|:%7C:g;s:\\:%5C:g;s:\^:%5E:g;s:~:%7E:g;s:\[:%5B:g;s:\]:%5D:g;s:`:%60:g;s:;:%3B:g;s:/:%2F:g;s:?:%3F:g;s^:^%3A^g;s:@:%40:g;s:=:%3D:g;s:&:%26:g;s:\$:%24:g;s:\!:%21:g;s:\*:%2A:g')"
-
  api="$(api "$u" | sed '/^\s*$/d')"
  [ "$api" = "" ] && echo "Couldn't download $u." && continue
  titles=$(echo "$api" | sed -n 1p)
