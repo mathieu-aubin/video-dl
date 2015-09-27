@@ -1,0 +1,50 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sun, 27 Sep 2015 17:16:24 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.87
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.87) precise; urgency=low
+ .
+   * Added automatic API choice Added automatic API choice, if my API
+     server is down.
+Checksums-Sha1: 
+ e8447a133afb1bf5a20238ef6dcfa8c0c43eee11 1443 video-dl_3.3.87.dsc
+ 7e4ea336c52db995a2a115df1c087766230e0c00 13198 video-dl_3.3.87.tar.gz
+ 4792a08c15dcafcbba11c48cd2de98fb49b75358 15668 video-dl_3.3.87_all.deb
+Checksums-Sha256: 
+ 6fb8ded6ccf0ffba0f7ff71d0b18ff3af83cbd2721dddf1728b8c5a42e3a8273 1443 video-dl_3.3.87.dsc
+ 2655b0c1f8ee859c389a786d021f93e31c757194caff16229233d1d654817d0d 13198 video-dl_3.3.87.tar.gz
+ 2b18d1a4577695e000bfa742b05016cb65e632be6109ac835a7951360ba6c17a 15668 video-dl_3.3.87_all.deb
+Files: 
+ fc9f1201cfe92417adc861232de1a35a 1443 misc optional video-dl_3.3.87.dsc
+ 3f5ea7f80a5a81bc07bc944749b46d4d 13198 misc optional video-dl_3.3.87.tar.gz
+ 88d6f49fe84240745a3ae8a0b4a2d8ed 15668 misc optional video-dl_3.3.87_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWCCRrAAoJEHK5f9HZZyyTpuYQAIA8ChLxG05oXvRli/HhBZyK
+xiJXMT9S3WY1/kmGg3RzSIrTrQ8HM/GEE/8KLn8PGzK2xUj80Rd9omTngTQWKXjC
+dCV7lSlkWXZe+a0i3YVAokbNZPE6sjdGZu5mIimv4B8UI/Rg947zKkc0uqxJgD1j
+Dn+y233YsObYTBZk+g7ork3XSh9oWEPO01K2z0XrIb4xXrYeXsTwYlnZpFdW3Qnq
+xOQtgBuAIXIpez1tFznCX0aw0/B9FwRkx4BViedHb/1fiwfa3HjashkxbRNaeelJ
+ydz7A5npN6PY6rdfjOI7C1LxjKca0gITQoUGk1bszAFwLkZDdLO0/NU5eRx1pdxQ
+f9XPecM9bpExN3MMTlHjZvPXG296p9WqO4VFl+aB7JoDRqCX7I5zowg8XWwJrLD7
+KuHvVfRhFWeft3FPy9tJBriAGoG2fJokGzWUlwAGmx7VH9WckAw8WA61KQV4yapg
+NS5MgAVdmPIXTJBKagYEeifr2dGq22qCZJUbskApb5BbsZ50AiIG4GtxGB6vL0tU
+Y8NHri1yCCEE5eJjxbvCJZd9m5WvXKFQhww0Z+23U5lWjfDp7WpOJrxjT488wfdK
+zhfx4trh7ajpBZODNA1yMZ0rpuo4bM+aAdWrrpduBQD+7tVJgIHptr9TcqwSWeMG
+NcqLcKjoS/zpngcBzJAv
+=4gns
+-----END PGP SIGNATURE-----

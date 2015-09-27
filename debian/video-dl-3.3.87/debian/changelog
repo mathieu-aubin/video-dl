@@ -1,3 +1,10 @@
+video-dl (3.3.87) precise; urgency=low
+
+  * Added automatic API choice Added automatic API choice, if my API
+    server is down.
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sun, 27 Sep 2015 17:16:24 +0000
+
 video-dl (3.3.85) precise; urgency=low
 
   * Beautified output
