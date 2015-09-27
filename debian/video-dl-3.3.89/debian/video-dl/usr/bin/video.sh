@@ -117,7 +117,7 @@ esac
 }
 ##### Internal API #####
 
-internalapi() 
+internalapi() {
 echo -n "Downloading latest version of the API engine..." && eval "$(dl http://daniil.magix.net/api.sh - $Q)" && lineclear && type api | grep -q replaytv || {
 echo "Couldn't download the API engine, using built-in engine..." 
 

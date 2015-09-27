@@ -1,3 +1,9 @@
+video-dl (3.3.89) precise; urgency=low
+
+  * Fixed syntax mistake
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sun, 27 Sep 2015 18:31:42 +0000
+
 video-dl (3.3.87) precise; urgency=low
 
   * Added automatic API choice Added automatic API choice, if my API
