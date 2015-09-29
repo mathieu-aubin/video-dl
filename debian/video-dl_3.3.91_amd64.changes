@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 29 Sep 2015 18:17:15 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.91
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.91) precise; urgency=low
+ .
+   * Fixed another syntax mistake
+Checksums-Sha1: 
+ c42144bbeee8e85080b2f2e80e7a6676ee4df7e3 1443 video-dl_3.3.91.dsc
+ def784f97e3a1c51e3379a91cb8d8e7d10403d34 13225 video-dl_3.3.91.tar.gz
+ 57411f7fac6f1a98faa3f197b3ffd58543a81f47 15714 video-dl_3.3.91_all.deb
+Checksums-Sha256: 
+ 9555ca379fced7eb7b6e6c898be4974a52f2d4f755b969440ffc8bd9f3c4d57c 1443 video-dl_3.3.91.dsc
+ ed06852d47c6ce239ad4328508c379d7892fa42c89906ea1c79a683d36f6e46d 13225 video-dl_3.3.91.tar.gz
+ 23232a8ce2531c1177a499c9f70fd929df17338cb18629620ac48558d3cebd82 15714 video-dl_3.3.91_all.deb
+Files: 
+ b185dd11ea241552116ba1857f9a31f8 1443 misc optional video-dl_3.3.91.dsc
+ 7f2315a90f44b9e1c2438aed849af3ae 13225 misc optional video-dl_3.3.91.tar.gz
+ a8b0a2578382d245c9f1be6ae4bb1992 15714 misc optional video-dl_3.3.91_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWCtWvAAoJEHK5f9HZZyyTxr0P/01OewxWNlWUQqngb95s7jIu
+NruIixVs6FeNwT9mQCVXopihleZIHGfM88XgPaYMv/01BZ9xkPGeuvunmaY+qH4o
+qKvr5e80yJBrT8BP8vVjcFyS4C26uf8bN8k0MAMgaJ3yNVFqiuZMzAQePmiFJ44g
+RGFs5AnPQp1ijKPPQo15gTr/ogsBfTyUQwhIjMHhA0VJPA+2de0Hp2WbyU+azlBJ
+JpK0JoGJMKmmIaEX6Fq/lVB9jT8xle2aOt7Or2xIkQtYq8PyIVIvMDC8CEs5A8IJ
+VCDb9C9AWLerh3TyYndVkyCKhw9/ysy4QMka9ufXnsEekYdWgs2f/lUzfPCZkis8
+pS1xrqEa4O5M8o9gtdH9CjcYXsrAX7KEmkcNAi7mOhUrOCl7ogWOhOOo8wH/nyzZ
+joJYDNjis5PaAuRVXNYHskEQpU6ShVw9MsT1+O7c+zccrbR7LTS0PndRCFsgfgdT
+wLjpnvjf2PunY2l9Gfe78kobJMzOUXFF6FBhm5xy353P3INWPGBOXS0M28WVJzRt
+Z1Ll0DPiipjjg9nkRraSJkDtL5hF4VW4xZsv+2KcApqnNhFSUEKjsWCyW+4tff6v
+ds+/NKqodN6j4fJKCIFDi3Ub4GbMfEV7VUM/gLMBZp41Yni5n+4hEFSeEJOi69jA
+KQhLTsA2LlXNcmzlJjjY
+=g2Q4
+-----END PGP SIGNATURE-----
