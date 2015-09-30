@@ -163,7 +163,7 @@ getsize() {
 
 info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(timeout -skill 10s wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
 sed 's/\
-//g;s/^, //g;s/, B,//g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
+//g;s/^, //g;s/, B,/, Unkown size,/g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
 
 }
 

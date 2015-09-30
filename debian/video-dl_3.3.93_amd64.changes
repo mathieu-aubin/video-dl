@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 30 Sep 2015 07:45:53 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.93
+Distribution: precise
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.93) precise; urgency=low
+ .
+   * Database, API and web version sync
+Checksums-Sha1: 
+ da253dea3296868d5da8d38afecd23cd887e5415 1443 video-dl_3.3.93.dsc
+ 1482bae83c7fa39d0a262dd78a7a6d857c11cb83 13295 video-dl_3.3.93.tar.gz
+ c6f86a87bdc1343ececaa38d8e95f06ab5b9abea 15738 video-dl_3.3.93_all.deb
+Checksums-Sha256: 
+ ec74f9bf5bf13cda8cff3fe96ab14964e91728256e7e86465bcd4dea97a43215 1443 video-dl_3.3.93.dsc
+ 67b283c679b152282331293d0849aa3b691c8a821b1d85c73b4297e7c7539dc5 13295 video-dl_3.3.93.tar.gz
+ 9192ab61f272ed45392433719d6486e7ff31fc507f8a85d9b516436ea45f4daf 15738 video-dl_3.3.93_all.deb
+Files: 
+ 56d13d3cfc7dc81db0e479eca331027b 1443 misc optional video-dl_3.3.93.dsc
+ 6f8e02e8c4808c1f025a5658d85c81b8 13295 misc optional video-dl_3.3.93.tar.gz
+ bfada0a539259968e479aa4f6ed5c6a3 15738 misc optional video-dl_3.3.93_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWC5M0AAoJEHK5f9HZZyyTOZUP/RwvYrz+q8kEgVvPQ2ZViBSd
+PliG5I0Opmc+m7TVK2PZ2p2GTi+9fF3MydxmTEU0nnAqB6TK+nUM1MC55Jru/AfM
+oig9BtlveAddLAm7iycbK9Zp1/CQ1qmW1tszL5Mr/fSdaAdfczNS78yHhtC1z6qJ
+kgSOXqx3g04/8kiCgyOrYYwUohnB6M2fcGD+UIiEnEtMhQpQIMPgHRNiitJ3lei2
+nb2lOvhHo33PfIXvWJdsrWdDiVIK0neVwWc9RGaFjZsOwyVVN554N6eZaVknDVgR
+QBSA3DDQfg1wBYRe0wwsgEQn4oMBiI6vI2VORk7lihQ+iADOLlrAGXCt2iFIXPNr
+LKSWFn7kdVvoBIFyAokYecGiRqnMtkCTyTeTNQP7cSIreo6a/MT76T9D02/dpuX9
+m4bLckWxaj98wxcVMAsE048/p1pY31ulieVt/b0ejkNCPXsuQFpYLSHEj3q2sEkF
+UKTlFMd5ehz+rxJYthCFPmbcUyHPB7Ce9fkU2GgLNzFTwVyKUizUv0WKyNUkbJxU
+l/OzL9YhQb06Q6lfisJIH4A+EVyh2bsisW4vS7V2H4+ByLzZaqVxfjLP0AzHCGv6
+nNnhfHLZP4sKnmYeLTbWdAyBCLPi4iJxOVecQXEBsV2vE+Gy63lpdWFRqM0pUqkK
+TVbHKs1I9083qrpyi/3D
+=jqV6
+-----END PGP SIGNATURE-----
