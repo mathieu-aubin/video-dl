@@ -56,8 +56,8 @@ if(isset($_GET['url'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
+    <meta name="author" content="Daniil Gentili">
 
     <title>Download Videos!</title>
 
@@ -77,25 +77,25 @@ if(isset($_GET['url'])) {
     <!-- End Cookie Consent plugin -->
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=ngg3edNEPX">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=ngg3edNEPX">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=ngg3edNEPX" sizes="32x32">
-    <link rel="icon" type="image/png" href="/android-chrome-192x192.png?v=ngg3edNEPX" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png?v=ngg3edNEPX" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=ngg3edNEPX" sizes="16x16">
-    <link rel="manifest" href="/manifest.json?v=ngg3edNEPX">
-    <link rel="shortcut icon" href="/favicon.ico?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png?v=ngg3edNEPX">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png?v=ngg3edNEPX">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=ngg3edNEPX" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png?v=ngg3edNEPX" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png?v=ngg3edNEPX" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png?v=ngg3edNEPX" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json?v=ngg3edNEPX">
+    <link rel="shortcut icon" href="/favicons/favicon.ico?v=ngg3edNEPX">
     <meta name="apple-mobile-web-app-title" content="Download videos">
     <meta name="application-name" content="Download videos">
     <meta name="msapplication-TileColor" content="#9f00a7">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=ngg3edNEPX">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png?v=ngg3edNEPX">
     <meta name="theme-color" content="#ff66ff">
 
     <!-- Scripts -->
