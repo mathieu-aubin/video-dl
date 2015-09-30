@@ -94,7 +94,7 @@ rm *md
 cp $video/video.sh video-dl/
 echo "debian/video-dl.1
 debian/video-dl-it.1" > debian/video-dl.manpages
-dch -v $version $desc 
+dch -v $version -D lenny $desc 
 $builddeb
 cd $temp
 git clone https://${GH_TOKEN}@github.com/danog/repo.git
