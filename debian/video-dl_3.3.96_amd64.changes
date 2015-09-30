@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 30 Sep 2015 18:12:10 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.96
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.96) lenny; urgency=low
+ .
+   * Force dist (trigger)
+Checksums-Sha1: 
+ dedd5dbaecd5143d0ee90425a664814230878fd9 1443 video-dl_3.3.96.dsc
+ 38fd702987965bec4ded377ec832f0144738e6fe 12794 video-dl_3.3.96.tar.gz
+ 0999b9c8427376d11a38f3de1e86c9d217d7d811 15142 video-dl_3.3.96_all.deb
+Checksums-Sha256: 
+ 152bd030df028ec601e6aba50deec6174c4ac68a6d9192fff5bd79eb40c70041 1443 video-dl_3.3.96.dsc
+ 6f16cb16edb29cca421aea718a24e770eaa1ee4bfb780518d3731cebd511835b 12794 video-dl_3.3.96.tar.gz
+ 01efc043d20bc0981cb2253ed94700e4556e94b08cd6fa0f7826ae110fe49357 15142 video-dl_3.3.96_all.deb
+Files: 
+ 92ce44f277b23dacfd76f48c0286c992 1443 misc optional video-dl_3.3.96.dsc
+ 7478ae0b68603d61c0d436afe7a8cc79 12794 misc optional video-dl_3.3.96.tar.gz
+ fc95f84ab33540d3051398b681a95734 15142 misc optional video-dl_3.3.96_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWDCX+AAoJEHK5f9HZZyyTWZ4P/iMi24M+iyVi4tdM7uuXNpfi
+DnsLK0PhA0sbIwFdP1BuBn7q6oCrDC/019rIC1w7WFdc3FIYm/91AXzRQt4w/dMc
+AwHvLqDWS5Pn5XwvucpS79gwrhRPTNvQYoPjUuccZEaeZRX06MVtC23H6F+CgaER
+3lu8yuyev/zH/vVRAkcn0fARxcb/p4srZn6nxGX38AxlyAEhaerv9HbRFFaPw1lN
+ye00/0+aZXJvtAdxStNj0a0+mSSxIlXp6Grj07rzdXFoBoHbFJ2pu6zXqLppuUsN
+SVMTrEXCXvETIKZ+Uy4CqYZdyEm4F8pfrLShJdCPe/wUXXC5YgXyMCtgxqEYd7PX
+ooPXhJ15c/J5lKZkQkAN5XDxE8nfh/NTg0G5J/v2HXF9bjCsN5tCKVeE5pTflFRX
+tZpYwe653GJ7qvo2tsSbSZIKRJ7G8CMZNySomQTPmT0LpJPG3onX2NI1uKg0n1vh
+/luIZMPG9h532GzqtM8EZQoiwa0gR2ELNX1/RkB9cfA2EByHn2BtNoPN4ntETWwk
+BD83naiZw+NW47dTffEg/1OYOs6gtbbV54YfkfA2YRK/UxHhN5qTPxoNj1BrcNGM
+AgCKgWd6CQ20BYY/O4bQUjaIHZsKZ9UT0MOtY4DyZdKzNsjNlhIoO4qiAKm7rWOl
+DIaMCpuSeFMHb1ngFIXY
+=3DGX
+-----END PGP SIGNATURE-----
