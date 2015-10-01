@@ -858,3 +858,46 @@ http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-c375b097-acb1-4b9b-b
 18_Il_rapimento_di_Stella_Winx_Club_VII_del_29092015 18 - Il rapimento di Stella - Winx Club VII del 29/09/2015
 Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4508691.mp4
 endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-3e94f301-cf4b-4dda-a9d9-4745e3959764.html#p=0
+19_Larcobaleno_di_Magix_Winx_club_VII_del_30092015 19 - L'arcobaleno di Magix - Winx club VII del 30/09/2015
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4513349.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-3bf164b6-e1e6-4d2e-a890-8c8809777d46.html#p=0
+20_Baby_Winx_Winx_club_VII_del_30092015 20 - Baby Winx - Winx club VII del 30/09/2015
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4513353.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-26&ch=23&v=570650&vd=2015-09-26&vc=23
+MIA_AND_ME_II_EP_15 MIA AND ME (II) - EP. 15
+Maximum quality (mp4, Unkown size, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_1800.mp4
+Medium-low quality (mp4, Unkown size, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-26&ch=23&v=570650&vd=2015-09-26&vc=23
+MIA_AND_ME_II_EP_15 MIA AND ME (II) - EP. 15
+Maximum quality (mp4, 318MB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_1800.mp4
+Medium-low quality (mp4, Unkown size, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-26&ch=23&v=570650&vd=2015-09-26&vc=23
+MIA_AND_ME_II_EP_15 MIA AND ME (II) - EP. 15
+Maximum quality (mp4, Unkown size, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_1800.mp4
+Medium-low quality (mp4, Unkown size, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-26&ch=23&v=570650&vd=2015-09-26&vc=23
+MIA_AND_ME_II_EP_15 MIA AND ME (II) - EP. 15
+Maximum quality (mp4, Unkown size, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_1800.mp4
+Medium-low quality (mp4, Unkown size, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-26&ch=23&v=570650&vd=2015-09-26&vc=23
+MIA_AND_ME_II_EP_15 MIA AND ME (II) - EP. 15
+Maximum quality (mp4, Unkown size, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_1800.mp4
+Medium-low quality (mp4, Unkown size, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-09-26&ch=23&v=570650&vd=2015-09-26&vc=23
+MIA_AND_ME_II_EP_15 MIA AND ME (II) - EP. 15
+Maximum quality (mp4, Unkown size, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_1800.mp4
+Medium-low quality (mp4, Unkown size, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/gulp_world/notte_world/4504181_800.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/giovedi-1-ottobre_563170.html
+Il_segreto_PUNTATE_INTERE_Giovedi_1_ottobre_Video_Mediaset Il segreto - PUNTATE INTERE Giovedi' 1 ottobre | Video Mediaset
+Medium-high quality (mp4, 253MB, 1024x576) http://vod.msf.ticdn.it/mp4/2015/10/15023ebf46889c-10_0.mp4
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/10/15023ebf46889c-08.ism/manifest
+endofdbentry

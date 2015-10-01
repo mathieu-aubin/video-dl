@@ -560,9 +560,9 @@ error() {
 videoTitolo=$(basename $dl)
 a=$dl
 getsize
-formats="$(echo "$info" | sed 's/[(]//;s/[)]//') $dl"
+formats="$info $dl"
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
-$formats"
+video $formats"
 exit
 }
 
