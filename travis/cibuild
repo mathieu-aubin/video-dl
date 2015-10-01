@@ -39,6 +39,7 @@ version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-
 # Sync API
 cd api
 sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\.txt/d' api.sh>script_api.sh
+cat $video/travis/last_api.sh >> script_api.sh
 busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
 mv script_api.sh $video
 cd $video
