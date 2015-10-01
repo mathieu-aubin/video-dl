@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Thu, 01 Oct 2015 16:17:04 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.101
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.101) lenny; urgency=low
+ .
+   * Update cibuild
+Checksums-Sha1: 
+ dd6b375e5afb7abe88bd191e6fe7e52254b2cc10 1447 video-dl_3.3.101.dsc
+ 8d5319ecbfd3f275ba7f8c029dea9687b814edd1 13108 video-dl_3.3.101.tar.gz
+ 9c21405719fe8d742a6d6f5c6cc3da5a7de03aba 15812 video-dl_3.3.101_all.deb
+Checksums-Sha256: 
+ ea059639c88ce5c28f91e3c1d4405e5890322f9776828a2bbdb2ea029171a32a 1447 video-dl_3.3.101.dsc
+ 0ed8e8797de0944c3c97a8df268acdf5763862dba814df580d2d59b7666dfb7b 13108 video-dl_3.3.101.tar.gz
+ 299df8686679888f9c31fbf5c9797aea933dba36d588f25fadc04052d8a098d1 15812 video-dl_3.3.101_all.deb
+Files: 
+ fa0248694b43a76cc07b75c688fad958 1447 misc optional video-dl_3.3.101.dsc
+ 6d583b5813cd2443a960522b7004dbc1 13108 misc optional video-dl_3.3.101.tar.gz
+ af0d4340541d50e4f7274015b9f018f4 15812 misc optional video-dl_3.3.101_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWDVyEAAoJEHK5f9HZZyyTqu8P/2Lv0iPbH+D+QEp+XSzmzQz1
+g21uCisfPfAS8h0YR9vozditJtA5e6DzmXTOH1HCW4mQsfB1cFTNC6CD9Lvi2UGR
+ALw3lSVoYKJNkw3MscBJsUIZuhYPw0Nx2Zj8G/haRqhltSwGsX+UOZjgVTsdsy92
+g5NnKBPyEOcpNgyiQMJo0SwxSnMfpV/lGTw98NVAIoTXqA3zalqCUOMb8KvIlshO
+Y6rvz9OulDtvaBmiYRh4xtAoBzIEEJNqKY1Q/b0tqiLPEq9zFqp/WtYxYdRJS+Vo
+NweFD9zVKt1JLLfFZM2CUa2HbN9muIc7oIdOsTrF3h+i1oP1/jvk8lTtqKqpHUbQ
+Te125evVSi8dZRFZdUxarBYlotrCCoz62HvbS36fe1QPNm1PC7VevQFy2A2BlBjS
+ovNuDhCsiJawvKpHW7WCdphhzyurW7bxT1vCpm+rau0yfXJHOrTFUhtNdjAtR+ig
+m8szPvg6xYFfHV1DSANtuF0g6HgH1shJJydX64YyjL5AQXJ0eeQ+2qr1nEDxTSKH
+uCmYo/ZFsGrTxgRCgCwuBoh1yVZBfEvVudSvs/kC6MrJRe4mO1zUruBQBQNb/jOM
+5OTa3tCzEwACTom7vcq39CWwUADUsYv4DxXigxVis8gVgX6h83dyVqN9RI/HSZUG
+8uaiN5uiOiOZcqpA4rUI
+=eMxd
+-----END PGP SIGNATURE-----
