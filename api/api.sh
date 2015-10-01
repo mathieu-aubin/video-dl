@@ -187,7 +187,7 @@ formats="$(
 
 )"
 
-formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2-)"
+formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2- | sed '/^\s*$/d')"
 [ "$formats" = "" ] && exit
 echo "$userinput
 $title $videoTitolo
