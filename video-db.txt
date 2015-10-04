@@ -941,3 +941,43 @@ audio only DASH audio  (m4a, Unkown size) https://r4---sn-nx5cvox-hpad.googlevid
 320x240 DASH video  (mp4, Unkown size) https://r4---sn-nx5cvox-hpad.googlevideo.com/videoplayback?id=e6c7f7c2c403ee6b&itag=133&source=youtube&requiressl=yes&mv=m&ms=au&mm=31&mn=sn-nx5cvox-hpad&pl=18&ratebypass=yes&mime=video/mp4&gir=yes&clen=1136204&lmt=1425201982530399&dur=227.033&upn=CuVIwwwifG0&mt=1443797758&sver=3&key=dg_yt0&fexp=9408136
 
 endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-9a98ca7e-1fb0-4ffa-bce0-95e8b60215c9.html#p=0
+21_Pazzo_pazzo_mondo_Winx_Club_VII_del_01102015 21 - Pazzo, pazzo mondo - Winx Club VII del 01/10/2015
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4516367.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-d6f1da9d-987e-44fd-9e37-a612110dd2dd.html#p=0
+22_Il_Regno_dei_diamanti_Winx_Club_VII_del_01102015 22 - Il Regno dei diamanti - Winx Club VII del 01/10/2015
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4516396.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-8de00920-bbba-4ca6-b56a-c02294c13e2b.html#p=0
+winxclub021020151 winxclub02102015_1
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4521565.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-005a14e3-b72c-478f-97fc-5e75341f8a8f.html#p=0
+winxclub021020152 winxclub02102015_2
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4521572.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-8d4cefdb-cae9-423b-986e-c059da02c69e.html#p=0
+WinxClubep25031015 WinxClub_ep25_031015
+Normal quality (mp4, 268MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4524676.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0
+WinxClubep26031015 WinxClub_ep26_031015
+Normal quality (mp4, 267MB, 720x404) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4524680.mp4
+endofdbentry
+pechino
+ 
+
+endofdbentry
+pechino
+ 
+
+endofdbentry
+pechino
+ 
+
+endofdbentry
+pechino
+ 
+
+endofdbentry
