@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Mon, 05 Oct 2015 09:55:13 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.109
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.109) lenny; urgency=low
+ .
+   * Skip url instead of exiting script on errror (built in api)
+Checksums-Sha1: 
+ 1f70b0b11461983af681d386bfd706781e2014ca 1447 video-dl_3.3.109.dsc
+ 69c05b9da2eeaebbb5d1683642bf8074725f6b2a 13534 video-dl_3.3.109.tar.gz
+ af65e7e0a3b6ba132328b9fac5d472eb18236b83 15968 video-dl_3.3.109_all.deb
+Checksums-Sha256: 
+ a96e415e9a1ce1bde768dca61a19097513c4a4c5a8ccd23be26374dd4db4cad7 1447 video-dl_3.3.109.dsc
+ b92edc05ca73013a24aa2910ae52c89e4e41af124d69fc537edcd8d1826350b4 13534 video-dl_3.3.109.tar.gz
+ b099a6574021014b6cee5c7de59949c8ea299ca76c65cd5812e17c35fbce82d0 15968 video-dl_3.3.109_all.deb
+Files: 
+ e5398d834e0d4cb95970cb46d068ceb0 1447 misc optional video-dl_3.3.109.dsc
+ 04425e4b29f71b9e31aa0f182d315b74 13534 misc optional video-dl_3.3.109.tar.gz
+ 8c03b489701901cd78ec96dd84dc498d 15968 misc optional video-dl_3.3.109_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJWEkkFAAoJEHK5f9HZZyyTsFsP/3i31r1HLoHuz6FQwT3d3GZM
+VWfqPC8hN1ZB4FxEpBjQR2d0MwIy2EyGTD0euombthBkvFRFW2Y8fKLj8ZYnuW7I
+xPi6QZzDbHpZZJvVVGwM7sB8NWQY0wXN7VKHyd5EeVQ1v8EtH9t6irjLSVP/7+rk
+WAwOzsnZvLUoQirm+vzSA5jnhMuui5s56nEzHZvEhow22D5y8KtCJ8oLHEsP86SX
+/Vy6lPRpZXZ3XK+08pktm+//00z1MtlSR3PC6CphF+tl8W3YGjSdOaipPs5foH8p
+XQeIZhAxe4v1kS36xRkECB30FiyMxuT+SIdU1DOOuxV8GCi5PxSk6qwa/x5wmOlm
+tlRg61CUEbfyGkfYn4o+1AtncPPNON8BjS/xiVb+yTCOeirUhse4QhZHgArcFrpT
+ehHSWi3h3ongRQhDxdbviTUik9nyQJWdgb6iGVoeciBfmyHao1JG+Rz/xF0PbLAK
+chNOX/zEps4c4nbataMPHp+2VvwQBPJ8IZCZMYdDc+2wofZIFKYNvvSXqV6XcMvi
+ch9SQATRTqTcuJSD4UEvDQxqzHheOaUJmQ9c151R4HP8B5Lyhslm3pjatq7FEUf4
+IQO0ZLBdEh3PpoOtr380JPbIDQsRkITbyOoI+EUOOwPOoUIzg7g2D2+IZIHylq/m
+mGplyp2IKS1XF5kytrcZ
+=gv2U
+-----END PGP SIGNATURE-----

@@ -1,3 +1,9 @@
+video-dl (3.3.109) lenny; urgency=low
+
+  * Skip url instead of exiting script on errror (built in api)
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Mon, 05 Oct 2015 09:55:13 +0000
+
 video-dl (3.3.107) lenny; urgency=low
 
   * Update last_api.sh
