@@ -578,6 +578,24 @@ title=${title// /_}
 
 }
 
+
+error() {
+videoTitolo=$(basename $dl)
+a=$dl
+getsize
+formats="$info $dl"
+[ "$formats" = "" ] && exit || echo "$title $videoTitolo
+video $formats"
+continue
+}
+
+size="$(wget -S --spider $dl 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*[(]//g;s/[)].*//g')"
+echo "$size" | grep -q G && error
+[ ${size%?} -gt 20 ] && error
+
+
+
+
 ###########################################################################################
 ##################### End of Common section, beginning of database section ################
 $ptype $dl $2 $3
