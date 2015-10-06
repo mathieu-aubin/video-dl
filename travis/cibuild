@@ -119,14 +119,14 @@ layout: default
 ---
 ">it.md
 sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README-IT.md >> it.md
-cp -a * $temp
+cp -a * .* $temp
 cd $video
 gitsync master OK madebytravisci
 
 # Upload everything
 git checkout gh-pages
 rm -rf *
-cp -a $temp/* .
+cp -a $temp/{.*,*} .
 
 echo "branches:
   except:
