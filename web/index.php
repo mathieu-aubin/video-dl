@@ -155,8 +155,7 @@ if(isset($_GET['url'])) {
     <![endif]-->
 
 </head>
-
-<body id="page-top" class="index" onload="firstload();">
+<body id="page-top" class="index" onload='firstload("#supportedurls", "<li>", "</li>", "#message", "y");'>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -200,7 +199,7 @@ if(isset($_GET['url'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick="video();" alt=""></a>
+                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick='video_dl($("input#urljs").val(), "#result", "#message");' alt=""></a>
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
 
@@ -214,7 +213,7 @@ if(isset($_GET['url'])) {
                             <input type="text" name="url" class="form-control" placeholder="URL of the video" id="url" required data-validation-required-message="Please enter a URL."><button type="submit" class="btn btn-success btn-lg">Download the video!</button>
                         </form>
                         <div style="display:none" id="js">
-                            <input onchange="video();" type="text" class="form-control" placeholder="URL of the video" id="urljs" required data-validation-required-message="Please enter a URL."><button type="submit" onclick="video();" class="btn btn-success btn-lg">Download the video!</button>
+                            <input onchange='video_dl($("input#urljs").val(), "#result", "#message");' type="text" class="form-control" placeholder="URL of the video" id="urljs" required data-validation-required-message="Please enter a URL."><button type="submit" onclick='video_dl($("input#urljs").val(), "#result", "#message");' class="btn btn-success btn-lg">Download the video!</button>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div id="result"><?= $output ?></div>
@@ -246,7 +245,7 @@ if(isset($_GET['url'])) {
                 <div class="row">
                     <div class="footer-col col-md-4 giallo">
                         <h3>Source code</h3>
-                        <p><a href="https://github.com/danog/video-dl/" target="_blank">Rai, Mediaset and LA7 download engine and this website (video-dl)</a>
+                        <p><a href="https://github.com/danog/video-dl/" target="_blank">Rai, Mediaset and LA7 download engine, youtube-dl wrapper API and this website (video-dl)</a>
                             <br><a href="https://github.com/rg3/youtube-dl" target="_blank">Generic download engine (youtube-dl)</a>
                             <br><a href="https://github.com/HubSpot/pace" target="_blank">Loading animation (pace.js)</a>
                             <br><a href="https://github.com/mathiasbynens/he" target="_blank">HTML entity encoder (he.js)</a>
@@ -269,6 +268,9 @@ if(isset($_GET['url'])) {
                             <li>
                                 <a href="https://www.linkedin.com/profile/view?id=316872434&amp;trk=hp-identity-name" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
+                                <a href="https://www.paypal.me/danog/2" class="btn-social btn-outline"><i class="fa fa-fw fa-paypal"></i></a>
+                            </li>
+
                         </ul>
                     </div>
                     <div class="footer-col col-md-4 giallo">
@@ -378,18 +380,11 @@ Thanks!</textarea>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
-    <!-- Fitvids 
-    <script src="js/jquery.fitvids.js"></script> 
-    <script>
-    $(document).ready(function(){
-        $(".vids").fitVids();
-    });
-    </script> -->
     <!-- Video download -->
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
     <script src="/js/linkify.min.js?"></script>
     <script src="/js/linkify-jquery.min.js?"></script>
-    <script src="/js/video-dl.js?v=omgomgomgomgomgomgomgomg"></script>
+    <script src="/js/video-dl.js?v=omgomgomgomgomgomgomgomgomgoomgmgomgmgomgomg"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

@@ -1094,3 +1094,38 @@ Capodanno_Il_giovane_Montalbano_del_01032012 Capodanno - Il giovane Montalbano d
 Normal quality (mp4, 672MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Il_giovane_Montalbano/794638.mp4
 Normal quality (wmv, Length: 309 [video/x-ms-wvx]B) http://a1124.v560967.c56096.g.vm.akamaistream.net/7/1124/56096/v0001/rainet.download.akamai.com/56228/raiuno/Il_giovane_Montalbano/794286.wmv
 endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-10-08&ch=31&v=575332&vd=2015-10-08&vc=31#day=2015-10-08&ch=31&v=575332&vd=2015-10-08&vc=31
+365_PAOLO_FRESU_IL_TEMPO_DI_UN_VIAGGIO 365 PAOLO FRESU IL TEMPO DI UN VIAGGIO
+Medium-low quality (mp4, 639MB) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4541759_800.mp4
+Maximum quality (mp4, 1.3GB) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4541759_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-10-08&ch=31&v=575332&vd=2015-10-08&vc=31#day=2015-10-08&ch=31&v=575332&vd=2015-10-08&vc=31
+365_PAOLO_FRESU_IL_TEMPO_DI_UN_VIAGGIO 365 PAOLO FRESU IL TEMPO DI UN VIAGGIO
+Medium-low quality (mp4, 639MB) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4541759_800.mp4
+Maximum quality (mp4, Unkown size) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/sera/4541759_1800.mp4
+endofdbentry
+test
+ 
+
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-10-06&ch=1&v=574350&vd=2015-10-06&vc=1
+Capitani_coraggiosi Capitani coraggiosi
+Medium-low quality (mp4, 853MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537245_800.mp4
+Maximum quality (mp4, 34MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537075_1800.mp4
+Medium-low quality (mp4, 16MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537075_800.mp4
+Maximum quality (mp4, 1.8GB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537245_1800.mp4
+endofdbentry
+http://it.dplay.com/marijuana-america-illegale/stagione-1-linferno-del-raccolto/
+ 
+
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-10-07&ch=31&v=574898&vd=2015-10-07&vc=31#day=2015-10-07&ch=31&v=574898&vd=2015-10-07&vc=31
+LE_ALPI_VISTE_DAL_CIELO LE ALPI VISTE DAL CIELO
+Maximum quality (mp4, 712MB) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4538337_1800.mp4
+Medium-low quality (mp4, 336MB) http://creativemedia1.rai.it/Italy/podcastmhp/replaytv/rai5/pomeriggio/4538337_800.mp4
+endofdbentry
+http://www.rai.tv/dl/replaytv/replaytv.html?day=2015-10-07&ch=1&v=574777&vd=2015-10-07&vc=1
+La_prova_del_cuoco La prova del cuoco
+Maximum quality (mp4, 999MB) http://creativemedia4.rai.it/podcastcdn/raiuno/La_prova_del_cuoco/La_prova_del_cuoco_EP_Puntate/4538835_1800.mp4
+Medium-low quality (mp4, 472MB) http://creativemedia4.rai.it/podcastcdn/raiuno/La_prova_del_cuoco/La_prova_del_cuoco_EP_Puntate/4538835_800.mp4
+endofdbentry

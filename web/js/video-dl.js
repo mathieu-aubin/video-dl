@@ -1,3 +1,4 @@
+/*
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -10,53 +11,57 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+*/
 
-function error(error, url) {
+function error(output, url, error) {
+    if (!((url) && (output))) { console.log("Missing required params.");return; };
     var domain = 3;
-    console.log(error)
+    console.log(error);
+    if (!(error)) { var error = "Empty Response"; };
     $.ajax({
         url: "https://mail.daniil.it/",
         type: "POST",
         data: {
             url: url,
             error: error,
-            domain: domain,
+            domain: domain
         },
         cache: false,
         success: function() {
-            $('#result').html("<h1>An error occurred and it was reported!</h1>");
+            $(output).html("<h1>An error occurred and it was reported!</h1>");
         },
         error: function() {
             // Fail message
-            $('#result').html("<h1>An error occurred but it couldn't be reported! Please use the manual report module!</h1>");
+            $(output).html("<h1>An error occurred but it couldn't be reported! Please use the manual report module!</h1>");
         },
     })
 };
 
-function mailtext(url) {
-    // 
+function mailtext(output, url) {
+    if (!(output)) { console.log("Missing required params.");return; };
+
+    // Create mail message
     if (url) {
         mail = url;
     } else {
         mail = "insert link";
     }
-    // Create mail message
     var mailmessage = 'The video:\n' + mail + '\ndoes not work, could you please fix it?\nThanks!';
 
     // Insert mail message in page
-
-    $("#message").html(mailmessage);
+    $(output).html(mailmessage);
 };
 
 
 // Video Download function
 
+function video_dl(userinput, output, messageoutput) {
+    console.log("input is "+userinput+", output is "+output+" and messageoutput is "+messageoutput);
+    $(output).empty();
+    if (!(output)) { console.log("Missing output parameter.");return; };
 
-// Video Download function
-function video_dl(userinput) {
-    $("#result").empty();
     if (userinput) {
-        $("#result").html("<h2>Working...</h2>");
+        $(output).html("<h2>Working...</h2>");
         url = "https://api.daniil.it/?url=" + encodeURIComponent(userinput);
         // Prepare and send request
         var xmlhttp = new XMLHttpRequest();
@@ -68,12 +73,9 @@ function video_dl(userinput) {
                     // Get the titles
                     var titles = response.substr(0, response.indexOf("\n"));
                     var title = titles.substr(0, response.indexOf(" "));
-                    var videoTitolo = titles.substring(response.indexOf(" ") +
-                        1);
+                    var videoTitolo = titles.substring(response.indexOf(" ") + 1);
                     // Prepare first part of output
-                    var result =
-                        "<h1><i>Video download script.</i></h1><br><h2><i>Created by <a href=\"http://daniil.it\">Daniil Gentili</a></i></h2><br><h1>Title:</h1> <h2>" +
-                        videoTitolo + "</h2><br><h1>Available versions:</h1>";
+                    var result = "<h1><i>Video download script.</i></h1><br><h2><i>Created by <a href=\"http://daniil.it\">Daniil Gentili</a></i></h2><br><h1>Title:</h1> <h2>" +videoTitolo+ "</h2><br><h1>Available versions:</h1>";
                     // Remove the titles
                     var lines = response.split('\n');
                     lines.splice(0, 1);
@@ -85,34 +87,27 @@ function video_dl(userinput) {
                         ext = info.substring(info.indexOf('(') + 1);
                         ext = ext.substring(0, ext.indexOf(','));
                         dl = title + "." + ext;
-                        result += "<h2><a download=\"" + dl + "\" href=\"" + url + "\">" + info +
-                            "</a></h2><br>"
+                        result += "<h2><a download=\"" + dl + "\" href=\"" + url + "\">" + info +"</a></h2><br>"
                     }
                     // Output the result and the mail text
-                    $("#result").html(result);
+                    $(output).html(result);
                     
-                } else error(response, userinput);
+                } else error(output, userinput, response);
 
             }
         }
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
-        // Get response text
-        mailtext(userinput);
-    } else {
-        $("#result").html("<h1>No URL was provided!</h1>");
-    };
+        // Put error message
+        if (messageoutput) { mailtext(messageoutput, userinput); };
+    } else { $(output).html("<h1>No URL was provided!</h1>"); }
 };
 
-function video() {
-    input = $("input#urljs").val();
-    video_dl(input);
-};
-
-function firstload() {
-    mailtext();
-    $("#supportedurls").empty();
-    $("#supportedurls").html("<h2>Working...</h2>");
+function firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit) {
+    if (!((separatorstart) && (separatorend))) { var separatorstart = "<br>"; var separatorstart = separatorend; };
+    mailtext(messageoutput);
+    $(supportedurls).empty();
+    $(supportedurls).html("<h3>Working...</h3>");
     url = "https://api.daniil.it/?p=allwebsites";
     // Prepare and send request
     var xmlhttp = new XMLHttpRequest();
@@ -120,20 +115,22 @@ function firstload() {
         if (xmlhttp.readyState == 4 || xmlhttp.readyState == "complete") {
             response = xmlhttp.responseText;
             if (response) {
-                response = he.encode(response).replace(/\s/g, "</li><li>");
+                response = he.encode(response).replace(/\n/g, separatorend+separatorstart);
                 // Output the result and the mail text
-                $("#supportedurls").html("<li>"+response+"<a href=\"http://lol.daniil.it\" target=\"_blank\">&#9786;</a></li>");
-                $("#js").css("display", "block");
-                $("#php").css("display", "none");
-                $("#jsd").css("display", "block");
-                $("#phpd").css("display", "none");
-                $('#supportedurls').linkify({
+                $(supportedurls).html(separatorstart+response+"<a href=\"http://lol.daniil.it\" target=\"_blank\">&#9786;</a>"+separatorend);
+                $(supportedurls).linkify({
                     target: "_blank"
                 });
+
+                if (videodaniilit) {
+                    $("#js").css("display", "block");
+                    $("#php").css("display", "none");
+                    $("#jsd").css("display", "block");
+                    $("#phpd").css("display", "none");
+                };
             }
         }
     }
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-    // Get response text
 };
