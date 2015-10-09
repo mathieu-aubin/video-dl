@@ -1,3 +1,9 @@
+video-dl (3.3.117) lenny; urgency=low
+
+  * Database, API and web version sync
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Fri, 09 Oct 2015 14:48:43 +0000
+
 video-dl (3.3.109) lenny; urgency=low
 
   * Skip url instead of exiting script on errror (built in api)
