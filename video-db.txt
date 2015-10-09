@@ -1040,3 +1040,57 @@ fd
  
 
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-c3724730-0c29-4c5d-9741-2bd28ab27430.html#p=
+Capitani_coraggiosi_del_06102015 Capitani coraggiosi del 06/10/2015
+Medium-low quality (mp4, 853MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537245_800.mp4
+Maximum quality (mp4, 1.8GB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537245_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-c3724730-0c29-4c5d-9741-2bd28ab27430.html#p=
+Capitani_coraggiosi_del_06102015 Capitani coraggiosi del 06/10/2015
+Medium-low quality (mp4, 853MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537245_800.mp4
+Maximum quality (mp4, 1.8GB) http://creativemedia4.rai.it/podcastcdn/raiuno/Capitani_Coraggiosi/Capitani_Coraggiosi_EP_Puntate/4537245_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e16750ab-fe6d-4997-a499-8b4f2093cec2.html
+Capodanno_Il_giovane_Montalbano_del_01032012 Capodanno - Il giovane Montalbano del 01/03/2012
+Normal quality (mp4, 672MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Il_giovane_Montalbano/794638.mp4
+Normal quality (wmv, Length: 309 [video/x-ms-wvx]B) http://a1124.v560967.c56096.g.vm.akamaistream.net/7/1124/56096/v0001/rainet.download.akamai.com/56228/raiuno/Il_giovane_Montalbano/794286.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e16750ab-fe6d-4997-a499-8b4f2093cec2.html
+Capodanno_Il_giovane_Montalbano_del_01032012 Capodanno - Il giovane Montalbano del 01/03/2012
+Normal quality (mp4, 672MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Il_giovane_Montalbano/794638.mp4
+Normal quality (mp4, 672MB) http://creativemedia3.rai.it/podcastcdn/raiuno/Il_giovane_Montalbano/794638.mp4
+Normal quality (wmv, Length: 309 [video/x-ms-wvx]B) http://a1124.v560967.c56096.g.vm.akamaistream.net/7/1124/56096/v0001/rainet.download.akamai.com/56228/raiuno/Il_giovane_Montalbano/794286.wmv
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-c07e6f23-97f6-424b-bc0a-a8b4afc1a832.html#p=
+Violenta_aggressione_a_un_giornalista_di_Report Violenta aggressione a un giornalista di Report
+Normal quality (mp4, 5.1MB) http://creativemedia4.rai.it/podcastcdn/raitre/report/4540137.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-cb45ecba-a1d8-465e-9a93-a088cc458048.html
+Winx_Club_VI_Ep12_I_Figli_della_Notte Winx Club VI - Ep.12: I Figli della Notte
+Maximum quality (mp4, 297MB) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_1800.mp4
+Maximum quality (mp4, 297MB) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_1800.mp4
+Medium-low quality (mp4, 136MB) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_800.mp4
+Medium-low quality (mp4, 136MB) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2388250_800.mp4
+endofdbentry
+http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-005a14e3-b72c-478f-97fc-5e75341f8a8f.html
+24_La_farfalla_dorata_Winx_Club_del_02102015 24 - La farfalla dorata - Winx Club del 02/10/2015
+Normal quality (mp4, 268MB) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4521572.mp4
+endofdbentry
+http://www.video.mediaset.it/video/il_segreto/full/giovedi-8-ottobre_564858.html
+Il_segreto_PUNTATE_INTERE_Gioved_8_ottobre_Mediaset_On_Demand Il segreto - PUNTATE INTERE Giovedì 8 ottobre | Mediaset On Demand
+Medium-high quality (mp4, 220MB) http://vod.msf.ticdn.it/mp4/2015/10/15048027a11965-10_0.mp4
+High quality (smooth streaming) http://smv.video.mediaset.net/smooth/asset03/2015/10/15048027a11965-08.ism/manifest
+endofdbentry
+xnxx
+ 
+
+endofdbentry
+y
+ 
+
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-e16750ab-fe6d-4997-a499-8b4f2093cec2.html#p=
+Capodanno_Il_giovane_Montalbano_del_01032012 Capodanno - Il giovane Montalbano del 01/03/2012
+Normal quality (mp4, 672MB) http://creativemedia4.rai.it/podcastcdn/raiuno/Il_giovane_Montalbano/794638.mp4
+Normal quality (wmv, Length: 309 [video/x-ms-wvx]B) http://a1124.v560967.c56096.g.vm.akamaistream.net/7/1124/56096/v0001/rainet.download.akamai.com/56228/raiuno/Il_giovane_Montalbano/794286.wmv
+endofdbentry
