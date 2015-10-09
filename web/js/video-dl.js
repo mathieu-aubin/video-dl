@@ -55,7 +55,7 @@ function mailtext(output, url) {
 
 // Video Download function
 
-function video_dl(userinput, output, messageoutput) {
+function video_dl(userinput, output, asupport, messageoutput) {
     console.log("input is "+userinput+", output is "+output+" and messageoutput is "+messageoutput);
     $(output).empty();
     if (!(output)) { console.log("Missing output parameter.");return; };
@@ -84,10 +84,12 @@ function video_dl(userinput, output, messageoutput) {
                         info = lines[i].substring(0, last);
                         splitr = lines[i].split(" ");
                         url = splitr[splitr.length - 1];
-                        ext = info.substring(info.indexOf('(') + 1);
-                        ext = ext.substring(0, ext.indexOf(','));
-                        dl = title + "." + ext;
-                        result += "<h2><a download=\"" + dl + "\" href=\"" + url + "\">" + info +"</a></h2><br>"
+                        if(asupport == "0") {
+                            ext = info.substring(info.indexOf('(') + 1);
+                            ext = ext.substring(0, ext.indexOf(','));
+                            dl = " download=\"" + title + "." + ext + "\"" ;
+                        } else { var download = ""; };
+                        result += "<h2><a"+ download + " href=\"" + url + "\">" + info + "</a></h2><br>"
                     }
                     // Output the result and the mail text
                     $(output).html(result);

@@ -2,7 +2,8 @@
 ini_set("log_errors", 1);
 ini_set("error_log", "/tmp/php-errorv.log");
 error_log( "Hello, errors video!" );
-
+$uacheck = preg_match_all("/Version\/[0-9]\.[0-9]\sChrome\S*\sMobile|;\swv|\sAppleWebKit\/[0-9]*\.[0-9]*\s[(]KHTML,\slike\sGecko[)]\sVersion\/[0-9]\.[0-9]\s/", $_SERVER['HTTP_USER_AGENT']);
+error_log($uacheck);
 
 if(isset($_GET['url'])) {
     if($_GET['url'] == "") {
@@ -17,10 +18,8 @@ if(isset($_GET['url'])) {
             $titles = strtok($response, "\n");
             $title = preg_replace('/ .*$/', '', $titles);
             $videoTitolo = preg_replace('/(?:^)(\w+)\s/', '', $titles); 
-            error_log(" title is $title. and videot is $videoTitolo and titles are $titles");
+            error_log("title is $title. and videot is $videoTitolo and titles are $titles");
             $arrfinal = explode("\n", $formats);
-            $uacheck = preg_match_all("/Version\/[0-9]\.[0-9]\sChrome\S*\sMobile|;\swv|\sAppleWebKit\/[0-9]*\.[0-9]*\s[(]KHTML,\slike\sGecko[)]\sVersion\/[0-9]\.[0-9]\s/", $_SERVER['HTTP_USER_AGENT']);
-            error_log($uacheck);
             foreach ($arrfinal as $key => $value) {
                 $finalarrspace = explode(' ', trim($arrfinal[$key]));
                 $url = htmlentities(array_pop($finalarrspace));
@@ -195,11 +194,12 @@ if(isset($_GET['url'])) {
     </nav>
 
     <!-- Header -->
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick='video_dl($("input#urljs").val(), "#result", "#message");' alt=""></a>
+                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick='video_dl($("input#urljs").val(), "#result", "<?= $uacheck ?>", "#message");' alt=""></a>
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
 
@@ -213,7 +213,8 @@ if(isset($_GET['url'])) {
                             <input type="text" name="url" class="form-control" placeholder="URL of the video" id="url" required data-validation-required-message="Please enter a URL."><button type="submit" class="btn btn-success btn-lg">Download the video!</button>
                         </form>
                         <div style="display:none" id="js">
-                            <input onchange='video_dl($("input#urljs").val(), "#result", "#message");' type="text" class="form-control" placeholder="URL of the video" id="urljs" required data-validation-required-message="Please enter a URL."><button type="submit" onclick='video_dl($("input#urljs").val(), "#result", "#message");' class="btn btn-success btn-lg">Download the video!</button>
+                            <input onchange='video_dl($("input#urljs").val(), "#result", "<?= $uacheck ?>", "#message");' type="text" class="form-control" placeholder="URL of the video" id="urljs" required data-validation-required-message="Please enter a URL.">
+                            <button onclick='video_dl($("input#urljs").val(), "#result", "<?= $uacheck ?>", "#message");' type="submit" class="btn btn-success btn-lg">Download the video!</button>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div id="result"><?= $output ?></div>
@@ -384,7 +385,7 @@ Thanks!</textarea>
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
     <script src="/js/linkify.min.js?"></script>
     <script src="/js/linkify-jquery.min.js?"></script>
-    <script src="/js/video-dl.js?v=omgomgomgomgomgomgomgomgomgoomgmgomgmgomgomg"></script>
+    <script src="/js/video-dl.js?v=lolomgr"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
