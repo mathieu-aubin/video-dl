@@ -162,7 +162,7 @@ eval $*
 
 getsize() {
 
-info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(timeout -skill 10s wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mplayer -vo null -ao null -identify -frames 0 $a 2>/dev/null | grep kbps | awk '{print $3}')" |
+info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(timeout -skill 10s wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mediainfo $a 2>/dev/null | sed '/Width\|Height/!d;s/.*:\s//g;s/\spixels//g;s/\s//g;/^\s*$/d' | tr -s "\n" x | sed 's/x$//g')" |
 sed 's/\
 //g;s/^, //g;s/, B,/, Unkown size,/g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
 
