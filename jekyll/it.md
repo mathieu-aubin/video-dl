@@ -26,7 +26,7 @@ Sia la [API](#api) sia la [versione web](#versione-web) usano un [database](http
 ## Versione Web
 Questo progetto include una [versione web](http://video.daniil.it/).
 
-![Alt text](http://daniilgentili.magix.net/rai.png?v=2)
+![web version](https://github.com/danog/video-dl/raw/master/web.png)
 
 Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/web).
 
