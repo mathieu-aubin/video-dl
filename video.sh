@@ -127,8 +127,7 @@ api() {
 ####### Beginning of URL recognition section #######
 ####################################################
 
-dl="$(echo $1 | grep -q '^//' && echo http:$1 || echo $1)"
-#dl="$(echo "$dl" | sed 's/#.*//;s/https:\/\//http:\/\//g')"
+dl="$(echo "$1" | grep -q '^//' && echo "http:$1" || echo "$1")"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null | sed 's/^HTTP:\/\//http:\/\//g')"
 
@@ -144,9 +143,6 @@ echo "$urltype" | grep -q 'http://.*wittytv.it/.*' && ptype=mediaset && witty=y
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*' && ptype=lasette
 
 dl="$urltype"
-#echo "$urltype" | grep -q 'http.*://.*vk.com/.*' && ptype=vk
-
-#echo "$urltype" | grep -q 'http.*://.*mail.ru/.*' && ptype=mail
 
 
 ##############################################################################
@@ -156,16 +152,16 @@ dl="$urltype"
 # Declare javascript variable
 
 var() {
-eval $*
+eval $(echo "$*" | sed 's/var//g;s/\s=\s/=/g')
 }
 # Get video information
 
 getsize() {
-
-info="($(echo "$(echo $a | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(timeout -skill 10s wget -S --spider $a 2>&1 | grep -E '^Length|^Lunghezza' | sed 's/.*(//;s/).*//')B, $(mediainfo $a 2>/dev/null | sed '/Width\|Height/!d;s/.*:\s//g;s/\spixels//g;s/\s//g;/^\s*$/d' | tr -s "\n" x | sed 's/x$//g')" |
+minfo="$(mediainfo "$a")"
+info="($(echo "$(echo "$a" | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(echo "$minfo" | sed '/File size/!d;s/.*:\s//g'), $(echo "$minfo" | sed '/Width\|Height/!d;s/.*:\s//g;s/\spixels//g;s/\s//g;/^\s*$/d' | tr -s "\n" x | sed 's/x$//g')" |
 sed 's/\
 //g;s/^, //g;s/, B,/, Unkown size,/g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
-
+minfo=
 }
 
 
@@ -194,19 +190,19 @@ formatoutput() {
 case $ptype in
   rai)
     {
-four="$(echo "$unformatted" | grep .*_400.mp4)"
-six="$(echo "$unformatted" | grep .*_600.mp4)"
-eight="$(echo "$unformatted" | grep .*_800.mp4)"
-twelve="$(echo "$unformatted" | grep .*_1200.mp4)"
-fifteen="$(echo "$unformatted" | grep .*_1500.mp4)"
-eighteen="$(echo "$unformatted" | grep .*_1800.mp4)"
-normal="$(echo "$unformatted" | grep -v .*_400.mp4 | grep -v .*_600.mp4 | grep -v .*_800.mp4 | grep -v .*_1200.mp4 | grep -v .*_1500.mp4 | grep -v .*_1800.mp4)"
+four="$(echo "$unformatted" | grep '.*_400.mp4')"
+six="$(echo "$unformatted" | grep '.*_600.mp4')"
+eight="$(echo "$unformatted" | grep '.*_800.mp4')"
+twelve="$(echo "$unformatted" | grep '.*_1200.mp4')"
+fifteen="$(echo "$unformatted" | grep '.*_1500.mp4')"
+eighteen="$(echo "$unformatted" | grep '.*_1800.mp4')"
+normal="$(echo "$unformatted" | sed '/.*_400\.mp4/d;/.*_600\.mp4/d;/.*_800\.mp4/d;/.*_1200\.mp4/d;/.*_1500\.mp4/d;/.*_1800\.mp4/d')"
     }
     ;;
   mediaset)
     {
 mp4="$(echo "$unformatted" | grep ".mp4")"
-smooth="$(echo "$unformatted" | grep -v "pl)" | grep "est")"
+smooth="$(echo "$unformatted" | sed '/pl[)]/d;/est/!d')"
 apple="$(echo "$unformatted" | grep "pl)")"
 wmv="$(echo "$unformatted" | grep ".wmv")"
 flv="$(echo "$unformatted" | grep ".flv")"
@@ -214,7 +210,7 @@ f4v="$(echo "$unformatted" | grep ".f4v")"
     }
     ;;
   lasette)
-    lamp4="$(echo "$unformatted" | grep -v master | grep -v manifest | grep ".mp4")"
+    lamp4="$(echo "$unformatted" | sed '/master/d;/manifest/d;/\.mp4/!d')"
     ;;
   common)
     common="$unformatted"
@@ -297,6 +293,12 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2- | sed '/^\s*$/d')"
+videoTitolo=${videoTitolo%.*}
+videoTitolo=$(echo "$videoTitolo" | tr -d '\015')
+title="${videoTitolo//[^a-zA-Z0-9 ]/}"
+title=$(echo $title | sed 's/^\s*//g;s/\s*$//g')
+title=${title// /_}
+
 [ "$formats" = "" ] && continue
 
 
@@ -311,12 +313,9 @@ rai_normal() {
 # iframe check
 echo "$file" | grep -q videoURL || { eval $(echo "$file" | grep 'content="ContentItem' | cut -d" " -f2) && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
 
-# read and declare videoURL variables from javascript in page
+# read and declare videoURL and videoTitolo variables from javascript in page
 
-eval "$(echo "$file" | grep videoURL | sed "s/var//g" | tr -d '[[:space:]]')"
-
-# read and declare title variable from javascript in page
-$(echo "$file" | grep videoTitolo)
+$(echo "$file" | grep 'videoTitolo\|videoURL')
 }
 
 # Rai replay function
@@ -361,10 +360,10 @@ json="$(echo $tmpjson | sed 's/'$v'.*//g;s/.*[{]//g;s/\,/\
 /g')"
 
 # Get the relinkers
-replay=$(echo "$json" | grep mediapolis | sed 's/.*\"://g;s/\"//g;s/^ *//g')
+replay=$(echo "$json" | sed '/mediapolis/!d;s/.*\"://g;s/\"//g;s/^ *//g')
 
 # Get the title
-videoTitolo=$(echo "$json" | grep '"t":' | sed 's/.*\"://;s/\"//g;s/^ *//g')
+videoTitolo=$(echo "$json" | sed '/\"t\":/!d;s/.*\"://;s/\"//g;s/^ *//g')
 
 
 }
@@ -380,18 +379,16 @@ function relinker_rai() {
 
 for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=split("",a); print "" }'); do
  
- dl=$(echo $f | grep -q '^//' && echo http:$f || echo $f)
+ dl=$(echo "$f" | grep -q '^//' && echo "http:$f" || echo "$f")
 
  # 1st method
 
  url="$(timeout -skill 5s wget -qO- "$dl&output=25")
 $(wget "$dl&output=43" -U="" -q -O -)"
  
- [ "$url" != "" ] && tempbase=$(echo "$url" | sed 's/[>]/\
+ [ "$url" != "" ] && base="$(echo "$url" | sed 's/[>]/\
 /g;s/[<]/\
-/g' | grep '.*\.mp4\|.*\.wmv\|.*\.mov')
- 
- base="$(echo "$tempbase"  | sed 's/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
+/g' | sed '/\.mp4\|\.wmv\|\.mov/!d;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
 
 
  # 2nd method
@@ -404,7 +401,7 @@ base="$(eval echo "$(for f in $(echo "$tempbase" | grep ","); do number="$(echo 
  # 3rd and 4th method
  [ "$base" = "" ] && {
 url="$(wget "$dl&output=4" -q -O -)"
-[ "$url" != "" ] && echo "$url" | grep -q creativemedia && base="$url" || base=$(curl -w "%{url_effective}\n" -L -s -I -S $dl -A "" -o /dev/null); checkurl
+[ "$url" != "" ] && echo "$url" | grep -q creativemedia && base="$url" || base=$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -A "" -o /dev/null); checkurl
  }
 
 
@@ -446,12 +443,9 @@ saferai="$1"
 file=$(wget "$saferai" -q -O -)
 
 # Rai replay or normal rai website choice
-echo "$1" | grep -q http://www.*.rai..*/dl/replaytv/replaytv.html.* && replay "$saferai" || rai_normal "$saferai"
+echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
 
 videoTitolo="$(echo -en "$videoTitolo")"
-title="${videoTitolo//[^a-zA-Z0-9 ]/}"
-title=`echo $title | tr -s " "`
-title=${title// /_}
 
 # Resolve relinkers
 relinker_rai $videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay
@@ -465,17 +459,13 @@ relinker_rai $videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL
 
 lasette() {
 # Store the page in a variable
-page="$(wget $1 -q -O -)"
+page="$(wget "$1" -q -O -)"
 
 # Get the javascript with the URLs
-URLS="$(wget -q -O - $(echo "$page" | grep starter | sed 's/.*src\=\"//;s/\".*//') | grep -E 'src:.*|src_.*' | sed 's/.*\: \"//;s/\".*//')"
+URLS="$(wget -q -O - $(echo "$page" | sed '/starter/!d;s/.*src\=\"//;s/\".*//') | sed '/src:.*\|src_.*/!d;s/.*\: \"//;s/\".*//')"
 
 # Get the title
-videoTitolo="$(echo $page | sed 's/.*<title>//;s/<\/title>.*//' | sed 's/^ //')"
-
-title="${videoTitolo//[^a-zA-Z0-9 ]/}"
-title=`echo $title | tr -s " "`
-title=${title// /_}
+videoTitolo="$(echo $page | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')"
 
 unformatted="$URLS"
 formatoutput
@@ -493,30 +483,26 @@ formatoutput
 
 mediaset() {
 # Store the page in a variable
-page=$(wget $1 -q -O -)
+page=$(wget "$1" -q -O -)
 
 # Witty tv recongition
 [ "$witty" = "y" ] && {
 # Get the video id
-id=$(echo "$page" | grep '\<iframe id=\"playeriframe\" src=\"http\:\/\/www.video.mediaset.it\/player\/playerIFrame.shtml?id\=' | sed 's/.*\<iframe id=\"playeriframe\" src=\"http\:\/\/www.video.mediaset.it\/player\/playerIFrame.shtml?id\=//;s/\&.*//')
+id=$(echo "$page" | sed '/[<]iframe id=\"playeriframe\" src=\"http\:\/\/www.video.mediaset.it\/player\/playerIFrame.shtml?id\=/!d;s/.*\<iframe id=\"playeriframe\" src=\"http\:\/\/www.video.mediaset.it\/player\/playerIFrame.shtml?id\=//;s/\&.*//')
 
 # Get the title
-videoTitolo=$(echo "$page" | grep -o "<meta content=\".*\" property=\".*title\"/>" | sed 's/.*\<meta content\=\"//;s/\".*//g')
+videoTitolo=$(echo "$page" | sed '/[<]meta content=\".*\" property=\".*title\"\/[>]/!d;s/.*\<meta content\=\"//;s/\".*//g')
 
 } || {
-eval $(echo "$page" | grep "var videoMetadataId" | sed 's/var //' | tr -d '[[:space:]]')
+$(echo "$page" | grep "var videoMetadataId")
 id="$videoMetadataId"
-videoTitolo=$(echo "$page" | grep -o "<meta content=\".*\" name=\"title\"/>" | sed 's/.*\<meta content\=\"//;s/\".*//g')
+videoTitolo=$(echo "$page" | sed '/[<]meta content=\".*\" name=\"title\"\/[>]/!d;s/.*\<meta content\=\"//;s/\".*//g')
 
 }
 
-title="${videoTitolo//[^a-zA-Z0-9 ]/}"
-title=`echo $title | tr -s " "`
-title=${title// /_}
-
 # Get the video URLs using the video id
 URLS="$(wget "http://cdnselector.xuniplay.fdnames.com/GetCDN.aspx?streamid=$id" -O - -q -U="" | sed 's/</\
-&/g' | grep http:// | sed 's/.*src=\"//;s/\".*//' |  sed '/^\s*$/d')"
+&/g;/http:\/\//!d;s/.*src=\"//;s/\".*//;/^\s*$/d')"
 
 
 unformatted="$URLS"
