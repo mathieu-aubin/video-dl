@@ -269,6 +269,7 @@ if(isset($_GET['url'])) {
                             <li>
                                 <a href="https://www.linkedin.com/profile/view?id=316872434&amp;trk=hp-identity-name" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
+                            <li>
                                 <a href="https://www.paypal.me/danog/2" class="btn-social btn-outline"><i class="fa fa-fw fa-paypal"></i></a>
                             </li>
 
