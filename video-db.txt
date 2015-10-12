@@ -1256,3 +1256,10 @@ Impazienti Impazienti
 Maximum quality (mp4, 136 MiB, 1024x576) http://creativemedia1.rai.it/podcastmhp/replaytv_world/premium_world/pomeriggio_world/4537848_1800.mp4
 Medium-low quality (mp4, 64.1 MiB, 700x392) http://creativemedia1.rai.it/podcastmhp/replaytv_world/premium_world/pomeriggio_world/4537848_800.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-a85d0f26-0483-476c-9744-de32c0b94a7a.html
+Winx_Club_VI_Ep10_La_serra_di_Alfea Winx Club VI - Ep.10: La serra di Alfea
+Maximum quality (mp4, 297 MiB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2342362_1800.mp4
+Maximum quality (mp4, 297 MiB, 1024x576) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2342362_1800.mp4
+Medium-low quality (mp4, 136 MiB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2342362_800.mp4
+Medium-low quality (mp4, 136 MiB, 700x394) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2342362_800.mp4
+endofdbentry
