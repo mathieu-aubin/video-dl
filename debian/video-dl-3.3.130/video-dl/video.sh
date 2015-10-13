@@ -190,13 +190,16 @@ formatoutput() {
 case $ptype in
   rai)
     {
+two="$(echo "$unformatted" | grep '.*_250.mp4')"
 four="$(echo "$unformatted" | grep '.*_400.mp4')"
 six="$(echo "$unformatted" | grep '.*_600.mp4')"
+seven="$(echo "$unformatted" | grep '.*_700.mp4')"
 eight="$(echo "$unformatted" | grep '.*_800.mp4')"
 twelve="$(echo "$unformatted" | grep '.*_1200.mp4')"
 fifteen="$(echo "$unformatted" | grep '.*_1500.mp4')"
 eighteen="$(echo "$unformatted" | grep '.*_1800.mp4')"
-normal="$(echo "$unformatted" | sed '/.*_400\.mp4/d;/.*_600\.mp4/d;/.*_800\.mp4/d;/.*_1200\.mp4/d;/.*_1500\.mp4/d;/.*_1800\.mp4/d')"
+twentyfour="$(echo "$unformatted" | grep '.*_2400.mp4')"
+normal="$(echo "$unformatted" | sed '/.*_250\.mp4/d;/.*_400\.mp4/d;/.*_600\.mp4/d;/.*_700\.mp4/d;/.*_800\.mp4/d;/.*_1200\.mp4/d;/.*_1500\.mp4/d;/.*_1800\.mp4/d;/.*_2400\.mp4/d')"
     }
     ;;
   mediaset)
@@ -232,6 +235,10 @@ formats="$(
 
  echo "Normal quality $info $a";done
 
+[ "$twentyfour" != "" ] && for a in $twentyfour; do getsize
+
+ echo "Super-Maximum quality $info $a";done
+
 [ "$eighteen" != "" ] && for a in $eighteen; do getsize
 
  echo "Maximum quality $info $a";done
@@ -250,6 +257,9 @@ formats="$(
 [ "$eight" != "" ] && for a in $eight; do getsize
 
  echo "Medium-low quality $info $a";done
+[ "$seven" != "" ] && for a in $seven; do getsize
+
+ echo "Medium-medium quality $info $a";done
 
 
 [ "$six" != "" ] && for a in $six; do getsize
@@ -260,6 +270,8 @@ formats="$(
 
 [ "$four" != "" ] && for a in $four; do getsize
  echo "Minimum quality $info $a";done
+[ "$two" != "" ] && for a in $two; do getsize
+ echo "Lowest Minimum quality $info $a";done
 
 
 
@@ -293,13 +305,13 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2- | sed '/^\s*$/d')"
+videoTitolo=${videoTitolo%.*}
 videoTitolo=$(echo "$videoTitolo" | tr -d '\015')
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=$(echo $title | sed 's/^\s*//g;s/\s*$//g')
 title=${title// /_}
 
 [ "$formats" = "" ] && continue
-
 
 }
 
@@ -310,7 +322,7 @@ title=${title// /_}
 rai_normal() {
 
 # iframe check
-echo "$file" | grep -q videoURL || { eval $(echo "$file" | grep 'content="ContentItem' | cut -d" " -f2) && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
+echo "$file" | grep -q videoURL || { content=$(echo "$file" | sed '/content="ContentItem/!d;s/.*content="//g;s/".*//g') && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
 
 # read and declare videoURL and videoTitolo variables from javascript in page
 
@@ -417,8 +429,11 @@ base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
-for t in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4 \\.mp4; do for i in _400\\.mp4 _600\\.mp4 _800\\.mp4 _1200\\.mp4 _1500\\.mp4 _1800\\.mp4; do tbase="$tbase
-$(echo "$base" | sed "s/$t/$i/")"; tbase="$(echo "$tbase" | grep -Ev '_([0-9]{3,4})_([0-9]{3,4})\.mp4' | awk '!x[$0]++')"; done;done
+qualities="250 400 600 700 800 1200 1500 1800 2400"
+for lol in $qualities; do loop="$loop"_"$lol ";done
+
+for t in $loop \ ; do [ "$t" = " " ] && t=; for i in $loop; do tbase="$tbase
+${base//$t\.mp4/$i\.mp4}"; tbase="$(echo "$tbase" | grep -Ev "_([0-9]{3,4})_([0-9]{3,4})\.mp4" | awk '!seen[$0]++')"; done;done
 
 
 base="$tbase"
