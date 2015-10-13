@@ -386,7 +386,7 @@ Thanks!</textarea>
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
     <script src="/js/linkify.min.js?"></script>
     <script src="/js/linkify-jquery.min.js?"></script>
-    <script src="/js/video-dl.js?v=lolomgr"></script>
+    <script src="/js/video-dl.js?v=tyyynixheeytynixpowerlucedeidiamanti"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

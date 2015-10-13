@@ -107,9 +107,9 @@ function video_dl(userinput, output, asupport, messageoutput) {
 
 function firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit) {
     if (!((separatorstart) && (separatorend))) { var separatorstart = "<br>"; var separatorstart = separatorend; };
-    mailtext(messageoutput);
     $(supportedurls).empty();
     $(supportedurls).html("<h3>Working...</h3>");
+
     url = "https://api.daniil.it/?p=allwebsites";
     // Prepare and send request
     var xmlhttp = new XMLHttpRequest();
@@ -117,22 +117,23 @@ function firstload(supportedurls, separatorstart, separatorend, messageoutput, v
         if (xmlhttp.readyState == 4 || xmlhttp.readyState == "complete") {
             response = xmlhttp.responseText;
             if (response) {
-                response = he.encode(response).replace(/\n/g, separatorend+separatorstart);
-                // Output the result and the mail text
-                $(supportedurls).html(separatorstart+response+"<a href=\"http://lol.daniil.it\" target=\"_blank\">&#9786;</a>"+separatorend);
-                $(supportedurls).linkify({
-                    target: "_blank"
-                });
-
                 if (videodaniilit) {
                     $("#js").css("display", "block");
                     $("#php").css("display", "none");
                     $("#jsd").css("display", "block");
                     $("#phpd").css("display", "none");
                 };
+                response = he.encode(response).replace(/\n/g, separatorend+separatorstart);
+                // Output the result and the mail text
+                $(supportedurls).html(separatorstart+response+"<a href=\"http://lol.daniil.it\" target=\"_blank\">&#9786;</a>"+separatorend);
+                $(supportedurls).linkify({
+                    target: "_blank"
+                });
             }
         }
     }
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+    mailtext(messageoutput);
+
 };
