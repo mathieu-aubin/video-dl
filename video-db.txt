@@ -1263,3 +1263,25 @@ Maximum quality (mp4, 297 MiB, 1024x576) http://creativemedia3.rai.it/Italy/podc
 Medium-low quality (mp4, 136 MiB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2342362_800.mp4
 Medium-low quality (mp4, 136 MiB, 700x394) http://creativemedia3.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2342362_800.mp4
 endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-6de01c90-873d-4f2a-9052-0d1dce39e56f.html
+20_Oltre_le_Mura_di_Liane_Mia_and_Me 20 - Oltre le Mura di Liane - Mia and Me
+Normal quality (mp4, 266 MiB, 720x404) http://creativemedia4.rai.it/podcastcdn/junior/Mia_and_Me/Mia_and_me_EP_Puntate/3788380.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-932a178b-479a-448c-a274-8a3c900e29ee.html
+Concerto_di_Natale_del_21122014 Concerto di Natale del 21/12/2014
+Maximum quality (mp4, 832 MiB, 1024x576) http://creativemedia4.rai.it/podcastcdn/raiuno/Gli_Speciali_di_Raiuno/Speciali_Raiuno_Musica/3355750_1800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-a13d8a03-ef44-4845-8af4-8a0d618be416.html
+Pechino_Express_Il_Nuovo_Mondo_del_14092015 Pechino Express Il Nuovo Mondo del 14/09/2015
+Maximum quality (mp4, 1.75 GiB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4455055_1800.mp4
+Medium-low quality (mp4, 846 MiB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4455055_800.mp4
+endofdbentry
+http://www.rai.tv/dl/RaiTV/programmi/media/ContentItem-0b670ee2-e945-4d0f-b026-f6daa4b0ce04.html
+Pechino_Express_Il_Nuovo_Mondo_del_21092015 Pechino Express Il Nuovo Mondo del 21/09/2015
+Maximum quality (mp4, 1.68 GiB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4480509_1800.mp4
+Medium-low quality (mp4, 815 MiB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/raidue/Pechino_Express/Pechino_Express_EP_Puntate/4480509_800.mp4
+endofdbentry
+http://www.altadefinizione01.com/cera-una-volta-a-new-york/
+ 
+
+endofdbentry
