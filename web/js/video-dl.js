@@ -84,12 +84,12 @@ function video_dl(userinput, output, asupport, messageoutput) {
                         info = lines[i].substring(0, last);
                         splitr = lines[i].split(" ");
                         url = splitr[splitr.length - 1];
-                        if(asupport == "0") {
+                        if(asupport === "0") {
                             ext = info.substring(info.indexOf('(') + 1);
                             ext = ext.substring(0, ext.indexOf(','));
                             dl = " download=\"" + title + "." + ext + "\"" ;
-                        } else { var download = ""; };
-                        result += "<h2><a"+ download + " href=\"" + url + "\">" + info + "</a></h2><br>"
+                        } else { var dl = ""; };
+                        result += "<h2><a"+ dl + " href=\"" + url + "\">" + info + "</a></h2><br>"
                     }
                     // Output the result and the mail text
                     $(output).html(result);
