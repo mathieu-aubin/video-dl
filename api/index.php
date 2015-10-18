@@ -1,4 +1,8 @@
 <?php
+ini_set("log_errors", 1);
+ini_set("error_log", "/tmp/php-error_api.log");
+error_log( "Hello, errors (api)!" );
+
 if(($_GET['p']) == 'websites') {
     echo "Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.";
 } elseif(($_GET['p']) == 'allwebsites') {
@@ -8,21 +12,34 @@ video.mediaset.it
 wittytv.it
 la7.it
 $yt";
-
-} elseif(isset($_GET['url'])) {
+} elseif((isset($_GET['url']) && $_GET['url'] != "") || php_sapi_name() == "cli") {
 /*    $locale = 'it_IT.utf-8';
     setlocale(LC_ALL, $locale);
     putenv('LC_ALL='.$locale);
 */
-    $file = __FILE__;
+    include 'db_connect.php';
+    $pdo = new PDO("$db", "$user", "$pass");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $url = $_GET["url"];
-    $param = $_GET["p"];
-    $db = $_GET["nodb"];
-    $cmd =  "bash /var/www/video/api/api.sh" . ' ' . escapeshellarg($url) . ' ' . escapeshellarg($param) . ' ' . escapeshellarg($db);
-    $message = shell_exec("$cmd");
-    $final = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message);
-    $final = trim($final, "\n");
-    echo "$final";
+    
+    $stmt = $pdo->prepare("SELECT final FROM video_db WHERE url=?");
+    $stmt->execute(array($url));
+    $final = $stmt->fetchColumn();
+    
+    if (empty($final) || "$final" == "") {
+     $param = $_GET["p"];
+     $db = $_GET["nodb"];
+     $cmd = "bash /var/www/video/api/api.sh".' '.escapeshellarg($url).' '.escapeshellarg($param).' '.escapeshellarg($db);
+     $message = shell_exec("$cmd");
+     $final = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message); 
+     $final = trim($final, "\n");
+     if ($final != "") {
+      echo "$final";
+      $stmt = $pdo->prepare("INSERT INTO video_db (url, final) VALUES (?, ?)");
+      $rows = $stmt->execute(array($url, $final));
+     };
+    } else { echo "$final"; };
 } else {
     echo '<!DOCTYPE HTML>
 <html>
