@@ -205,9 +205,9 @@ The API supports GET requests and the endpoint is http://api.daniil.it (supports
 
 ### Supported parameters:
 
-```
-url
-```
+
+#### url
+
 
 The value should be the URL of the video to download. The response will be a list of URLS with the corresponding quality name, format, size and dimension.
 
@@ -249,9 +249,7 @@ The qualities are ordered in decreasing order by dimension.
 
 
 
-```
-p
-```
+#### p
 
 Supports the following values:
 
@@ -259,17 +257,18 @@ Supports the following values:
 websites
 ```
 
-returns a short list of the supported websites:
-
-
-```
-Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.
-```
+returns a shortened list of supported websites:
 
 
 ```
 allwebsites
-``` returns the full list of supported websites:
+```
+
+returns a full list of supported websites.
+
+
+
+## Contribute!
 
 
 If you created a version of the script using another programming language [contact me](http://daniil.it) and I will put it on this page!
