@@ -305,6 +305,7 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2- | sed '/^\s*$/d')"
+videoTitolo=${videoTitolo%.*}
 videoTitolo=$(echo "$videoTitolo" | tr -d '\015')
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=$(echo $title | sed 's/^\s*//g;s/\s*$//g')
@@ -652,15 +653,15 @@ urlformatcheck
 ##### To be automatic or to be selected by the user, that is the question. #####
 
 [ "$A" = "y" ] && dlcmd() {
-url="$(echo "$api" | sed '1!d' | sed 's/.*\s//')"
-ext=$(echo "$api" | sed '1!d' | sed 's/.*[(]//g;s/, .*//g')
+url="$(echo "$api" | sed '1!d;s/.*\s//')"
+ext=$(echo "$api" | sed '1!d;s/.*[(]//g;s/, .*//g')
 dlvideo
 } || {
 echo "Video(s) info:" &&
 dlcmd() {
-videoTitolo=$(echo "$titles" | cut -d' ' -f2- | sed 's/è/e/g;s/é/e/g;s/ì/i/g;s/í/i/g;s/ù/u/g;s/ú/u/g')
+videoTitolo=$(echo "$titles" | sed 's/^\S*\s//g;s/è/e/g;s/é/e/g;s/ì/i/g;s/í/i/g;s/ù/u/g;s/ú/u/g')
 
-max="$(echo "$api" | awk 'END{print}' | grep -Eo '^[^ ]+')"
+max="$(echo "$api" | sed -n '$p' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
 
@@ -669,8 +670,8 @@ $(echo "$api" | sed 's/http:\/\/.*//g;s/https:\/\/.*//g')
 "
 
 until [ "$l" -le "$max" ] && [ "$l" -gt 0 ] ; do echo -n "What quality do you whish to download (number, enter q to skip this video and enter to download the maximum quality)? "; read l; [ "$l" = "q" ] && break;[ "$l" = "" ] && {
-url="$(echo "$api" | sed '1!d' | sed 's/.*\s//')"
-ext=$(echo "$api" | sed '1!d' | sed 's/.*[(]//g;s/, .*//g')
+url="$(echo "$api" | sed '1!d;s/.*\s//')"
+ext=$(echo "$api" | sed '1!d;s/.*[(]//g;s/, .*//g')
 dlvideo
 break
 };done 2>/dev/null
@@ -681,7 +682,7 @@ selection=$(echo "$api" | sed "$l!d")
 
 urlformat=$(echo "$selection" | sed 's/http:\/\/.*//;s/https:\/\/.*//g;s/.*[(]//;s/[)].*//')
 
-url=$(echo "$selection" | awk 'NF>1{print $NF}')
+url=$(echo "$selection" | sed 's/.*\s//g')
 
 ext=$(echo "$selection" | sed 's/.*[(]//g;s/, .*//g')
 dlvideo
@@ -694,8 +695,8 @@ for u in $URL; do
  api="$(api "$u" | sed '/^\s*$/d')"
  [ "$api" = "" ] && { echo "Couldn't download $u." && continue; } || lineclear
  titles=$(echo "$api" | sed -n 1p)
- api=$(echo "$api" | sed '1d' | awk '{print NR, $0}')
- title=$(echo "$titles" | cut -d \  -f 1)
+ api=$(echo "$api" | sed '1d' | sed = | sed 'N;s/\n/ /')
+ title=$(echo "$titles" | sed 's/\s.*//g')
 
  dlcmd
 done
