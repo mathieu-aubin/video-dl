@@ -18,6 +18,7 @@ This project features a Bash script that can be installed on [any Linux/Unix sys
 Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/web/video_db.sql).
 
 
+
 ## Web version
 This project also features a [web version](https://video.daniil.it/).
 
@@ -25,6 +26,10 @@ This project also features a [web version](https://video.daniil.it/).
 
 The source code of the page can be viewed [here](https://github.com/danog/video-dl/blob/master/web).
 
+
+
+
+# Bash script.
 
 ## Bash script usage:
 ```
@@ -191,12 +196,15 @@ This project also features an [API](http://video.daniil.it/api/).
 
 The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/api).
 
-### API usage
 
-Make a GET request to api.daniil.it with the URL in the url parameter. 
-The response will be the following:
+The API supports GET requests and the endpoint is http://api.daniil.it (supports https).
 
-Requested URL:
+Supported parameters:
+
+```url```
+
+When provided, the response will be a list of URLS with the corresponding qualities, obtained from the given video URL.
+Example:
 
 ```
 http://api.daniil.it/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
@@ -214,33 +222,35 @@ Explanation:
 
 ```
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
-
+```
 Sanitized name of video for file name  Original name of the video for printing to user output
 
+```
 Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
-
-Quality name (format, size, dimension) URL of the video
-
-
-Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
-
-Quality name (format, size, dimension) URL of the video
-
-
 ```
 
-The API also supports the following requests:
+Quality name (format, size, dimension) URL of the video
 
-```http://api.daniil.it/?p=websites``` returns a short list of the supported websites:
+```
+Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+```
 
-Response:
+Quality name (format, size, dimension) URL of the video
+
+The qualities are ordered in decreasing order by dimension.
+
+
+
+```p```
+
+Supports the following values:
+
+```websites``` returns a short list of the supported websites:
 
 
 ```Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.```
 
-```http://api.daniil.it/?p=allwebsites``` returns the full list of supported websites:
-
-Response is too long to paste in here.
+```allwebsites``` returns the full list of supported websites:
 
 
 If you created a version of the script using another programming language [contact me](http://daniil.it) and I will put it on this page!
