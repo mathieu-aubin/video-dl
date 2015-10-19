@@ -1,0 +1,1 @@
+rm /usr/bin/video-dl && ln -s /usr/bin/video.sh /usr/bin/video-dl
