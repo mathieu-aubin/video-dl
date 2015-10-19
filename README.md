@@ -265,7 +265,9 @@ Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.
 
 ```
 allwebsites
-``` returns the full list of supported websites:
+```
+
+returns the list of all of the supported websites (response is too long to paste here).
 
 
 If you created a version of the script using another programming language [contact me](http://daniil.it) and I will put it on this page!
