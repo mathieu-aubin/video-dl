@@ -199,14 +199,15 @@ The source code of the API can be viewed [here](https://github.com/danog/video-d
 
 The API supports GET requests and the endpoint is http://api.daniil.it (supports https).
 
-Supported parameters:
+### Supported parameters:
 
 ```
 url
 ```
 
+The value should be the URL of the video to download. The response will be a list of URLS with the corresponding quality name, format, size and dimension.
 
-When provided, the response will be a list of URLS with the corresponding qualities, obtained from the given video URL.
+
 Example:
 
 ```
@@ -244,16 +245,27 @@ The qualities are ordered in decreasing order by dimension.
 
 
 
-```p```
+```
+p
+```
 
 Supports the following values:
 
-```websites``` returns a short list of the supported websites:
+```
+websites
+```
+
+returns a short list of the supported websites:
 
 
-```Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.```
+```
+Rai, Mediaset, Witty TV, LA7 and all of the websites supported by youtube-dl.
+```
 
-```allwebsites``` returns the full list of supported websites:
+
+```
+allwebsites
+``` returns the full list of supported websites:
 
 
 If you created a version of the script using another programming language [contact me](http://daniil.it) and I will put it on this page!
