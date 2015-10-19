@@ -36,7 +36,9 @@ The source code of the page can be viewed [here](https://github.com/danog/video-
 # Bash script.
 
 ## Bash script usage:
+
 ```
+
 video.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 
 Do not forget to put the URL between quotes if it contains special chars like & or #.
@@ -231,6 +233,7 @@ Explanation:
 ```
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
 ```
+
 Sanitized name of video for file name  Original name of the video for printing to user output
 
 ```
