@@ -140,6 +140,6 @@ echo "branches:
 
 git add -A
 git commit -am "Updated the website"
-git push -qf origin ${gh-pages}
+git push -qf origin gh-pages
 
 }
