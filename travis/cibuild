@@ -122,15 +122,18 @@ sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\
 cp -a * $temp
 mkdir $temp/repo
 cd $video
-cp -a * $temp/repo
-rm -r $temp/repo/jekyll
 gitsync master OK madebytravisci
 
 # Upload everything
-git checkout gh-pages
+git checkout --orphan gh-pages
 rm -rf *
+git rm -rf *
 cp -a $temp/* .
 
+echo "[submodule \"video-dl\"]
+        path = repo
+        url = https://github.com/danog/video-dl.git
+">.gitmodules
 echo "branches:
   except:
     - gh-pages" > .travis.yml
