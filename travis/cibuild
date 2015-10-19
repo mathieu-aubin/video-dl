@@ -137,6 +137,9 @@ echo "[submodule \"video-dl\"]
 echo "branches:
   except:
     - gh-pages" > .travis.yml
-gitsync gh-pages "Updated the website"
+
+git add -A
+git commit -am "Updated the website"
+git push -qf origin ${gh-pages}
 
 }
