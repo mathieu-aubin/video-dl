@@ -1,3 +1,9 @@
+video-dl (3.3.143) lenny; urgency=low
+
+  * Use only sed.
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Mon, 19 Oct 2015 08:50:10 +0000
+
 video-dl (3.3.140) lenny; urgency=low
 
   * Database, API and web version sync

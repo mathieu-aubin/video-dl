@@ -305,7 +305,6 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2- | sed '/^\s*$/d')"
-videoTitolo=${videoTitolo%.*}
 videoTitolo=$(echo "$videoTitolo" | tr -d '\015')
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=$(echo $title | sed 's/^\s*//g;s/\s*$//g')
