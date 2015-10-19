@@ -201,7 +201,10 @@ The API supports GET requests and the endpoint is http://api.daniil.it (supports
 
 Supported parameters:
 
-```url```
+```
+url
+```
+
 
 When provided, the response will be a list of URLS with the corresponding qualities, obtained from the given video URL.
 Example:
