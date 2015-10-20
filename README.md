@@ -27,6 +27,15 @@ This project also features a [web version](https://video.daniil.it/).
 The source code of the page can be viewed [here](https://github.com/danog/video-dl/blob/master/web).
 
 
+I used the following programs in the web version:
+
+* [Loading animation (pace.js)](https://github.com/HubSpot/pace)
+
+* [HTML entity encoder (he.js)](https://github.com/mathiasbynens/he)
+
+* [Bootstrap theme (freelancer)](https://github.com/IronSummitMedia/startbootstrap-freelancer)
+
+* [Linkifier (linkify.js)](https://github.com/soapbox/linkifyjs/)
 
 
 # Bash script.
@@ -195,6 +204,7 @@ This project also features an [API](http://video.daniil.it/api/).
 
 The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/api).
 
+The API uses [youtube-dl](https://github.com/rg3/youtube-dl) to get the links for non Rai/mediaset/la7 videos.
 
 The API supports GET requests and the endpoint is http://api.daniil.it (supports https).
 
