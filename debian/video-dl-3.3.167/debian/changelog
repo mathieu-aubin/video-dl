@@ -1,3 +1,9 @@
+video-dl (3.3.167) lenny; urgency=low
+
+  * Added license URL
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Tue, 20 Oct 2015 15:19:52 +0000
+
 video-dl (3.3.164) lenny; urgency=low
 
   * Made curl follow redirects
