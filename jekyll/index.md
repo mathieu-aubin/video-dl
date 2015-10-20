@@ -40,7 +40,7 @@ This project features:
 * And even a [web version](#web-version)!
 
 
-Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/web/video_db.sql).
+Both the [API](#api) and the [web version](#web-version) use a [database](https://github.com/danog/video-dl/blob/master/video_db.sql).
 
 
 
