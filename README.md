@@ -15,15 +15,23 @@ The programs included in this project can be used to download videos from any ge
 
 This project features:
 * A Bash script that can be installed on
-** [Any Linux/Unix system](#bash-script-installation-instructions)
-** [Android](#android)
-** [Mac OS X](#bash-script-installation-instructions)
-** [iOS](#ios) and even on
-** [Windows](#windows)!
+
+ ** [Any Linux/Unix system](#bash-script-installation-instructions)
+
+ ** [Android](#android)
+
+ ** [Mac OS X](#bash-script-installation-instructions)
+
+ ** [iOS](#ios) and even on
+
+ ** [Windows](#windows)!
+
 
 * An [API](#api)!
 
+
 * An [Android app](#method-1-app)!
+
 
 * And even a [web version](#web-version)!
 
