@@ -31,7 +31,7 @@
 echo "Video download script - Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
-under certain conditions; see the LICENSE file."
+under certain conditions; see https://github.com/danog/video-dl/raw/master/LICENSE."
 
 lineclear() { echo -en "\r\033[K"; }
 
@@ -707,4 +707,3 @@ done
 
 
 exit $?
-
