@@ -5,3 +5,4 @@ For more info visit http://daniil.it
 and visit http://video.daniil.it for the web version!"
 
 ln -s /usr/bin/video.sh /usr/bin/video-dl
+exit $?

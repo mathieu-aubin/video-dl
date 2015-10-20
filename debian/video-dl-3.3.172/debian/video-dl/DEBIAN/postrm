@@ -6,3 +6,4 @@ daniil@daniil.it
 And I will try to fix the problem."
 
 rm /usr/bin/video-dl
+exit $?

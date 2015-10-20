@@ -1,3 +1,10 @@
+video-dl (3.3.172) lenny; urgency=low
+
+  * Updated postrm and postinst scripts, fixed perms and trigger deb
+    build
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Tue, 20 Oct 2015 16:10:09 +0000
+
 video-dl (3.3.170) lenny; urgency=low
 
   * Update points script and trigger build
