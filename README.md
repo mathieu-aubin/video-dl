@@ -43,7 +43,6 @@ I used the following programs in the web version:
 ## Bash script usage:
 
 ```
-
 video.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
 
 Do not forget to put the URL between quotes if it contains special chars like & or #.
