@@ -23,10 +23,13 @@ $yt";
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $url = $_GET["url"];
     
-    $stmt = $pdo->prepare("SELECT final FROM video_db WHERE url=?");
-    $stmt->execute(array($url));
+    
+    $stmt = $pdo->prepare('SELECT final FROM video_db WHERE url  = :url');
+    $stmt->bindParam(':url', $url, PDO::PARAM_STR);
+    $stmt->execute();
     $final = $stmt->fetchColumn();
     
+    error_log("$final");
     if (empty($final) || "$final" == "") {
      $param = $_GET["p"];
      $db = $_GET["nodb"];
