@@ -23,7 +23,7 @@ The programs included in this project can be used to download videos from any ge
 This project features a Bash script that can be installed on \fIany Linux/Unix system\fR including \fIAndroid\fR, \fIMac OS X\fR or \fIiOS\fR and even on \fIWindows\fR, an \fIAPI\fR, an \fIAndroid app\fR and even a \fIweb version\fR!
 .
 .P
-Both the \fIAPI\fR and the \fIweb version\fR use a database \fIhttps://github\.com/danog/video\-dl/blob/master/web/video\-db\.txt\fR\.
+Both the \fIAPI\fR and the \fIweb version\fR use a database \fIhttps://github\.com/danog/video\-dl/blob/master/web/video_db\.sql\fR\.
 .
 .SH "Web version"
 This project also features a web version \fIhttps://video\.daniil\.it/\fR\.
@@ -37,34 +37,35 @@ The source code of the page can be viewed here \fIhttps://github\.com/danog/vide
 .
 .nf
 
+
 video\.sh [ \-qaf [ urls\.txt ] ] URL URL2 URL3 \.\.\.
+
+Do not forget to put the URL between quotes if it contains special chars like & or #\.
+
+Run with \./video\.sh if you installed in a directory not in $PATH\.
+
+Options:
+
+
+
+
+\-q              Quiet mode: useful for crontab jobs, automatically enables \-a\.
+
+\-a              Automatic mode: automatically download the video in the maximum quality\.
+
+\-b              Use built\-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server\.
+
+\-f              Read URL(s) from specified text file(s)\. If specified, you cannot provide URLs as arguments\.
+
+\-p=player       Play the video instead of downloading it using specified player, mplayer if none specified\.
+
+\-\-help          Show this extremely helpful message\.
 .
 .fi
 .
-.P
-Options:
-.
-.P
-\-q Quiet mode: useful for crontab jobs, automatically enables \-a\.
-.
-.P
-\-a Automatic mode: automatically download the video in the maximum quality\.
-.
-.P
-\-b Use built\-in API engine: requires additional programs and may not work properly on some systems but may be faster than the API server\.
-.
-.P
-\-f Read URL(s) from specified text file(s)\. If specified, you cannot provide URLs as arguments\.
-.
-.P
-\-p=player Play the video instead of downloading it using specified player, mplayer if none specified\.
-.
-.P
-\-\-help Show this extremely helpful message\.
-.
 .SS "Bash script installation instructions:"
 .
-.SS "Any Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):"
+.P
 On debian\-derived distros, execute this command to add my repo to your system:
 .
 .IP "" 4
@@ -94,25 +95,6 @@ sudo apt\-get update; sudo apt\-get \-y install video\-dl
 .IP "" 0
 .
 .P
-Run with:
-.
-.IP "" 4
-.
-.nf
-
-video\.sh "URL"
-.
-.fi
-.
-.IP "" 0
-.
-.P
-Do not forget to put the URL between quotes\.
-.
-.P
-Or if you want to use the old method follow these instructions\.
-.
-.P
 Execute this command to install the script:
 .
 .IP "" 4
@@ -126,10 +108,7 @@ wget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http:/
 .IP "" 0
 .
 .P
-Run with \fB\./video\.sh "URL"\fR In the directory where you downloaded it\.
-.
-.P
-Do not forget to put the URL between quotes\.
+Run with \./video\.sh in the directory where you downloaded it\.
 .
 .P
 To use from any directory install the script directly in the $PATH using this command (run as root):
@@ -143,14 +122,6 @@ wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \
 .fi
 .
 .IP "" 0
-.
-.P
-Now you should be able to run the script simply with: \fBvideo\.sh "URL"\fR
-.
-.P
-Do not forget to put the URL between quotes\.
-.
-.SS "Android:"
 .
 .P
 Enable unknown sources and install this app \fIhttp://bit\.ly/0192837465k\fR\. Once opened you will be presented with a user friendly interface similar to the web version\.
@@ -183,10 +154,7 @@ Video tutorial \fIhttps://www\.youtube\.com/watch?v=4NLs2NzHbbc\fR
 Note: if you can\'t copy & paste the commands directly in the Terminal Emulator app try this: paste them in the url bar one line at a time, copy them again from the url bar and try to paste them again in the Terminal Emulator app\. Run these commands: \fBcd /sdcard && wget http://daniilgentili\.magix\.net/android/video\.sh\fR
 .
 .P
-Run with: \fBbash /sdcard/video\.sh "URL"\fR
-.
-.P
-Do not forget to put the URL between quotes\.
+Run with: \fBbash /sdcard/video\.sh\fR
 .
 .P
 To install the script directly in the $PATH use these commands (here, root is mandatory)\.
@@ -203,16 +171,10 @@ mount \-o rw,remount /system && wget http://daniilgentili\.magix\.net/android/vi
 .IP "" 0
 .
 .P
-Now you should be able to run it with: \fBvideo\.sh "URL"\fR
-.
-.P
-Do not forget to put the URL between quotes\.
-.
-.P
-If you cannot execute the command match the shebang of the script to the location of the bash executable\.
+If you cannot execute the script match the its shebang (the #!) to the location of the bash executable\.
 .
 .SS "iOS:"
-Jailbreak your device, install mobileterminal and wget and run the following command:
+Jailbreak your device, install mobileterminal, sed and wget and run the following command:
 .
 .IP "" 4
 .
@@ -225,16 +187,10 @@ wget http://daniilgentili\.magix\.net/video\.sh \-O video\.sh || curl \-L http:/
 .IP "" 0
 .
 .P
-Run with: \fB\./video\.sh "URL"\fR
+Run with \./video\.sh In the directory where you downloaded it\.
 .
 .P
-Do not forget to put the URL between quotes\.
-.
-.P
-In the directory where you downloaded it\.
-.
-.P
-To view the downloaded video use iFile\.
+To view and import the downloaded video to the gallery use iFile or Filza\.
 .
 .P
 To use from any directory install the script directly in $PATH using this command:
@@ -249,14 +205,8 @@ su \-c "wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh |
 .
 .IP "" 0
 .
-.P
-Now you should be able to run it with: \fBvideo\.sh "URL"\fR
-.
-.P
-Do not forget to put the URL between quotes\.
-.
 .SS "Windows:"
-Install Cygwin \fIhttps://www\.cygwin\.com\fR (don\'t forget to install wget during the installation process!), open its command prompt and type:
+Install Cygwin \fIhttps://www\.cygwin\.com\fR (don\'t forget to install wget and sed during the installation process!), open its command prompt and type:
 .
 .IP "" 4
 .
@@ -269,13 +219,7 @@ wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh
 .IP "" 0
 .
 .P
-Run with: \fB\./video\.sh "URL"\fR
-.
-.P
-Do not forget to put the URL between quotes\.
-.
-.P
-In the directory where you downloaded it\.
+Run with \./video\.sh In the directory where you downloaded it\.
 .
 .P
 To run the script from any directory run the following commands:
@@ -290,20 +234,22 @@ cd /bin && wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh && 
 .
 .IP "" 0
 .
-.P
-Now you should be able to run it with: \fBvideo\.sh "URL"\fR
-.
-.P
-Do not forget to put the URL between quotes\.
-.
 .SH "API"
 This project also features an API \fIhttp://video\.daniil\.it/api/\fR\.
 .
 .P
 The source code of the API can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/api\fR\.
 .
-.SS "API usage example"
-Requested URL:
+.P
+The API supports GET requests and the endpoint is http://api\.daniil\.it (supports https)\.
+.
+.SS "Supported parameters:"
+.
+.P
+The value should be the URL of the video to download\. The response will be a list of URLS with the corresponding quality name, format, size and dimension\.
+.
+.P
+Example:
 .
 .IP "" 4
 .
@@ -337,26 +283,74 @@ Explanation:
 .
 .nf
 
-
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI \- Ep\.3: Il collegio volante
-
-Sanitized name of video for file name  Original name of the video for printing to user output
-Newline
-
-Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4
-
-Quality name (format, size, dimension) URL of the video
-Newline
-
-Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4
-
-Quality name (format, size, dimension) URL of the video
 .
 .fi
 .
 .IP "" 0
 .
 .P
+Sanitized name of video for file name Original name of the video for printing to user output
+.
+.IP "" 4
+.
+.nf
+
+Highest quality (mp4, 286MB, 1024x576) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800\.mp4
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Quality name (format, size, dimension) URL of the video
+.
+.IP "" 4
+.
+.nf
+
+Medium\-low quality (mp4, 131MB, 700x394) http://creativemedia4\.rai\.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800\.mp4
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Quality name (format, size, dimension) URL of the video
+.
+.P
+The qualities are ordered in decreasing order by dimension\.
+.
+.P
+Supports the following values:
+.
+.IP "" 4
+.
+.nf
+
+websites
+.
+.fi
+.
+.IP "" 0
+.
+.P
+returns a shortened list of supported websites:
+.
+.IP "" 4
+.
+.nf
+
+allwebsites
+.
+.fi
+.
+.IP "" 0
+.
+.P
+returns a full list of supported websites\.
+.
+.SH "Contribute!"
 If you created a version of the script using another programming language contact me \fIhttp://daniil\.it\fR and I will put it on this page!
 .
 .P

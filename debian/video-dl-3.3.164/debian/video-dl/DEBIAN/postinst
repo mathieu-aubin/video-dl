@@ -1,0 +1,2 @@
+rm /usr/bin/video-dl 2>/dev/null
+ln -s /usr/bin/video.sh /usr/bin/video-dl
