@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 20 Oct 2015 15:44:25 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.170
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.170) lenny; urgency=low
+ .
+   * Update points script and trigger build
+Checksums-Sha1: 
+ 0b0cbfa49edcdf91a63c5ec54da49e5532218200 1447 video-dl_3.3.170.dsc
+ 2127484c0ab862429154cbf58c8fa50e50e1f89f 14156 video-dl_3.3.170.tar.gz
+ faea3915e16de73a3d0b1fb24c6d405ff2470a30 16630 video-dl_3.3.170_all.deb
+Checksums-Sha256: 
+ 5a8531cf4a25d45c46e24c6e2c9306b4b74921fa16d49a96bc9aab8a80bc72cc 1447 video-dl_3.3.170.dsc
+ 5981bc8120bffecbd6a7fb545f900a4bbe5f32cf2f5a0321dc5ccbb38b397ffc 14156 video-dl_3.3.170.tar.gz
+ dfd30964acef778399203dbee9c1d0d59d7f3f77860c38770fe0e32341c76ad9 16630 video-dl_3.3.170_all.deb
+Files: 
+ e753c354ab826b105ecebbc04f73f8bc 1447 misc optional video-dl_3.3.170.dsc
+ cc514cf77dd836cb1241cdc2945bbe89 14156 misc optional video-dl_3.3.170.tar.gz
+ bd7a4e2e18063dddcf6f822d1dae5196 16630 misc optional video-dl_3.3.170_all.deb

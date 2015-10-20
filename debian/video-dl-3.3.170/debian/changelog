@@ -1,3 +1,9 @@
+video-dl (3.3.170) lenny; urgency=low
+
+  * Update points script and trigger build
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Tue, 20 Oct 2015 15:44:25 +0000
+
 video-dl (3.3.167) lenny; urgency=low
 
   * Added license URL
