@@ -159,21 +159,18 @@ mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/video
 If you cannot execute the script match the its shebang (the #!) to the location of the bash executable.
 
 ### iOS:
-Jailbreak your device, install mobileterminal, sed and wget and run the following command:
+Jailbreak your device, add the following repo to Cydia,
 
 ```
-wget http://daniilgentili.magix.net/video.sh -O video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x video.sh
+http://repo.daniil.it
 ```
 
-Run with ./video.sh In the directory where you downloaded it.
+... and install mobileterminal and video-dl.
+
+
+Run with video.sh in mobileterminal.
 
 To view and import the downloaded video to the gallery use iFile or Filza.
-
-To use from any directory install the script directly in $PATH using this command:
-
-```
-su -c "wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x /usr/bin/video.sh"
-```
 
 
 ### Windows:
