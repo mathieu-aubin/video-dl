@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Wed, 21 Oct 2015 00:10:17 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.186
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.186) lenny; urgency=low
+ .
+   * v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac
+     OS X (curl redirection).
+Checksums-Sha1: 
+ c0aecd1c743248b41e8f2d1ffc63a6c0bcdc4b0c 1447 video-dl_3.3.186.dsc
+ 3d5f9dc7078cc2a98609175571d50c0447d1a9ad 14544 video-dl_3.3.186.tar.gz
+ 24b48114bae84ef5352b3c91ce48e2ffc1141368 17020 video-dl_3.3.186_all.deb
+Checksums-Sha256: 
+ b54d23eb55f1c22d3710619b20bb6a24fd1f3723250e49c1ca46c1813af8cf8e 1447 video-dl_3.3.186.dsc
+ 73581edfd57ce9e13d65a16d6afef09d665643a56506c9a55716383e3ff8d4f9 14544 video-dl_3.3.186.tar.gz
+ adaea2a1d0a97d6136eb285bf841745f59750f04d5b2b7ca9f4e48f40781b618 17020 video-dl_3.3.186_all.deb
+Files: 
+ 53737e7b85399bde20e577169f1bbd2f 1447 misc optional video-dl_3.3.186.dsc
+ 6f7bdc1cfb10b27cf92af378da8eebdb 14544 misc optional video-dl_3.3.186.tar.gz
+ c24ab64ae9457bb21392bee881bee8af 17020 misc optional video-dl_3.3.186_all.deb
