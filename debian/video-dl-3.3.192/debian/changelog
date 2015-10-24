@@ -1,3 +1,9 @@
+video-dl (3.3.192) lenny; urgency=low
+
+  * Database, API and web version sync
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sat, 24 Oct 2015 17:26:02 +0000
+
 video-dl (3.3.186) lenny; urgency=low
 
   * v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac

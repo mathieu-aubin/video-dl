@@ -199,7 +199,9 @@ twelve="$(echo "$unformatted" | grep '.*_1200.mp4')"
 fifteen="$(echo "$unformatted" | grep '.*_1500.mp4')"
 eighteen="$(echo "$unformatted" | grep '.*_1800.mp4')"
 twentyfour="$(echo "$unformatted" | grep '.*_2400.mp4')"
-normal="$(echo "$unformatted" | sed '/.*_250\.mp4/d;/.*_400\.mp4/d;/.*_600\.mp4/d;/.*_700\.mp4/d;/.*_800\.mp4/d;/.*_1200\.mp4/d;/.*_1500\.mp4/d;/.*_1800\.mp4/d;/.*_2400\.mp4/d')"
+thirtytwo="$(echo "$unformatted" | grep '.*_3200.mp4')"
+fourthousand="$(echo "$unformatted" | grep '.*_4000.mp4')"
+normal="$(echo "$unformatted" | sed '/.*_250\.mp4/d;/.*_400\.mp4/d;/.*_600\.mp4/d;/.*_700\.mp4/d;/.*_800\.mp4/d;/.*_1200\.mp4/d;/.*_1500\.mp4/d;/.*_1800\.mp4/d;/.*_2400\.mp4/d;/.*_3200\.mp4/d;/.*_4000\.mp4/d')"
     }
     ;;
   mediaset)
@@ -235,13 +237,21 @@ formats="$(
 
  echo "Normal quality $info $a";done
 
+[ "$fourthousand" != "" ] && for a in $fourthousand; do getsize
+
+ echo "Full HD quality $info $a";done
+
+[ "$thirtytwo" != "" ] && for a in $thirtytwo; do getsize
+
+ echo "HD quality $info $a";done
+
 [ "$twentyfour" != "" ] && for a in $twentyfour; do getsize
 
- echo "Super-Maximum quality $info $a";done
+ echo "Super-high quality $info $a";done
 
 [ "$eighteen" != "" ] && for a in $eighteen; do getsize
 
- echo "Maximum quality $info $a";done
+ echo "High quality $info $a";done
 
 
 [ "$fifteen" != "" ] && for a in $fifteen; do getsize
@@ -254,14 +264,15 @@ formats="$(
 
  echo "Medium quality $info $a";done
 
-[ "$eight" != "" ] && for a in $eight; do getsize
-
- echo "Medium-low quality $info $a";done
 [ "$seven" != "" ] && for a in $seven; do getsize
 
  echo "Medium-medium quality $info $a";done
 
 
+[ "$eight" != "" ] && for a in $eight; do getsize
+
+ echo "Medium-low quality $info $a";done
+ 
 [ "$six" != "" ] && for a in $six; do getsize
  
  echo "Low quality $info $a";done
@@ -270,6 +281,7 @@ formats="$(
 
 [ "$four" != "" ] && for a in $four; do getsize
  echo "Minimum quality $info $a";done
+ 
 [ "$two" != "" ] && for a in $two; do getsize
  echo "Lowest Minimum quality $info $a";done
 
@@ -428,7 +440,7 @@ base="$(echo "$TMPURLS" | sort | awk '!x[$0]++')"
 
 # Find all qualities in every video
 tbase=
-qualities="250 400 600 700 800 1200 1500 1800 2400"
+qualities="250 400 600 700 800 1200 1500 1800 2400 3200 4000"
 for lol in $qualities; do loop="$loop"_"$lol ";done
 
 for t in $loop \ ; do [ "$t" = " " ] && t=; for i in $loop; do tbase="$tbase
