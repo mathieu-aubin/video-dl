@@ -90,7 +90,7 @@ example: #result.
 
 
 inputurl: url of the video. Required.  
-example: $("input#urljs").val()  
+example: $("input#urljs").val()
 
 dlsupport: enables or disables the download attribute in the download links. Optional.  
 0 enables, anything disables. 
@@ -98,7 +98,7 @@ dlsupport: enables or disables the download attribute in the download links. Opt
 messageoutput: output html element for the contact module. Optional.  
 example: #message. 
 
-Example:  
+####Example:  
 video_dl("#result", $("input#urljs").val(), "0", "#message");  
 
 Let's say the input#urljs text field has value "http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0".  
@@ -118,19 +118,22 @@ See mailtext description for the result.
 Use to output supported websites list, prepare mail message and,
 only on the video.daniil.it website, hide the php submit module and use javascript engine instead.  
 
-####Usage: firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit)  
+####Usage:
+```
+firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit)  
+```
 
 ####Parameters:  
 
 supportedurls: output html element for the supported websites list. Required.  
 Example: #supportedurls. 
 
-separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to <br>.  
+separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
 Optional, recommended.  
-Example: <li>  
+Example: ```<li>```  
 
-separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to <br>. Optional, recommended.  
-Example: </li>  
+separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
+Example: ```</li>```  
 
 messageoutput: output html element for default contact module text. Optional, recommended.  
 Example: #contact  
