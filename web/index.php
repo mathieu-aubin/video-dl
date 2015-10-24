@@ -1,4 +1,9 @@
 <?php
+// Video download script, php version - Copyright (C) 2015 Daniil Gentili
+// This program comes with ABSOLUTELY NO WARRANTY.
+// This is free software, and you are welcome to redistribute it
+// under certain conditions; see https://github.com/danog/video-dl/raw/master/LICENSE.
+
 ini_set("log_errors", 1);
 ini_set("error_log", "/tmp/php-errorv.log");
 error_log( "Hello, errors video!" );
@@ -99,11 +104,7 @@ if(isset($_GET['url'])) {
 
     <!-- Scripts -->
 
-    <!-- Clicky Analytics -->
-    <script src="//static.getclicky.com/js" type="text/javascript"></script>
-    <script type="text/javascript">try{ clicky.init(100888970); }catch(e){}</script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100888970ns.gif" /></p></noscript>
-
+    <!-- No Analytics -->
     <!-- Share -->
     <script type="text/javascript">
         var switchTo5x = true;
