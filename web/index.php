@@ -99,23 +99,10 @@ if(isset($_GET['url'])) {
 
     <!-- Scripts -->
 
-    <!-- Google Analytics -->
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-50691719-7', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <!-- Clicky Analytics -->
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+    <script type="text/javascript">try{ clicky.init(100888970); }catch(e){}</script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100888970ns.gif" /></p></noscript>
 
     <!-- Share -->
     <script type="text/javascript">
@@ -199,7 +186,7 @@ if(isset($_GET['url'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick='video_dl($("input#urljs").val(), "#result", "<?= $uacheck ?>", "#message");' alt=""></a>
+                    <a class="page-scroll" href="#description"><img class="img-responsive img-centered" src="img/profile.png?v=2" onclick='video_dl("#result", $("input#urljs").val(), "<?= $uacheck ?>", "#message");' alt=""></a>
                     <div class="intro-text">
                         <span class="name">Download videos!</span>
 
@@ -213,8 +200,8 @@ if(isset($_GET['url'])) {
                             <input type="text" name="url" class="form-control" placeholder="URL of the video" id="url" required data-validation-required-message="Please enter a URL."><button type="submit" class="btn btn-success btn-lg">Download the video!</button>
                         </form>
                         <div style="display:none" id="js">
-                            <input onchange='video_dl($("input#urljs").val(), "#result", "<?= $uacheck ?>", "#message");' type="text" class="form-control" placeholder="URL of the video" id="urljs" required data-validation-required-message="Please enter a URL.">
-                            <button onclick='video_dl($("input#urljs").val(), "#result", "<?= $uacheck ?>", "#message");' type="submit" class="btn btn-success btn-lg">Download the video!</button>
+                            <input onchange='video_dl("#result", $("input#urljs").val(), "<?= $uacheck ?>", "#message");' type="text" class="form-control" placeholder="URL of the video" id="urljs" required data-validation-required-message="Please enter a URL.">
+                            <button onclick='video_dl("#result", $("input#urljs").val(), "<?= $uacheck ?>", "#message");' type="submit" class="btn btn-success btn-lg">Download the video!</button>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div id="result"><?= $output ?></div>
@@ -386,7 +373,7 @@ Thanks!</textarea>
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
     <script src="/js/linkify.min.js?"></script>
     <script src="/js/linkify-jquery.min.js?"></script>
-    <script src="/js/video-dl.js?v=tynixpowerlucedeidiamantimagicwinx"></script>
+    <script data-cfasync="false" src="/js/video-dl.js?v=tynixpowerlucedeidiamantimagicwinxminimondimagiciwinx"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
