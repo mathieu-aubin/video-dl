@@ -11,6 +11,9 @@ Video download project\.
 Read in Italian \fIhttps://github\.com/danog/video\-dl/blob/master/README\-IT\.md\fR
 .
 .P
+View on Github \fIhttps://github\.com/danog/video\-dl/\fR
+.
+.P
 Created by Daniil Gentili \fIhttp://daniil\.it\fR\.
 .
 .P
@@ -46,13 +49,13 @@ An \fIAndroid app\fR!
 .IP "\(bu" 4
 And even a \fIweb version\fR!
 .
+.IP "\(bu" 4
+That can be \fIincorporated\fR in other websites!
+.
 .IP "" 0
 .
 .P
-Both the \fIAPI\fR and the \fIweb version\fR use a database \fIhttps://github\.com/danog/video\-dl/blob/master/video_db\.sql\fR\.
-.
-.SH "Web version"
-This project also features a web version \fIhttps://video\.daniil\.it/\fR\.
+Both the \fIAPI\fR and the \fIweb version\fR use a database \fIhttps://github\.com/danog/video\-dl/blob/master/video_db\.sql\fR\.This project also features a web version \fIhttps://video\.daniil\.it/\fR\.
 .
 .P
 .
@@ -69,12 +72,249 @@ Loading animation (pace\.js) \fIhttps://github\.com/HubSpot/pace\fR
 HTML entity encoder (he\.js) \fIhttps://github\.com/mathiasbynens/he\fR
 .
 .IP "\(bu" 4
-Bootstrap theme (freelancer) \fIhttps://github\.com/IronSummitMedia/startbootstrap\-freelancer\fR
-.
-.IP "\(bu" 4
 Linkifier (linkify\.js) \fIhttps://github\.com/soapbox/linkifyjs/\fR
 .
 .IP "" 0
+.
+.P
+And used the following theme as a base:
+.
+.IP "\(bu" 4
+Bootstrap theme (freelancer) \fIhttps://github\.com/IronSummitMedia/startbootstrap\-freelancer\fR
+.
+.IP "" 0
+.
+.SH "Incorporation"
+You can incorporate this script in your website!
+.
+.br
+Just include the video\-dl script with:
+.
+.br
+```
+.
+.IP "" 4
+.
+.nf
+
+Or install it using npm\.
+.
+.fi
+.
+.IP "" 0
+.
+.P
+npm install video\-dl ```
+.
+.P
+Here\'s a list of the functions and the usage instructions\.
+.
+.SS "Video Download function\."
+.
+.IP "" 4
+.
+.nf
+
+video_dl(output, inputurl, dlsupport, messageoutput)
+.
+.fi
+.
+.IP "" 0
+.
+.P
+output: output html element for the video info and the download urls\. Required\.
+.
+.br
+example: #result\.
+.
+.P
+inputurl: url of the video\. Required\.
+.
+.br
+example: $("input#urljs")\.val()
+.
+.P
+dlsupport: enables or disables the download attribute in the download links\. Optional\.
+.
+.br
+0 enables, anything disables\.
+.
+.P
+messageoutput: output html element for the contact module\. Optional\.
+.
+.br
+example: #message\.
+.
+.P
+video_dl("#result", $("input#urljs")\.val(), "0", "#message");
+.
+.P
+Let\'s say the input#urljs text field has value "http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-a27ccfe8\-b824\-4e85\-9a08\-d15e57fb61a0\.html#p=0"\.
+.
+.P
+The function will get the value of the input#urljs element, get the download links from the API, and return the following output to the #result element:
+.
+.br
+```
+.
+.br
+.
+.br
+.
+.br
+.
+.br
+```
+.
+.P
+The function will then start the mailtext function with the following parameters:
+.
+.br
+mailtext(messageoutput, inputurl);
+.
+.P
+See mailtext description for the result\.
+.
+.SS "First load function\."
+Use to output supported websites list, prepare mail message and, only on the video\.daniil\.it website, hide the php submit module and use javascript engine instead\.
+.
+.IP "" 4
+.
+.nf
+
+firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit)
+.
+.fi
+.
+.IP "" 0
+.
+.P
+supportedurls: output html element for the supported websites list\. Required\.
+.
+.br
+Example: #supportedurls\.
+.
+.P
+separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to \fB<br>\fR\.
+.
+.br
+Optional, recommended\.
+.
+.br
+Example: \fB<li>\fR
+.
+.P
+separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to \fB<br>\fR\. Optional, recommended\.
+.
+.br
+Example: \fB</li>\fR
+.
+.P
+messageoutput: output html element for default contact module text\. Optional, recommended\.
+.
+.br
+Example: #contact
+.
+.P
+videodaniilit: If on video\.daniiil\.it hides php module and unhides javascript text field\. Do not use\.
+.
+.IP "" 4
+.
+.nf
+
+firstload("#supportedurls", "<li>", "</li>", "#message");
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Let\'s say the url list is: a b c d\.
+.
+.P
+Output printed to #supportedurls is: \fB<li>a</li><li>b</li><li>c</li><li>d</li><a href=\e"http://lol\.daniil\.it\e" target=\e"_blank\e">&#9786;</a></li>\fR
+.
+.P
+This will also create the default contact module text with mailtext("#message");
+.
+.SS "Contact module function\."
+Prints a nice message to the contact module text field, with the url if it\'s provided else just With "insert link"\.
+.
+.IP "" 4
+.
+.nf
+
+mailtext(output, url)
+.
+.fi
+.
+.IP "" 0
+.
+.P
+output: html entity where to print out the contact message\. Required\.
+.
+.br
+Example: #contact
+.
+.P
+url: url of the video to insert into the message\. Not required, if not provided defaults to insert link\.
+.
+.IP "" 4
+.
+.nf
+
+mailtext("#contact", "http://google\.com");
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Will put "The video: http://google\.com does not download, could you please fix it Thanks!" to #contact\.
+.
+.SS "Error function\."
+Sends me an email if an error occurs\.
+.
+.IP "" 4
+.
+.nf
+
+error(output, url, error)
+.
+.fi
+.
+.IP "" 0
+.
+.P
+output: html entity where to output success or error message of request to mail sending php script\. Required\.
+.
+.br
+example: #result
+.
+.P
+url: url of the video that failed to download\. Required\.
+.
+.br
+example: http://google\.com
+.
+.P
+error: actual error message\. If empty defaults to Empty Response\. Recommended\.
+.
+.br
+example: error 404
+.
+.IP "" 4
+.
+.nf
+
+error("#result", "http://google\.com", "error 404");
+.
+.fi
+.
+.IP "" 0
+.
+.P
+Will try to send me a mail and print "An error occurred and it was reported!" to #result if everything went fine, else it will print "An error occurred but it couldn\'t be reported! Please use the manual report module!"\.
 .
 .SH "Bash script usage:"
 .
