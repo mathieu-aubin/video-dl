@@ -1,7 +1,9 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/local/bin/npm', 'publish' ]
-2 info using npm@3.3.8
-3 info using node@v4.2.1
+1 verbose cli [ '/home/travis/.nvm/versions/node/v4.1.2/bin/node',
+1 verbose cli   '/home/travis/.nvm/versions/node/v4.1.2/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
 4 verbose publish [ '.' ]
 5 silly cache add args [ '.', null ]
 6 verbose cache add spec .
@@ -10,94 +12,70 @@
 7 silly cache add   scope: null,
 7 silly cache add   name: null,
 7 silly cache add   rawSpec: '.',
-7 silly cache add   spec: '/home/daniil/repos/video-dl/jquery',
+7 silly cache add   spec: '/home/travis/build/danog/video-dl/video-dl/jquery',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/daniil/.npm/video-dl/1.0.0/package.tgz not in flight; packing
-9 info lifecycle video-dl@1.0.0~prepublish: video-dl@1.0.0
-10 silly lifecycle video-dl@1.0.0~prepublish: no script for prepublish, continuing
-11 verbose tar pack [ '/home/daniil/.npm/video-dl/1.0.0/package.tgz',
-11 verbose tar pack   '/home/daniil/repos/video-dl/jquery' ]
-12 verbose tarball /home/daniil/.npm/video-dl/1.0.0/package.tgz
-13 verbose folder /home/daniil/repos/video-dl/jquery
-14 verbose addLocalTarball adding from inside cache /home/daniil/.npm/video-dl/1.0.0/package.tgz
-15 silly cache afterAdd video-dl@1.0.0
-16 verbose afterAdd /home/daniil/.npm/video-dl/1.0.0/package/package.json not in flight; writing
-17 verbose afterAdd /home/daniil/.npm/video-dl/1.0.0/package/package.json written
-18 silly publish { name: 'video-dl',
-18 silly publish   version: '1.0.0',
-18 silly publish   description: 'Script to Download videos from youtube, rai.tv, mediaset, la7 and hundreds of other sites',
-18 silly publish   main: 'video-dl.js',
-18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-18 silly publish   repository:
-18 silly publish    { type: 'git',
-18 silly publish      url: 'git+https://github.com/danog/video-dl.git' },
-18 silly publish   keywords:
-18 silly publish    [ 'download',
-18 silly publish      'videos',
-18 silly publish      'youtube',
-18 silly publish      'rai',
-18 silly publish      'mediaset',
-18 silly publish      'la7',
-18 silly publish      'dailymotion' ],
-18 silly publish   author:
-18 silly publish    { name: 'Daniil Gentili',
-18 silly publish      email: 'daniil.gentili.dg@gmail.com',
-18 silly publish      url: 'http://daniil.it' },
-18 silly publish   license: 'GPL-3.0',
-18 silly publish   bugs: { url: 'https://github.com/danog/video-dl/issues' },
-18 silly publish   homepage: 'https://daniil.it/video-dl',
-18 silly publish   dependencies: { he: '^0.5.0', jquery: '^2.1.4', linkifyjs: '^2.0.0-beta.4' },
-18 silly publish   readme: 'ERROR: No README data found!',
-18 silly publish   _id: 'video-dl@1.0.0',
-18 silly publish   _shasum: 'fe873bd6a164e074815bcd5d0ccad35d6b59273d',
-18 silly publish   _from: '.' }
-19 verbose getPublishConfig undefined
-20 silly mapToRegistry name video-dl
-21 silly mapToRegistry using default registry
-22 silly mapToRegistry registry https://registry.npmjs.org/
-23 silly mapToRegistry uri https://registry.npmjs.org/video-dl
-24 verbose publish registryBase https://registry.npmjs.org/
-25 silly publish uploading /home/daniil/.npm/video-dl/1.0.0/package.tgz
-26 verbose request uri https://registry.npmjs.org/video-dl
-27 verbose request sending authorization for write operation
-28 info attempt registry request try #1 at 22:02:52
-29 verbose request using bearer token for auth
-30 verbose request id e0bcda655122950c
-31 http request PUT https://registry.npmjs.org/video-dl
-32 http 403 https://registry.npmjs.org/video-dl
-33 verbose headers { 'content-type': 'application/json',
-33 verbose headers   'cache-control': 'max-age=60',
-33 verbose headers   'content-length': '95',
-33 verbose headers   'accept-ranges': 'bytes',
-33 verbose headers   date: 'Sun, 25 Oct 2015 21:02:55 GMT',
-33 verbose headers   via: '1.1 varnish',
-33 verbose headers   connection: 'keep-alive',
-33 verbose headers   'x-served-by': 'cache-fra1221-FRA',
-33 verbose headers   'x-cache': 'MISS',
-33 verbose headers   'x-cache-hits': '0',
-33 verbose headers   'x-timer': 'S1445806974.722740,VS0,VE1089' }
-34 verbose request invalidating /home/daniil/.npm/registry.npmjs.org/video-dl on PUT
-35 error publish Failed PUT 403
-36 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : video-dl
-36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
-36 verbose stack     at emitTwo (events.js:87:13)
-36 verbose stack     at Request.emit (events.js:172:7)
-36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
-36 verbose stack     at emitOne (events.js:82:20)
-36 verbose stack     at Request.emit (events.js:169:7)
-36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
-37 verbose statusCode 403
-38 verbose pkgid video-dl
-39 verbose cwd /home/daniil/repos/video-dl/jquery
-40 error Linux 3.19.0-31-generic
-41 error argv "/usr/bin/nodejs" "/usr/local/bin/npm" "publish"
-42 error node v4.2.1
-43 error npm  v3.3.8
-44 error code E403
-45 error "You cannot publish over the previously published version 1.0.0." : video-dl
-46 error If you need help, you may report this error at:
-46 error     <https://github.com/npm/npm/issues>
-47 verbose exit [ 1, true ]
+8 verbose addLocalDirectory /home/travis/.npm/video-dl/3.3.223/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/travis/.npm/video-dl/3.3.223/package.tgz',
+9 verbose tar pack   '/home/travis/build/danog/video-dl/video-dl/jquery' ]
+10 verbose tarball /home/travis/.npm/video-dl/3.3.223/package.tgz
+11 verbose folder /home/travis/build/danog/video-dl/video-dl/jquery
+12 info prepublish video-dl@3.3.223
+13 verbose addLocalTarball adding from inside cache /home/travis/.npm/video-dl/3.3.223/package.tgz
+14 silly cache afterAdd video-dl@3.3.223
+15 verbose afterAdd /home/travis/.npm/video-dl/3.3.223/package/package.json not in flight; writing
+16 verbose afterAdd /home/travis/.npm/video-dl/3.3.223/package/package.json written
+17 silly publish { name: 'video-dl',
+17 silly publish   version: '3.3.223',
+17 silly publish   description: 'Script to Download videos from youtube, rai.tv, mediaset, la7 and hundreds of other sites',
+17 silly publish   main: 'video-dl.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/danog/video-dl.git' },
+17 silly publish   keywords:
+17 silly publish    [ 'download',
+17 silly publish      'videos',
+17 silly publish      'youtube',
+17 silly publish      'rai',
+17 silly publish      'mediaset',
+17 silly publish      'la7',
+17 silly publish      'dailymotion' ],
+17 silly publish   author:
+17 silly publish    { name: 'Daniil Gentili',
+17 silly publish      email: 'daniil.gentili.dg@gmail.com',
+17 silly publish      url: 'http://daniil.it' },
+17 silly publish   license: 'GPL-3.0',
+17 silly publish   bugs: { url: 'https://github.com/danog/video-dl/issues' },
+17 silly publish   homepage: 'https://daniil.it/video-dl',
+17 silly publish   dependencies: { he: '^0.5.0', jquery: '^2.1.4', linkifyjs: '^2.0.0-beta.4' },
+17 silly publish   readme: 'ERROR: No README data found!',
+17 silly publish   _id: 'video-dl@3.3.223',
+17 silly publish   _shasum: 'b78ca5b331b94e81c9193c4bfecc2fbb1ff5822d',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name video-dl
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/video-dl
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /home/travis/.npm/video-dl/3.3.223/package.tgz
+25 verbose stack Error: auth required for publishing
+25 verbose stack     at CachingRegistryClient.publish (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+25 verbose stack     at /home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/lib/publish.js:134:14
+25 verbose stack     at mapToRegistry (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
+25 verbose stack     at publish_ (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/lib/publish.js:104:3)
+25 verbose stack     at Array.<anonymous> (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+25 verbose stack     at LOOP (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+25 verbose stack     at LOOP (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+25 verbose stack     at chain (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+25 verbose stack     at /home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/lib/publish.js:73:5
+25 verbose stack     at RES (/home/travis/.nvm/versions/node/v4.1.2/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+26 verbose cwd /home/travis/build/danog/video-dl/video-dl/jquery
+27 error Linux 3.19.0-30-generic
+28 error argv "/home/travis/.nvm/versions/node/v4.1.2/bin/node" "/home/travis/.nvm/versions/node/v4.1.2/bin/npm" "publish"
+29 error node v4.1.2
+30 error npm  v2.14.4
+31 error code ENEEDAUTH
+32 error need auth auth required for publishing
+32 error need auth You need to authorize this machine using `npm adduser`
+33 verbose exit [ 1, true ]
