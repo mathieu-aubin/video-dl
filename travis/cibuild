@@ -10,7 +10,7 @@ curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 sudo apt-get update
 sudo apt-get install busybox ruby-ronn build-essential devscripts lintian patch python-pip python3 patchutils gnupg expect dpkg-dev nodejs -y 
-
+sudo npm i npm -g
 sudo npm install uglify-js -g
 sudo pip install pexpect
 tar -xzf enc.tar.gz

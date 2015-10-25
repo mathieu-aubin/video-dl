@@ -1,8 +1,7 @@
-// Video download script, jquery version - Copyright (C) 2015 Daniil Gentili
-// This program comes with ABSOLUTELY NO WARRANTY.
-// This is free software, and you are welcome to redistribute it
-// under certain conditions; see https://github.com/danog/video-dl/raw/master/LICENSE.
-
+/* Video download script, jquery version - Copyright (C) 2015 Daniil Gentili
+ This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions; see https://github.com/danog/video-dl/raw/master/LICENSE.
+*/
 
 /*
 Video Download function
