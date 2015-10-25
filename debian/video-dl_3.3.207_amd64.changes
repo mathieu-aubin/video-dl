@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 25 Oct 2015 21:14:30 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.3.207
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.3.207) lenny; urgency=low
+ .
+   * Final tweaks for npm package
+Checksums-Sha1: 
+ 4be9cfeb0e5436dabb8cb9d0af5ba23f9b0e6f7b 1447 video-dl_3.3.207.dsc
+ 19abc8694fdeadadb316cab2d14feaa7a09f4452 15931 video-dl_3.3.207.tar.gz
+ b088d1ac2385ab17dfd022a4d618f63d4cf18726 18532 video-dl_3.3.207_all.deb
+Checksums-Sha256: 
+ 4e38d0272f7c1da0b30ba740198cd339ecda55e61a0cdabfa8393e8ce405e702 1447 video-dl_3.3.207.dsc
+ e79b0b2f200ec16c2a37376e26ae5b84960839d8ab5b58ac5d07930acc4b29a1 15931 video-dl_3.3.207.tar.gz
+ 5b871adc18db6aa221e6a171e6fcb755c73eb31ecf356026040349ae9e0ff98f 18532 video-dl_3.3.207_all.deb
+Files: 
+ e52e9b11c43c3cf895ae5cab05473f37 1447 misc optional video-dl_3.3.207.dsc
+ e6e017cf525805b10dc77f16d7cb6e53 15931 misc optional video-dl_3.3.207.tar.gz
+ fa9929e524daf9b8322efeacb0c19bdf 18532 misc optional video-dl_3.3.207_all.deb
