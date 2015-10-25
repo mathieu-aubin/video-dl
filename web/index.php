@@ -222,6 +222,7 @@ if(isset($_GET['url'])) {
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
+                        <span class="skills giallo" id="description">You can incorporate this video download script in your website! Just follow <A href="//daniil.it/video-dl#incorporation" target="_blank">these instructions! </A></span>
                     </div>
                 </div>
             </div>
@@ -374,7 +375,7 @@ Thanks!</textarea>
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
     <script src="/js/linkify.min.js?"></script>
     <script src="/js/linkify-jquery.min.js?"></script>
-    <script data-cfasync="false" src="/video-dl-jquery/video-dl.js?v=tynixpowerlucedeidiamantimagicwinxminimondimagiciwinx"></script>
+    <script data-cfasync="false" src="/js/video-dl.js?v=tynixpowerlucedeidiamantimagicwinxminimondimagiciwinx"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
