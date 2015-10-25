@@ -1,0 +1,33 @@
+{
+  "name": "video-dl",
+  "version": "1.0.0",
+  "description": "Script to Download videos from youtube, rai.tv, mediaset, la7 and hundreds of other sites",
+  "main": "video-dl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danog/video-dl.git"
+  },
+  "keywords": [
+    "download",
+    "videos",
+    "youtube",
+    "rai",
+    "mediaset",
+    "la7",
+    "dailymotion"
+  ],
+  "author": "Daniil Gentili <daniil.gentili.dg@gmail.com> (http://daniil.it)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/danog/video-dl/issues"
+  },
+  "homepage": "https://daniil.it/video-dl",
+  "dependencies": {
+    "he": "^0.5.0",
+    "jquery": "^2.1.4",
+    "linkifyjs": "^2.0.0-beta.4"
+  }
+}
