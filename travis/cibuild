@@ -15,13 +15,15 @@ sudo npm install uglify-js -g
 sudo pip install pexpect
 tar -xzf enc.tar.gz
 gpg --allow-secret-key-import --import mygpgkey_sec.gpg
+} >/dev/null
+{
 npm login << EOF
 $nuser
 $npass
 $nemail
 
 EOF
-} >/dev/null
+} | grep -v Password
 builddeb="$PWD/builddeb"
 chmod +x ${builddeb}
 
