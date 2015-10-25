@@ -3,7 +3,6 @@
 // This is free software, and you are welcome to redistribute it
 // under certain conditions; see https://github.com/danog/video-dl/raw/master/LICENSE.
 
-
 /*
 Video Download function
 
