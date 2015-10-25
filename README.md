@@ -74,7 +74,7 @@ And used the following theme as a base:
 You can incorporate this script in your website!  
 Just include the video-dl script with:  
 ```
-<script src="//daniil.it/video-dl.min.js"></script>
+<script src="//daniil.it/video-dl/video-dl.min.js"></script>
 ```  
 Or install it using npm.  
 ```
@@ -92,23 +92,27 @@ video_dl(output, inputurl, dlsupport, messageoutput)
 
 ####Parameters:  
 
-output: output html element for the video info and the download urls. Required.  
-example: #result. 
+#####output: output html element for the video info and the download urls. Required.  
+example: ```#result.```
 
 
-inputurl: url of the video. Required.  
-example: $("input#urljs").val()
 
-dlsupport: enables or disables the download attribute in the download links. Optional.  
+#####inputurl: url of the video. Required.  
+example: ```$("input#urljs").val()```
+
+#####dlsupport: enables or disables the download attribute in the download links. Optional.  
 0 enables, anything disables. 
 
-messageoutput: output html element for the contact module. Optional.  
-example: #message. 
+#####messageoutput: output html element for the contact module. Optional.  
+example: ```#message```
+
+
 
 ####Example:  
-video_dl("#result", $("input#urljs").val(), "0", "#message");  
+```video_dl("#result", $("input#urljs").val(), "0", "#message"); ```
 
-Let's say the input#urljs text field has value "http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0".  
+
+Let's say the ```input#urljs``` text field has value "http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0".  
 
 The function will get the value of the input#urljs element, get the download links from the API, and return the following output to the #result element:  
 ```
@@ -132,20 +136,21 @@ firstload(supportedurls, separatorstart, separatorend, messageoutput, videodanii
 
 ####Parameters:  
 
-supportedurls: output html element for the supported websites list. Required.  
+#####supportedurls: output html element for the supported websites list. Required.  
 Example: #supportedurls. 
 
-separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
+#####separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
 Optional, recommended.  
 Example: ```<li>```  
 
-separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
+######separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
 Example: ```</li>```  
 
-messageoutput: output html element for default contact module text. Optional, recommended.  
-Example: #contact  
+######messageoutput: output html element for default contact module text. Optional, recommended.  
+Example: ```#contact ```
 
-videodaniilit: If on video.daniiil.it hides php module and unhides javascript text field. Do not use.  
+
+#####videodaniilit: If on video.daniiil.it hides php module and unhides javascript text field. Do not use.  
 
 ####Example:  
 ```
@@ -160,7 +165,9 @@ Output printed to #supportedurls is:
 ```
 
 This will also create the default contact module text with
+```
 mailtext("#message");  
+```
 
 
 ###Contact module function.  
@@ -173,20 +180,29 @@ mailtext(output, url)
 
 ####Parameters:  
 
-output: html entity where to print out the contact message. Required.  
-Example: #contact  
+#####output: html entity where to print out the contact message. Required.  
+Example: ```#contact```
 
-url: url of the video to insert into the message.   Not required, if not provided defaults to insert link.  
+
+
+#####url: url of the video to insert into the message.  Not required, if not provided defaults to insert link.
+
+  
 
 ####Example:  
 ```
 mailtext("#contact", "http://google.com");  
 ```
 
-Will put "The video:
+Will put 
+```
+The video:
 http://google.com
 does not download, could you please fix it
-Thanks!" to #contact.  
+Thanks!
+```
+
+to #contact.  
 
 
 ###Error function.  
@@ -199,13 +215,13 @@ error(output, url, error)
 
 ####Parameters:  
 
-output: html entity where to output success or error message of request to mail sending php script. Required.  
+#####output: html entity where to output success or error message of request to mail sending php script. Required.  
 example: #result  
 
-url: url of the video that failed to download.   Required.  
+#####url: url of the video that failed to download.   Required.  
 example: http://google.com 
 
-error: actual error message. If empty defaults to
+#####error: actual error message. If empty defaults to
 Empty Response. Recommended.  
 example: error 404 
 
