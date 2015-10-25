@@ -16,7 +16,7 @@ sudo pip install pexpect
 tar -xzf enc.tar.gz
 gpg --allow-secret-key-import --import mygpgkey_sec.gpg
 npm login << EOF
-$nlogin
+$nuser
 $npass
 $nemail
 
