@@ -122,34 +122,22 @@ video_dl(output, inputurl, dlsupport, messageoutput)
 .IP "" 0
 .
 .P
-output: output html element for the video info and the download urls\. Required\.
-.
-.br
-example: #result\.
+example: \fB#result\.\fR
 .
 .P
-inputurl: url of the video\. Required\.
-.
-.br
-example: $("input#urljs")\.val()
+example: \fB$("input#urljs")\.val()\fR
 .
 .P
-dlsupport: enables or disables the download attribute in the download links\. Optional\.
-.
-.br
 0 enables, anything disables\.
 .
 .P
-messageoutput: output html element for the contact module\. Optional\.
-.
-.br
-example: #message\.
+example: \fB#message\fR
 .
 .P
-video_dl("#result", $("input#urljs")\.val(), "0", "#message");
+\fBvideo_dl("#result", $("input#urljs")\.val(), "0", "#message");\fR
 .
 .P
-Let\'s say the input#urljs text field has value "http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-a27ccfe8\-b824\-4e85\-9a08\-d15e57fb61a0\.html#p=0"\.
+Let\'s say the \fBinput#urljs\fR text field has value "http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-a27ccfe8\-b824\-4e85\-9a08\-d15e57fb61a0\.html#p=0"\.
 .
 .P
 The function will get the value of the input#urljs element, get the download links from the API, and return the following output to the #result element:
@@ -189,34 +177,19 @@ firstload(supportedurls, separatorstart, separatorend, messageoutput, videodanii
 .IP "" 0
 .
 .P
-supportedurls: output html element for the supported websites list\. Required\.
-.
-.br
 Example: #supportedurls\.
 .
 .P
-separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to \fB<br>\fR\.
-.
-.br
 Optional, recommended\.
 .
 .br
 Example: \fB<li>\fR
 .
 .P
-separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to \fB<br>\fR\. Optional, recommended\.
-.
-.br
 Example: \fB</li>\fR
 .
 .P
-messageoutput: output html element for default contact module text\. Optional, recommended\.
-.
-.br
-Example: #contact
-.
-.P
-videodaniilit: If on video\.daniiil\.it hides php module and unhides javascript text field\. Do not use\.
+Example: \fB#contact\fR
 .
 .IP "" 4
 .
@@ -235,7 +208,7 @@ Let\'s say the url list is: a b c d\.
 Output printed to #supportedurls is: \fB<li>a</li><li>b</li><li>c</li><li>d</li><a href=\e"http://lol\.daniil\.it\e" target=\e"_blank\e">&#9786;</a></li>\fR
 .
 .P
-This will also create the default contact module text with mailtext("#message");
+This will also create the default contact module text with \fBmailtext("#message");\fR
 .
 .SS "Contact module function\."
 Prints a nice message to the contact module text field, with the url if it\'s provided else just With "insert link"\.
@@ -251,13 +224,7 @@ mailtext(output, url)
 .IP "" 0
 .
 .P
-output: html entity where to print out the contact message\. Required\.
-.
-.br
-Example: #contact
-.
-.P
-url: url of the video to insert into the message\. Not required, if not provided defaults to insert link\.
+Example: \fB#contact\fR
 .
 .IP "" 4
 .
@@ -270,7 +237,10 @@ mailtext("#contact", "http://google\.com");
 .IP "" 0
 .
 .P
-Will put "The video: http://google\.com does not download, could you please fix it Thanks!" to #contact\.
+Will put \fBThe video: http://google\.com does not download, could you please fix it Thanks!\fR
+.
+.P
+to #contact\.
 .
 .SS "Error function\."
 Sends me an email if an error occurs\.
@@ -286,19 +256,13 @@ error(output, url, error)
 .IP "" 0
 .
 .P
-output: html entity where to output success or error message of request to mail sending php script\. Required\.
-.
-.br
 example: #result
 .
 .P
-url: url of the video that failed to download\. Required\.
-.
-.br
 example: http://google\.com
 .
 .P
-error: actual error message\. If empty defaults to Empty Response\. Recommended\.
+Empty Response\. Recommended\.
 .
 .br
 example: error 404
