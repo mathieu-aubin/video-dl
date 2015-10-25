@@ -7,4 +7,3 @@ description: Programs to download videos from virtually any website.
 markdown: kramdown
 
 exclude: ["README.md"]
-exclude: ["web"]

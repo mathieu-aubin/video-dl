@@ -5,7 +5,7 @@ desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
 
 export DEBFULLNAME="Daniil Gentili"
-(
+{
 curl -sL https://deb.nodesource.com/setup | sudo bash - 
 
 sudo apt-get update
@@ -21,7 +21,7 @@ $npass
 $nemail
 
 EOF
-) >/dev/null
+} >/dev/null
 builddeb="$PWD/builddeb"
 chmod +x ${builddeb}
 
@@ -121,7 +121,7 @@ cd $video
 
 # Copy js
 
-uglifyjs web/js/{video-dl.js,jquery.js,he.js,linkify.min.js,linkify-jquery.min.js} -o $temp/video-dl.min.js
+uglifyjs web/js/{jquery.js,he.js,linkify.min.js,linkify-jquery.min.js,video-dl.js} -o $temp/video-dl.min.js
 
 [ "$(diff $video/web/js/video-dl.js $video/jquery/video-dl.js)" != "" ] && {
 cp $video/web/js/video-dl.js $video/jquery/video-dl.js
