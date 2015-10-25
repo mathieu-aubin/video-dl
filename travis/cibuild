@@ -5,11 +5,11 @@ desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
 
 export DEBFULLNAME="Daniil Gentili"
-hide() {
+
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 sudo apt-get update &>/dev/null
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch python-pip python3 patchutils gnupg expect dpkg-dev nodejs &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch python-pip python3 patchutils gnupg expect dpkg-dev nodejs
 sudo npm install uglify-js -g
 sudo pip install pexpect
 tar -xzf enc.tar.gz
@@ -23,8 +23,7 @@ $npass
 $nemail
 
 EOF
-} 
-hide &>/dev/null
+} >/dev/null
 mkdir temp
 temp="$PWD/temp"
 gitsync() {
@@ -84,7 +83,7 @@ busybox ftpput -u $u1 -p $p1 $ftp win-native/rai.sh videow.sh
 busybox ftpput -u $u1 -p $p1 $ftp win-native/mediaset.sh videow.sh
 
 
-sed -i 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' videoww.sh
+sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' video.sh > videoww.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/video.sh videoww.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh videoww.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh videoww.sh
