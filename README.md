@@ -5,6 +5,8 @@ Video download project.
 
 [Read in Italian](https://github.com/danog/video-dl/blob/master/README-IT.md)
 
+[View on Github](https://github.com/danog/video-dl/)
+
 
 Created by [Daniil Gentili](http://daniil.it).
 
