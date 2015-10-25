@@ -72,10 +72,15 @@ And used the following theme as a base:
 ## Incorporation
 
 You can incorporate this script in your website!  
-Just include jquery, he.js and linkifier in the page and then include the video-dl script with:  
+Just include the video-dl script with:  
 ```
-<script src="//video.daniil.it/js/video-dl.js"></script>
+<script src="//daniil.it/video-dl.min.js"></script>
+```  
+Or install it using npm.  
 ```
+npm install video-dl
+```
+
 Here's a list of the functions and the usage instructions.  
 
 ###Video Download function.  

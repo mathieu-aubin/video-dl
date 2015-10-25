@@ -3,16 +3,25 @@
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
 echo "$desc" | grep -q madebytravisci && exit
+
 export DEBFULLNAME="Daniil Gentili"
+curl -sL https://deb.nodesource.com/setup | sudo bash - 
+
 sudo apt-get update &>/dev/null
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch python-pip python3 patchutils gnupg expect dpkg-dev &>/dev/null
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch python-pip python3 patchutils gnupg expect dpkg-dev nodejs &>/dev/null
+sudo npm install uglify-js -g
 sudo pip install pexpect
 tar -xzf enc.tar.gz
 gpg --allow-secret-key-import --import mygpgkey_sec.gpg
 
 builddeb="$PWD/builddeb"
 chmod +x ${builddeb}
+npm login << EOF
+$nlogin
+$npass
+$nemail
 
+EOF
 
 mkdir temp
 temp="$PWD/temp"
@@ -72,15 +81,16 @@ busybox ftpput -u $u1 -p $p1 $ftp win-native/rai.sh videow.sh
 busybox ftpput -u $u1 -p $p1 $ftp win-native/mediaset.sh videow.sh
 
 
-sed -i 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' video.sh
-busybox ftpput -u $u1 -p $p1 $ftp win/video.sh video.sh
-busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh video.sh
-busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh video.sh
+sed -i 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' videoww.sh
+busybox ftpput -u $u1 -p $p1 $ftp win/video.sh videoww.sh
+busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh videoww.sh
+busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh videoww.sh
 
 cd $video
-
+cp -a web $temp
 # Generate deb
 echo "$desc" | grep -q trigger || [ "$(diff $temp/reallyold.sh $video/video.sh)" != "" ] && {
+sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
 cd debian/
 cp * old
 rm *
@@ -106,6 +116,17 @@ gitsync master Updated video-dl to $version
 cd $video
 }
 
+# Copy js
+
+uglifyjs web/js/{video-dl.js,jquery.js,he.js,linkify.min.js,linkify-jquery.min.js} -o $temp/video-dl.min.js
+
+[ "$(diff $video/web/js/video-dl.js $video/jquery/video-dl.js)" != "" ] && {
+cp $video/web/js/video-dl.js $video/jquery/video-dl.js
+cd $video/jquery
+sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
+npm publish
+}
+
 # Generate website
 cd $video/jekyll
 echo "---
@@ -127,7 +148,7 @@ gitsync master OK madebytravisci
 # Upload everything
 git checkout --orphan gh-pages
 rm -rf *
-git rm -rf *
+git rm -rf * &>/dev/null
 cp -a $temp/* .
 
 echo "[submodule \"video-dl\"]
