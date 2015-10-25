@@ -7,7 +7,7 @@ echo "$desc" | grep -q madebytravisci && exit
 export DEBFULLNAME="Daniil Gentili"
 {
 curl -sL https://deb.nodesource.com/setup | sudo bash - &>
-} &>/dev/null
+
 sudo apt-get update &>/dev/null
 sudo apt-get install busybox ruby-ronn build-essential devscripts lintian diff patch python-pip python3 patchutils gnupg expect dpkg-dev nodejs &>/dev/null
 sudo npm install uglify-js -g
@@ -23,12 +23,13 @@ $npass
 $nemail
 
 EOF
-
+} &>/dev/null
 mkdir temp
 temp="$PWD/temp"
 gitsync() {
 branch="${1}"
 shift
+
 
 git add -A
 git commit -am "${*}"
