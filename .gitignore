@@ -1,3 +1,4 @@
 vendor
 s.key
 *~
+*.old.*
