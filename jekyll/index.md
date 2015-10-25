@@ -9,6 +9,8 @@ Video download project.
 
 [Read in Italian](http://daniil.it/video-dl/it.html)
 
+[View on Github](https://github.com/danog/video-dl/)
+
 
 Created by [Daniil Gentili](http://daniil.it).
 
