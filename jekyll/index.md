@@ -81,8 +81,9 @@ And used the following theme as a base:
 ## Incorporation
 
 You can incorporate this script in your website!  
-Just include the video-dl script with:  
+Just include jquery and the video-dl script with:  
 ```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="//daniil.it/video-dl/video-dl.min.js"></script>
 ```  
 Or install it using npm.  
