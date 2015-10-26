@@ -1,3 +1,9 @@
+video-dl (3.4.4) lenny; urgency=low
+
+  * Update README.md
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Mon, 26 Oct 2015 16:42:26 +0000
+
 video-dl (3.4.2) lenny; urgency=low
 
   * Fixed syntax mistake
