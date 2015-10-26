@@ -161,9 +161,7 @@ gitsync master OK madebytravisci
 
 
 cd $video
-git checkout --orphan npm
-rm -rf *
-git rm -rf * &>/dev/null
+git checkout npm
 cp -a $temp/npm/* .
 rm -rf $temp/npm
 git add -A
