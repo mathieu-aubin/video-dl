@@ -139,12 +139,6 @@ sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
 npm publish
 mkdir $temp/npm
 cp -a * $temp/npm
-cd $video
-git checkout --orphan npm
-rm -rf *
-git rm -rf * &>/dev/null
-cp -a $temp/npm/* .
-rm -rf $temp/npm
 }
 
 # Generate website
@@ -165,16 +159,22 @@ mkdir $temp/repo
 cd $video
 gitsync master OK madebytravisci
 
+
+cd $video
+git checkout --orphan npm
+rm -rf *
+git rm -rf * &>/dev/null
+cp -a $temp/npm/* .
+rm -rf $temp/npm
+git add -A
+git commit -am "Updated npm branch"
+git push -qf origin npm
+
 # Upload everything
 git checkout --orphan gh-pages
 rm -rf *
 git rm -rf * &>/dev/null
 cp -a $temp/* .
-
-echo "[submodule \"video-dl\"]
-        path = repo
-        url = https://github.com/danog/video-dl.git
-">.gitmodules
 echo "branches:
   except:
     - gh-pages" > .travis.yml
