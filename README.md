@@ -2,7 +2,7 @@
 Video download project.
 
 [![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
-[![npm version](https://badge.fury.io/js/video-dl.svg)](https://badge.fury.io/js/video-dl)
+[![npm version](https://badge.fury.io/js/video-dl.svg)](https://npmjs.org/package/video-dl)
 
 
 
