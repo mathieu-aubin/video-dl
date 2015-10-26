@@ -94,7 +94,7 @@ busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh videoww.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh videoww.sh
 
 cd $video
-cp -a web $temp
+
 # Generate deb
 echo "$desc" | grep -q trigger || [ "$(diff $temp/reallyold.sh $video/video.sh)" != "" ] && {
 sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
