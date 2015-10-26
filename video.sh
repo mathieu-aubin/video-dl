@@ -640,7 +640,7 @@ case "$FLAG" in
     {
 play=y
 tmplayer="$(echo $OPTARG | sed 's/=//g')"
-[ "$tmplayer" =! "" ] && which "$tmplayer" &>/dev/null && player="$tmplayer" || player="mplayer"
+[ "$tmplayer" != "" ] && which "$tmplayer" &>/dev/null && player="$tmplayer" || player="mplayer"
     }
     ;;
   \?)
