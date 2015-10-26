@@ -3,6 +3,8 @@ node_js:
   - "4"
 script:
   - "echo nuffuink"
+before_install:
+  npm install -g npm@'>=2.13.5'
 deploy:
   provider: npm
   email: daniil.gentili.dg@gmail.com
