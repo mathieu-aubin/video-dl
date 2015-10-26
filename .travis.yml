@@ -1,15 +1,14 @@
 language: node_js
 node_js:
-  - "4"
+- '4'
 script:
-  - "echo nuffuink"
-before_install:
-  npm install -g npm@'>=2.13.5'
+- echo nuffuink
+before_install: npm install -g npm@'>=2.13.5'
 deploy:
   provider: npm
   email: daniil.gentili.dg@gmail.com
   api_key:
-    secure: pM4pKTQEJAFEoqi00Ew2g246Yv7/3M+bl0KFl2BOyjvwASPS7c1ZdYqkQxSb0QaqeYjVuBQ9sbioOGU7hQ5IDNuDF861upV5gUn0Mw0iJq3K5mrTctYBCH/og6fLB2UCsR5nvriQCBysHggyQcxbt0OKyaQk+4cfN9+vPmlU093UD25Hq0sbHGadp6dWANTtJxV/jenj2gAWPN0m10I9W2zZlajSa8KB6+nZxcTo+wRUUpU5QqY0TpcxIe0sN/M9lS4s4iJhl3NyUnkvb7rjFFfoG0hq/oMpAhRAaCa08H+18iLd2mP2R8fN0nlNHuiIPvSAoFlE/DcZO4HyCN+FeC2k+ly/SEHtLVxo9fDs63DZDoQmtNSvDXAM74vAd2Lcu82C6tgfn6S1fagRTrjbWfvAQfpczUPb0oCfoi5v+hJ2ENID2A0H1JDER80Im7ih3Ec9N1RvNlCCDg9ZZKXQ6On6JZI2igYq2Tu6lE3kU2q7op4y83UJ9COmg+cpqUHlJAc3oiosxUSqvPf9GsEj2GgFQwMA1aCj0e4G02kEZ4+5DVVjoZQgHnunYnv4Rm46jgudrKXkfjI+GcTKXZ0kQCUzJMuClR8oKxPKKh7krdeAVNR8n2Bi93TS8j6RCP/mvEkBngu3DfUvhbOYEskvj2qxeenwBXm4W8mG0eB7rZ4=
+    secure: gJWqE/qpk2E0Ljnlesjr2jfM02iG66ycQTKEPrDNdz5ugiV79Gz9lR69+UIxp9JhGZZ08vTF9d0BRBdX7Yo7ahICzuEuwmt6G/VQrBKNNN1Mo4qKeZpV56f7+27yxt4/DIgvsWyurx9ieEkf4MQkJiWnlj2DOFsIIN4K5OBAcB0xKqWjPGVxLZGUKk5PMOSofXDxtR8ljShOx8YUVpdU7ioiTcAvRCC0YuSDbu6If2ZpiVJ7uLyihpF3ugtMwSXtyIRMG9RS4gp3WwOQ5lzMJR8bKN92L3CLmFEMifZZEje00lbk/D6cIdU3K4Gpg0UZz/+6LEPIgPlR49RAJqInNuqBwI1SneKXi4rdD7wx2RyouRGDoebZs53ODSCG614hPBfvu7i9GJ1fkSBpdbY+8jo1mJlRUOGlOzMWCma4AL7SJ8B6ZozwpFm6u+bARhX5tKqViE+o5o0LmfkgmUqiruya80KEZyiQKMxTabBO70iXcUXqKejV8on0w/Mc+Jndg0/kLtCb+0FbxC0+l1efm/6A2+giNJJqJSUJ/x4yI6KA7kz3BQPf8dBKiwJSsl0Ro8W/ogvk984pr0U9HWgv+kmlSJDtt/XVfCC1cASRzN56FUHr3rOchmCU+kFvm1Dgs6QBbUw8Xs2JQDB8Ozh4iByO6hw42r3uT99otQBdHRU=
   on:
     repo: danog/video-dl
     branch: npm
