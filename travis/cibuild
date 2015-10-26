@@ -6,29 +6,14 @@ echo "$desc" | grep -q madebytravisci && exit
 
 export DEBFULLNAME="Daniil Gentili"
 {
-curl -sL https://deb.nodesource.com/setup | sudo bash - 
 
 sudo apt-get update
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian patch python-pip python3 patchutils gnupg diff expect dpkg-dev libffi-dev libssl-dev nodejs -y 
-sudo npm i npm -g
-sudo npm install uglify-js -g
-sudo npm cache clean
-npm set init.author.name "Daniil Gentili"
-npm set init.author.email "daniil.gentili.dg@gmail.com"
-npm set init.author.url "http://daniil.it"
+sudo apt-get install busybox ruby-ronn build-essential devscripts lintian patch python-pip python3 patchutils gnupg diff expect dpkg-dev libffi-dev libssl-dev -y 
 sudo pip install requests[security]
 sudo pip install pexpect
 tar -xzf enc.tar.gz
 gpg --allow-secret-key-import --import mygpgkey_sec.gpg
 } >/dev/null
-{
-npm login << EOF
-$nuser
-$npass
-$nemail
-
-EOF
-} | grep -v Password
 builddeb="$PWD/builddeb"
 chmod +x ${builddeb}
 
@@ -136,7 +121,6 @@ cp $video/web/js/video-dl.js $video/jquery/video-dl.js
 cp $video/README.md $video/jquery/
 cd $video/jquery
 sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
-npm publish
 mkdir $temp/npm
 cp -a * $temp/npm
 }
