@@ -1,0 +1,8 @@
+deploy:
+  provider: npm
+  email: daniil.gentili.dg@gmail.com
+  api_key:
+    secure: pM4pKTQEJAFEoqi00Ew2g246Yv7/3M+bl0KFl2BOyjvwASPS7c1ZdYqkQxSb0QaqeYjVuBQ9sbioOGU7hQ5IDNuDF861upV5gUn0Mw0iJq3K5mrTctYBCH/og6fLB2UCsR5nvriQCBysHggyQcxbt0OKyaQk+4cfN9+vPmlU093UD25Hq0sbHGadp6dWANTtJxV/jenj2gAWPN0m10I9W2zZlajSa8KB6+nZxcTo+wRUUpU5QqY0TpcxIe0sN/M9lS4s4iJhl3NyUnkvb7rjFFfoG0hq/oMpAhRAaCa08H+18iLd2mP2R8fN0nlNHuiIPvSAoFlE/DcZO4HyCN+FeC2k+ly/SEHtLVxo9fDs63DZDoQmtNSvDXAM74vAd2Lcu82C6tgfn6S1fagRTrjbWfvAQfpczUPb0oCfoi5v+hJ2ENID2A0H1JDER80Im7ih3Ec9N1RvNlCCDg9ZZKXQ6On6JZI2igYq2Tu6lE3kU2q7op4y83UJ9COmg+cpqUHlJAc3oiosxUSqvPf9GsEj2GgFQwMA1aCj0e4G02kEZ4+5DVVjoZQgHnunYnv4Rm46jgudrKXkfjI+GcTKXZ0kQCUzJMuClR8oKxPKKh7krdeAVNR8n2Bi93TS8j6RCP/mvEkBngu3DfUvhbOYEskvj2qxeenwBXm4W8mG0eB7rZ4=
+  on:
+    repo: danog/video-dl
+    branch: npm
