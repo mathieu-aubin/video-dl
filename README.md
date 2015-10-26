@@ -115,15 +115,15 @@ example: ```#message```
 ```video_dl("#result", $("input#urljs").val(), "0", "#message"); ```
 
 
-Let's say the ```input#urljs``` text field has value "http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0".  
+Let's say the ```input#urljs``` text field has value ```"http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0"```.  
 
-The function will get the value of the input#urljs element, get the download links from the API, and return the following output to the #result element:  
+The function will get the value of the ```input#urljs``` element, get the download links from the API, and return the following output to the ```#result``` element:  
 ```
 <h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>26 - Il potere degli animali fatati - Winx Club VII del 03/10/2015</h2><br><h1>Available versions:</h1><br><h2><a href="http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4524680.mp4" download="26_Il_potere_degli_animali_fatati_Winx_Club_VII_del_03102015.mp4">Normal quality (mp4, 267 MiB, 720x404)</a><br></h2>
 ```
 
 The function will then start the mailtext function with the following parameters:  
-mailtext(messageoutput, inputurl);  
+```mailtext(messageoutput, inputurl);```  
 
 See mailtext description for the result.  
 
@@ -140,7 +140,7 @@ firstload(supportedurls, separatorstart, separatorend, messageoutput, videodanii
 ####Parameters:  
 
 #####supportedurls: output html element for the supported websites list. Required.  
-Example: #supportedurls. 
+Example: ```#supportedurls```. 
 
 #####separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
 Optional, recommended.  
@@ -160,11 +160,12 @@ Example: ```#contact ```
 firstload("#supportedurls", "<li>", "</li>", "#message");  
 ```
 
-Let's say the url list is: a b c d. 
+Let's say the url list is: ```a b c d```. 
 
 Output printed to #supportedurls is:
+
 ```
-<li>a</li><li>b</li><li>c</li><li>d</li><a href=\"http://lol.daniil.it\" target=\"_blank\">&#9786;</a></li>
+<li>a</li><li>b</li><li>c</li><li>d</li><a href="http://lol.daniil.it" target="_blank">&#9786;</a></li>
 ```
 
 This will also create the default contact module text with
@@ -174,7 +175,7 @@ mailtext("#message");
 
 
 ###Contact module function.  
-Prints a nice message to the contact module text field, with the url if it's provided else just With "insert link".  
+Prints a nice message to the contact module text field, with the url if it's provided else just With ```insert link```.  
 
 ####Usage:  
 ```
@@ -205,7 +206,7 @@ does not download, could you please fix it
 Thanks!
 ```
 
-to #contact.  
+to ```#contact```.  
 
 
 ###Error function.  
@@ -219,21 +220,21 @@ error(output, url, error)
 ####Parameters:  
 
 #####output: html selector where to output success or error message of request to mail sending php script. Required.  
-example: #result  
+example: ```#result```  
 
 #####url: url of the video that failed to download.   Required.  
-example: http://google.com 
+example: ```http://google.com``` 
 
 #####error: actual error message. If empty defaults to
 Empty Response. Recommended.  
-example: error 404 
+example: ```error 404```  
 
 ####Example:  
 ```
 error("#result", "http://google.com", "error 404");  
 ```
 
-Will try to send me a mail and print "An error occurred and it was reported!" to #result if everything went fine, else it will print "An error occurred but it couldn't be reported! Please use the manual report module!".   
+Will try to send me a mail and print ```"An error occurred and it was reported!"``` to ```#result```` if everything went fine, else it will print ```"An error occurred but it couldn't be reported! Please use the manual report module!"```.   
 
 
 # Bash script.

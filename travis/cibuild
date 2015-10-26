@@ -121,6 +121,7 @@ cd video-dl-$version
 cp $video/debian/* .
 gitsync master Updated video-dl to $version
 cd $video
+rm -rf $temp/repo
 }
 
 # Copy js
