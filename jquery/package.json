@@ -1,6 +1,6 @@
 {
   "name": "video-dl",
-  "version": "3.3.231",
+  "version": "3.4.1",
   "description": "Script to Download videos from youtube, rai.tv, mediaset, la7 and hundreds of other sites",
   "main": "video-dl.js",
   "scripts": {
@@ -8,9 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danog/video-dl.git"
+    "url": "git+https://github.com/danog/video-dl.git#npm"
   },
   "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
     "download",
     "videos",
     "youtube",
