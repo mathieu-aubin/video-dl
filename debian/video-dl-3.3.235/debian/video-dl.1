@@ -137,10 +137,10 @@ example: \fB#message\fR
 \fBvideo_dl("#result", $("input#urljs")\.val(), "0", "#message");\fR
 .
 .P
-Let\'s say the \fBinput#urljs\fR text field has value "http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-a27ccfe8\-b824\-4e85\-9a08\-d15e57fb61a0\.html#p=0"\.
+Let\'s say the \fBinput#urljs\fR text field has value \fB"http://www\.winx\.rai\.it/dl/RaiTV/programmi/media/ContentItem\-a27ccfe8\-b824\-4e85\-9a08\-d15e57fb61a0\.html#p=0"\fR\.
 .
 .P
-The function will get the value of the input#urljs element, get the download links from the API, and return the following output to the #result element:
+The function will get the value of the \fBinput#urljs\fR element, get the download links from the API, and return the following output to the \fB#result\fR element:
 .
 .br
 ```
@@ -158,7 +158,7 @@ The function will get the value of the input#urljs element, get the download lin
 The function will then start the mailtext function with the following parameters:
 .
 .br
-mailtext(messageoutput, inputurl);
+\fBmailtext(messageoutput, inputurl);\fR
 .
 .P
 See mailtext description for the result\.
@@ -177,7 +177,7 @@ firstload(supportedurls, separatorstart, separatorend, messageoutput, videodanii
 .IP "" 0
 .
 .P
-Example: #supportedurls\.
+Example: \fB#supportedurls\fR\.
 .
 .P
 Optional, recommended\.
@@ -202,16 +202,26 @@ firstload("#supportedurls", "<li>", "</li>", "#message");
 .IP "" 0
 .
 .P
-Let\'s say the url list is: a b c d\.
+Let\'s say the url list is: \fBa b c d\fR\.
 .
 .P
-Output printed to #supportedurls is: \fB<li>a</li><li>b</li><li>c</li><li>d</li><a href=\e"http://lol\.daniil\.it\e" target=\e"_blank\e">&#9786;</a></li>\fR
+Output printed to #supportedurls is:
+.
+.IP "" 4
+.
+.nf
+
+<li>a</li><li>b</li><li>c</li><li>d</li><a href="http://lol\.daniil\.it" target="_blank">&#9786;</a></li>
+.
+.fi
+.
+.IP "" 0
 .
 .P
 This will also create the default contact module text with \fBmailtext("#message");\fR
 .
 .SS "Contact module function\."
-Prints a nice message to the contact module text field, with the url if it\'s provided else just With "insert link"\.
+Prints a nice message to the contact module text field, with the url if it\'s provided else just With \fBinsert link\fR\.
 .
 .IP "" 4
 .
@@ -240,7 +250,7 @@ mailtext("#contact", "http://google\.com");
 Will put \fBThe video: http://google\.com does not download, could you please fix it Thanks!\fR
 .
 .P
-to #contact\.
+to \fB#contact\fR\.
 .
 .SS "Error function\."
 Sends me an email if an error occurs\.
@@ -256,16 +266,16 @@ error(output, url, error)
 .IP "" 0
 .
 .P
-example: #result
+example: \fB#result\fR
 .
 .P
-example: http://google\.com
+example: \fBhttp://google\.com\fR
 .
 .P
 Empty Response\. Recommended\.
 .
 .br
-example: error 404
+example: \fBerror 404\fR
 .
 .IP "" 4
 .
@@ -278,7 +288,7 @@ error("#result", "http://google\.com", "error 404");
 .IP "" 0
 .
 .P
-Will try to send me a mail and print "An error occurred and it was reported!" to #result if everything went fine, else it will print "An error occurred but it couldn\'t be reported! Please use the manual report module!"\.
+Will try to send me a mail and print \fB"An error occurred and it was reported!"\fR to \fB#result```` if everything went fine, else it will print\fR"An error occurred but it couldn\'t be reported! Please use the manual report module!"```\.
 .
 .SH "Bash script usage:"
 .
