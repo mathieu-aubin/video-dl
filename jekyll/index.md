@@ -6,6 +6,9 @@ layout: default
 Video download project.
 
 [![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
+[![npm version](https://badge.fury.io/js/video-dl.svg)](https://npmjs.org/package/video-dl)
+
+
 
 [Read in Italian](http://daniil.it/video-dl/it.html)
 
@@ -184,7 +187,7 @@ mailtext(output, url)
 
 ####Parameters:  
 
-#####output: html entity where to print out the contact message. Required.  
+#####output: html selector where to print out the contact message. Required.  
 Example: ```#contact```
 
 
@@ -219,7 +222,7 @@ error(output, url, error)
 
 ####Parameters:  
 
-#####output: html entity where to output success or error message of request to mail sending php script. Required.  
+#####output: html selector where to output success or error message of request to mail sending php script. Required.  
 example: #result  
 
 #####url: url of the video that failed to download.   Required.  
