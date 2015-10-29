@@ -118,14 +118,13 @@ rm -rf $temp/repo
 
 uglifyjs web/js/{he.js,linkify.min.js,linkify-jquery.min.js,video-dl.js} -o $temp/video-dl.min.js
 
-[ "$(diff $video/web/js/video-dl.js $video/jquery/video-dl.js)" != "" ] && {
+
 cp $video/web/js/video-dl.js $video/jquery/video-dl.js
 cp $video/README.md $video/jquery/
 cd $video/jquery
 sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
 mkdir $temp/npm
 cp -a * $temp/npm
-}
 
 # Generate website
 cd $video/jekyll
