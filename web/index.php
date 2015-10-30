@@ -183,7 +183,7 @@ if(isset($_GET['url'])) {
                     </li>
 
                     <li>
-                        <a href="https://github.com/danog/video-dl/fork" target="_blank" data-toggle="modal">Fork me on GitHub!</a>
+                        <a href="https://github.com/danog/video-dl/" target="_blank" data-toggle="modal">Fork me on GitHub!</a>
                     </li>
                 </ul>
             </div>
