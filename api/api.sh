@@ -223,13 +223,17 @@ title=${title// /_}
 # Rai website 
 
 rai_normal() {
+origfile="$file"
 
 # iframe check
-echo "$file" | grep -q videoURL || { content=$(echo "$file" | sed '/content="ContentItem/!d;s/.*content="//g;s/".*//g') && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
+echo "$origfile" | grep -q videoURL || { content=$(echo "$origfile" | sed '/content="ContentItem/!d;s/.*content="//g;s/".*//g') && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
+
+echo "$origfile" | grep -q videoURL || { file="$(wget -qO- http://www.rai.tv$(echo "$origfile" | grep -A1 '<div id="idFramePlayer">' | sed '/\<iframe/!d;s/.*src="//g;s/?.*//g'))"; }
 
 # read and declare videoURL and videoTitolo variables from javascript in page
 
 $(echo "$file" | grep 'videoTitolo\|videoURL')
+
 }
 
 # Rai replay function
