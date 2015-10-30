@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.6
+# Video download script v3.4.29
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.6
+echo "Video download script v3.4.29
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -332,13 +332,17 @@ title=${title// /_}
 # Rai website 
 
 rai_normal() {
+origfile="$file"
 
 # iframe check
-echo "$file" | grep -q videoURL || { content=$(echo "$file" | sed '/content="ContentItem/!d;s/.*content="//g;s/".*//g') && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
+echo "$origfile" | grep -q videoURL || { content=$(echo "$origfile" | sed '/content="ContentItem/!d;s/.*content="//g;s/".*//g') && file="$(wget http://www.rai.it/dl/RaiTV/programmi/media/"$content".html -qO-)"; }
+
+echo "$origfile" | grep -q videoURL || { file="$(wget -qO- http://www.rai.tv$(echo "$origfile" | grep -A1 '<div id="idFramePlayer">' | sed '/\<iframe/!d;s/.*src="//g;s/?.*//g'))"; }
 
 # read and declare videoURL and videoTitolo variables from javascript in page
 
 $(echo "$file" | grep 'videoTitolo\|videoURL')
+
 }
 
 # Rai replay function
