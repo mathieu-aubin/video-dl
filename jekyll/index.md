@@ -9,7 +9,6 @@ Video download project.
 [![npm version](https://badge.fury.io/js/video-dl.svg)](https://npmjs.org/package/video-dl)
 
 
-
 [Read in Italian](http://daniil.it/video-dl/it.html)
 
 [View on Github](https://github.com/danog/video-dl/)
@@ -160,7 +159,7 @@ Example: ```</li>```
 Example: ```#contact ```
 
 
-#####videodaniilit: If on video.daniiil.it hides php module and unhides javascript text field. Do not use.  
+#####videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
 
 ####Example:  
 ```
