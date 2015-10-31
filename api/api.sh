@@ -49,7 +49,7 @@ eval $(echo "$*" | sed 's/var//g;s/\s=\s/=/g')
 # Get video information
 
 getsize() {
-minfo="$(mediainfo "$a")"
+minfo="$(timeout -skill 15s mediainfo "$a")"
 info="($(echo "$(echo "$a" | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(echo "$minfo" | sed '/File size/!d;s/.*:\s//g'), $(echo "$minfo" | sed '/Width\|Height/!d;s/.*:\s//g;s/\spixels//g;s/\s//g;/^\s*$/d' | tr -s "\n" x | sed 's/x$//g')" |
 sed 's/\
 //g;s/^, //g;s/, B,/, Unkown size,/g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
@@ -305,7 +305,7 @@ for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spl
  # 1st method
 
  url="$(timeout -skill 5s wget -qO- "$dl&output=25")
-$(wget "$dl&output=43" -U="" -q -O -)"
+$(timeout -skill 5s wget "$dl&output=43" -U="" -q -O -)"
  
  [ "$url" != "" ] && base="$(echo "$url" | sed 's/[>]/\
 /g;s/[<]/\
@@ -322,7 +322,7 @@ base="$(eval echo "$(for f in $(echo "$tempbase" | grep ","); do number="$(echo 
  # 3rd and 4th method
  [ "$base" = "" ] && {
 url="$(wget "$dl&output=4" -q -O -)"
-[ "$url" != "" ] && echo "$url" | grep -q creativemedia && base="$url" || base=$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -A "" -o /dev/null); checkurl
+[ "$url" != "" ] && echo "$url" | grep -q 'creativemedia\|wms' && base="$url" || base=$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -A "" -o /dev/null); checkurl
  }
 
 
@@ -514,18 +514,9 @@ second=$2
 third=$3
 [ "$ptype" = "common" -a "$second" = "json" ] && youtube-dl -J "$dl" && exit
 # Find input URLs in database
-userinput="$dl"
-saneuserinput="$(echo "$dl" | sed 's/\//\\\//g;s/\&/\\\&/g')"
-
-[ "$third" != 'y' ] && grep -q ^"$saneuserinput"$ /var/www/video-db.txt && {
-video_db
-[ "$formats" = "" ] && exit || echo "$title $videoTitolo
-$formats"
-} || {
 $ptype "$dl" "$2" "$3"
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
 $formats"
-}
 
 ###########################################################################################
 ################################### End of the script #####################################
