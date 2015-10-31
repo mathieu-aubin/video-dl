@@ -33,7 +33,7 @@ if(isset($_GET['url'])) {
                     $ext = preg_replace('/,.*$/', '', preg_replace('/^.*[(]\s*/', '', $info));
                     $download = " download=\"$title.$ext\"";
                  };
-                $readyformats = "$readyformats<a href=\"$url\"$download>$info</a><br>";
+                $readyformats = "$readyformats<BR><a href=\"$url\"$download>$info</a><br>";
             };
         
             $output = '<h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>'.$videoTitolo."</h2><br><h1>Available versions:</h1><br>$readyformats</h2>";
@@ -102,7 +102,9 @@ if(isset($_GET['url'])) {
     <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png?v=ngg3edNEPX">
     <meta name="theme-color" content="#ff66ff">
 
-    <!-- Scripts -->
+    <!-- Video download CDN version -->
+    <script src="//daniil.it/video-dl/video-dl.min.js"></script>
+
 
     <!-- Google Analytics -->
     <script>
@@ -280,7 +282,7 @@ if(isset($_GET['url'])) {
                         <p><a href="http://daniil.it/video-dl/#method-1-app" target="_blank">Android version</a>
                             <br><a href="http://daniil.it/video-dl/" target="_blank">Bash script version</a>
                             <br>
-                        </p><p id="jsd" style="display:none">Currently using the Javascript engine.</p><p id="phpd">Currently using the Php engine.</p>
+                        </p><p id="jsd" style="display:none">Currently using the Jquery engine.</p><p id="phpd">Currently using the Php engine.</p>
                     </div>
                 </div>
             </div>

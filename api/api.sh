@@ -309,7 +309,7 @@ $(timeout -skill 5s wget "$dl&output=43" -U="" -q -O -)"
  
  [ "$url" != "" ] && base="$(echo "$url" | sed 's/[>]/\
 /g;s/[<]/\
-/g' | sed '/\.mp4\|\.wmv\|\.mov/!d;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
+/g' | sed '/\.mp4\|\.wmv\|\.mov/!d;s/mms/http/g;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
 
 
  # 2nd method
