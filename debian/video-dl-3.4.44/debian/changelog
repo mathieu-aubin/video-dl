@@ -1,3 +1,9 @@
+video-dl (3.4.44) lenny; urgency=low
+
+  * Merge pull request #3 from danog/inchworm/master Optimize images
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sat, 31 Oct 2015 22:25:21 +0000
+
 video-dl (3.4.43) lenny; urgency=low
 
   * Database, API and web version sync
