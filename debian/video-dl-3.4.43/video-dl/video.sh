@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.38
+# Video download script v3.4.43
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.38
+echo "Video download script v3.4.43
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -418,7 +418,7 @@ $(timeout -skill 5s wget "$dl&output=43" -U="" -q -O -)"
  
  [ "$url" != "" ] && base="$(echo "$url" | sed 's/[>]/\
 /g;s/[<]/\
-/g' | sed '/\.mp4\|\.wmv\|\.mov/!d;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
+/g' | sed '/\.mp4\|\.wmv\|\.mov/!d;s/mms/http/g;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
 
 
  # 2nd method
