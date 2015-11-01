@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 01 Nov 2015 15:00:23 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.4.58
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.4.58) lenny; urgency=low
+ .
+   * Merge branch 'master' of github.com:/danog/video-dl
+Checksums-Sha1: 
+ 9a267f6bd4af10c5d4589723dcec68f970687fb4 1443 video-dl_3.4.58.dsc
+ 84642d6c6c8eeabeffbefef54f5d8966c79320f2 16225 video-dl_3.4.58.tar.gz
+ 29e3db2ce0d76bf50cc1b95f9cb8125a41664f64 18726 video-dl_3.4.58_all.deb
+Checksums-Sha256: 
+ b8b030287aefa5b88f911966e7711581054fd6a03dac4c41d259381c6752725d 1443 video-dl_3.4.58.dsc
+ 7a4eb06fa0b4904571ee0f35d20e51f064fce8f214e8a06c5d7b454baa01e70f 16225 video-dl_3.4.58.tar.gz
+ a7fc05f2606c5a8fdf4a1fcda10ba36cd54418f817183b0292cd7ce886bb6ae4 18726 video-dl_3.4.58_all.deb
+Files: 
+ 0cf883e51ff33515a465bb87b60af78f 1443 misc optional video-dl_3.4.58.dsc
+ 5539c47cca022d0af71dd412d5ffef2d 16225 misc optional video-dl_3.4.58.tar.gz
+ f7d90b9ff1bf34f7e99992c448c723cf 18726 misc optional video-dl_3.4.58_all.deb
