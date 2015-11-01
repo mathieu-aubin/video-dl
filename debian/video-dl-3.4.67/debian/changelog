@@ -1,3 +1,9 @@
+video-dl (3.4.67) lenny; urgency=low
+
+  * Fixed bug in script
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sun, 01 Nov 2015 19:23:41 +0000
+
 video-dl (3.4.63) lenny; urgency=low
 
   * revert to old jekyll
