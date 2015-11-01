@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 01 Nov 2015 18:53:34 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.4.63
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.4.63) lenny; urgency=low
+ .
+   * revert to old jekyll
+Checksums-Sha1: 
+ 45e9059e95003b2f422efcb9d4855673b91da32d 1443 video-dl_3.4.63.dsc
+ 157446cb140259e8d9a93000ba56fc05f7d50d10 16126 video-dl_3.4.63.tar.gz
+ ff914d0115d2dbdcb9208c53b02048c250e7dad7 18748 video-dl_3.4.63_all.deb
+Checksums-Sha256: 
+ 291872e46e2b0afd2b90239095578d13b7dcb31baae6f0ff481cc6ae19ed73ce 1443 video-dl_3.4.63.dsc
+ c380ea460832b79d9b9bdb358753eb5647f4a48d09322aee9d8fa29d223ad9e9 16126 video-dl_3.4.63.tar.gz
+ e79f7599ae277e0530dd63fe530b10602f22c83ce8d5002b6dbe2ebe3486a594 18748 video-dl_3.4.63_all.deb
+Files: 
+ ee48e97ec03a66790d7ab243491a7b9c 1443 misc optional video-dl_3.4.63.dsc
+ 4fdddd7217d9a2ab5c8262bb7bcccc52 16126 misc optional video-dl_3.4.63.tar.gz
+ bf3c249a147f833d3d7c60488b50b0d6 18748 misc optional video-dl_3.4.63_all.deb
