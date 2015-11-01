@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 01 Nov 2015 09:21:34 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.4.52
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.4.52) lenny; urgency=low
+ .
+   * Merge pull request #4 from danog/inchworm/master Optimize images
+Checksums-Sha1: 
+ 3d706bbb0ad2c30b667ff1d60bdff6d9bfb30ab6 1443 video-dl_3.4.52.dsc
+ ee052c66f3a0106896a403bb3991e3310d07244d 16092 video-dl_3.4.52.tar.gz
+ 3da45a29d487ed403d77a378925cfe30ca5c9c7e 18660 video-dl_3.4.52_all.deb
+Checksums-Sha256: 
+ e3b4cc6f20c2705bb1475e380aa547038a06ffe60dbbee3afe999006e190da85 1443 video-dl_3.4.52.dsc
+ 9acf2d648f96c45dec41f345fa9e2690ef5ae2675ffaee63e68b59a4d3ee749b 16092 video-dl_3.4.52.tar.gz
+ dc091fd088cdad6a9b9e35407749986e0a9b807ab9e3f7833e4cf624275d26f3 18660 video-dl_3.4.52_all.deb
+Files: 
+ dfd47c84d19f9ed666db7cf8a5a8b05c 1443 misc optional video-dl_3.4.52.dsc
+ 0e366d7df117b111a1d4bd99e62eaba3 16092 misc optional video-dl_3.4.52.tar.gz
+ d6b5fe960a5e2e92072254f18c54e38d 18660 misc optional video-dl_3.4.52_all.deb
