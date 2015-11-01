@@ -684,7 +684,7 @@ max="$(echo "$api" | sed -n '$p' | grep -Eo '^[^ ]+')"
 
 echo "Title: $videoTitolo
 
-$(echo "$api" | sed 's/http:\/\/.*//g;s/https:\/\/.*//g')
+$(echo "$api" | sed 's/\S*$//')
 
 "
 
