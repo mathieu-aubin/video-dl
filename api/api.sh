@@ -224,14 +224,18 @@ title=${title// /_}
 
 rai_normal() {
 
+echo "$1" | grep -q "rainews.it" && {
+bsp=$(echo "$file" | sed '/parentPage.bsp /!d;'"s/.* '//;s/'.*//")
+jsons=$(echo "$file" |  sed '/"url" : "http/!d;s/.* : "//;s/".*//')
+
+} || {
 # iframe check
 echo "$file" | grep -q videoURL || {
 urls="http://www.rai.it/dl/RaiTV/programmi/media/"$(echo "$file" | sed '/content="ContentItem/!d;s/.*content="//g;s/".*//g')".html http://www.rai.tv$(echo "$file" | grep -A1 '<div id="idFramePlayer">' | sed '/\<iframe/!d;s/.*src="//g;s/?.*//g') $(echo "$file" | sed '/drawMediaRaiTV/!d;s/.*http/http/g;s/'"'"'.*//g')"
 
 file="$(wget -qO- $urls)"; 
-
 }
-
+}
 # read and declare videoURL and videoTitolo variables from javascript in page
 
 $(echo "$file" | grep 'videoTitolo\|videoURL')
@@ -477,16 +481,6 @@ title=${title// /_}
 
 }
 
-
-###########################################################################################
-##################### End of Common section, beginning of database section ################
-###########################################################################################
-
-video_db() {
-# Read formats from database
-formats="$(sed -n '/'"$saneuserinput"'/,$p' /var/www/video-db.txt | sed -n '/endofdbentry/q;p' | sed '1d')"
-
-}
 
 
 
