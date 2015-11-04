@@ -86,8 +86,6 @@ And used the following theme as a base:
 Bootstrap theme (freelancer) \fIhttps://github\.com/IronSummitMedia/startbootstrap\-freelancer\fR
 .
 .IP "" 0
-.
-.SH "Incorporation"
 You can incorporate this script in your website!
 .
 .br
@@ -112,9 +110,9 @@ npm install video\-dl ```
 .P
 Here\'s a list of the functions and the usage instructions\.
 .
-.SS "Video Download function\."
+.SH "Video Download function\."
 .
-.IP "" 4
+.SS "Usage:"
 .
 .nf
 
@@ -122,21 +120,21 @@ video_dl(output, inputurl, dlsupport, messageoutput)
 .
 .fi
 .
-.IP "" 0
+.SS "Parameters:"
 .
-.P
+.SS "output: output html element for the video info and the download urls\. Required\."
 example: \fB#result\.\fR
 .
-.P
+.SS "inputurl: url of the video\. Required\."
 example: \fB$("input#urljs")\.val()\fR
 .
-.P
+.SS "dlsupport: enables or disables the download attribute in the download links\. Optional\."
 0 enables, anything disables\.
 .
-.P
+.SS "messageoutput: output html element for the contact module\. Optional\."
 example: \fB#message\fR
 .
-.P
+.SS "Example:"
 \fBvideo_dl("#result", $("input#urljs")\.val(), "0", "#message");\fR
 .
 .P
@@ -166,10 +164,10 @@ The function will then start the mailtext function with the following parameters
 .P
 See mailtext description for the result\.
 .
-.SS "First load function\."
+.SH "First load function\."
 Use to output supported websites list, prepare mail message and, only on the video\.daniil\.it website, hide the php submit module and use javascript engine instead\.
 .
-.IP "" 4
+.SS "Usage:"
 .
 .nf
 
@@ -177,32 +175,32 @@ firstload(supportedurls, separatorstart, separatorend, messageoutput, videodanii
 .
 .fi
 .
-.IP "" 0
+.SS "Parameters:"
 .
-.P
+.SS "supportedurls: output html element for the supported websites list\. Required\."
 Example: \fB#supportedurls\fR\.
 .
-.P
+.SS "separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to <code><br></code>\."
 Optional, recommended\.
 .
 .br
 Example: \fB<li>\fR
 .
-.P
+.SS "separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to <code><br></code>\. Optional, recommended\."
 Example: \fB</li>\fR
 .
-.P
+.SS "messageoutput: output html element for default contact module text\. Optional, recommended\."
 Example: \fB#contact\fR
 .
-.IP "" 4
+.SS "videodaniilit: If on video\.daniil\.it hides php module and unhides javascript text field\. Do not use\."
+.
+.SS "Example:"
 .
 .nf
 
 firstload("#supportedurls", "<li>", "</li>", "#message");
 .
 .fi
-.
-.IP "" 0
 .
 .P
 Let\'s say the url list is: \fBa b c d\fR\.
@@ -223,10 +221,10 @@ Output printed to #supportedurls is:
 .P
 This will also create the default contact module text with \fBmailtext("#message");\fR
 .
-.SS "Contact module function\."
+.SH "Contact module function\."
 Prints a nice message to the contact module text field, with the url if it\'s provided else just With \fBinsert link\fR\.
 .
-.IP "" 4
+.SS "Usage:"
 .
 .nf
 
@@ -234,12 +232,14 @@ mailtext(output, url)
 .
 .fi
 .
-.IP "" 0
+.SS "Parameters:"
 .
-.P
+.SS "output: html selector where to print out the contact message\. Required\."
 Example: \fB#contact\fR
 .
-.IP "" 4
+.SS "url: url of the video to insert into the message\. Not required, if not provided defaults to insert link\."
+.
+.SS "Example:"
 .
 .nf
 
@@ -247,18 +247,16 @@ mailtext("#contact", "http://google\.com");
 .
 .fi
 .
-.IP "" 0
-.
 .P
 Will put \fBThe video: http://google\.com does not download, could you please fix it Thanks!\fR
 .
 .P
 to \fB#contact\fR\.
 .
-.SS "Error function\."
+.SH "Error function\."
 Sends me an email if an error occurs\.
 .
-.IP "" 4
+.SS "Usage:"
 .
 .nf
 
@@ -266,29 +264,27 @@ error(output, url, error)
 .
 .fi
 .
-.IP "" 0
+.SS "Parameters:"
 .
-.P
+.SS "output: html selector where to output success or error message of request to mail sending php script\. Required\."
 example: \fB#result\fR
 .
-.P
+.SS "url: url of the video that failed to download\. Required\."
 example: \fBhttp://google\.com\fR
 .
-.P
+.SS "error: actual error message\. If empty defaults to"
 Empty Response\. Recommended\.
 .
 .br
 example: \fBerror 404\fR
 .
-.IP "" 4
+.SS "Example:"
 .
 .nf
 
 error("#result", "http://google\.com", "error 404");
 .
 .fi
-.
-.IP "" 0
 .
 .P
 Will try to send me a mail and print \fB"An error occurred and it was reported!"\fR to \fB#result```` if everything went fine, else it will print\fR"An error occurred but it couldn\'t be reported! Please use the manual report module!"```\.
@@ -322,9 +318,9 @@ Options:
 .
 .fi
 .
-.SS "Bash script installation instructions:"
+.SH "Bash script installation instructions:"
 .
-.P
+.SS "Debian\-derived distros (Ubuntu, Linux mint, Bodhi Linux, etc\.)"
 On debian\-derived distros, execute this command to add my repo to your system:
 .
 .IP "" 4
@@ -353,7 +349,7 @@ sudo apt\-get update; sudo apt\-get \-y install video\-dl
 .
 .IP "" 0
 .
-.P
+.SS "Any other Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):"
 Execute this command to install the script:
 .
 .IP "" 4
@@ -382,10 +378,12 @@ wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \
 .
 .IP "" 0
 .
-.P
+.SS "Android:"
+.
+.SS "Method 1 (app)\."
 Enable unknown sources and install this app \fIhttp://bit\.ly/0192837465k\fR\. Once opened you will be presented with a user friendly interface similar to the web version\.
 .
-.P
+.SS "Changelog:"
 1: initial version
 .
 .P
@@ -403,10 +401,12 @@ Enable unknown sources and install this app \fIhttp://bit\.ly/0192837465k\fR\. O
 .P
 1\.4: Added more credits\.
 .
-.P
+.SS "Todo:"
 You tell me!
 .
-.P
+.SS "Method 2 (script)\."
+.
+.SS "Install <a href=\"https://play\.google\.com/store/apps/details?id=stericson\.busybox\">Busybox</a>, <a href=\"https://play\.google\.com/store/apps/details?id=jackpal\.androidterm\">Jackpal\'s Terminal emulator</a> and <a href=\"https://play\.google\.com/store/apps/details?id=com\.bitcubate\.android\.bash\.installer\">Bash</a> on rooted devices or <a href=\"https://play\.google\.com/store/apps/details?id=burrows\.apps\.busybox\">Busybox no root</a> if your device isn\'t rooted\."
 Video tutorial \fIhttps://www\.youtube\.com/watch?v=4NLs2NzHbbc\fR
 .
 .P
@@ -497,7 +497,7 @@ The API supports GET requests and the endpoint is http://api\.daniil\.it (suppor
 .
 .SS "Supported parameters:"
 .
-.P
+.SS "url"
 The value should be the URL of the video to download\. The response will be a list of URLS with the corresponding quality name, format, size and dimension\.
 .
 .P
@@ -573,7 +573,7 @@ Quality name (format, size, dimension) URL of the video
 .P
 The qualities are ordered in decreasing order by dimension\.
 .
-.P
+.SS "p"
 Supports the following values:
 .
 .IP "" 4
@@ -603,7 +603,7 @@ allwebsites
 returns a full list of supported websites\.
 .
 .SH "Contribute!"
-If you created a version of the script using another programming language contact me \fIhttp://daniil\.it\fR and I will put it on this page!
+If you created a program that uses this API contact me \fIhttp://daniil\.it\fR and I will put it on this page!
 .
 .P
 That\'s it!
