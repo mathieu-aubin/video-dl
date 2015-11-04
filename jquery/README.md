@@ -315,6 +315,8 @@ wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L htt
 
 
 ### Android:
+
+
 ### Method 1 (app).
 Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once opened you will be presented with a user friendly interface similar to the web version.
 

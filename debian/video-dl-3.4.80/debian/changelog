@@ -1,3 +1,9 @@
+video-dl (3.4.80) lenny; urgency=low
+
+  * Update README.md
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Wed, 04 Nov 2015 11:30:21 +0000
+
 video-dl (3.4.78) lenny; urgency=low
 
   * Merge branch 'master' of github.com:/danog/video-dl
