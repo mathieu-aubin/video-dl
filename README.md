@@ -73,7 +73,7 @@ And used the following theme as a base:
 
 
 
-## Incorporation
+# Incorporation
 
 You can incorporate this script in your website!  
 Just include jquery and the video-dl script with:  
@@ -88,32 +88,32 @@ npm install video-dl
 
 Here's a list of the functions and the usage instructions.  
 
-###Video Download function.  
+##Video Download function.  
 
-####Usage:  
+###Usage:  
 ```
 video_dl(output, inputurl, dlsupport, messageoutput)
 ```
 
-####Parameters:  
+###Parameters:  
 
-#####output: output html element for the video info and the download urls. Required.  
+###output: output html element for the video info and the download urls. Required.  
 example: ```#result.```
 
 
 
-#####inputurl: url of the video. Required.  
+###inputurl: url of the video. Required.  
 example: ```$("input#urljs").val()```
 
-#####dlsupport: enables or disables the download attribute in the download links. Optional.  
+###dlsupport: enables or disables the download attribute in the download links. Optional.  
 0 enables, anything disables. 
 
-#####messageoutput: output html element for the contact module. Optional.  
+###messageoutput: output html element for the contact module. Optional.  
 example: ```#message```
 
 
 
-####Example:  
+###Example:  
 ```video_dl("#result", $("input#urljs").val(), "0", "#message"); ```
 
 
@@ -130,34 +130,34 @@ The function will then start the mailtext function with the following parameters
 See mailtext description for the result.  
 
 
-###First load function.  
+##First load function.  
 Use to output supported websites list, prepare mail message and,
 only on the video.daniil.it website, hide the php submit module and use javascript engine instead.  
 
-####Usage:
+###Usage:
 ```
 firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit)  
 ```
 
-####Parameters:  
+###Parameters:  
 
-#####supportedurls: output html element for the supported websites list. Required.  
+###supportedurls: output html element for the supported websites list. Required.  
 Example: ```#supportedurls```. 
 
-#####separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
+###separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
 Optional, recommended.  
 Example: ```<li>```  
 
-######separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
+###separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
 Example: ```</li>```  
 
-######messageoutput: output html element for default contact module text. Optional, recommended.  
+###messageoutput: output html element for default contact module text. Optional, recommended.  
 Example: ```#contact ```
 
 
-#####videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
+###videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
 
-####Example:  
+###Example:  
 ```
 firstload("#supportedurls", "<li>", "</li>", "#message");  
 ```
@@ -176,26 +176,26 @@ mailtext("#message");
 ```
 
 
-###Contact module function.  
+##Contact module function.  
 Prints a nice message to the contact module text field, with the url if it's provided else just With ```insert link```.  
 
-####Usage:  
+###Usage:  
 ```
 mailtext(output, url)  
 ```
 
-####Parameters:  
+###Parameters:  
 
-#####output: html selector where to print out the contact message. Required.  
+###output: html selector where to print out the contact message. Required.  
 Example: ```#contact```
 
 
 
-#####url: url of the video to insert into the message.  Not required, if not provided defaults to insert link.
+###url: url of the video to insert into the message.  Not required, if not provided defaults to insert link.
 
   
 
-####Example:  
+###Example:  
 ```
 mailtext("#contact", "http://google.com");  
 ```
@@ -211,27 +211,27 @@ Thanks!
 to ```#contact```.  
 
 
-###Error function.  
+##Error function.  
 Sends me an email if an error occurs.  
 
-####Usage:  
+###Usage:  
 ```
 error(output, url, error)  
 ```
 
-####Parameters:  
+###Parameters:  
 
-#####output: html selector where to output success or error message of request to mail sending php script. Required.  
+###output: html selector where to output success or error message of request to mail sending php script. Required.  
 example: ```#result```  
 
-#####url: url of the video that failed to download.   Required.  
+###url: url of the video that failed to download.   Required.  
 example: ```http://google.com``` 
 
-#####error: actual error message. If empty defaults to
+###error: actual error message. If empty defaults to
 Empty Response. Recommended.  
 example: ```error 404```  
 
-####Example:  
+###Example:  
 ```
 error("#result", "http://google.com", "error 404");  
 ```
@@ -271,9 +271,9 @@ Options:
 
 
 
-### Bash script installation instructions:
+## Bash script installation instructions:
 
-#### Debian-derived distros (Ubuntu, Linux mint, Bodhi Linux, etc.)
+### Debian-derived distros (Ubuntu, Linux mint, Bodhi Linux, etc.)
 
 
 On debian-derived distros, execute this command to add my repo to your system:
@@ -296,7 +296,7 @@ sudo apt-get update; sudo apt-get -y install video-dl
 
 
 
-#### Any other Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
+### Any other Linux/Unix system (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 
 
 Execute this command to install the script:
@@ -314,10 +314,11 @@ wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L htt
 ```
 
 
-#### Android:
-##### Method 1 (app).
+### Android:
+### Method 1 (app).
 Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once opened you will be presented with a user friendly interface similar to the web version.
-##### Changelog:
+
+### Changelog:
 
 1: initial version
 
@@ -332,13 +333,13 @@ Enable unknown sources and install [this app](http://bit.ly/0192837465k). Once o
 1.4: Added more credits.
 
 
-##### Todo: 
+### Todo: 
 
 You tell me!
 
 
-##### Method 2 (script).
-##### Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) on rooted devices or [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) if your device isn't rooted. 
+### Method 2 (script).
+### Install [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Jackpal's Terminal emulator](https://play.google.com/store/apps/details?id=jackpal.androidterm) and [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) on rooted devices or [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) if your device isn't rooted. 
 
 
 [Video tutorial](https://www.youtube.com/watch?v=4NLs2NzHbbc)
@@ -411,7 +412,7 @@ The API supports GET requests and the endpoint is http://api.daniil.it (supports
 ### Supported parameters:
 
 
-#### url
+### url
 
 
 The value should be the URL of the video to download. The response will be a list of URLS with the corresponding quality name, format, size and dimension.
@@ -455,7 +456,7 @@ The qualities are ordered in decreasing order by dimension.
 
 
 
-#### p
+### p
 
 Supports the following values:
 
@@ -477,7 +478,7 @@ returns a full list of supported websites.
 ## Contribute!
 
 
-If you created a version of the script using another programming language [contact me](http://daniil.it) and I will put it on this page!
+If you created a program that uses this API [contact me](http://daniil.it) and I will put it on this page!
 
 That's it!
 
