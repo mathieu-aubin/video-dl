@@ -1,3 +1,9 @@
+video-dl (3.4.86) lenny; urgency=low
+
+  * Database, API and web version sync
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Thu, 05 Nov 2015 19:11:02 +0000
+
 video-dl (3.4.85) lenny; urgency=low
 
   * Remove error function
