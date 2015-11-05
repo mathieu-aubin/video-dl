@@ -253,42 +253,6 @@ Will put \fBThe video: http://google\.com does not download, could you please fi
 .P
 to \fB#contact\fR\.
 .
-.SH "Error function\."
-Sends me an email if an error occurs\.
-.
-.SS "Usage:"
-.
-.nf
-
-error(output, url, error)
-.
-.fi
-.
-.SS "Parameters:"
-.
-.SS "output: html selector where to output success or error message of request to mail sending php script\. Required\."
-example: \fB#result\fR
-.
-.SS "url: url of the video that failed to download\. Required\."
-example: \fBhttp://google\.com\fR
-.
-.SS "error: actual error message\. If empty defaults to"
-Empty Response\. Recommended\.
-.
-.br
-example: \fBerror 404\fR
-.
-.SS "Example:"
-.
-.nf
-
-error("#result", "http://google\.com", "error 404");
-.
-.fi
-.
-.P
-Will try to send me a mail and print \fB"An error occurred and it was reported!"\fR to \fB#result```` if everything went fine, else it will print\fR"An error occurred but it couldn\'t be reported! Please use the manual report module!"```\.
-.
 .SH "Bash script usage:"
 .
 .nf

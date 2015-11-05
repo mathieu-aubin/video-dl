@@ -211,33 +211,6 @@ Thanks!
 to ```#contact```.  
 
 
-##Error function.  
-Sends me an email if an error occurs.  
-
-###Usage:  
-```
-error(output, url, error)  
-```
-
-###Parameters:  
-
-###output: html selector where to output success or error message of request to mail sending php script. Required.  
-example: ```#result```  
-
-###url: url of the video that failed to download.   Required.  
-example: ```http://google.com``` 
-
-###error: actual error message. If empty defaults to
-Empty Response. Recommended.  
-example: ```error 404```  
-
-###Example:  
-```
-error("#result", "http://google.com", "error 404");  
-```
-
-Will try to send me a mail and print ```"An error occurred and it was reported!"``` to ```#result```` if everything went fine, else it will print ```"An error occurred but it couldn't be reported! Please use the manual report module!"```.   
-
 
 # Bash script.
 
