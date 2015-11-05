@@ -95,8 +95,8 @@ function video_dl(output, inputurl, dlsupport, messageoutput) {
                     }
                     // Output the result
                     $(output).html(result);
-                    // Else send error email
-                } else error(output, inputurl, response);
+                    // Else primt error
+                } else $(output).html("<h1>An error occurred and it was reported!");
             }
         }
         // Set request type
@@ -238,59 +238,6 @@ function mailtext(output, url) {
 };
 
 
-/*
-Error function.
-Sends me an email if an error occurs.
 
-Usage:
-error(output, url, error)
-
-Parameters:
-
-output: html entity where to output success or error message of request to mail sending php script. Required.
-example: #result
-
-url: url of the video that failed to download. Required.
-example: http://google.com
-
-error: actual error message. If empty defaults to
-Empty Response. Recommended.
-example: error 404
-
-Example:
-error("#result", "http://google.com", "error 404");
-
-Will try to send me a mail and print "An error occurred and it was reported!" to #result if everything went fine, else it will print "An error occurred but it couldn't be reported! Please use the manual report module!".
-
-*/
-function error(output, url, error) {
-    // Check for required params
-    if (!((url) && (output))) { console.log("Missing required params.");return; };
-    // Set domain value for php script
-    var domain = 3;
-    // Log to console the error.
-    console.log(error);
-    // If there is no error set it to Empty Response
-    if (!(error)) { var error = "Empty Response"; };
-    // Prepare and make request
-    $.ajax({
-        url: "https://mail.daniil.it/",
-        type: "POST",
-        data: {
-            url: url,
-            error: error,
-            domain: domain
-        },
-        cache: false,
-        success: function() {
-            // Success sending mail
-            $(output).html("<h1>An error occurred and it was reported!</h1>");
-        },
-        error: function() {
-            // Error sending mail
-            $(output).html("<h1>An error occurred but it couldn't be reported! Please use the manual report module!</h1>");
-        },
-    })
-};
 
 
