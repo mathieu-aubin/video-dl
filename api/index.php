@@ -46,6 +46,17 @@ $yt";
       echo "$final";
       $stmt = $pdo->prepare("INSERT INTO video_db (url, final) VALUES (?, ?)");
       $rows = $stmt->execute(array($url, $final));
+     } else {
+      $cmd = "bash -x /var/www/video/api/api.sh".' '.escapeshellarg($url).' '.escapeshellarg($param).' '.escapeshellarg($db)." 2>&1";
+      $message = shell_exec("$cmd");
+      $error = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message); 
+      $error = trim($error, "\n");
+      $to = 'daniil.gentili.dg@gmail.com';
+      $headers = "From: noreply@daniil.it\n";
+      $email_subject = "Video download error: $url";
+      $email_body = "An error occurred while downloading the following url: $url\n$error\n\n";
+      $headers .= "Reply-To: daniil.gentili.dg@gmail.com";
+      mail($to,$email_subject,$email_body,$headers);
      };
     } else { echo "$final"; };
 } else {

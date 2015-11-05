@@ -38,12 +38,6 @@ if(isset($_GET['url'])) {
         
             $output = '<h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>'.$videoTitolo."</h2><br><h1>Available versions:</h1><br>$readyformats</h2>";
         } else {
-             $to = 'daniil.gentili.dg@gmail.com';
-             $headers = "From: noreply@daniil.it\n";
-             $email_subject = "Video download error: $mail";
-             $email_body = "An error occurred while downloading the following url: $mail\nEmpty response\n\n";
-             $headers .= "Reply-To: daniil.gentili.dg@gmail.com";
-             mail($to,$email_subject,$email_body,$headers);
              $output = "<h1>An error occurred and it was reported.</h1>";
         }
     }
