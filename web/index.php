@@ -67,8 +67,8 @@ if(isset($_GET['url'])) {
             "message": "This website uses cookies to ensure you get the best experience on our website",
             "dismiss": "Got it!",
             "learnMore": "More info",
-            "link": "",
-            "theme": "light-top"
+            "link": "http://privacypolicies.com/privacy/view/DbHIYG",
+            "theme": "light-bottom"
         };
     </script>
     <script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
@@ -96,8 +96,6 @@ if(isset($_GET['url'])) {
     <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png?v=ngg3edNEPX">
     <meta name="theme-color" content="#ff66ff">
 
-    <!-- Video download CDN version -->
-    <script src="//daniil.it/video-dl/video-dl.min.js"></script>
 
 
     <!-- Google Analytics -->
@@ -179,7 +177,7 @@ if(isset($_GET['url'])) {
                     </li>
 
                     <li>
-                        <a href="https://github.com/danog/video-dl/" target="_blank" data-toggle="modal">Fork me on GitHub!</a>
+                        <a href="https://github.com/danog/video-dl/" target="_blank">Fork me on GitHub!</a>
                     </li>
                 </ul>
             </div>
