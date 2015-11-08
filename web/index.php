@@ -67,7 +67,7 @@ if(isset($_GET['url'])) {
             "message": "This website uses cookies to ensure you get the best experience on our website",
             "dismiss": "Got it!",
             "learnMore": "More info",
-            "link": "http://privacypolicies.com/privacy/view/DbHIYG",
+            "link": "http://cookie.daniil.it/?w=video",
             "theme": "light-bottom"
         };
     </script>
@@ -96,19 +96,6 @@ if(isset($_GET['url'])) {
     <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png?v=ngg3edNEPX">
     <meta name="theme-color" content="#ff66ff">
 
-
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o) [0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-50691719-7', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 
     <!-- Share -->
     <script type="text/javascript">
@@ -148,6 +135,22 @@ if(isset($_GET['url'])) {
 
 </head>
 <body id="page-top" class="index" onload='firstload("#supportedurls", "<li>", "</li>", "#message", "y");'>
+    <!-- Video download CDN version -->
+    <script src="//daniil.it/video-dl/video-dl.min.js"></script>
+
+
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o) [0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50691719-7', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -197,7 +200,7 @@ if(isset($_GET['url'])) {
                         <span class="name">Download videos!</span>
 
                         <hr class="star-light">
-                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br>BTW I'm working on DPLAY support.<br><br>Paste the URL of the video:<BR></span>
+                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br>BTW I&apos;m working on DPLAY support.<br><br>Paste the URL of the video:<BR></span>
 
                         <br>
                         <br>
@@ -283,7 +286,7 @@ if(isset($_GET['url'])) {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="https://daniil.it">Here you can find my other projects!</a>
+                        <a href="https://daniil.it">Here you can find my other projects!</a><br><a href="http://privacypolicies.com/privacy/view/DbHIYG">Privacy Policy</a>
                     </div>
                 </div>
             </div>
@@ -381,10 +384,6 @@ Thanks!</textarea>
     <script src="/js/linkify.min.js?"></script>
     <script src="/js/linkify-jquery.min.js?"></script>
     <script data-cfasync="false" src="/js/video-dl.js?v=tynixpowerlucedeidiamantimagicwinxminimondimagicimagicwinx"></script>-->
-    <!-- Video download CDN version -->
-    <script src="//daniil.it/video-dl/video-dl.min.js"></script>
-
-
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
