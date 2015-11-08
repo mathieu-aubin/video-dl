@@ -7,14 +7,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,15 +20,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ayz4sci.androidfactory.DownloadProgressView;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.winsontan520.wversionmanager.library.WVersionManager;
-
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.IOException;
-
 
 public class MainActivity extends Activity {
 
@@ -39,16 +32,70 @@ public class MainActivity extends Activity {
     public static Tracker tracker;
     private WebView mWebView;
 
+    public void dlfile (String url, String title, String sanetitle)
+
+    {
+        final String url2print = url;
+        // TOAST
+        final Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        Toast toaststartdl = Toast.makeText(this, getString(R.string.starting_dl), duration);
+        toaststartdl.show();
+
+        // Initial setup
+        String dirPath = Environment.DIRECTORY_MOVIES+"Video";
+
+        DownloadProgressView downloadProgressView = (DownloadProgressView) findViewById(R.id.downloadProgressView);
+        DownloadManager downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+        request.setTitle(title);
+        request.setDescription("Downloading " + title + "...");
+        request.setDestinationInExternalFilesDir(getApplicationContext(), dirPath, sanetitle);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.allowScanningByMediaScanner();
+        }
+        long downloadID = downloadManager.enqueue(request);
+
+        downloadProgressView.show(downloadID, new DownloadProgressView.DownloadStatusListener() {
+            @Override
+            public void downloadFailed(int reason) {
+                int duration = Toast.LENGTH_SHORT;
+                String message = getString(R.string.dl_error1)+url2print+getString(R.string.dl_error2)+reason;
+                Toast toastdlfail = Toast.makeText(context, message, duration);
+                toastdlfail.show();
+
+            }
+
+            @Override
+            public void downloadSuccessful() {
+
+                int duration = Toast.LENGTH_SHORT;
+                Toast toastdlok = Toast.makeText(context, getString(R.string.dl_success), duration);
+                toastdlok.show();
+            }
+
+            @Override
+            public void downloadCancelled() {
+
+                int duration = Toast.LENGTH_SHORT;
+                Toast toastdlcanceled = Toast.makeText(context, getString(R.string.dl_cancel), duration);
+                toastdlcanceled.show();
+            }
+        });
+
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         // Needed stuff
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
         int duration = Toast.LENGTH_SHORT;
-
-        Toast toasterror = Toast.makeText(this, getString(R.string.error), duration);
-        Toast toastsuccess = Toast.makeText(this, getString(R.string.success), duration);
+        Toast toasterror = Toast.makeText(this, getString(R.string.error), duration););
 
         PackageManager m = getPackageManager();
         String dlfolder = getPackageName();
@@ -59,7 +106,7 @@ public class MainActivity extends Activity {
             Log.w("yourtag", "Error Package name not found ", e);
         }
 
-        /* if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
         }*/
         // Auto update
@@ -77,37 +124,6 @@ public class MainActivity extends Activity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
         if (settings.getBoolean("my_first_time", true)) {
-
-            File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/yt-dl4a.sh");
-            if (!file.exists()) {
-
-                String url = "http://daniil.magix.net/yt-dl4a.sh";
-                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-                request.setDescription(getString(R.string.dldesc));
-                request.setTitle(getString(R.string.dl));
-    // in order for this if to run, you must use the android 3.2 to compile your app
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    request.allowScanningByMediaScanner();
-                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                }
-                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "yt-dl4a.sh");
-
-    // get download service and enqueue file
-                DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                manager.enqueue(request);
-            }
-
-            Toast toastworking = Toast.makeText(this, getString(R.string.installing), duration);
-            toastworking.show();
-            String[] cmd = {"sh ",Environment.DIRECTORY_DOWNLOADS,"/yt-dl4a.sh ",dlfolder};
-
-            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                cmd = {"sh ", Environment.DIRECTORY_DOWNLOADS. "/yt-dl4a.sh ", dlfolder};
-            }
-
-            Process process = Runtime.getRuntime().exec(cmd);
-
-            // record the fact that the app has been started at least once
             settings.edit().putBoolean("my_first_time", false).commit();
         }
 
@@ -147,7 +163,7 @@ public class MainActivity extends Activity {
         String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
 
 
-        if (Intent.ACTION_SEND.equals(action) && type != null && ("text/plain".equals(type) && ((sharedText.startsWith("https://")) || (sharedText.startsWith("http://"))))) {
+        if (Intent.ACTION_SEND.equals(action) && type != null && "text/plain".equals(type) && ((sharedText.startsWith("https://")) || (sharedText.startsWith("http://")))) {
             // Handle text being sent
             urltoload = sharedText;
         }
@@ -183,16 +199,16 @@ public class MainActivity extends Activity {
             case R.id.action_url:
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
+                // final EditText edittext = (EditText) findViewById(R.id.popup_url);
+                final EditText edittext = new EditText(this);
+                edittext.setText(mWebView.getUrl());
+
                 alert.setTitle(R.string.urlprompt);
-
-                final EditText input = new EditText(this);
-                alert.setView(input);
-                input.setHint(mWebView.getUrl());
-
+                alert.setView(edittext);
                 alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        String inurl = input.getText().toString();
-                        if(inurl != null && !inurl.isEmpty() && !inurl.equals("null")) {
+                        String inurl = edittext.getText().toString();
+                        if(inurl != null && !inurl.isEmpty() && !inurl.equals("null") && (inurl.startsWith("https://")) || (inurl.startsWith("http://"))) {
                             mWebView.loadUrl(inurl);
                         }
                     }

@@ -13,8 +13,10 @@
     <string name="urlprompt">Please type in a URL</string>
     <string name="error">An error occurred, please try again.</string>
     <string name="success">Success!</string>
-    <string name="dl">Downloading…</string>
-    <string name="dldesc">Downloading required files…</string>
-    <string name="installing">Installing files…</string>
-    <string name="share_text">Try out this incredibly fast and intuitive application to download videos from Rai, Mediaset e LA7 websites: http://git.daniil.it/video-dl/#method-1-app</string>
+    <string name="starting_dl">Starting download…</string>
+    <string name="dl_error1">Couldn\'t download the video </string>
+    <string name="dl_error2"> due to the following error: </string>
+    <string name="dl_cancel">Download canceled!</string>
+    <string name="dl_success">Download successful!</string>
+    <string name="share_text">Try out this incredibly fast and intuitive application to download videos from Rai, Mediaset e LA7 websites: http://daniil.it/video-dl/#method-1-app</string>
 </resources>

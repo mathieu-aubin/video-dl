@@ -8,7 +8,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 22
         versionCode 2
-        versionName '2.0'
+        versionName '3.0'
 
     }
     buildTypes {
@@ -20,8 +20,15 @@ android {
     productFlavors {
     }
 }
+repositories {
+    maven {
+        url 'https://dl.bintray.com/ayz4sci/maven/'
+    }
+}
 
 dependencies {
+    compile 'com.ayz4sci.androidfactory:downloadprogress:1.0.1'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.google.android.gms:play-services:7.0.0'
+
 }
