@@ -1,3 +1,9 @@
+video-dl (3.4.100) lenny; urgency=low
+
+  * Database, API and web version sync
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Mon, 09 Nov 2015 20:49:55 +0000
+
 video-dl (3.4.99) lenny; urgency=low
 
   * Updated dependencies for jquery plugin
