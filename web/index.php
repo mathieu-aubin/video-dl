@@ -71,7 +71,7 @@ if(isset($_GET['url'])) {
             "theme": "light-bottom"
         };
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
     <!-- End Cookie Consent plugin -->
 
     <!-- Favicon -->
@@ -135,6 +135,9 @@ if(isset($_GET['url'])) {
 
 </head>
 <body id="page-top" class="index" onload='firstload("#supportedurls", "<li>", "</li>", "#message", "y");'>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
     <!-- Video download CDN version -->
     <script src="//daniil.it/video-dl/video-dl.min.js"></script>
 
@@ -248,7 +251,7 @@ if(isset($_GET['url'])) {
                             <br><a href="https://github.com/HubSpot/pace" target="_blank">Loading animation (pace.js)</a>
                             <br><a href="https://github.com/mathiasbynens/he" target="_blank">HTML entity encoder (he.js)</a>
                             <br><a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Bootstrap theme (freelancer)</a>
-                            <br><a href="https://github.com/parshap/html-linkify" target="_blank">Linkifier (html-linkify)</a>
+                            <br><a href="https://github.com/soapbox/linkifyjs/" target="_blank">Linkifier (linkify.js)</a>
                         </p>
                     </div>
                     <div class="footer-col col-md-4">
@@ -381,6 +384,8 @@ Thanks!</textarea>
 
     <!-- Video download 
     <script src="https://cdn.rawgit.com/mathiasbynens/he/master/he.js"></script>
+    <script src="/js/linkify.min.js?"></script>
+    <script src="/js/linkify-jquery.min.js?"></script>
     <script data-cfasync="false" src="/js/video-dl.js?v=tynixpowerlucedeidiamantimagicwinxminimondimagicimagicwinx"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
