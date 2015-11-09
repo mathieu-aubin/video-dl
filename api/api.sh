@@ -127,7 +127,7 @@ formats="$(
 
 [ "$normal" != "" ] && for a in $normal; do getsize
 
- echo "Normal quality $info $a";done
+ echo "$info $a";done
 
 [ "$fourthousand" != "" ] && for a in $fourthousand; do getsize
 
