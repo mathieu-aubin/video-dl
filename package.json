@@ -1,6 +1,6 @@
 {
   "name": "video-dl",
-  "version": "3.4.96",
+  "version": "3.4.99",
   "description": "Script to Download videos from youtube, rai.tv, mediaset, la7 and hundreds of other sites",
   "main": "video-dl.js",
   "scripts": {
@@ -29,8 +29,7 @@
   "homepage": "https://daniil.it/video-dl",
   "dependencies": {
     "he": "^0.5.0",
-    "jquery": "^2.1.4",
-    "linkifyjs": "^2.0.0-beta.4"
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
     "coveralls": "^2.11.4"
