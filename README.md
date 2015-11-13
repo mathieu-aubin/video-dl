@@ -20,7 +20,7 @@ The programs included in this project can be used to download videos from any ge
 This project features:
 
 
-* A Bash script that can be installed on
+* A [Bash script](#bash-script-usage) that can be installed on
 
  * [Any Linux/Unix system](#bash-script-installation-instructions)
 
@@ -217,7 +217,9 @@ to ```#contact```.
 ## Bash script usage:
 
 ```
-video.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
+video.sh [ -qabp=player ] URL URL2 URL3 ...
+video.sh [ -qabfp=player ] URLS.txt URLS2.txt URLS3.txt ...
+
 
 Do not forget to put the URL between quotes if it contains special chars like & or #.
 

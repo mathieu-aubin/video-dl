@@ -2,6 +2,8 @@
 Programmi per scaricare video.
 
 [![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
+[![npm version](https://badge.fury.io/js/video-dl.svg)](https://npmjs.org/package/video-dl)
+
 
 [Read English version](https://github.com/danog/video-dl)
 
@@ -11,22 +13,208 @@ Creato da [Daniil Gentili](http://daniil.it).
 This project is licensed under the terms of the GPLv3 license.
 
 
-I programmi di questo progetto possono essere usati per scaricare i video di qualsiasi sito generico, inclusi i video del sito della [Rai](http://rai.tv) (incluso Rai Replay e siti iframe), [Mediaset](http://mediaset.it) (incluso Witty TV), [LA7](http://la7.it) e tanti altri siti. E grazie a youtube-dl adesso i programmi supportano tantissimi altri siti!
+I programmi di questo progetto possono essere usati per scaricare i video di qualsiasi sito generico, inclusi i video del sito della [Rai](http://rai.tv) (incluso Rai Replay e siti iframe), [Mediaset](http://mediaset.it) (incluso Witty TV), [LA7](http://la7.it), [Dplay](http://dplay.com) e tanti altri siti. E grazie a youtube-dl adesso i programmi supportano tantissimi altri siti!
 
 
-Questo progetto include uno [script Bash](#istruzioni-di-utilizzo-dello-script-bash) che può essere installato su [qualsiasi sistema Linux/Unix](#installation-instructions) incluso [Android](#android), [Mac OS X](#installation-instructions) o [iOS](#ios) e persino su [Windows](#windows), [un'applicazione per Android](#metodo-1-app), una [API](#api) e una [versione web](#versione-web)!
-
-Sia la [API](#api) sia la [versione web](#versione-web) usano un [database](https://github.com/danog/video-dl/blob/master/web/video-db.txt).
+Questo progetto include:
 
 
-## Versione Web
-Questo progetto include una [versione web](http://video.daniil.it/).
+* Uno [script Bash](#istruzioni-di-utilizzo-dello-script-bash) che può essere installato su:
+
+ * [qualsiasi sistema Linux/Unix](#istruzioni-di-installazione-dello-script-bash)
+
+ * [Android](#android)
+
+ * [Mac OS X](#istruzioni-di-installazione-dello-script-bash)
+
+ * [iOS](#ios) e persino su
+
+ * [Windows](#windows)!
+
+
+* Una [API](#api)!
+
+
+* Un'[app Android](#metodo-1-app)!
+
+
+* E persino una [versione web](#versione-web)!
+
+
+* Che può essere [incorpororata](#incorporamento) in altri siti!
+
+
+Sia la [API](#api) sia la [versione web](#web-version) usano un [database](https://github.com/danog/video-dl/blob/master/video_db.sql).
+
+
+
+# Versione web
+
+Questo progetto include anche una [versione web](https://video.daniil.it/).
 
 ![web version](https://github.com/danog/video-dl/raw/master/web.png)
+
 
 Il codice sorgente della pagina può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/web).
 
 
+Ho usato i seguenti script nella versione web:
+
+
+* [Animazione di caricamento (pace.js)](https://github.com/HubSpot/pace)
+
+* [Codificatore di entità HTML (he.js)](https://github.com/mathiasbynens/he)
+
+* [Linkifier (linkify.js)](https://github.com/soapbox/linkifyjs/)
+
+
+E mi sono basato sul seguente tema bootstrap:  
+
+
+* [Bootstrap theme (freelancer)](https://github.com/IronSummitMedia/startbootstrap-freelancer)
+
+
+
+# Incorporamento
+
+Puoi anche incorporare la versione Jquery nel tuo sito!  
+Semplicemente includi jquery e lo script video-dl con il seguente codice:  
+```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//daniil.it/video-dl/video-dl.min.js"></script>
+```  
+O installa il tutto con npm.  
+```
+npm install video-dl
+```
+
+Ecco la lista delle funzioni e le istruzioni di utilizzo.  
+
+##Funzione di scaricamento video.  
+
+###Utilizzo:  
+```
+video_dl(output, inputurl, dlsupport, messageoutput)
+```
+
+###Parametri:  
+
+###output: elemento html per l'output delle informazioni del video e gli indirizzi di scaricamento. Obbligatorio.  
+Esempio: ```#result.```
+
+
+
+###inputurl: Indirizzo del video. Obbligatorio.  
+Esempio: ```$("input#urljs").val()```
+
+###dlsupport: abilita o disabilita l'attributo html5 download negli indirizzi di scaricamento. Opzionale.  
+0 abilita, qualsiasi altro valore incluso "" disabilita. 
+
+###messageoutput: elemento html dell'output del testo del modulo di contatto. Opzionale.  
+Esempio: ```#message```
+
+
+
+###Esempio:  
+```video_dl("#result", $("input#urljs").val(), "0", "#message"); ```
+
+
+Diciamo che il campo di testo ```input#urljs``` ha valore ```"http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-a27ccfe8-b824-4e85-9a08-d15e57fb61a0.html#p=0"```.  
+
+La funzione leggerà il valore del campo di testo ```input#urljs``` element, otterrà gli indirizzi di scaricamento dall'API e scriverà il seguente output sull'elemento ```#result```:  
+```
+<h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>26 - Il potere degli animali fatati - Winx Club VII del 03/10/2015</h2><br><h1>Available versions:</h1><br><h2><a href="http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4524680.mp4" download="26_Il_potere_degli_animali_fatati_Winx_Club_VII_del_03102015.mp4">Normal quality (mp4, 267 MiB, 720x404)</a><br></h2>
+```
+
+Poi la funzione chiamerà la funzione ```mailtext``` con i seguenti Parametri:  
+```mailtext(messageoutput, inputurl);```  
+
+Per il risultato vedere la funzione mailtext.  
+
+
+##Funzione di primo avvio.  
+Usata per scrivere la lista dei siti supportati, preparare il messaggio del modulo di contatto e, soltanto su video.daniil.it, nascondere il modulo php ed usare la versione Jquery del programma.
+
+
+###Utilizzo:
+```
+firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit)  
+```
+
+###Parametri:  
+
+###supportedurls: elemento html di output per la lista dei siti supportati. Obbligatorio.  
+Esempio: ```#supportedurls```. 
+
+###separatorstart: il primo separatore della lista degli indirizzi: verrà inserito prima di ogni elemento della lista dei siti, se vuoto diventa ```<br>```.  
+Opzionale, raccomandato.  
+Esempio: ```<li>```  
+
+###separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Opzionale, recommended.  
+Esempio: ```</li>```  
+
+###messageoutput: output html element for default contact module text. Opzionale, recommended.  
+Esempio: ```#contact ```
+
+
+###videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
+
+###Esempio:  
+```
+firstload("#supportedurls", "<li>", "</li>", "#message");  
+```
+
+Let's say the url list is: ```a b c d```. 
+
+Output printed to #supportedurls is:
+
+```
+<li>a</li><li>b</li><li>c</li><li>d</li><a href="http://lol.daniil.it" target="_blank">&#9786;</a></li>
+```
+
+This will also create the default contact module text with
+```
+mailtext("#message");  
+```
+
+
+##Contact module function.  
+Prints a nice message to the contact module text field, with the url if it's provided else just With ```insert link```.  
+
+###Utilizzo:  
+```
+mailtext(output, url)  
+```
+
+###Parametri:  
+
+###output: html selector where to print out the contact message. Obbligatorio.  
+Esempio: ```#contact```
+
+
+
+###url: url of the video to insert into the message.  Not Obbligatorio, if not provided defaults to insert link.
+
+  
+
+###Esempio:  
+```
+mailtext("#contact", "http://google.com");  
+```
+
+Will put 
+```
+The video:
+http://google.com
+does not download, could you please fix it
+Thanks!
+```
+
+to ```#contact```.  
+
+
+
+# Bash script.
 ## Istruzioni di utilizzo dello script bash:
 ```
 video.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
