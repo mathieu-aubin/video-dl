@@ -1,3 +1,9 @@
+video-dl (3.4.112) lenny; urgency=low
+
+  * Update cibuild
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Fri, 13 Nov 2015 12:36:38 +0000
+
 video-dl (3.4.110) lenny; urgency=low
 
   * Database, API and web version sync
