@@ -54,7 +54,7 @@ if(isset($_GET['url'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
+    <meta name="description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV, Dplay and lots of other websites!">
     <meta name="author" content="Daniil Gentili">
 
     <title>Download Videos!</title>
@@ -113,7 +113,7 @@ if(isset($_GET['url'])) {
 
 
     <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video, youtube">
-    <meta name="Description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV and lots of other websites!">
+    <meta name="Description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV, Dplay and lots of other websites!">
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css?v=loloolol" rel="stylesheet">
@@ -203,7 +203,7 @@ if(isset($_GET['url'])) {
                         <span class="name">Download videos!</span>
 
                         <hr class="star-light">
-                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br>BTW I&apos;m working on DPLAY support.<br><br>Paste the URL of the video:<BR></span>
+                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a>, <a href="http://dplay.com" target="_blank">Dplay</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br><br>Paste the URL of the video:<BR></span>
 
                         <br>
                         <br>
