@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.112
+# Video download script v3.4.114
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.112
+echo "Video download script v3.4.114
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -132,16 +132,18 @@ dl="$(echo "$1" | grep -q '^//' && echo "http:$1" || echo "$1")"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null | sed 's/^HTTP:\/\//http:\/\//g')"
 
-echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://*.akamaihd.net/*|http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|http://.*wittytv.it/.*|http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*' || ptype=common
+echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/.*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|http://.*wittytv.it/.*|http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://www.*.rai..*/dl/RaiTV/programmi/media/.*|https://www.*.rai..*/dl/RaiTV/tematiche/.*|https://www.*.rai..*/dl/.*PublishingBlock-.*|https://www.*.rai..*/dl/replaytv/replaytv.html.*|https://.*.rai.it/.*|https://www.rainews.it/dl/rainews/.*|https://mediapolisvod.rai.it/.*|https://www.video.mediaset.it/video/.*|https://www.video.mediaset.it/player/playerIFrame.*|https://.*wittytv.it/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*|.*dplay.com/.*' || ptype=common
 
-echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*' && ptype=rai
+echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/.*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|https://www.*.rai..*/dl/RaiTV/programmi/media/.*|https://www.*.rai..*/dl/RaiTV/tematiche/.*|https://www.*.rai..*/dl/.*PublishingBlock-.*|https://www.*.rai..*/dl/replaytv/replaytv.html.*|https://.*.rai.it/.*|https://www.rainews.it/dl/rainews/.*' && ptype=rai
 
 
-echo "$urltype" | grep -qE 'http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*' && ptype=mediaset
+echo "$urltype" | grep -qE 'http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|https://www.video.mediaset.it/video/.*|https://www.video.mediaset.it/player/playerIFrame.*|tgcom24.mediaset.it/video/.*|http://mediaset.it/.*|https://mediaset.it/.*' && ptype=mediaset
 
-echo "$urltype" | grep -q 'http://.*wittytv.it/.*' && ptype=mediaset && witty=y
+echo "$urltype" | grep -q 'http://.*wittytv.it/.*|https://.*wittytv.it/.*' && ptype=mediaset && witty=y
 
-echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*' && ptype=lasette
+echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*' && ptype=lasette
+
+echo "$urltype" | grep -qE '.*dplay.com/.*' && ptype=dplay
 
 dl="$urltype"
 
@@ -218,7 +220,7 @@ f4v="$(echo "$unformatted" | grep ".f4v")"
   lasette)
     lamp4="$(echo "$unformatted" | sed '/master/d;/manifest/d;/\.mp4/!d')"
     ;;
-  common)
+  *)
     common="$unformatted"
     ;;
 esac
@@ -547,9 +549,21 @@ formatoutput
 
 }
 
+###########################################################################################
+##################### End of Mediaset section, beginning of dplay section ################
+###########################################################################################
+
+dplay() {
+id=$(curl -s "$dl" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
+json="$(curl -s http://it.dplay.com/api/v2/ajax/videos?video_id=$id)"
+unformatted="$(echo "$json" | sed 's/\"\:\"/\
+/g' | sed '/mp4/!d;s/\".*//g;s/\\//g')"
+videoTitolo=$(echo "$json" | sed 's/.*","title":"//g;s/".*//g')
+formatoutput
+}
 
 ###########################################################################################
-##################### End of Mediaset section, beginning of common section ################
+##################### End of dplay section, beginning of common section ################
 common() {
 # Store the page in a variable
 page="$(wget -q -O - "$1")"

@@ -1,0 +1,17 @@
+Format: 3.0 (native)
+Source: video-dl
+Binary: video-dl
+Architecture: all
+Version: 3.4.114
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Homepage: http://daniil.it/video-dl
+Standards-Version: 3.9.4
+Build-Depends: debhelper (>= 8.0.0)
+Package-List: 
+ video-dl deb misc optional
+Checksums-Sha1: 
+ 0b1079b4574906c86c041249451ee0b0859bcb88 17508 video-dl_3.4.114.tar.gz
+Checksums-Sha256: 
+ 3fefbe09ed99840bc781861647da0e0db7460493ff1df6c0d133cdd49b24809c 17508 video-dl_3.4.114.tar.gz
+Files: 
+ 1773e38353d78506f4749fd78f3b6fcb 17508 video-dl_3.4.114.tar.gz
