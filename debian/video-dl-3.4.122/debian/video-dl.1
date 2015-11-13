@@ -26,7 +26,7 @@ The programs included in this project can be used to download videos from any ge
 This project features:
 .
 .IP "\(bu" 4
-A Bash script that can be installed on
+A \fIBash script\fR that can be installed on
 .
 .IP "\(bu" 4
 \fIAny Linux/Unix system\fR
@@ -234,7 +234,7 @@ mailtext(output, url)
 .
 .SS "Parameters:"
 .
-.SS "output: html selector where to print out the contact message\. Required\."
+.SS "output: html element where to print out the contact message\. Required\."
 Example: \fB#contact\fR
 .
 .SS "url: url of the video to insert into the message\. Not required, if not provided defaults to insert link\."
@@ -257,7 +257,9 @@ to \fB#contact\fR\.
 .
 .nf
 
-video\.sh [ \-qaf [ urls\.txt ] ] URL URL2 URL3 \.\.\.
+video\.sh [ \-qabp=player ] URL URL2 URL3 \.\.\.
+video\.sh [ \-qabfp=player ] URLS\.txt URLS2\.txt URLS3\.txt \.\.\.
+
 
 Do not forget to put the URL between quotes if it contains special chars like & or #\.
 
@@ -341,6 +343,9 @@ wget http://daniilgentili\.magix\.net/video\.sh \-O /usr/bin/video\.sh || curl \
 .fi
 .
 .IP "" 0
+.
+.P
+Now you can run it with video\.sh in any directory\.
 .
 .SS "Android:"
 .
@@ -432,7 +437,7 @@ wget http://daniilgentili\.magix\.net/win/video\.sh \-O video\.sh
 .IP "" 0
 .
 .P
-Run with \./video\.sh In the directory where you downloaded it\.
+Run with \fB\./video\.sh\fR in the directory where you downloaded it\.
 .
 .P
 To run the script from any directory run the following commands:
@@ -454,7 +459,7 @@ This project also features an API \fIhttp://video\.daniil\.it/api/\fR\.
 The source code of the API can be viewed here \fIhttps://github\.com/danog/video\-dl/blob/master/api\fR\.
 .
 .P
-The API uses youtube\-dl \fIhttps://github\.com/rg3/youtube\-dl\fR to get the links for non Rai/mediaset/la7 videos\.
+The API uses youtube\-dl \fIhttps://github\.com/rg3/youtube\-dl\fR to get the links for non Rai/mediaset/la7/dplay/wittytv videos\.
 .
 .P
 The API supports GET requests and the endpoint is http://api\.daniil\.it (supports https)\.
@@ -462,7 +467,7 @@ The API supports GET requests and the endpoint is http://api\.daniil\.it (suppor
 .SS "Supported parameters:"
 .
 .SS "url"
-The value should be the URL of the video to download\. The response will be a list of URLS with the corresponding quality name, format, size and dimension\.
+The value should be the percent\-encoded URL of the video to download\. The response will be a list of URLS with the corresponding quality name, format, size and dimension\.
 .
 .P
 Example:
@@ -551,7 +556,7 @@ websites
 .IP "" 0
 .
 .P
-returns a shortened list of supported websites:
+returns a shortened list of supported websites\.
 .
 .IP "" 4
 .
