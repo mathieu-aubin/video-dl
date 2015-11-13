@@ -146,54 +146,54 @@ firstload(supportedurls, separatorstart, separatorend, messageoutput, videodanii
 ###supportedurls: elemento html di output per la lista dei siti supportati. Obbligatorio.  
 Esempio: ```#supportedurls```. 
 
-###separatorstart: il primo separatore della lista degli indirizzi: verrà inserito prima di ogni elemento della lista dei siti, se vuoto diventa ```<br>```.  
-Opzionale, raccomandato.  
+###separatorstart: il primo separatore della lista degli indirizzi: verrà inserito prima di ogni elemento della lista dei siti, se vuoto diventa ```<br>```. Opzionale, raccomandato.  
 Esempio: ```<li>```  
 
-###separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Opzionale, recommended.  
+###separatorend: il primo separatore della lista degli indirizzi: verrà inserito dopo ogni elemento della lista dei siti, se vuoto diventa ```<br>```. Opzionale, raccomandato. 
 Esempio: ```</li>```  
 
-###messageoutput: output html element for default contact module text. Opzionale, recommended.  
+###messageoutput: elemento html di output per il testo del modulo di contatto. Opzionale, raccomandato.  
 Esempio: ```#contact ```
 
 
-###videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
+###videodaniilit: Se su video.daniil.it nasconde il modulo php ed usa la versione Jquery del programma.
+
 
 ###Esempio:  
 ```
 firstload("#supportedurls", "<li>", "</li>", "#message");  
 ```
 
-Let's say the url list is: ```a b c d```. 
+Diciamo che la lista dei siti supportati sia: ```a b c d```. 
 
-Output printed to #supportedurls is:
+L'output scritto su ```#supportedurls``` è:
 
 ```
 <li>a</li><li>b</li><li>c</li><li>d</li><a href="http://lol.daniil.it" target="_blank">&#9786;</a></li>
 ```
 
-This will also create the default contact module text with
+Questo inserirà anche il testo nel modulo di contatto con  
 ```
 mailtext("#message");  
 ```
 
 
-##Contact module function.  
-Prints a nice message to the contact module text field, with the url if it's provided else just With ```insert link```.  
+##Funzione del modulo di contatto. 
+Scrive un bel messaggio nel modulo di contatto con l'indirizzo se è dato, altrimenti soltanto con ```insert link```.  
 
 ###Utilizzo:  
 ```
-mailtext(output, url)  
+mailtext(output, url);  
 ```
 
 ###Parametri:  
 
-###output: html selector where to print out the contact message. Obbligatorio.  
+###output: elemento html dove scrivere il messaggio del modulo di contatto:  
 Esempio: ```#contact```
 
 
 
-###url: url of the video to insert into the message.  Not Obbligatorio, if not provided defaults to insert link.
+###url: L'indirizzo del video da inserire nel messaggio.  Non Obbligatorio, se non dato viene sostituito da ```insert link```.
 
   
 
@@ -202,7 +202,7 @@ Esempio: ```#contact```
 mailtext("#contact", "http://google.com");  
 ```
 
-Will put 
+Scriverà  
 ```
 The video:
 http://google.com
@@ -210,15 +210,23 @@ does not download, could you please fix it
 Thanks!
 ```
 
-to ```#contact```.  
+su ```#contact```.  
 
 
 
-# Bash script.
-## Istruzioni di utilizzo dello script bash:
+# Script Bash.
+
+## Istruzioni di utilizzo dello script bash:  
 ```
-video.sh [ -qaf [ urls.txt ] ] URL URL2 URL3 ...
-```
+video.sh [ -qabp=player ] URL URL2 URL3 ...
+video.sh [ -qabfp=player ] URLS.txt URLS2.txt URLS3.txt ...
+
+Non dimenticarti di mettere l'URL tra virgolette se contiene caratteri speciali come & o #.
+
+
+Apri con ./video.sh se hai installato lo script in una directory non inserita nella $PATH.
+
+
 Opzioni:
 
 
@@ -230,23 +238,25 @@ Opzioni:
 -a:	Modalità Automatica/Andrea: scarica automaticamente la massima qualità dei video.
 
 
--b:	Usa la API interna: richiede più programmmi aggiuntivi e potrebbe nkn funzionare su qualche dispositivo, ma potrebbe anche essere più veloce del server API.
+-b:	Usa la API interna: richiede più programmmi aggiuntivi e potrebbe non funzionare su qualche dispositivo, ma potrebbe anche essere più veloce del server API.
 
 
 -f:	Leggi gli URL da uno o più file di testo.
 
 
--p player:	Riproduci il video invece di scaricarlo utilizzando il player specificato, se invece esso non viene specificato viene usato mplayer.
+-p player:	Riproduci il video invece di scaricarlo utilizzando il player specificato, se non viene specificato viene usato mplayer.
 
 
 --help:	Fa vedere questo messaggio.
 
 
 
+```
+
+
 ## Istruzioni di installazione dello script bash:
 
-### Qualsiasi sistema Linux/Unix (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
-
+### Sistemi debian o derivati (Ubuntu, Linux mint, Bodhi Linux, ecc...)
 
 Su sistemi debian o derivate, esegui questo comando per aggiungere la mia repo al sistema:
 
@@ -266,18 +276,9 @@ E questo comando per installare lo script.
 sudo apt-get update && sudo apt-get -y install video-dl
 ```
 
-Esegui il programma con:
-
-```
-video.sh "URL"
-```
 
 
-Ricorda che è necessario racchiudere l'URL tra virgolette.
-
-
-
-Oppure se vuoi usare il metodo normale segui queste istruzioni.
+### Qualsiasi sistema Linux/Unix (Ubuntu, Debian, Fedora, Redhat, openBSD, Mac OS X):
 
 Esegui questo comando per installare lo script:
 
@@ -285,16 +286,7 @@ Esegui questo comando per installare lo script:
 wget http://daniilgentili.magix.net/video.sh -O video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x video.sh
 ```
 
-Esegui il programma con:
-```
-./video.sh "URL"
-```
-
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
-
-
-Nella directory dove l'hai scaricato.
+Esegui il programma con: ```./video.sh``` nella directory dove l'hai scaricato.
 
 Per usare questo programma da qualsiasi cartella installa il programma nella $PATH con questo comando (da eseguire come root):
 
@@ -302,25 +294,19 @@ Per usare questo programma da qualsiasi cartella installa il programma nella $PA
 wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x /usr/bin/video.sh
 ```
 
-Ora potrai eseguire lo script da qualsiasi cartella con:
-```
-video.sh "URL"
-```
-
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
-
-
+Ora potrai eseguire lo script da qualsiasi cartella con: ```video.sh```
 
 
 
 ### Android:
-#### Metodo 1 (app).
-Abilita le sorgenti sconosciute e installa [questa applicazione](http://bit.ly/0192837465k).
+
+
+### Metodo 1 (app).
+Abilita sorgenti sconosciute e installa [questa applicazione](http://bit.ly/0192837465k).
 
 L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 
-##### Changelog:
+### Changelog:
 
 1: versione iniziale
 
@@ -335,12 +321,12 @@ L'applicazione presenta una semplice interfaccia molto simile alla versione web.
 1.4: Aggiunto link nei ringraziamenti
 
 
-##### Da fare:
+### Da fare:
 
 Dimmi tu cosa posso aggiungere nelle versioni sucessive!
 
-#### Metodo 2 (script).
-##### Installa [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Emulatore Terminale](https://play.google.com/store/apps/details?id=jackpal.androidterm) e [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) se il tuo dispositivo ha i permessi di root o soltanto [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) se il tuo dispositivo non è rootato. 
+### Metodo 2 (script).
+### Installa [Busybox](https://play.google.com/store/apps/details?id=stericson.busybox), [Emulatore Terminale](https://play.google.com/store/apps/details?id=jackpal.androidterm) e [Bash](https://play.google.com/store/apps/details?id=com.bitcubate.android.bash.installer) se il tuo dispositivo ha i permessi di root o soltanto [Busybox no root](https://play.google.com/store/apps/details?id=burrows.apps.busybox) se il tuo dispositivo non è rootato. 
 
 
 [Video tutorial](https://www.youtube.com/watch?v=4NLs2NzHbbc)
@@ -354,11 +340,8 @@ cd /sdcard && wget http://daniilgentili.magix.net/android/video.sh
 
 Eseguilo con:
 ```
-bash /sdcard/video.sh "URL"
+bash /sdcard/video.sh
 ```
-
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
 
 
 
@@ -370,54 +353,24 @@ su
 mount -o rw,remount /system && wget http://daniilgentili.magix.net/android/video.sh -O /system/bin/video.sh && chmod 755 /system/bin/video.sh
 ```
 
-Ora dovresti essere in grado di eseguire lo script con:
-```
-video.sh "URL"
-```
-
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
-
+Ora dovresti essere in grado di eseguire lo script con un ```video.sh```.
 
 
 Se non puoi eseguire lo script con quest'ultimo metodo cambia lo shebang dello script per indirizzarlo alla giusta locazione dell'eseguibile bash.
 
 ### iOS:
-Fai il jailbreak del tuo dispositivo, installa mobileterminal e wget ed esegui questo comando:
+Fai il Jailbreak al tuo dispositivo, aggiungi questa repo Cydia,
 
 ```
-wget http://daniilgentili.magix.net/video.sh -O video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x video.sh
+http://repo.daniil.it
 ```
 
-Esegui lo script con:
-```
-./video.sh "URL"
-```
+... e installa mobileterminal e video-dl.
 
 
-Ricorda che è necessario racchiudere l'URL tra virgolette.
+Esegui lo script con video.sh in mobileterminal.
 
-
-
-Nella cartella dove lo hai scaricato.
-
-Per visualizzare i video scaricati usa iFile.
-
-Per usare questo programma da qualsiasi directory esegui questo comando:
-
-```
-su -c "wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x /usr/bin/video.sh"
-```
-
-Ora dovresti essere in grado di eseguire lo script con questo comando:
-```
-video.sh "URL"
-```
-
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
-
-
+Per eseguire e importare il video usa iFile o Filza.
 
 
 ### Windows:
@@ -432,11 +385,6 @@ Esegui lo script con:
 ./video.sh "URL"
 ```
 
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
-
-
-
 Nella directory dove lo hai scaricato.
 
 Per usare lo script da qualsiasi directory usa questo comando.
@@ -446,13 +394,7 @@ cd /bin && wget http://daniilgentili.magix.net/win/video.sh -O video.sh && cd $O
 ```
 
 
-Ora dovresti essere in grado di eseguirlo con un:
-```
-video.sh "URL"
-```
-
-
-Ricorda che è necessario racchiudere l'URL tra virgolette.
+Ora dovresti essere in grado di eseguirlo con un: ```video.sh "URL"```.
 
 # API
 
@@ -460,10 +402,21 @@ Questo progetto include anche una API.
 
 Il codice sorgente della API può essere visualizzato [qui](https://github.com/danog/video-dl/blob/master/api).
 
+La API usa [youtube-dl](https://github.com/rg3/youtube-dl) per ottenere i link di scaricamento per siti a parte la7/rai/mediaset/dplay/wittytv.
+
+La API supporta richieste GET e il punto di accesso è http://api.daniil.it (supporta https).
 
 ### Esempio di utilizzo API
 
-Richiesta:
+### Parametri supportati:
+
+
+### url
+
+Il valore di questo parametro deve essere l'indrizzo codificato (percent encoding) del video. La risposta sarà il titolo e una lista di indirizzi con il nome della corrispondente qualità, il formato, la risoluzione e la dimensione.
+
+
+Esempio:
 
 ```
 http://api.daniil.it/?url=http://www.winx.rai.it/dl/RaiTV/programmi/media/ContentItem-47307196-8fd1-46f8-8b31-92ae5f9b5089.html#p=0
@@ -478,25 +431,50 @@ Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcas
 Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
 ```
 
-Spiegazione: 
+Explanation: 
 
 ```
 Winx_Club_VI_Ep3_Il_collegio_volante Winx Club VI - Ep.3: Il collegio volante
+```
 
-Nome sanitizzato per il salvataggio del video  Nome originale del video
-Newline
+Nome per il salvataggio del video in un file  Nome originale del video per informazione
 
-Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
-
-Nome della qualità (formato, dimensione, qualità) URL del video
-Newline
-
-Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
-
-Nome della qualità (formato, dimensione, qualità) URL del video
-Newline
 
 ```
+Highest quality (mp4, 286MB, 1024x576) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_1800.mp4
+```
+
+Nome della qualità (formato, dimensione, risoluzione) indirizzo del video
+
+```
+Medium-low quality (mp4, 131MB, 700x394) http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_6_puntate/2189463_800.mp4
+```
+
+Nome della qualità (formato, dimensione, risoluzione) indirizzo del video
+
+Le qualità sono ordinate in ordine decrescente della risoluzione.
+
+
+### p
+
+Supporta i seguenti valori:
+
+```
+websites
+```
+
+ritorna una lista accorciata dei siti supportati.
+
+
+```
+allwebsites
+```
+
+ritorna la lista completa dei siti supportati.
+
+
+
+## Contribuisci
 
 
 Se hai creato un'altra versione di questo programma utilizzando la API [contattami](http://daniil.it/) e io la metterò su questa pagina!

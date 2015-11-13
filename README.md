@@ -186,7 +186,7 @@ mailtext(output, url)
 
 ###Parameters:  
 
-###output: html selector where to print out the contact message. Required.  
+###output: html element where to print out the contact message. Required.  
 Example: ```#contact```
 
 
@@ -288,6 +288,8 @@ To use from any directory install the script directly in the $PATH using this co
 wget http://daniilgentili.magix.net/video.sh -O /usr/bin/video.sh || curl -L http://daniilgentili.magix.net/video.sh -o video.sh; chmod +x /usr/bin/video.sh
 ```
 
+Now you can run it with video.sh in any directory.
+
 
 ### Android:
 
@@ -367,7 +369,7 @@ Install [Cygwin](https://www.cygwin.com) (don't forget to install wget and sed d
 wget http://daniilgentili.magix.net/win/video.sh -O video.sh
 ```
 
-Run with ./video.sh In the directory where you downloaded it.
+Run with ```./video.sh``` in the directory where you downloaded it.
 
 To run the script from any directory run the following commands:
 
@@ -382,7 +384,7 @@ This project also features an [API](http://video.daniil.it/api/).
 
 The source code of the API can be viewed [here](https://github.com/danog/video-dl/blob/master/api).
 
-The API uses [youtube-dl](https://github.com/rg3/youtube-dl) to get the links for non Rai/mediaset/la7 videos.
+The API uses [youtube-dl](https://github.com/rg3/youtube-dl) to get the links for non Rai/mediaset/la7/dplay/wittytv videos.
 
 The API supports GET requests and the endpoint is http://api.daniil.it (supports https).
 
@@ -392,7 +394,7 @@ The API supports GET requests and the endpoint is http://api.daniil.it (supports
 ### url
 
 
-The value should be the URL of the video to download. The response will be a list of URLS with the corresponding quality name, format, size and dimension.
+The value should be the percent-encoded URL of the video to download. The response will be a list of URLS with the corresponding quality name, format, size and dimension.
 
 
 Example:
@@ -441,7 +443,7 @@ Supports the following values:
 websites
 ```
 
-returns a shortened list of supported websites:
+returns a shortened list of supported websites.
 
 
 ```
