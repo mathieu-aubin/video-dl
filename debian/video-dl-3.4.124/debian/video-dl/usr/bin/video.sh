@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.122
+# Video download script v3.4.124
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.122
+echo "Video download script v3.4.124
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -320,7 +320,7 @@ formats="$(
 )"
 
 formats="$(echo "$formats" | awk '!x[$0]++' | awk '{print $(NF-1), $0}' | sort -gr | cut -d' ' -f2- | sed '/^\s*$/d')"
-videoTitolo=$(echo "$videoTitolo" | tr -d '\015')
+videoTitolo=$(echo "$videoTitolo" | tr -d '\015' | tr -s "\n" " ")
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=$(echo $title | sed 's/^\s*//g;s/\s*$//g')
 title=${title// /_}
@@ -330,6 +330,26 @@ title=${title// /_}
 }
 
 
+###########################################################################################
+################## End of formatting section, beginning of Rai section ##################
+###########################################################################################
+
+
+function rai() {
+saferai="$1"
+# Store the page in a variable
+file=$(wget "$saferai" -q -O -)
+
+# Rai replay or normal rai website choice
+echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
+
+videoTitolo="$(echo -en "$videoTitolo")"
+
+[ "$videoTitolo" = "" ] && videoTitolo=$(echo $file | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+# Resolve relinkers
+relinker_rai $videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay
+}
+
 
 # Rai website 
 
@@ -337,7 +357,8 @@ rai_normal() {
 
 echo "$1" | grep -q "rainews.it" && {
 bsp=$(echo "$file" | sed '/parentPage.bsp /!d;'"s/.* '//;s/'.*//")
-jsons=$(echo "$file" |  sed '/"url" : "http/!d;s/.* : "//;s/".*//')
+jsons=$(echo "$file" | sed '/"url" : "http/!d;s/.* : "//;s/".*//')
+json=$(curl -s $jsons)
 
 } || {
 # iframe check
@@ -346,6 +367,7 @@ urls="http://www.rai.it/dl/RaiTV/programmi/media/"$(echo "$file" | sed '/content
 
 file="$(wget -qO- $urls)"; 
 }
+
 }
 # read and declare videoURL and videoTitolo variables from javascript in page
 
@@ -469,25 +491,6 @@ unformatted="$base"
 formatoutput
 
 
-}
-
-###########################################################################################
-################## End of Rai relinker section, beginning of Rai section ##################
-###########################################################################################
-
-
-function rai() {
-saferai="$1"
-# Store the page in a variable
-file=$(wget "$saferai" -q -O -)
-
-# Rai replay or normal rai website choice
-echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
-
-videoTitolo="$(echo -en "$videoTitolo")"
-
-# Resolve relinkers
-relinker_rai $videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay
 }
 
 
