@@ -1,4 +1,4 @@
-w#!/usr/bin/env bash
+#!/usr/bin/env bash
 [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
