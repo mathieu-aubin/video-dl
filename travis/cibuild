@@ -86,10 +86,10 @@ busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh videoww.sh
 busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh videoww.sh
 
 cd $video
-diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d'
+out=`diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d'`
 
 # Generate deb
-[ "$(diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d/')" != "" ] && {
+[ "$0" != "" ] && {
 sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
 cd debian/
 cp * old
