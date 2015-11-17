@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+w#!/usr/bin/env bash
 [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
 # Setup everything 
 desc="$(git log -1 --pretty=%B)"
@@ -41,6 +41,8 @@ video="$PWD"
 wget http://daniilgentili.magix.net/video.sh -O $temp/reallyold.sh
 ########################################
 version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-[^-]*$//;s/.*-//')"
+
+[ "`git status -s | wc -l`" = "1" ] && git status -s | grep -q "video_db.sql" && exit 0
 
 # Sync API
 cd api
@@ -87,7 +89,7 @@ cd $video
 diff $temp/reallyold.sh $video/video.sh
 
 # Generate deb
-echo "$desc" | grep -q trigger || [ "$(diff $temp/reallyold.sh $video/video.sh)" != "" ] && {
+[ "$(diff $temp/reallyold.sh $video/video.sh)" != "" ] && {
 sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
 cd debian/
 cp * old
