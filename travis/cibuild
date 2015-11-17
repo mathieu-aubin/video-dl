@@ -38,7 +38,7 @@ git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
 git config --global push.default simple
 video="$PWD"
-wget http://daniilgentili.magix.net/video.sh -O $temp/reallyold.sh
+wget http://daniilgentili.magix.net/video.sh?v=$version -O $temp/reallyold.sh
 ########################################
 version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-[^-]*$//;s/.*-//')"
 
@@ -89,7 +89,7 @@ cd $video
 out=`diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d'`
 
 # Generate deb
-[ "$0" != "" ] && {
+[ "$out" != "" ] && {
 sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
 cd debian/
 cp * old
