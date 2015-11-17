@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 17 Nov 2015 13:30:47 +0000
+Source: video-dl
+Binary: video-dl
+Architecture: source all
+Version: 3.4.136
+Distribution: lenny
+Urgency: low
+Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Changed-By: Daniil Gentili <daniil.gentili.dg@gmail.com>
+Description: 
+ video-dl   - Video Download script
+Changes: 
+ video-dl (3.4.136) lenny; urgency=low
+ .
+   * Trying to fix travis
+Checksums-Sha1: 
+ 536f0902d51f24e90d0ae7007adb842300e722b7 1447 video-dl_3.4.136.dsc
+ b82dcaa32189749fac68ce9d0e2235703bad7548 18503 video-dl_3.4.136.tar.gz
+ a0e1c5bbab41dc214b463c7e0d70a000e33b2e70 21980 video-dl_3.4.136_all.deb
+Checksums-Sha256: 
+ 7cf8e4d37aac16dbe9bfcb89fa8adaac5a3c7a6f9bbce775e5e18e8cf6f34608 1447 video-dl_3.4.136.dsc
+ 2b2e59157961b83b284ac1c1494ed385f0d826f9cdf8020a8c7af547d93d849d 18503 video-dl_3.4.136.tar.gz
+ af0c7b3f293e495d2428dfb184c80586994ed8b3744ac3bdcdff9fb72dbf7dc7 21980 video-dl_3.4.136_all.deb
+Files: 
+ 4542c42ba896f87dffd09b490fddcc95 1447 misc optional video-dl_3.4.136.dsc
+ 5b6d5a1e8b567a0eeb4b3d699ec28011 18503 misc optional video-dl_3.4.136.tar.gz
+ 521f202cb4565ec9321ddb5d0b5f0d43 21980 misc optional video-dl_3.4.136_all.deb
