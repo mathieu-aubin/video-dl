@@ -89,7 +89,7 @@ cd $video
 diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d'
 
 # Generate deb
-[ "$(diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video Download/d')" != "" ] && {
+[ "$(diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d/')" != "" ] && {
 sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
 cd debian/
 cp * old
