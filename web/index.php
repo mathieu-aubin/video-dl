@@ -203,7 +203,7 @@ if(isset($_GET['url'])) {
                         <span class="name">Download videos!</span>
 
                         <hr class="star-light">
-                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a>, <a href="http://dplay.com" target="_blank">Dplay</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br><br>Paste the URL of the video:<BR></span>
+                        <span class="skills giallo" id="description">Download videos from <a href="http://youtube.com" target="_blank">YouTube</a>, <a href="http://rai.tv" target="_blank">Rai</a>, <a href="http://www.rai.tv/dl/replaytv/replaytv.html#" target="_blank">Rai Replay</a>, <a href="http://video.mediaset.it" target="_blank">Video Mediaset</a>, <a href="http://la7.it" target="_blank">La7</a>, <a href="http://wittytv.it" target="_blank">Witty TV</a>, <a href="http://dplay.com" target="_blank">Dplay</a> <a href="#support" class="portfolio-link"  data-toggle="modal">and lots of other websites</a>!<br>Paste the URL of the video:<BR></span>
 
                         <br>
                         <br>
