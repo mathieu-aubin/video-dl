@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.149
+# Video download script v3.4.155
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.149
+echo "Video download script v3.4.155
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -143,7 +143,7 @@ echo "$urltype" | grep -qE 'http://.*wittytv.it/.*|https://.*wittytv.it/.*' && p
 
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*' && ptype=lasette
 
-echo "$urltype" | grep -qE '.*dplay.com/.*' && ptype=dplay
+echo "$urltype" | grep -qE '.*dplay.com/.*|.*dmax.it.*|.*realtimetv.it.*|.*giallotv.it.*|.*focustv.it.*' && ptype=dplay
 
 dl="$urltype"
 
@@ -557,8 +557,8 @@ formatoutput
 ###########################################################################################
 
 dplay() {
-id=$(curl -s "$dl" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
-json="$(curl -s http://it.dplay.com/api/v2/ajax/videos?video_id=$id)"
+id=$(curl -Ls "$dl" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
+json="$(curl -Ls http://it.dplay.com/api/v2/ajax/videos?video_id=$id)"
 unformatted="$(echo "$json" | sed 's/\"\:\"/\
 /g' | sed '/mp4/!d;s/\".*//g;s/\\//g')"
 videoTitolo=$(echo "$json" | sed 's/.*","title":"//g;s/".*//g')
