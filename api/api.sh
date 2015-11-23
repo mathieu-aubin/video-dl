@@ -34,7 +34,7 @@ echo "$urltype" | grep -qE 'http://.*wittytv.it/.*|https://.*wittytv.it/.*' && p
 
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*' && ptype=lasette
 
-echo "$urltype" | grep -qE '.*dplay.com/.*' && ptype=dplay
+echo "$urltype" | grep -qE '.*dplay.com/.*|.*dmax.it.*|.*realtimetv.it.*|.*giallotv.it.*|.*focustv.it.*' && ptype=dplay
 
 dl="$urltype"
 
@@ -448,8 +448,8 @@ formatoutput
 ###########################################################################################
 
 dplay() {
-id=$(curl -s "$dl" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
-json="$(curl -s http://it.dplay.com/api/v2/ajax/videos?video_id=$id)"
+id=$(curl -Ls "$dl" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
+json="$(curl -Ls http://it.dplay.com/api/v2/ajax/videos?video_id=$id)"
 unformatted="$(echo "$json" | sed 's/\"\:\"/\
 /g' | sed '/mp4/!d;s/\".*//g;s/\\//g')"
 videoTitolo=$(echo "$json" | sed 's/.*","title":"//g;s/".*//g')
