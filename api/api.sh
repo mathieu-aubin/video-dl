@@ -23,7 +23,6 @@ dl="$(echo "$1" | grep -q '^//' && echo "http:$1" || echo "$1")"
 
 urltype="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null | sed 's/^HTTP:\/\//http:\/\//g')"
 
-echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/.*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|http://mediapolisvod.rai.it/.*|http://www.video.mediaset.it/video/.*|http://www.video.mediaset.it/player/playerIFrame.*|http://.*wittytv.it/.*|http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://www.*.rai..*/dl/RaiTV/programmi/media/.*|https://www.*.rai..*/dl/RaiTV/tematiche/.*|https://www.*.rai..*/dl/.*PublishingBlock-.*|https://www.*.rai..*/dl/replaytv/replaytv.html.*|https://.*.rai.it/.*|https://www.rainews.it/dl/rainews/.*|https://mediapolisvod.rai.it/.*|https://www.video.mediaset.it/video/.*|https://www.video.mediaset.it/player/playerIFrame.*|https://.*wittytv.it/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*|.*dplay.com/.*' || ptype=common
 
 echo "$urltype" | grep -qE 'http://www.*.rai..*/dl/RaiTV/programmi/media/.*|http://www.*.rai..*/dl/RaiTV/tematiche/.*|http://www.*.rai..*/dl/.*PublishingBlock-.*|http://www.*.rai..*/dl/replaytv/replaytv.html.*|http://.*.rai.it/.*|http://www.rainews.it/dl/rainews/.*|https://www.*.rai..*/dl/RaiTV/programmi/media/.*|https://www.*.rai..*/dl/RaiTV/tematiche/.*|https://www.*.rai..*/dl/.*PublishingBlock-.*|https://www.*.rai..*/dl/replaytv/replaytv.html.*|https://.*.rai.it/.*|https://www.rainews.it/dl/rainews/.*' && ptype=rai
 
@@ -35,6 +34,8 @@ echo "$urltype" | grep -qE 'http://.*wittytv.it/.*|https://.*wittytv.it/.*' && p
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*' && ptype=lasette
 
 echo "$urltype" | grep -qE '.*dplay.com/.*|.*dmax.it.*|.*realtimetv.it.*|.*giallotv.it.*|.*focustv.it.*' && ptype=dplay
+
+[ "$ptype" = "" ] && ptype="common"
 
 dl="$urltype"
 
@@ -464,9 +465,7 @@ formatoutput
 common() {
 # Store the page in a variable
 #page="$(wget -q -O - "$1")"
-# Get the video URLs
-#base="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g' | awk '!x[$0]++')"
-#checkurl
+
 #[ "$base" = "" ] && {
 
 tmpjson="$(youtube-dl -J "$1")"
@@ -492,6 +491,13 @@ $formats"
     }
 done <<< "$json"
 
+[ "$formats" = "" ] && {
+base="$(echo "$tmpjson" | sed 's/\"/\
+/g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg'  | awk '!x[$0]++')"
+
+checkurl
+formats="$base"
+}
 # Get the title
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=${title// /_}
