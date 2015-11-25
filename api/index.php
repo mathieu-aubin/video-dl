@@ -9,7 +9,7 @@ ini_set("error_log", "/tmp/php-error_api.log");
 error_log( "Hello, errors (api)!" );
 
 if(($_GET['p']) == 'websites') {
-    echo "Rai, Mediaset, Witty TV, LA7, DPLAY and all of the websites supported by youtube-dl.";
+    echo "Rai, Mediaset, Witty TV, LA7, DPLAY, Deejay TV, Eurosport, WAT and all of the websites supported by youtube-dl.";
 } elseif(($_GET['p']) == 'allwebsites') {
     $yt = shell_exec('youtube-dl --list-extractors');
     echo "rai.it
@@ -17,6 +17,9 @@ video.mediaset.it
 wittytv.it
 la7.it
 dplay.com
+deejay.it
+wat.tv
+eurosport.com
 $yt";
 } elseif((isset($_GET['url']) && $_GET['url'] != "") || php_sapi_name() == "cli") {
 /*    $locale = 'it_IT.utf-8';
