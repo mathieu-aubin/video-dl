@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.157
+# Video download script v3.4.161
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.157
+echo "Video download script v3.4.161
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -142,7 +142,12 @@ echo "$urltype" | grep -qE 'http://.*wittytv.it/.*|https://.*wittytv.it/.*' && p
 
 echo "$urltype" | grep -qE 'http://la7.it/.*|http://.*.la7.it/.*|http://la7.tv/.*|http://.*.la7.tv/.*|https://la7.it/.*|https://.*.la7.it/.*|https://la7.tv/.*|https://.*.la7.tv/.*' && ptype=lasette
 
-echo "$urltype" | grep -qE '.*dplay.com/.*|.*dmax.it.*|.*realtimetv.it.*|.*giallotv.it.*|.*focustv.it.*' && ptype=dplay
+echo "$urltype" | grep -qE '.*dplay.com/.*|.*dmax.it.*|.*realtimetv.it.*|.*giallotv.it.*|.*focustv.it.*|.*k2tv.it.*|.*frisbeetv.it.*' && ptype=dplay
+
+echo "$urltype" | grep -qE '.*deejay.it.*' && ptype=deejay
+
+echo "$urltype" | grep -qE '.*eurosport.com.*' && ptype=eurosport
+echo "$urltype" | grep -qE '.*wat.tv.*' && ptype=wat
 
 [ "$ptype" = "" ] && ptype="common"
 
@@ -559,6 +564,10 @@ formatoutput
 
 dplay() {
 id=$(curl -Ls "$dl" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
+[ "$id" != "" ] && {
+orig=$(curl -Ls "$dl" | sed '/dplay.com/!d;s/.*href="http/http/g;s/".*//g') && 
+id=$(curl -Ls "$orig" | sed '/data-video-id\=\"/!d;s/.*data-video-id\=\"//g;s/\".*//g')
+}
 json="$(curl -Ls http://it.dplay.com/api/v2/ajax/videos?video_id=$id)"
 unformatted="$(echo "$json" | sed 's/\"\:\"/\
 /g' | sed '/mp4/!d;s/\".*//g;s/\\//g')"
@@ -567,7 +576,44 @@ formatoutput
 }
 
 ###########################################################################################
-##################### End of dplay section, beginning of common section ################
+##################### End of dplay section, beginning of deejay section ################
+###########################################################################################
+deejay() {
+file="$(curl -sL "$1")"
+unformatted="$(echo "$file" | sed '/addParam[(]'"'"'format'"'"', /!d;s/.*'"'"'http/http/g;s/'"'"'.*//g')"
+videoTitolo=$(echo $file | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+formatoutput
+}
+
+###########################################################################################
+##################### End of deejay section, beginning of eurosport section ################
+###########################################################################################
+eurosport() {
+file="$(curl -sL "$1")"
+frame="$(echo $file | sed 's/.*src=\"http:\/\/www.wat.tv\/embedframe/http:\/\/www.wat.tv\/embedframe/g;s/\".*//g')"
+videoTitolo=$(echo $file | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+
+wat_base "$frame"
+formatoutput
+}
+###########################################################################################
+##################### End of eurosport section, beginning of wat section ################
+###########################################################################################
+
+wat_base() {
+file="$(curl -sL "$1")"
+unformatted="$(echo "$file" | sed 's/,/\
+/g' | sed '/PlayerLite.swf?videoId=/!d;s/.*\/\/www.wat.tv\/images/\/\/wat.tv\/images/g;s/\".*//g' | awk '!x[$0]++')"
+
+}
+
+wat() {
+wat_base "$1"
+videoTitolo=$(echo $file | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+formatoutput
+}
+###########################################################################################
+##################### End of wat section, beginning of common section ################
 common() {
 # Store the page in a variable
 page="$(wget -q -O - "$1")"
