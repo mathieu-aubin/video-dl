@@ -10,6 +10,9 @@ error_log( "Hello, errors video!" );
 $uacheck = preg_match_all("/Version\/[0-9]\.[0-9]\sChrome\S*\sMobile|;\swv|\sAppleWebKit\/[0-9]*\.[0-9]*\s[(]KHTML,\slike\sGecko[)]\sVersion\/[0-9]\.[0-9]\s/", $_SERVER['HTTP_USER_AGENT']);
 error_log($uacheck);
 
+$keys = file_get_contents("https://api.daniil.it/?p=allwebsites");
+$keys = preg_replace('/\n/', ', ', $keys);
+
 if(isset($_GET['url'])) {
     if($_GET['url'] == "") {
         $output = "<h1>No URL was provided. </h1>";
@@ -55,6 +58,7 @@ if(isset($_GET['url'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV, Dplay and lots of other websites!">
+    <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video, youtube, download, download videos from, <?= $keys ?>">
     <meta name="author" content="Daniil Gentili">
 
     <title>Download Videos!</title>
@@ -111,9 +115,6 @@ if(isset($_GET['url'])) {
         });
     </script>
 
-
-    <meta name="keywords" content="pasty.link, mediaset, mediaset.it, rai, link, download, video, Rai.tv, paste, senza Silverlight, scaricare, scaricare video rai, without Silverlight, streaming, vlc, videos, mediaset, Mediaset, il segreto, il segreto Mediaset, video mediaset, la7, la7 TV, scaricare video, youtube">
-    <meta name="Description" content="Download videos from YouTube, Rai, Rai Replay, Video Mediaset, La7, Witty TV, Dplay and lots of other websites!">
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css?v=loloolol" rel="stylesheet">
