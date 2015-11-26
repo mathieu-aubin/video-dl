@@ -1,6 +1,6 @@
 {
   "name": "video-dl",
-  "version": "3.4.161",
+  "version": "3.4.163",
   "description": "Script to Download videos from youtube, rai.tv, mediaset, la7 and hundreds of other sites",
   "main": "video-dl.js",
   "scripts": {
