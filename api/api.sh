@@ -509,9 +509,7 @@ formatoutput
 
 common() {
 # Store the page in a variable
-#page="$(wget -q -O - "$1")"
-
-#[ "$base" = "" ] && {
+page="$(wget -q -O - "$1")"
 
 tmpjson="$(youtube-dl -J "$1")"
 videoTitolo=$(echo "$tmpjson" | sed 's/.*\"title\": \"//g;s/\".*//g')
@@ -541,8 +539,22 @@ base="$(echo "$tmpjson" | sed 's/\"/\
 /g' | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg'  | awk '!x[$0]++')"
 
 checkurl
-formats="$base"
+unformatted="$base"
+formatoutput
 }
+
+[ "$formats" = "" ] &&  {
+
+# Get the video URLs
+base="$(echo "$page" | egrep '\.mp4|\.mkv|\.flv|\.f4v|\.wmv|\.mov|\.3gp|\.avi|\.m4v|\.mpg|\.mpe|\.mpeg' | sed 's/.*http:\/\//http:\/\//;s/\".*//' | sed "s/'.*//" | sed 's/.mp4.*/.mp4/g;s/.mkv.*/.mkv/g;s/.flv.*/.flv/g;s/.f4v.*/.f4v/g;s/.wmv.*/.wmv/g;s/.mov.*/.mov/g;s/.3gp.*/.3gp/g;s/.avi.*/.avi/g;s/.m4v.*/.m4v/g;s/.mpg.*/.mpg/g;s/.mpe.*/.mpe/g;s/.mpeg.*/.mpeg/g' | awk '!x[$0]++')"
+checkurl
+unformatted="$base"
+
+formatoutput
+}
+
+[ "$videoTitolo" != "" ] && videoTitolo=$(echo $page | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+
 # Get the title
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=${title// /_}
