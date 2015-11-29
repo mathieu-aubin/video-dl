@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.161
+# Video download script v3.4.168
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.161
+echo "Video download script v3.4.168
 Copyright (C) 2015 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -152,7 +152,7 @@ echo "$urltype" | grep -qE '.*wat.tv.*' && ptype=wat
 [ "$ptype" = "" ] && ptype="common"
 
 dl="$urltype"
-
+[ "$ptype" = "rai" ] && echo "$1" | grep -q '#' && dl="$1"
 
 ##############################################################################
 ####### End of URL recognition section, beginning of Functions section #######
@@ -449,16 +449,16 @@ for f in $(echo $* | awk '{ while(++i<=NF) printf (!a[$i]++) ? $i FS : ""; i=spl
 
  url="$(timeout -skill 5s wget -qO- "$dl&output=25")
 $(timeout -skill 5s wget "$dl&output=43" -U="" -q -O -)"
- 
- [ "$url" != "" ] && base="$(echo "$url" | sed 's/[>]/\
+ url="$(echo "$url" | sed 's/[>]/\
 /g;s/[<]/\
-/g' | sed '/\.mp4\|\.wmv\|\.mov/!d;s/mms/http/g;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
+/g')"
+ [ "$url" != "" ] && base="$(echo "$url" | sed '/\.mp4\|\.wmv\|\.mov/!d;s/mms/http/g;/http/!d;s/\.mp4.*/\.mp4/;s/\.wmv.*/\.wmv/;s/\.mov.*/\.mov/')" && checkurl
 
 
  # 2nd method
 
  [ "$base" = "" ] && {
-base="$(eval echo "$(for f in $(echo "$tempbase" | grep ","); do number="$(echo "$f" | sed 's/http\:\/\///g;s/\/.*//;s/[^0-9]//g')"; echo "$f" | sed 's/.*Italy/Italy/;s/^/http\:\/\/creativemedia'$number'\.rai\.it\//;s/,/{/;s/,\./}\./;s/\.mp4.*/\.mp4/'; done)")" && checkurl
+base="$(eval echo "$(for f in $(echo "$url" | grep ","); do number="$(echo "$f" | sed 's/http\:\/\///g;s/\/.*//;s/[^0-9]//g')"; echo "$f" | sed 's/.*Italy/Italy/;s/^/http\:\/\/creativemedia'$number'\.rai\.it\//;s/,/{/;s/,\./}\./;s/\.mp4.*/\.mp4/'; done)")" && checkurl
  }
  
 
@@ -467,10 +467,6 @@ base="$(eval echo "$(for f in $(echo "$tempbase" | grep ","); do number="$(echo 
 url="$(wget "$dl&output=4" -q -O -)"
 [ "$url" != "" ] && echo "$url" | grep -q 'creativemedia\|wms' && base="$url" || base=$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -A "" -o /dev/null); checkurl
  }
-
-
- #[ "$base" = "" ] && base="$(curl -w "%{url_effective}\n" -L -s -I -S "$dl" -o /dev/null -A='')" && checkurl 
-
 
  TMPURLS="$TMPURLS
 $base"
