@@ -8,6 +8,7 @@ Video download project.
 [![Build Status](https://travis-ci.org/danog/video-dl.svg?branch=master)](https://travis-ci.org/danog/video-dl)
 [![npm version](https://badge.fury.io/js/video-dl.svg)](https://npmjs.org/package/video-dl)
 
+[![Rank and dls](https://nodei.co/npm/video-dl.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/video-dl)
 
 [Read in Italian](http://daniil.it/video-dl/it.html)
 
