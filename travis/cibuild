@@ -9,6 +9,8 @@ export DEBFULLNAME="Daniil Gentili"
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get update
 sudo apt-get install busybox ruby-ronn build-essential devscripts lintian patch python-pip python3 patchutils gnupg diff expect dpkg-dev libffi-dev libssl-dev nodejs -y 
+sudo apt-get purge python-openssl
+sudo pip install pyopenssl
 sudo pip install requests[security]
 sudo npm i npm -g		
 sudo npm install uglify-js -g
@@ -36,7 +38,6 @@ git clone https://${GH_TOKEN}@github.com/danog/video-dl.git video-dl
 cd video-dl
 git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
-git config --global push.default simple
 video="$PWD"
 wget http://daniilgentili.magix.net/video.sh?v=$version -O $temp/reallyold.sh
 ########################################
