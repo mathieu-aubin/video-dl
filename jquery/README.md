@@ -89,32 +89,32 @@ npm install video-dl
 
 Here's a list of the functions and the usage instructions.  
 
-##Video Download function.  
+## Video Download function.  
 
-###Usage:  
+### Usage:  
 ```
 video_dl(output, inputurl, dlsupport, messageoutput)
 ```
 
-###Parameters:  
+### Parameters:  
 
-###output: output html element for the video info and the download urls. Required.  
+### output: output html element for the video info and the download urls. Required.  
 example: ```#result.```
 
 
 
-###inputurl: url of the video. Required.  
+### inputurl: url of the video. Required.  
 example: ```$("input#urljs").val()```
 
-###dlsupport: enables or disables the download attribute in the download links. Optional.  
+### dlsupport: enables or disables the download attribute in the download links. Optional.  
 0 enables, anything disables. 
 
-###messageoutput: output html element for the contact module. Optional.  
+### messageoutput: output html element for the contact module. Optional.  
 example: ```#message```
 
 
 
-###Example:  
+### Example:  
 ```video_dl("#result", $("input#urljs").val(), "0", "#message"); ```
 
 
@@ -131,34 +131,34 @@ The function will then start the mailtext function with the following parameters
 See mailtext description for the result.  
 
 
-##First load function.  
+## First load function.  
 Use to output supported websites list, prepare mail message and,
 only on the video.daniil.it website, hide the php submit module and use javascript engine instead.  
 
-###Usage:
+### Usage:
 ```
 firstload(supportedurls, separatorstart, separatorend, messageoutput, videodaniilit)  
 ```
 
-###Parameters:  
+### Parameters:  
 
-###supportedurls: output html element for the supported websites list. Required.  
+### supportedurls: output html element for the supported websites list. Required.  
 Example: ```#supportedurls```. 
 
-###separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
+### separatorstart: first separator for the supported urls list: it will be put before every item in the supported websites list, if empty defaults to ```<br>```.  
 Optional, recommended.  
 Example: ```<li>```  
 
-###separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
+### separatorend: the second separator for the supported urls list: it will be put after every url, if empty defaults to ```<br>```. Optional, recommended.  
 Example: ```</li>```  
 
-###messageoutput: output html element for default contact module text. Optional, recommended.  
+### messageoutput: output html element for default contact module text. Optional, recommended.  
 Example: ```#contact ```
 
 
-###videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
+### videodaniilit: If on video.daniil.it hides php module and unhides javascript text field. Do not use.  
 
-###Example:  
+### Example:  
 ```
 firstload("#supportedurls", "<li>", "</li>", "#message");  
 ```
@@ -177,26 +177,26 @@ mailtext("#message");
 ```
 
 
-##Contact module function.  
+## Contact module function.  
 Prints a nice message to the contact module text field, with the url if it's provided else just With ```insert link```.  
 
-###Usage:  
+### Usage:  
 ```
 mailtext(output, url)  
 ```
 
-###Parameters:  
+### Parameters:  
 
-###output: html element where to print out the contact message. Required.  
+### output: html element where to print out the contact message. Required.  
 Example: ```#contact```
 
 
 
-###url: url of the video to insert into the message.  Not required, if not provided defaults to insert link.
+### url: url of the video to insert into the message.  Not required, if not provided defaults to ```insert link```.
 
   
 
-###Example:  
+### Example:  
 ```
 mailtext("#contact", "http://google.com");  
 ```
