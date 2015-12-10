@@ -222,7 +222,6 @@ title="${videoTitolo//[^a-zA-Z0-9 ]/}"
 title=$(echo $title | sed 's/^\s*//g;s/\s*$//g')
 title=${title// /_}
 
-[ "$formats" = "" ] && exit
 
 }
 
@@ -585,6 +584,7 @@ third=$3
 [ "$ptype" = "common" -a "$second" = "json" ] && youtube-dl -J "$dl" && exit
 # Find input URLs in database
 $ptype "$dl" "$2" "$3"
+[ "$formats" = "" ] && common "$2" "$3"
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
 $formats"
 
