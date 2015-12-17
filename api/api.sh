@@ -584,7 +584,7 @@ third=$3
 [ "$ptype" = "common" -a "$second" = "json" ] && youtube-dl -J "$dl" && exit
 # Find input URLs in database
 $ptype "$dl" "$2" "$3"
-[ "$formats" = "" ] && common "$2" "$3"
+[ "$formats" = "" ] && common "$dl" "$2" "$3"
 [ "$formats" = "" ] && exit || echo "$title $videoTitolo
 $formats"
 
