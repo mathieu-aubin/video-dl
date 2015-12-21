@@ -25,12 +25,11 @@ $yt";
 /*    $locale = 'it_IT.utf-8';
     setlocale(LC_ALL, $locale);
     putenv('LC_ALL='.$locale);
-*/
+
     include 'db_connect.php';
     $pdo = new PDO("$db", "$user", "$pass");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $url = $_GET["url"];
     
     
     $stmt = $pdo->prepare('SELECT final FROM video_db WHERE url  = :url');
@@ -63,6 +62,16 @@ $yt";
       mail($to,$email_subject,$email_body,$headers);
      };
     } else { echo "$final"; };
+*/
+     $dir = __DIR__;
+     $url = $_GET["url"];
+     $param = $_GET["p"];
+     $db = $_GET["nodb"];
+     $cmd = "bash ".escapeshellarg($dir)."/api.sh ".escapeshellarg($url).' '.escapeshellarg($param).' '.escapeshellarg($db);
+     $message = shell_exec("$cmd");
+     $final = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message); 
+     $final = trim($final, "\n");
+     echo $final;
 } else {
     echo '<!DOCTYPE HTML>
 <html>

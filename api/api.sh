@@ -548,7 +548,7 @@ unformatted="$base"
 formatoutput
 }
 
-[ "$videoTitolo" != "" ] && videoTitolo=$(echo $page | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+[ "$videoTitolo" = "" ] && videoTitolo=$(echo $page | sed 's/<\/title>.*//;s/.*>//g;s/^ //')
 
 # Get the title
 title="${videoTitolo//[^a-zA-Z0-9 ]/}"
