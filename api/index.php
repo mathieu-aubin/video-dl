@@ -71,7 +71,24 @@ $yt";
      $message = shell_exec("$cmd");
      $final = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message); 
      $final = trim($final, "\n");
-     echo $final;
+     error_log("final is $final");
+     if($final != "") {
+      echo $final;
+     } else {
+      $cmdcheck = "bash ".escapeshellarg($dir)."/api.sh ".escapeshellarg($url).' check';
+      $message = shell_exec("$cmdcheck");
+      $error = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $message); 
+      $error = trim($error, "\n");
+      error_log("error is $error");
+      if($error != ""){
+       $to = 'daniil.gentili.dg@gmail.com';
+       $headers = "From: noreply@daniil.it\n";
+       $email_subject = "Video download error: $url";
+       $email_body = "An error occurred while downloading the following video: $url\nThis is the output of youtube-dl --verbose\n\n$error\n\n";
+       $headers .= "Reply-To: daniil.gentili@gmail.com";
+       mail($to,$email_subject,$email_body,$headers);
+      }
+     }
 } else {
     echo '<!DOCTYPE HTML>
 <html>

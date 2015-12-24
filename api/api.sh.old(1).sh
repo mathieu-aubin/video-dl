@@ -582,13 +582,6 @@ echo "$size" | grep -q G && error
 second=$2
 third=$3
 [ "$ptype" = "common" -a "$second" = "json" ] && youtube-dl -J "$dl" && exit
-
-[ "$second" = "check" ] && {
-wget -qO /dev/null "$1" && {
-youtube-dl "$1" &>/dev/null || youtube-dl --verbose -J "$1" 2>&1
-};
-exit
-}
 # Find input URLs in database
 $ptype "$dl" "$2" "$3"
 [ "$formats" = "" ] && common "$dl" "$2" "$3"
@@ -603,4 +596,9 @@ $formats"
 
 }
 
-api "$@"
+[ "$2" = "check" ] && {
+wget -qO /dev/null "$1" && {
+youtube-dl "$1" &>/dev/null || youtube-dl --verbose -J "$1" 2>&1
+};
+exit
+} || api "$@"
