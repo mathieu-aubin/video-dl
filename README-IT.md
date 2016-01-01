@@ -127,7 +127,7 @@ Diciamo che il campo di testo ```input#urljs``` ha valore ```"http://www.winx.ra
 
 La funzione leggerà il valore del campo di testo ```input#urljs``` element, otterrà gli indirizzi di scaricamento dall'API e scriverà il seguente output sull'elemento ```#result```:  
 ```
-<h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>26 - Il potere degli animali fatati - Winx Club VII del 03/10/2016</h2><br><h1>Available versions:</h1><br><h2><a href="http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4524680.mp4" download="26_Il_potere_degli_animali_fatati_Winx_Club_VII_del_03102016.mp4">Normal quality (mp4, 267 MiB, 720x404)</a><br></h2>
+<h1 style="font-style: italic;">Video download script.</h1><br><h2 style="font-style: italic;">Created by <a href="http://daniil.it">Daniil Gentili</a></h2><br><h1>Title:</h1> <h2>26 - Il potere degli animali fatati - Winx Club VII del 03/10/2015</h2><br><h1>Available versions:</h1><br><h2><a href="http://creativemedia4.rai.it/Italy/podcastcdn/junior/Winx/Winx_7_EP_Puntate/4524680.mp4" download="26_Il_potere_degli_animali_fatati_Winx_Club_VII_del_03102015.mp4">Normal quality (mp4, 267 MiB, 720x404)</a><br></h2>
 ```
 
 Poi la funzione chiamerà la funzione ```mailtext``` con i seguenti Parametri:  
