@@ -3,7 +3,7 @@
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
-# Copyright (C) 2015 Daniil Gentili
+# Copyright (C) 2016 Daniil Gentili
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
 echo "Video download script v3.4.197
-Copyright (C) 2015 Daniil Gentili
+Copyright (C) 2016 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions; see https://github.com/danog/video-dl/raw/master/LICENSE."
