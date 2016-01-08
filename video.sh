@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v3.4.197
+# Video download script v4.0.13
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v3.4.197
+echo "Video download script v4.0.13
 Copyright (C) 2016 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -340,7 +340,7 @@ title=${title// /_}
 ###########################################################################################
 
 
-function rai() {
+rai() {
 saferai="$1"
 # Store the page in a variable
 file=$(wget "$saferai" -q -O -)
@@ -388,10 +388,14 @@ replay() {
 v=$(echo "$1" | sed 's/.*v=//;s/\&.*//')
 
 # Get the day
-day=$(echo "$1" | sed 's/.*day=//;s/\&.*//;s/-/_/g')
+day=$(echo "$1" | sed 's/.*day=//;s/\&.*//;s/-/_/g;/http/d')
+[ "$day" = "" ] && day=$(echo "$1" | sed 's/.*vd=//;s/\&.*//;s/-/_/g')
+
+ch=$(echo "$1" | sed 's/.*ch=//;s/\&.*//;/http/d')
+[ "$ch" = "" ] && ch=$(echo "$1" | sed 's/.*vc=//;s/\&.*//')
 
 # Get the channel
-case $(echo "$1" | sed 's/.*ch=//;s/\&.*//') in
+case $ch in
   1)
     ch=RaiUno
     ;;
