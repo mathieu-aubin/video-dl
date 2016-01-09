@@ -47,7 +47,7 @@ version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-
 
 # Sync API
 cd api
-sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\.txt/d;s/exit/continue/g' api.sh>script_api.sh
+sed '/api[(][)]/,/beginning of common section/!d;s/exit/continue/g' api.sh>script_api.sh
 cat $video/travis/last_api.sh >> script_api.sh
 busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
 mv script_api.sh $video
@@ -119,9 +119,12 @@ rm -rf $temp/repo
 }
 
 # Copy js
-
+wget http://daniil.it/video-dl/video-dl.min.JS -O $temp/old.js
 uglifyjs web/js/{he.js,linkify.min.js,linkify-jquery.min.js,video-dl.js} -o $temp/video-dl.min.js
 
+out=`diff $temp/old.js $temp/video-dl.min.js`
+
+[ "$out" != "" ] && {
 
 cp $video/web/js/video-dl.js $video/jquery/video-dl.js
 cp $video/README.md $video/jquery/
@@ -129,7 +132,7 @@ cd $video/jquery
 sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
 mkdir $temp/npm
 cp -a * $temp/npm
-
+}
 # Generate website
 cd $video/jekyll
 echo "---
@@ -150,12 +153,6 @@ gitsync master OK madebytravisci
 
 
 cd $video
-git checkout npm
-cp -a $temp/npm/* .
-rm -rf $temp/npm
-git add -A
-git commit -am "Updated npm branch"
-git push -qf origin npm
 
 # Upload everything
 git checkout --orphan gh-pages
@@ -169,5 +166,12 @@ echo "branches:
 git add -A
 git commit -am "Updated the website"
 git push -qf origin gh-pages
+
+git checkout npm
+cp -a $temp/npm/* .
+rm -rf $temp/npm
+git add -A
+git commit -am "Updated npm branch"
+git push -qf origin npm
 
 }
