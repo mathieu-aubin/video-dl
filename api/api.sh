@@ -121,7 +121,7 @@ $u"
 
   formats="$(
 [ "$common" != "" ] && for a in $common; do getsize
- info="$(echo "$info" | sed 's/[(]//;s/[)]//')"
+# info="$(echo "$info" | sed 's/[(]//;s/[)]//')"
 
  echo "$info $a";done
 
@@ -498,7 +498,8 @@ videoTitolo=$(echo "$page" | sed '/[<]meta content=\".*\" property=\".*title\"\/
     format=$(echo "$formats" | sed $n'q;d')
     ext=$(echo "$exts" | sed $n'q;d')
     tmpsize="$(timeout -skill 3s wget -S --spider "$url" 2>&1 | sed '/^Length\|^Lunghezza/!d;s/.*(//;s/).*//')"
-    [ "$tmpsize" != "" ] && size=", $size"B || size=", Unkown size"
+    size=
+    [ "$tmpsize" != "" ] && size=", $tmpsize"B || size=", Unkown size"
     final="$format ($ext$size) $url
 $final"
     n=$(($n + 1))
