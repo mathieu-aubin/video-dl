@@ -1,8 +1,8 @@
 Package: video-dl
-Version: 4.0.13
+Version: 4.0.18
 Architecture: all
 Maintainer: Daniil Gentili <daniil.gentili.dg@gmail.com>
-Installed-Size: 74
+Installed-Size: 75
 Depends: wget, bash, sed
 Section: misc
 Priority: optional

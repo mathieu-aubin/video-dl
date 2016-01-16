@@ -1,3 +1,9 @@
+video-dl (4.0.18) lenny; urgency=low
+
+  * API and web version sync
+
+ -- Daniil Gentili <daniil.gentili.dg@gmail.com>  Sat, 16 Jan 2016 10:52:13 +0000
+
 video-dl (4.0.13) lenny; urgency=low
 
   * API and web version sync
