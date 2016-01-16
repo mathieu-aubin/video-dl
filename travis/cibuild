@@ -169,4 +169,5 @@ layout: default
   git commit -am "Updated npm branch"
   git push -qf origin npm
  }
+ exit 0
 }
