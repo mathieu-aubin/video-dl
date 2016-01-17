@@ -70,7 +70,7 @@ sed 's/\
  checkurl() {
  tbase="$(echo "$base" | sed 's/ /%20/g;s/%20http:\/\//\
 http:\/\//g;s/%20https:\/\//\
-http:\/\//g;s/%20$//g;s/ /\
+https:\/\//g;s/%20$//g;s/ /\
 /g' | awk '!x[$0]++')"
 
  base=
@@ -360,7 +360,7 @@ $base"
 
   # Find all qualities in every video
   tbase=
-  qualities="_250 _400 _600 _700 _800 _1200 _1500 _1800 _2400 _3200 _4000"
+  loop="_250 _400 _600 _700 _800 _1200 _1500 _1800 _2400 _3200 _4000"
   
   for t in $loop \ ; do [ "$t" = " " ] && t=; for i in $loop; do tbase="$tbase
 ${base//$t\.mp4/$i\.mp4}"; tbase="$(echo "$tbase" | grep -Ev "_([0-9]{3,4})_([0-9]{3,4})\.mp4" | awk '!seen[$0]++')"; done;done
@@ -495,14 +495,16 @@ videoTitolo=$(echo "$page" | sed '/[<]meta content=\".*\" property=\".*title\"\/
   n=1
   while read -r line; do
     url=$line
-    format=$(echo "$formats" | sed $n'q;d')
-    ext=$(echo "$exts" | sed $n'q;d')
-    tmpsize="$(timeout -skill 3s wget -S --spider "$url" 2>&1 | sed '/^Length\|^Lunghezza/!d;s/.*(//;s/).*//')"
-    size=
-    [ "$tmpsize" != "" ] && size=", $tmpsize"B || size=", Unkown size"
-    final="$format ($ext$size) $url
+    [ "$url" != "" ] && {
+     format=$(echo "$formats" | sed $n'q;d')
+     ext=$(echo "$exts" | sed $n'q;d')
+     tmpsize="$(timeout -skill 3s wget -S --spider "$url" 2>&1 | sed '/^Length\|^Lunghezza/!d;s/.*(//;s/).*//')"
+     size=
+     [ "$tmpsize" != "" ] && size=", $tmpsize"B || size=", Unkown size"
+     final="$format ($ext$size) $url
 $final"
-    n=$(($n + 1))
+     n=$(($n + 1))
+    }
   done <<< "$urls"
   n=
   final="$(echo "$final" | awk '!x[$0]++')"
