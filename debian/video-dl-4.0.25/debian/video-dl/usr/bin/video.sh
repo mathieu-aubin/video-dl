@@ -1,5 +1,5 @@
 #!/bin/bash
-# Video download script v4.0.23
+# Video download script v4.0.25
 # Created by Daniil Gentili (http://daniil.it)
 # Video-dl - Video download programs
 #
@@ -28,7 +28,7 @@
 # v3.3.1 Improved the auto update function and player choice
 # v3.3.2 Squashed some other bugs, fixed download of 302 videos on Mac OS X (curl redirection).
 
-echo "Video download script v4.0.23
+echo "Video download script v4.0.25
 Copyright (C) 2016 Daniil Gentili
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
@@ -166,7 +166,7 @@ api() {
  # Get video information
 
  getsize() {
-  minfo="$(timeout -skill 15s mediainfo "$a")"
+  minfo="$(timeout -skill 5s mediainfo "$a")"
   info="($(echo "$(echo "$a" | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(echo "$minfo" | sed '/File size/!d;s/.*:\s//g'), $(echo "$minfo" | sed '/Width\|Height/!d;s/.*:\s//g;s/\spixels//g;s/\s//g;/^\s*$/d' | tr -s "\n" x | sed 's/x$//g')" |
 sed 's/\
 //g;s/^, //g;s/, B,/, Unkown size,/g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
@@ -335,18 +335,20 @@ $u"
 
 
  rai() { 
- saferai="$1"
- # Store the page in a variable
- file=$(wget "$saferai" -q -O -)
+  saferai="$1"
+  # Store the page in a variable
+  file=$(wget "$saferai" -q -O -)
 
- # Rai replay or normal rai website choice
- echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
-
- videoTitolo="$(echo -en "$videoTitolo")"
-
- [ "$videoTitolo" = "" ] && videoTitolo=$(echo "$file" | tr '\n' ' ' | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
- # Resolve relinkers
-  relinker_rai $videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay
+  # Rai replay or normal rai website choice
+  echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
+  links="$videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay"
+  links="$(echo "$links" | sed '/^\s*$/d')"
+  videoTitolo="$(echo -en "$videoTitolo")"
+  [ "$links" = "" ] && replay "$saferai"
+  links="$videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay"
+  [ "$videoTitolo" = "" ] && videoTitolo=$(echo "$file" | tr '\n' ' ' | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+  # Resolve relinkers
+  relinker_rai "$links"
  }
 
 
@@ -448,7 +450,7 @@ $(timeout -skill 5s wget "$dl&output=43" -U="" -q -O -)"
    # 2nd method
 
    [ "$base" = "" ] && {
-    base="$(eval echo "$(for f in $(echo "$url" | grep ","); do number="$(echo "$f" | sed 's/http\:\/\///g;s/\/.*//;s/[^0-9]//g')"; echo "$f" | sed 's/.*Italy/Italy/;s/^/http\:\/\/creativemedia'$number'\.rai\.it\//;s/,/{/;s/,\./}\./;s/\.mp4.*/\.mp4/'; done)")" && checkurl
+    base="$(eval echo "$(for f in $(echo "$url" | grep ","); do number="$(echo "$f" | sed 's/http\:\/\///g;s/\/.*//;s/[^0-9]//g;s/^.*\(.\{1\}\)$/\1/')"; echo "$f" | sed 's/.*Italy/Italy/;s/^/http\:\/\/creativemedia'$number'\.rai\.it\//;s/,/{/;s/,\./}\./;s/\.mp4.*/\.mp4/'; done)")" && checkurl
    }
  
 
