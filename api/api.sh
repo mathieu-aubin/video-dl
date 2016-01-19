@@ -57,7 +57,7 @@ api() {
  # Get video information
 
  getsize() {
-  minfo="$(timeout -skill 15s mediainfo "$a")"
+  minfo="$(timeout -skill 5s mediainfo "$a")"
   info="($(echo "$(echo "$a" | sed "s/.*\.//;s/[^a-z|0-9].*//"), $(echo "$minfo" | sed '/File size/!d;s/.*:\s//g'), $(echo "$minfo" | sed '/Width\|Height/!d;s/.*:\s//g;s/\spixels//g;s/\s//g;/^\s*$/d' | tr -s "\n" x | sed 's/x$//g')" |
 sed 's/\
 //g;s/^, //g;s/, B,/, Unkown size,/g;s/, ,/,/g;s/^B,//g;s/, $//;s/ $//g'))"
@@ -226,18 +226,20 @@ $u"
 
 
  rai() { 
- saferai="$1"
- # Store the page in a variable
- file=$(wget "$saferai" -q -O -)
+  saferai="$1"
+  # Store the page in a variable
+  file=$(wget "$saferai" -q -O -)
 
- # Rai replay or normal rai website choice
- echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
-
- videoTitolo="$(echo -en "$videoTitolo")"
-
- [ "$videoTitolo" = "" ] && videoTitolo=$(echo "$file" | tr '\n' ' ' | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
- # Resolve relinkers
-  relinker_rai $videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay
+  # Rai replay or normal rai website choice
+  echo "$1" | grep -q 'http://www.*.rai..*/dl/replaytv/replaytv.html.*' && replay "$saferai" || rai_normal "$saferai"
+  links="$videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay"
+  links="$(echo "$links" | sed '/^\s*$/d')"
+  videoTitolo="$(echo -en "$videoTitolo")"
+  [ "$links" = "" ] && replay "$saferai"
+  links="$videoURL_M3U8 $videoURL_MP4 $videoURL_H264 $videoURL_WMV $videoURL $replay"
+  [ "$videoTitolo" = "" ] && videoTitolo=$(echo "$file" | tr '\n' ' ' | sed 's/.*<title>//;s/<\/title>.*//;s/^ //')
+  # Resolve relinkers
+  relinker_rai "$links"
  }
 
 
@@ -339,7 +341,7 @@ $(timeout -skill 5s wget "$dl&output=43" -U="" -q -O -)"
    # 2nd method
 
    [ "$base" = "" ] && {
-    base="$(eval echo "$(for f in $(echo "$url" | grep ","); do number="$(echo "$f" | sed 's/http\:\/\///g;s/\/.*//;s/[^0-9]//g')"; echo "$f" | sed 's/.*Italy/Italy/;s/^/http\:\/\/creativemedia'$number'\.rai\.it\//;s/,/{/;s/,\./}\./;s/\.mp4.*/\.mp4/'; done)")" && checkurl
+    base="$(eval echo "$(for f in $(echo "$url" | grep ","); do number="$(echo "$f" | sed 's/http\:\/\///g;s/\/.*//;s/[^0-9]//g;s/^.*\(.\{1\}\)$/\1/')"; echo "$f" | sed 's/.*Italy/Italy/;s/^/http\:\/\/creativemedia'$number'\.rai\.it\//;s/,/{/;s/,\./}\./;s/\.mp4.*/\.mp4/'; done)")" && checkurl
    }
  
 
@@ -489,20 +491,19 @@ videoTitolo=$(echo "$page" | sed '/[<]meta content=\".*\" property=\".*title\"\/
 
   json="$(youtube-dl -J "$1" | ./JSON.sh -s)"
   videoTitolo=$(echo "$json" | sed '/\["title"\]/!d;s/.*\t"//g;s/".*//g')
-  urls="$(echo "$json" | sed '/\["formats",.*,"url"\]\|\["url"\]/!d;s/.*\t"//g;s/".*//g')"
-  formats="$(echo "$json" | sed '/\["formats",.*,"format"\]\|\["format"\]/!d;s/.*\t"//g;s/".*//g')"
-  exts="$(echo "$json" | sed '/\["formats",.*,"ext"\]\|\["ext"\]/!d;s/.*\t"//g;s/".*//g')"
+  urls="$(echo "$json" | sed '/\["formats",.*,"url"\]\|\["url"\]\|\["entries",.*,"url"\]/!d;s/.*\t"//g;s/".*//g')"
+  formats="$(echo "$json" | sed '/\["formats",.*,"format"\]\|\["format"\]\|\["entries",.*,"format"\]/!d;s/.*\t"//g;s/".*//g;s/[(]\|[)]//g')"
+  exts="$(echo "$json" | sed '/\["formats",.*,"ext"\]\|\["ext"\]\|\["entries",.*,"ext"\]/!d;s/.*\t"//g;s/".*//g')"
   n=1
   while read -r line; do
-    url=$line
-    [ "$url" != "" ] && {
+    a=$line
+    [ "$a" != "" ] && {
      format=$(echo "$formats" | sed $n'q;d')
      ext=$(echo "$exts" | sed $n'q;d')
-     tmpsize="$(timeout -skill 3s wget -S --spider "$url" 2>&1 | sed '/^Length\|^Lunghezza/!d;s/.*(//;s/).*//')"
-     size=
-     [ "$tmpsize" != "" ] && size=", $tmpsize"B || size=", Unkown size"
-     final="$format ($ext$size) $url
-$final"
+     getsize
+     info=$(echo "$info" | sed 's/[(][^,]*,/('$ext',/')
+     final="$final
+$format $info $a"
      n=$(($n + 1))
     }
   done <<< "$urls"
@@ -550,7 +551,7 @@ video $formats"
   exit
  }
 
- size="$(wget -S --spider "$dl" 2>&1 | sed '/^Length\|^Lunghezza/!d;s/.*[(]//g;s/[)].*//g')"
+ size="$(mediainfo "$dl" | sed '/size/!d;s/.*:\s//g')"
  echo "$size" | grep -q G && error
 
 
