@@ -494,14 +494,21 @@ videoTitolo=$(echo "$page" | sed '/[<]meta content=\".*\" property=\".*title\"\/
   urls="$(echo "$json" | sed '/\["formats",.*,"url"\]\|\["url"\]\|\["entries",.*,"url"\]/!d;s/.*\t"//g;s/".*//g')"
   formats="$(echo "$json" | sed '/\["formats",.*,"format"\]\|\["format"\]\|\["entries",.*,"format"\]/!d;s/.*\t"//g;s/".*//g;s/[(]\|[)]//g')"
   exts="$(echo "$json" | sed '/\["formats",.*,"ext"\]\|\["ext"\]\|\["entries",.*,"ext"\]/!d;s/.*\t"//g;s/".*//g')"
+  ws="$(echo "$json" | sed '/\["formats",.*,"width"\]\|\["width"\]\|\["entries",.*,"width"\]/!d;s/.*\t//g')"
+  hs="$(echo "$json" | sed '/\["formats",.*,"height"\]\|\["height"\]\|\["entries",.*,"height"\]/!d;s/.*\t//g')"
+  sizes="$(echo "$json" | sed '/\["formats",.*,"filesize"\]\|\["filesize"\]\|\["entries",.*,"filesize"\]/!d;s/.*\t//g' | awk ' function human(x) { if (x<1000) {return x} else {x/=1024} s="kMGTEPYZ"; while (x>=1000 && length(s)>1) {x/=1024; s=substr(s,2)} return int(x+0.5) substr(s,1,1) } {sub(/^[0-9]+/, human($1)); print}')"
   n=1
   while read -r line; do
     a=$line
     [ "$a" != "" ] && {
      format=$(echo "$formats" | sed $n'q;d')
      ext=$(echo "$exts" | sed $n'q;d')
-     getsize
-     info=$(echo "$info" | sed 's/[(][^,]*,/('$ext',/')
+     width=$(echo "$hs" | sed $n'q;d')
+     height=$(echo "$ws" | sed $n'q;d')
+     size=$(echo "$sizes" | sed $n'q;d')
+     [ "$width" = "" -a "$height" = "" ] && quality="Unkown quality" || quality=$width"x"$height
+     [ "$size" = "" -o "$size" = "null" ] && size="Unkown size"
+     info="("$ext", "$size", "$quality")"
      final="$final
 $format $info $a"
      n=$(($n + 1))
