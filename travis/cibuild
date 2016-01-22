@@ -1,173 +1,173 @@
 #!/usr/bin/env bash
 [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] && {
-# Setup everything 
-desc="$(git log -1 --pretty=%B)"
-echo "$desc" | grep -q madebytravisci && exit
+ # Setup everything 
+ desc="$(git log -1 --pretty=%B)"
+ echo "$desc" | grep -q madebytravisci && exit
 
-export DEBFULLNAME="Daniil Gentili"
-{
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get update
-sudo apt-get install busybox ruby-ronn build-essential devscripts lintian patch python-pip python3 patchutils gnupg diff expect dpkg-dev libffi-dev libssl-dev nodejs -y 
-sudo apt-get purge python-openssl
-sudo pip install pyopenssl
-sudo pip install requests[security]
-sudo npm i npm -g		
-sudo npm install uglify-js -g
-sudo pip install pexpect
-tar -xzf enc.tar.gz
-gpg --allow-secret-key-import --import mygpgkey_sec.gpg
-} >/dev/null
-builddeb="$PWD/builddeb"
-chmod +x ${builddeb}
+ export DEBFULLNAME="Daniil Gentili"
+ {
+   curl -sL https://deb.nodesource.com/setup | sudo bash -
+  sudo apt-get update
+  sudo apt-get install busybox ruby-ronn build-essential devscripts lintian patch python-pip python3 patchutils gnupg diff expect dpkg-dev libffi-dev libssl-dev nodejs -y 
+  sudo apt-get purge python-openssl
+  sudo pip install pyopenssl
+  sudo pip install requests[security]
+  sudo npm -g install npm@latest
+  sudo npm install uglify-js -g
+  sudo pip install pexpect
+  tar -xzf enc.tar.gz
+  gpg --allow-secret-key-import --import mygpgkey_sec.gpg
+ } >/dev/null
+ builddeb="$PWD/builddeb"
+ chmod +x ${builddeb}
 
-mkdir temp
-temp="$PWD/temp"
-gitsync() {
-branch="${1}"
-shift
+ mkdir temp
+ temp="$PWD/temp"
+ gitsync() {
+  branch="${1}"
+  shift
+  git add -A
+  git commit -am "${*}"
+  git push -q origin ${branch}
+ }
 
+ git clone https://${GH_TOKEN}@github.com/danog/video-dl.git video-dl
+ cd video-dl
+ git config --global user.name "${GIT_NAME}"
+ git config --global user.email "${GIT_EMAIL}"
+ video="$PWD"
+ wget http://daniilgentili.magix.net/video.sh?v=$version -O $temp/reallyold.sh
+ ########################################
+ version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-[^-]*$//;s/.*-//')"
 
-git add -A
-git commit -am "${*}"
-git push -q origin ${branch}
+ [ "`git status -s | wc -l`" = "1" ] && git status -s | grep -q "video_db.sql" && exit 0
 
-}
+ # Sync API
+ cd api
+ sed '/api[(][)]/,/beginning of common section/!d;s/exit/continue/g' api.sh>script_api.sh
+ cat $video/travis/last_api.sh >> script_api.sh
+ busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
+ mv script_api.sh $video
+ cd $video
 
-git clone https://${GH_TOKEN}@github.com/danog/video-dl.git video-dl
-cd video-dl
-git config --global user.name "${GIT_NAME}"
-git config --global user.email "${GIT_EMAIL}"
-video="$PWD"
-wget http://daniilgentili.magix.net/video.sh?v=$version -O $temp/reallyold.sh
-########################################
-version="$(git describe --tags | sed 's/-.*//').$(git describe --tags | sed 's/-[^-]*$//;s/.*-//')"
-
-[ "`git status -s | wc -l`" = "1" ] && git status -s | grep -q "video_db.sql" && exit 0
-
-# Sync API
-cd api
-sed '/api[(][)]/,/beginning of common section/!d;/echo \"\$userinput/,/video-db\.txt/d;s/exit/continue/g' api.sh>script_api.sh
-cat $video/travis/last_api.sh >> script_api.sh
-busybox ftpput -u $u2 -p $p2 $ftp api.sh script_api.sh
-mv script_api.sh $video
-cd $video
-
-sed '/\#\!\/bin\/bash/,/\# 1st part ends here/!d' video.sh>tmpvideo.sh
-cat script_api.sh >>tmpvideo.sh
-sed '/\# 2nd part starts here/,/exit \$\?/!d' video.sh>>tmpvideo.sh
-echo '[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
+ sed '/\#\!\/bin\/bash/,/\# 1st part ends here/!d' video.sh>tmpvideo.sh
+ cat script_api.sh >>tmpvideo.sh
+ sed '/\# 2nd part starts here/,/exit \$\?/!d' video.sh>>tmpvideo.sh
+ echo '[ "$play" != "y" ] && { echo "Downloading videos..." && eval "$queue" && echo "All downloads completed successfully." || echo "An error occurred";exit 1; } 
 [ "$play" = "y" ] && { eval $queue || echo "An error occurred";exit 1; }
 
 
 exit $?
 '>>tmpvideo.sh
 
-mv tmpvideo.sh video.sh
-rm script_api.sh
-cp video.sh $temp
-cd $temp
-busybox ftpput -u $u1 -p $p1 $ftp video.sh
-busybox ftpput -u $u1 -p $p1 $ftp rai.sh video.sh
-busybox ftpput -u $u1 -p $p1 $ftp mediaset.sh video.sh
-sed 's/#!\/bin\/bash/#!\/system\/xbin\/bash/' video.sh | sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/' >videoa.sh
-busybox ftpput -u $u1 -p $p1 $ftp android/video.sh videoa.sh
-busybox ftpput -u $u1 -p $p1 $ftp android/rai.sh videoa.sh
-busybox ftpput -u $u1 -p $p1 $ftp android/mediaset.sh videoa.sh
+ mv tmpvideo.sh video.sh
+ rm script_api.sh
+ cp video.sh $temp
+ cd $temp
+ busybox ftpput -u $u1 -p $p1 $ftp video.sh
+ busybox ftpput -u $u1 -p $p1 $ftp rai.sh video.sh
+ busybox ftpput -u $u1 -p $p1 $ftp mediaset.sh video.sh
+ sed 's/#!\/bin\/bash/#!\/system\/xbin\/bash/' video.sh | sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/' >videoa.sh
+ busybox ftpput -u $u1 -p $p1 $ftp android/video.sh videoa.sh
+ busybox ftpput -u $u1 -p $p1 $ftp android/rai.sh videoa.sh
+ busybox ftpput -u $u1 -p $p1 $ftp android/mediaset.sh videoa.sh
 
-sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/;s/wget/wget.exe/g;s/curl/curl.exe/g' video.sh >videow.sh
-busybox ftpput -u $u1 -p $p1 $ftp win-native/video.sh videow.sh
-busybox ftpput -u $u1 -p $p1 $ftp win-native/rai.sh videow.sh
-busybox ftpput -u $u1 -p $p1 $ftp win-native/mediaset.sh videow.sh
+ sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/android\/video.sh/;s/wget/wget.exe/g;s/curl/curl.exe/g' video.sh >videow.sh
+ busybox ftpput -u $u1 -p $p1 $ftp win-native/video.sh videow.sh
+ busybox ftpput -u $u1 -p $p1 $ftp win-native/rai.sh videow.sh
+ busybox ftpput -u $u1 -p $p1 $ftp win-native/mediaset.sh videow.sh
 
 
-sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' video.sh > videoww.sh
-busybox ftpput -u $u1 -p $p1 $ftp win/video.sh videoww.sh
-busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh videoww.sh
-busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh videoww.sh
+ sed 's/http:\/\/daniilgentili.magix.net\/video.sh/http:\/\/daniilgentili.magix.net\/win\/video.sh/' video.sh > videoww.sh
+ busybox ftpput -u $u1 -p $p1 $ftp win/video.sh videoww.sh
+ busybox ftpput -u $u1 -p $p1 $ftp win/rai.sh videoww.sh
+ busybox ftpput -u $u1 -p $p1 $ftp win/mediaset.sh videoww.sh
 
-cd $video
-out=`diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d'`
+ cd $video
+ out=`diff $temp/reallyold.sh $video/video.sh | sed '/[<]\|[>]/!d;/Video download script v/d'`
 
-# Generate deb
-[ "$out" != "" ] && {
-sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
-cd debian/
-cp * old
-rm *
-cd video*
-cp $video/README-IT.md $video/README.md .
-bundle exec ronn --roff README.md
-bundle exec ronn --roff README-IT.md
-mv README-IT debian/video-dl-it.1
-mv README debian/video-dl.1
-rm *md
-cp $video/video.sh video-dl/
-echo "debian/video-dl.1
+ # Generate deb
+ [ "$out" != "" ] && {
+  sed -i 's/^\# Video download script v.*/\# Video download script v'$version'/g;s/echo \"Video download script v.*/echo "Video download script v'$version'/g' video.sh
+  cd debian/
+  cp * old
+  rm *
+  cd video*
+  cp $video/README-IT.md $video/README.md .
+  bundle exec ronn --roff README.md
+  bundle exec ronn --roff README-IT.md
+  mv README-IT debian/video-dl-it.1
+  mv README debian/video-dl.1
+  rm *md
+  cp $video/video.sh video-dl/
+  echo "debian/video-dl.1
 debian/video-dl-it.1" > debian/video-dl.manpages
-dch -v $version -D lenny --force-distribution $desc 
-$builddeb
-cd $temp
-git clone https://${GH_TOKEN}@github.com/danog/repo.git
-cd repo/debs
-mkdir video-dl-$version
-cd video-dl-$version
-cp $video/debian/* .
-gitsync master Updated video-dl to $version
-cd $video
-rm -rf $temp/repo
-}
+  dch -v $version -D lenny --force-distribution $desc 
+  $builddeb
+  cd $temp
+  git clone https://${GH_TOKEN}@github.com/danog/repo.git
+  cd repo/debs
+  mkdir video-dl-$version
+  cd video-dl-$version
+  cp $video/debian/* .
+  gitsync master Updated video-dl to $version
+  cd $video
+  rm -rf $temp/repo
+ }
 
-# Copy js
+ # Copy js
+ wget http://daniil.it/video-dl/video-dl.min.js -O $temp/old.js
+ uglifyjs web/js/{he.js,linkify.min.js,linkify-jquery.min.js,video-dl.js} -o $temp/video-dl.min.js
 
-uglifyjs web/js/{he.js,linkify.min.js,linkify-jquery.min.js,video-dl.js} -o $temp/video-dl.min.js
+ out=`diff $temp/old.js $temp/video-dl.min.js | sed '/[<]\|[>]/!d;/Video download script v/d'`
 
-
-cp $video/web/js/video-dl.js $video/jquery/video-dl.js
-cp $video/README.md $video/jquery/
-cd $video/jquery
-sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
-mkdir $temp/npm
-cp -a * $temp/npm
-
-# Generate website
-cd $video/jekyll
-echo "---
+ [ "$out" != "" ] && {
+  cp $video/web/js/video-dl.js $video/jquery/video-dl.js
+  cp $video/README.md $video/jquery/
+  cd $video/jquery
+  sed -i 's/"version": ".*",/"version": "'$version'",/g' package.json
+  mkdir $temp/npm
+  cp -a * $temp/npm
+ }
+ # Generate website
+ cd $video/jekyll
+ echo "---
 layout: default
 ---
 ">index.md
-sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README-IT\.md/http\:\/\/daniil\.it\/video-dl\/it\.html/' $video/README.md >> index.md
+ sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README-IT\.md/http\:\/\/daniil\.it\/video-dl\/it\.html/' $video/README.md >> index.md
 
-echo "---
+ echo "---
 layout: default
 ---
 ">it.md
-sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README-IT.md >> it.md
-cp -a * $temp
-mkdir $temp/repo
-cd $video
-gitsync master OK madebytravisci
+ sed 's/https\:\/\/github\.com\/danog\/video-dl\/blob\/master\/README\.md/http\:\/\/daniil\.it\/video-dl/' $video/README-IT.md >> it.md
+ cp -a * $temp
+ mkdir $temp/repo
+ cd $video
+ gitsync master OK madebytravisci
 
 
-cd $video
-git checkout npm
-cp -a $temp/npm/* .
-rm -rf $temp/npm
-git add -A
-git commit -am "Updated npm branch"
-git push -qf origin npm
-
-# Upload everything
-git checkout --orphan gh-pages
-rm -rf *
-git rm -rf * &>/dev/null
-cp -a $temp/* .
-echo "branches:
+ # Upload everything
+ git checkout --orphan gh-pages
+ rm -rf *
+ git rm -rf * &>/dev/null
+ cp -a $temp/* .
+ echo "branches:
   except:
     - gh-pages" > .travis.yml
 
-git add -A
-git commit -am "Updated the website"
-git push -qf origin gh-pages
+ git add -A
+ git commit -am "Updated the website"
+ git push -qf origin gh-pages
 
+ [ "$out" != "" ] && {
+  git checkout npm
+  cp -a $temp/npm/* .
+  rm -rf $temp/npm
+  git add -A
+  git commit -am "Updated npm branch"
+  git push -qf origin npm
+ }
+ exit 0
 }
